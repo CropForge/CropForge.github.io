@@ -1,0 +1,1437 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta name="generator" content="MediaWiki 1.14.0" />
+		<meta name="keywords" content="TDM Windows Application Programming Interface" />
+		<link rel="shortcut icon" href="../../../../misc/favicon.ico" />
+		<link rel="search" type="application/opensearchdescription+xml" href="../../../../../opensearch_desc.php" title="ICISWiki (en)" />
+		<link title="Creative Commons" type="application/rdf+xml" href="../../../../articles/t/d/m/TDM_Windows_Application_Programming_Interface_c979.html" rel="alternate meta" />
+		<link rel="copyright" href="../../../../../COPYING.html" />
+		<link rel="alternate" type="application/rss+xml" title="ICISWiki RSS Feed" href="http://localhost../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" />
+		<link rel="alternate" type="application/atom+xml" title="ICISWiki Atom Feed" href="http://localhost../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" />
+		<title>TDM Windows Application Programming Interface - ICISWiki</title>
+		<link rel="stylesheet" href="../../../../skins/common/shared.css?195" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../../../../skins/common/commonPrint.css?195" type="text/css" media="print" />
+		<link rel="stylesheet" href="../../../../skins/monobook/main.css?195" type="text/css" media="screen" />
+		<!--[if lt IE 5.5000]><link rel="stylesheet" href="../../../../skins/monobook/IE50Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 5.5000]><link rel="stylesheet" href="../../../../skins/monobook/IE55Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 6]><link rel="stylesheet" href="../../../../skins/monobook/IE60Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 7]><link rel="stylesheet" href="../../../../skins/monobook/IE70Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7ECommon.css?195" type="text/css" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7EPrint.css?195" type="text/css" media="print" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7EMonobook.css?195" type="text/css" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/gen.css?195" type="text/css" />
+		<!--[if lt IE 7]><script type="text/javascript" src="../../../../skins/common/IEFixes.js?195"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+
+		<script type= "text/javascript">/*<![CDATA[*/
+		var skin = "monobook";
+		var stylepath = "../../../../skins";
+		var wgArticlePath = "../../../../$1";
+		var wgScriptPath = "../../../../..";
+		var wgScript = "/icis/index.php";
+		var wgVariantArticlePath = false;
+		var wgActionPaths = {};
+		var wgServer = "http://localhost";
+		var wgCanonicalNamespace = "";
+		var wgCanonicalSpecialPageName = false;
+		var wgNamespaceNumber = 0;
+		var wgPageName = "TDM_Windows_Application_Programming_Interface";
+		var wgTitle = "TDM Windows Application Programming Interface";
+		var wgAction = "view";
+		var wgArticleId = "784";
+		var wgIsArticle = true;
+		var wgUserName = null;
+		var wgUserGroups = null;
+		var wgUserLanguage = "en";
+		var wgContentLanguage = "en";
+		var wgBreakFrames = false;
+		var wgCurRevisionId = "5683";
+		var wgVersion = "1.14.0";
+		var wgEnableAPI = true;
+		var wgEnableWriteAPI = true;
+		var wgSeparatorTransformTable = ["", ""];
+		var wgDigitTransformTable = ["", ""];
+		var wgRestrictionEdit = [];
+		var wgRestrictionMove = [];
+		/*]]>*/</script>
+
+		<script type="text/javascript" src="../../../../skins/common/wikibits.js?195"><!-- wikibits js --></script>
+		<!-- Head Scripts -->
+		<script type="text/javascript" src="../../../../raw/gen.js"><!-- site js --></script>
+	</head>
+<body class="mediawiki ltr ns-0 ns-subject page-TDM_Windows_Application_Programming_Interface skin-monobook">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 id="firstHeading" class="firstHeading">TDM Windows Application Programming Interface</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From ICISWiki</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>			<!-- start content -->
+			<table id="toc" class="toc" summary="Contents"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1"><a href="#DLL_Architecture"><span class="tocnumber">1</span> <span class="toctext">DLL Architecture</span></a>
+<ul>
+<li class="toclevel-2"><a href="#INTRODUCTION"><span class="tocnumber">1.1</span> <span class="toctext">INTRODUCTION</span></a>
+<ul>
+<li class="toclevel-3"><a href="#Conventions_of_ICIS_Application_Development"><span class="tocnumber">1.1.1</span> <span class="toctext">Conventions of ICIS Application Development</span></a></li>
+<li class="toclevel-3"><a href="#Data_Source_Names_and_the_INI_file"><span class="tocnumber">1.1.2</span> <span class="toctext">Data Source Names and the INI file</span></a></li>
+<li class="toclevel-3"><a href="#Return_values_for_ICIS_DLL_functions"><span class="tocnumber">1.1.3</span> <span class="toctext">Return values for ICIS DLL functions</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#ICIS_Data_Structures"><span class="tocnumber">2</span> <span class="toctext">ICIS Data Structures</span></a>
+<ul>
+<li class="toclevel-2"><a href="#Introduction_2"><span class="tocnumber">2.1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-2"><a href="#GMS_DATA_STRUCTURES"><span class="tocnumber">2.2</span> <span class="toctext">GMS DATA STRUCTURES</span></a>
+<ul>
+<li class="toclevel-3"><a href="#GMS_Germplasm_structure_.28in_order_of_declaration.29"><span class="tocnumber">2.2.1</span> <span class="toctext">GMS_Germplasm structure (in order of declaration)</span></a></li>
+<li class="toclevel-3"><a href="#GMS_NameData_structure"><span class="tocnumber">2.2.2</span> <span class="toctext">GMS_NameData structure</span></a></li>
+<li class="toclevel-3"><a href="#GMS_Attribute_structure"><span class="tocnumber">2.2.3</span> <span class="toctext">GMS_Attribute structure</span></a></li>
+<li class="toclevel-3"><a href="#GMS_Method_structure"><span class="tocnumber">2.2.4</span> <span class="toctext">GMS_Method structure</span></a></li>
+<li class="toclevel-3"><a href="#GMS_UDField_structure"><span class="tocnumber">2.2.5</span> <span class="toctext">GMS_UDField structure</span></a></li>
+<li class="toclevel-3"><a href="#GMS_Changes_Structure"><span class="tocnumber">2.2.6</span> <span class="toctext">GMS_Changes Structure</span></a></li>
+<li class="toclevel-3"><a href="#GMS_User_structure"><span class="tocnumber">2.2.7</span> <span class="toctext">GMS_User structure</span></a></li>
+<li class="toclevel-3"><a href="#GMS_Installation_Structure"><span class="tocnumber">2.2.8</span> <span class="toctext">GMS_Installation Structure</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2"><a href="#LIST_DATA_STRUCTURE"><span class="tocnumber">2.3</span> <span class="toctext">LIST DATA STRUCTURE</span></a>
+<ul>
+<li class="toclevel-3"><a href="#GMS_ListName_Structure"><span class="tocnumber">2.3.1</span> <span class="toctext">GMS_ListName Structure</span></a></li>
+<li class="toclevel-3"><a href="#GMS_ListData_Structure"><span class="tocnumber">2.3.2</span> <span class="toctext">GMS_ListData Structure</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#DLL_Functions_for_Access_Control"><span class="tocnumber">3</span> <span class="toctext">DLL Functions for Access Control</span></a>
+<ul>
+<li class="toclevel-2"><a href="#GENEALOGY_MANAGEMENT_SYSTEM_DATABASE_ACCESS_FUNCTIONS"><span class="tocnumber">3.1</span> <span class="toctext">GENEALOGY MANAGEMENT SYSTEM DATABASE ACCESS FUNCTIONS</span></a></li>
+<li class="toclevel-2"><a href="#DATA_MANAGEMENT_SYSTEM_DATABASE_ACCESS_FUNCTIONS"><span class="tocnumber">3.2</span> <span class="toctext">DATA MANAGEMENT SYSTEM DATABASE ACCESS FUNCTIONS</span></a></li>
+<li class="toclevel-2"><a href="#INVENTORY_MANAGEMENT_SYSTEM_DATABASE_ACCESS_FUNCTIONS"><span class="tocnumber">3.3</span> <span class="toctext">INVENTORY MANAGEMENT SYSTEM DATABASE ACCESS FUNCTIONS</span></a></li>
+<li class="toclevel-2"><a href="#USER_AND_INSTALLATION"><span class="tocnumber">3.4</span> <span class="toctext">USER AND INSTALLATION</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#GMS_DLL_FUNCTIONS"><span class="tocnumber">4</span> <span class="toctext">GMS DLL FUNCTIONS</span></a>
+<ul>
+<li class="toclevel-2"><a href="#SEARCH_FUNCTIONS"><span class="tocnumber">4.1</span> <span class="toctext">SEARCH FUNCTIONS</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#DMS_DLL_Functions"><span class="tocnumber">5</span> <span class="toctext">DMS DLL Functions</span></a></li>
+<li class="toclevel-1"><a href="#List_DLL_Functions"><span class="tocnumber">6</span> <span class="toctext">List DLL Functions</span></a></li>
+<li class="toclevel-1"><a href="#IMS_DLL_Functions"><span class="tocnumber">7</span> <span class="toctext">IMS DLL Functions</span></a></li>
+<li class="toclevel-1"><a href="#LMS_DLL_Functions"><span class="tocnumber">8</span> <span class="toctext">LMS DLL Functions</span></a></li>
+<li class="toclevel-1"><a href="#BIBREF_DLL_Functions"><span class="tocnumber">9</span> <span class="toctext">BIBREF DLL Functions</span></a></li>
+<li class="toclevel-1"><a href="#Integration_of_Web_Services"><span class="tocnumber">10</span> <span class="toctext">Integration of Web Services</span></a></li>
+</ul>
+</td></tr></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </script>
+<a name="DLL_Architecture" id="DLL_Architecture"></a><h2> <span class="mw-headline"> DLL Architecture </span></h2>
+<a name="INTRODUCTION" id="INTRODUCTION"></a><h3> <span class="mw-headline"> INTRODUCTION</span></h3>
+<p>ICIS applications can be written in any computer language under a WINDOWS 32-bit operating system.  They must only access the ICIS databases through the ICIS DLL functions. Programs, which access the database directly or through any other system, may 
+be useful for loading data, but are not portable to other users and so, are not part of the ICIS system.  Any applications, which have potential value for other users, should only use the DLL.
+</p>
+<a name="Conventions_of_ICIS_Application_Development" id="Conventions_of_ICIS_Application_Development"></a><h4> <span class="mw-headline">Conventions of ICIS Application Development</span></h4>
+<p>Most ICIS applications are expected to be WINDOWS 95, 32-bit programs but they could be WINDOWS NT, Windows 2000 or 32-bit console applications.  The restriction to 32 bit operating systems is due to requirements of the ICIS DLL and the ODBC drivers it uses.  This is not regarded as a serious restriction since ICIS will at least require a computer with a CD drive, and most of these are capable of running a 32-bit operating system.  Apart from this restriction applications can be written in any computer language which can access the ICIS DLL.  FORTRAN 90, Delphi PASCAL, Visual Basic, and C++ have been used to access the DLL so far. The first function of any ICIS application is to establish the ODBC data connections for the current session.  To do this it must read the ODBC data source names from an INI file.  The default file is called ICIS.INI.  An application initially looks for ICIS.INI in the WINDOWS&nbsp;%TEMP% directory (the name of this directory is stored in the environment variable temp), unless a parameter is passed together when an application is called.  The parameter to use a different INI file should contain the full pathname of the INI file to use.  The structure of ICIS.INI files is defined in 5.3.1, but new applications may require new sections in the file.  These sections should be headed by the application name and will be ignored by other applications.  Since several users and projects may wish to access different data sources on the same computer a system of replacing ICIS.INI for each session has been established through the LAUNCHER application (5.3). The second function of any application is to identify the user and verify his or her access privileges.
+</p>
+<a name="Data_Source_Names_and_the_INI_file" id="Data_Source_Names_and_the_INI_file"></a><h4> <span class="mw-headline">Data Source Names and the INI file</span></h4>
+<p>Access to ICIS databases is provided through the ICIS DLL described in this chapter.  Functions in this DLL use ODBC to access the data in the Central and Local databases.  These must therefore be defined as ODBC data sources before ICIS applications will operate.  Steps to set up the sources are described in 5.2.3b. The ICIS DLL obtains information from an initialization file.  This file must exist  before applications will run, the application passes the name of the INI file to the DLL, but for general applications this name should be ICIS.INI.
+</p>
+<a name="Return_values_for_ICIS_DLL_functions" id="Return_values_for_ICIS_DLL_functions"></a><h4> <span class="mw-headline">Return values for ICIS DLL functions</span></h4>
+<p>Most DLL functions return a long integer value which are: GMS_SUCCESS if the function call was successful, GMS_ERROR if the function call results in an error, GMS_NO_DATA if no data is found in the databases relevant to a particular call or GMS_NOACCESS if the ICIS user does not have access to the particular function being called.  Some functions return other values to indicate different events.  These are described in the function descriptions.  Note: When making DLL function calls, always initialize character arguments to null prior to calling the function.  If this is not done each and every time, errors may occur or you may accidentally filter your results.
+</p><p><br />
+GMS FUNCTIONS return value
+</p>
+<table border="1" cellpadding="2">
+<tr>
+<th>Return Code
+</th><th>Value
+</th></tr>
+<tr>
+<td>GMS_NO_DATA
+</td><td>0
+</td></tr>
+<tr>
+<td>GMS_SUCCESS
+</td><td> 1
+</td></tr>
+<tr>
+<td>GMS_ERROR
+</td><td> -1
+</td></tr>
+<tr>
+<td>GMS_NO_ACCESS
+</td><td> -2
+</td></tr>
+<tr>
+<td>GMS_INVALID_PASSWORD
+</td><td> -3
+</td></tr>
+<tr>
+<td>GMS_INVALID_USER
+</td><td> -4
+</td></tr>
+<tr>
+<td>GMS_NAME_EXISTS
+</td><td> -5
+</td></tr>
+<tr>
+<td>GMS_NOT_FOUND
+</td><td> -6
+</td></tr>
+<tr>
+<td> GMS_MORE_DATA
+</td><td> -7
+</td></tr>
+<tr>
+<td>GMS_READ_ONLY
+</td><td> -8
+</td></tr>
+<tr>
+<td>GMS_INVALID_INSTALLATION
+</td><td> -9
+</td></tr>
+<tr>
+<td>GMS_INVALID_DBSTRUCTURE
+</td><td> -10
+</td></tr></table>
+<a name="ICIS_Data_Structures" id="ICIS_Data_Structures"></a><h2> <span class="mw-headline"> ICIS Data Structures </span></h2>
+<a name="Introduction_2" id="Introduction_2"></a><h3> <span class="mw-headline">Introduction</span></h3>
+<p>Several compound structures are used to pass information between the DLL and the application. Users may specify their own names for elements in the structures, but not their order data types. However we recommend using the field names supplied to ensure uniformity across applications. 
+</p><p>The structures are defined in the following tables. The data type “long” is a 4-byte signed integer, the type “double” is an 8-byte real and the type “single” is a 4-byte real or ‘float’ data type. Character or string elements are denoted char [n] where n is the length of the element in bytes. All character variables are NULL terminated strings so one byte will be used for the NULL character. 
+</p><p>The size of elements in the structures is larger than the space allocated to corresponding fields in the database.  This facilitates data transfer to the DLL by accommodating the NULL termination character for character variables and by ensuring data alignment in most programming languages.  However, care must be taken that data passed to the database through the structures is not too large for the database fields.
+</p><p>ICIS DATA TYPES
+</p>
+<table border="1" cellpadding="2">
+<tr>
+<th>Data Type
+</th><th>Size in bytes
+</th></tr>
+<tr>
+<td>Double
+</td><td>8
+</td></tr>
+<tr>
+<td>single or float
+</td><td>4
+</td></tr>
+<tr>
+<td>Long
+</td><td>4
+</td></tr>
+<tr>
+<td>char[n] (including null character)
+</td><td>n
+</td></tr></table>
+<p><br />
+</p>
+<a name="GMS_DATA_STRUCTURES" id="GMS_DATA_STRUCTURES"></a><h3> <span class="mw-headline">GMS DATA STRUCTURES </span></h3>
+<a name="GMS_Germplasm_structure_.28in_order_of_declaration.29" id="GMS_Germplasm_structure_.28in_order_of_declaration.29"></a><h4> <span class="mw-headline">GMS_Germplasm structure (in order of declaration)</span></h4>
+<table border="1" cellpadding="2">
+<tr>
+<th>Element name
+</th><th>Type
+</th><th>Database Field Name
+</th></tr>
+<tr>
+<td>GERMPLASM_ID
+</td><td>long
+</td><td>GERMPLASM_ID
+</td></tr>
+<tr>
+<td>METHOD
+</td><td>long
+</td><td>METHOD_NO
+</td></tr>
+<tr>
+<td>NO_PROGENITORS
+</td><td>long
+</td><td>NO_PROGENITORS
+</td></tr>
+<tr>
+<td>PROGENITOR_ID1
+</td><td>long
+</td><td>PROGENITOR_ID1
+</td></tr>
+<tr>
+<td>PROGENITOR_ID2
+</td><td>long
+</td><td>PROGENITOR_ID2
+</td></tr>
+<tr>
+<td>USER
+</td><td>long
+</td><td>GERMPLASM_USER_ID
+</td></tr>
+<tr>
+<td>LOCAL_GID
+</td><td>long
+</td><td>LOCAL_GERMPLASM_ID
+</td></tr>
+<tr>
+<td>LOCATION
+</td><td>long
+</td><td>LOCATION_NO
+</td></tr>
+<tr>
+<td>DATE
+</td><td>long
+</td><td>GERMPLASM_DATE
+</td></tr>
+<tr>
+<td>REFERENCE
+</td><td>long
+</td><td>GERMPLASM_REFERENCE
+</td></tr>
+<tr>
+<td>REPLACE
+</td><td>long
+</td><td>GERMPLASM_RPLCE
+</td></tr></table>
+<p><br />
+</p>
+<a name="GMS_NameData_structure" id="GMS_NameData_structure"></a><h4> <span class="mw-headline">GMS_NameData structure</span></h4>
+<table border="1" cellpadding="2">
+<tr>
+<th>Element name
+</th><th>Type
+</th><th>Database Field Name
+</th></tr>
+<tr>
+<td>NID
+</td><td>long
+</td><td>NAME_IDENTIFIER
+</td></tr>
+<tr>
+<td>GERMPLASM
+</td><td>long
+</td><td>GERMPLASM_ID
+</td></tr>
+<tr>
+<td>TYPE
+</td><td>long
+</td><td>NAME_TYPE
+</td></tr>
+<tr>
+<td>STATUS
+</td><td>long
+</td><td>NAME_STATUS
+</td></tr>
+<tr>
+<td>USER
+</td><td>long
+</td><td>NAME_USER_ID
+</td></tr>
+<tr>
+<td>LOCATION
+</td><td>long
+</td><td>NAME_LOCATION_NO
+</td></tr>
+<tr>
+<td>DATE
+</td><td>long	NAME_DATE
+</td></tr>
+<tr>
+<td>REFERENCE
+</td><td>long
+</td><td>NAME_REFERENCE
+</td></tr></table>
+<p><br />
+</p>
+<a name="GMS_Attribute_structure" id="GMS_Attribute_structure"></a><h4> <span class="mw-headline">GMS_Attribute structure</span></h4>
+<table border="1" cellpadding="2">
+<tr>
+<th>Element name
+</th><th>Type
+</th><th>Database Field Name
+</th></tr>
+<tr>
+<td>AID
+</td><td>long
+</td><td>Attribute identifier
+</td></tr>
+<tr>
+<td>GERMPLASM
+</td><td>long
+</td><td>GERMPLASM_ID
+</td></tr>
+<tr>
+<td>TYPE
+</td><td>long
+</td><td>ATTRIBUTE_TYPE
+</td></tr>
+<tr>
+<td>USER
+</td><td>long
+</td><td>ATTRIBUTE_USER_ID
+</td></tr>
+<tr>
+<td>LOCATION
+</td><td>long
+</td><td>ATTRIBUTE_LOCATION_NO
+</td></tr>
+<tr>
+<td>DATE
+</td><td>long
+</td><td>ATTRIBUTE_DATE
+</td></tr>
+<tr>
+<td>REFERENCE
+</td><td>long
+</td><td>NAME_REFERENCE
+</td></tr></table>
+<p><br />
+</p>
+<a name="GMS_Method_structure" id="GMS_Method_structure"></a><h4> <span class="mw-headline">GMS_Method structure</span></h4>
+<table border="1" cellpadding="2">
+<tr>
+<th>Element name
+</th><th>Type
+</th><th>Database Field Name
+</th></tr>
+<tr>
+<td>METHOD_ID
+</td><td>long
+</td><td>METHOD_ID
+</td></tr>
+<tr>
+<td>REFERENCE
+</td><td>long
+</td><td>METHOD_REFERENCE
+</td></tr>
+<tr>
+<td>NO_PROGENITORS
+</td><td>long
+</td><td>NO_PROG_REQUIRED
+</td></tr>
+<tr>
+<td>NO_MATERNAL
+</td><td>long
+</td><td>NO_FEMALE_PARENTS
+</td></tr>
+<tr>
+<td>ATTRIBUTE
+</td><td>long
+</td><td>METHOD_ATTRIBUTE
+</td></tr>
+<tr>
+<td>TYPE
+</td><td>char[4]
+</td><td>METHOD_TYPE
+</td></tr>
+<tr>
+<td>CODE
+</td><td>char[12]
+</td><td>METHOD_CODE
+</td></tr>
+<tr>
+<td>NAME
+</td><td>char[52]
+</td><td>METHOD_NAME
+</td></tr>
+<tr>
+<td>GROUP
+</td><td>char[4]
+</td><td>METHOD_GROUP
+</td></tr>
+<tr>
+<td>GENEQ
+</td><td>long
+</td><td>GENETIC_EQUIVALENCE
+</td></tr>
+<tr>
+<td>MUID
+</td><td>long
+</td><td>METHOD_USER
+</td></tr>
+<tr>
+<td>LMID
+</td><td>long
+</td><td>LOCAL_METHOD_ID
+</td></tr>
+<tr>
+<td>MDATE
+</td><td>long
+</td><td>METHOD_DATE
+</td></tr></table>
+<p><br />
+</p>
+<a name="GMS_UDField_structure" id="GMS_UDField_structure"></a><h4> <span class="mw-headline">GMS_UDField structure</span></h4>
+<table border="1" cellpadding="2">
+<tr>
+<th>Element name
+</th><th>Type
+</th><th>Database Field Name
+</th></tr>
+<tr>
+<td>UDFIELD_ID
+</td><td>long
+</td><td>USER_FIELD_NO
+</td></tr>
+<tr>
+<td>TABLE
+</td><td>char[28]
+</td><td>USER_FIELD_TABLE
+</td></tr>
+<tr>
+<td>TYPE
+</td><td>char[16]
+</td><td>USER_FIELD_TYPE
+</td></tr>
+<tr>
+<td>CODE
+</td><td>char[12]
+</td><td>USER_FIELD_CODE
+</td></tr>
+<tr>
+<td>NAME
+</td><td>char[52]
+</td><td>USER_FIELD_NAME
+</td></tr>
+<tr>
+<td>FORMAT
+</td><td>char[256]
+</td><td>USER_FIELD_FMT
+</td></tr>
+<tr>
+<td>LFLDNO
+</td><td>long
+</td><td>LOCAL_FIELD_NO
+</td></tr>
+<tr>
+<td>FUID
+</td><td>long
+</td><td>FIELD_USER_ID
+</td></tr>
+<tr>
+<td>FDATE
+</td><td>long
+</td><td>FIELD_DATE
+</td></tr></table>
+<p><br />
+</p>
+<a name="GMS_Changes_Structure" id="GMS_Changes_Structure"></a><h4> <span class="mw-headline">GMS_Changes Structure</span></h4>
+<table border="1" cellpadding="2">
+<tr>
+<th>Element name
+</th><th>Type
+</th><th>Database Field Name
+</th></tr>
+<tr>
+<td>CID
+</td><td>long
+</td><td>CID
+</td></tr>
+<tr>
+<td>CRECORD
+</td><td>long
+</td><td>CRECORD
+</td></tr>
+<tr>
+<td>CFROM
+</td><td>long
+</td><td>CFROM
+</td></tr>
+<tr>
+<td>CTO
+</td><td>long
+</td><td>CTO
+</td></tr>
+<tr>
+<td>CDATE
+</td><td>long
+</td><td>CDATE
+</td></tr>
+<tr>
+<td>CTIME
+</td><td>long
+</td><td>CTIME
+</td></tr>
+<tr>
+<td>CUID
+</td><td>long
+</td><td>CUID
+</td></tr>
+<tr>
+<td>CREF
+</td><td>long
+</td><td>CREF
+</td></tr>
+<tr>
+<td>CTABLE
+</td><td>char[16]
+</td><td>CTABLE
+</td></tr>
+<tr>
+<td>CFIELD
+</td><td>char[16]
+</td><td>CFIELD
+</td></tr>
+<tr>
+<td>CGROUP
+</td><td>char[20]
+</td><td>CGROUP
+</td></tr></table>
+<a name="GMS_User_structure" id="GMS_User_structure"></a><h4> <span class="mw-headline">GMS_User structure</span></h4>
+<table border="1" cellpadding="2">
+<tr>
+<th>Element name
+</th><th>Type
+</th><th>Database Field Name
+</th></tr>
+<tr>
+<td>USER_ID
+</td><td>long
+</td><td>USER_ID
+</td></tr>
+<tr>
+<td>INSTALLATION
+</td><td>long
+</td><td>INSTALLATION
+</td></tr>
+<tr>
+<td>STATUS
+</td><td>integer
+</td><td>USER_STATUS
+</td></tr>
+<tr>
+<td>ACCESS
+</td><td>long
+</td><td>USER_ACCESS
+</td></tr>
+<tr>
+<td>TYPE
+</td><td>char[32]
+</td><td>USER_TYPE
+</td></tr>
+<tr>
+<td>NAME
+</td><td>char[32]
+</td><td>USER_NAME
+</td></tr>
+<tr>
+<td>PASSWORD
+</td><td>char[12]
+</td><td>USER_PASSWORD
+</td></tr>
+<tr>
+<td>PERSON
+</td><td>long
+</td><td>PERSON_ID
+</td></tr>
+<tr>
+<td>ASSIGN_DATE
+</td><td>long
+</td><td>ASSIGN_DATE
+</td></tr>
+<tr>
+<td>CLOSE_DATE
+</td><td>long
+</td><td>CLOSE_DATE
+</td></tr></table>
+<p><br />
+</p>
+<a name="GMS_Installation_Structure" id="GMS_Installation_Structure"></a><h4> <span class="mw-headline">GMS_Installation Structure</span></h4>
+<table border="1" cellpadding="2">
+<tr>
+<th width="35%">Element name
+</th><th width="25%">Type
+</th><th width="40%">Database Field Name
+</th></tr>
+<tr>
+<td>INSTALLATION
+</td><td>long
+</td><td>INSTALLATION_NO
+</td></tr>
+<tr>
+<td>ADMINISTRATOR
+</td><td>long
+</td><td>ADMIN_USER_ID
+</td></tr>
+<tr>
+<td>UDATE
+</td><td>long
+</td><td>UPDATE_DATE
+</td></tr>
+<tr>
+<td>UGID
+</td><td>long
+</td><td>UPDATE_GID
+</td></tr>
+<tr>
+<td>ULOCN
+</td><td>long
+</td><td>UPDATE_LOCN
+</td></tr>
+<tr>
+<td>UMETHN
+</td><td>long
+</td><td>UPDATE_METHN
+</td></tr>
+<tr>
+<td>UFLDNO
+</td><td>long
+</td><td>UPDATE_FLDNO
+</td></tr>
+<tr>
+<td>UREFNO
+</td><td>long
+</td><td>UPDATE_REFNO
+</td></tr>
+<tr>
+<td>UPID
+</td><td>long
+</td><td>UPDATE_PID
+</td></tr></table>
+<a name="LIST_DATA_STRUCTURE" id="LIST_DATA_STRUCTURE"></a><h3> <span class="mw-headline">LIST DATA STRUCTURE</span></h3>
+<a name="GMS_ListName_Structure" id="GMS_ListName_Structure"></a><h4> <span class="mw-headline">GMS_ListName Structure</span></h4>
+<table border="1" cellpadding="2">
+<tr>
+<th width="35%">Element name
+</th><th width="25%">Type
+</th><th width="40%">Database Field Name
+</th></tr>
+<tr>
+<td>LISTID
+</td><td>long
+</td><td>LISTID
+</td></tr>
+<tr>
+<td>LISTNAME
+</td><td>char[48]
+</td><td>LISTNAME
+</td></tr>
+<tr>
+<td>LISTDATE
+</td><td>long
+</td><td>LISTDATE
+</td></tr>
+<tr>
+<td>LISTTYPE
+</td><td>char[8]
+</td><td>LISTTYPE
+</td></tr>
+<tr>
+<td>LISTUID
+</td><td>long
+</td><td>LISTUID
+</td></tr>
+<tr>
+<td>LISTDESC
+</td><td>char[80]
+</td><td>LISTDESC
+</td></tr>
+<tr>
+<td>LISTSTATUS
+</td><td>long
+</td><td>LIST_STATUS
+</td></tr>
+<tr>
+<td>LISTHIER
+</td><td>long
+</td><td>LIST_HIERARCHY
+</td></tr></table>
+<a name="GMS_ListData_Structure" id="GMS_ListData_Structure"></a><h4> <span class="mw-headline">GMS_ListData Structure</span></h4>
+<table border="1" cellpadding="2">
+<tr>
+<th width="35%">Element name
+</th><th width="25%">Type
+</th><th width="40%">Database Field Name
+</th></tr>
+<tr>
+<td>LISTID
+</td><td>Long
+</td><td>LISTID
+</td></tr>
+<tr>
+<td>GID
+</td><td>Long
+</td><td>GID
+</td></tr>
+<tr>
+<td>ENTRYID
+</td><td>Long
+</td><td>ENTRYID
+</td></tr>
+<tr>
+<td>ENTRYCD
+</td><td>char[48]
+</td><td>ENTRYCD
+</td></tr>
+<tr>
+<td>SOURCE
+</td><td>char[48]
+</td><td>SOURCE
+</td></tr>
+<tr>
+<td>DESIG
+</td><td>char[164]
+</td><td>DESIG
+</td></tr></table>
+<a name="DLL_Functions_for_Access_Control" id="DLL_Functions_for_Access_Control"></a><h2> <span class="mw-headline"> DLL Functions for Access Control </span></h2>
+<p>Access to the different subsystems of ICIS is through a pair of open and close commands.  Before any functions associated to the subsystem can be called, the open access command must executed first.  However, access to the ICIS applications is based on the right granted to the current user of the installation as specified in the USERS and INSTLN tables.  This right is checked and verified through the open access function of GMS subsystem.
+</p>
+<a name="GENEALOGY_MANAGEMENT_SYSTEM_DATABASE_ACCESS_FUNCTIONS" id="GENEALOGY_MANAGEMENT_SYSTEM_DATABASE_ACCESS_FUNCTIONS"></a><h3> <span class="mw-headline">GENEALOGY MANAGEMENT SYSTEM DATABASE ACCESS FUNCTIONS</span></h3>
+<dl><dt>GMS_openDatabase
+</dt></dl>
+<p><br />
+</p>
+<dl><dd>GMS_openDatabase reads the initialization file identified by the value of argument szIniFile.  The data source names, DBMS user IDs and DBMS passwords are read from this file and the associated databases opened. GMS_openDatabase does not check ICIS User IDs or passwords, but logs the user as GUEST with password GUEST with read-only access to the central and local database.  To obtain full access to either database, use GMS_openDatabase2.  The format of the INI file is described in 5.2.3b, and the convention is to set szIniFile to ‘ICIS.INI’, which should exist in the default windows&nbsp;%TEMP% directory (6.1.1).  It is not necessary to follow this convention for specific applications.
+</dd></dl>
+<dl><dd><b>Syntax</b>
+</dd><dd>long <b>GMS_openDatabase</b>(<i>szIniFile</i>)
+</dd></dl>
+<dl><dd><b>Arguments</b>
+</dd></dl>
+<dl><dd><table border="1" cellpadding="2">
+<tr>
+<td>Argument
+</td><td>Type
+</td><td>Use
+</td><td>Description
+</td></tr>
+<tr>
+<td>szIniFile
+</td><td>char *
+</td><td>Input
+</td><td>Pointer to NULL terminated string containing the name of an existing initialization file.  If an INI file other than&nbsp;%TEMP%\ICIS.INI is used, it should be passed as a parameter to the application including the full pathname.
+</td></tr></table></dd></dl>
+<p><br />
+</p>
+<dl><dd><b>Returns</b>
+</dd><dd>GMS_SUCCESS, GMS_ERRORor GMS_NOACCESS
+</dd><dd><b>Comments</b>
+</dd><dd>The function returns GMS_ERROR if the one or both GMS databases are not opened successfully. No data sources are connected unless all are found and opened.
+</dd></dl>
+<p><br />
+</p>
+<dl><dt>GMS_openDatabase2
+</dt></dl>
+<dl><dd>GMS_openDatabase2 reads the initialization file identified by the value of argument szIniFile.  There are two levels of access control to ICIS databases.  First, the database management system may have a system of user IDs and passwords to control opening the database.  Secondly, GMS has a table of user IDs, access privileges, and passwords controlling access to the ICIS fundamental functions.  The data source names, database user IDs and database passwords are read from the initialization file szIniFile. The ICIS user name of the current user is passed in szUserName and the ICIS password in szPassword.  These must be obtained by the application, and one short cut to this is to read them from the INI fil.  The function returns the USER_ID of the current user in argument userID.
+</dd></dl>
+<dl><dd><b>Syntax</b>
+</dd><dd>long <b>GMS_openDatabase2</b>(<i>szIniFile, szUserName, szPassword, userID</i>)
+</dd></dl>
+<dl><dd><b>Arguments</b>
+</dd></dl>
+<dl><dd><table border="1" cellpadding="2">
+<tr>
+<td>Argument
+</td><td>Type
+</td><td>Use
+</td><td>Description
+</td></tr>
+<tr>
+<td>szIniFile
+</td><td>char *
+</td><td>input
+</td><td>Pointer to NULL terminated string containing the name of an existing initialization file. The file must exist and be present in the Windows subdirectory.
+</td></tr>
+<tr>
+<td>szUserName
+</td><td>char *
+</td><td>input
+</td><td>Pointer to NULL terminated string containing the user name
+</td></tr>
+<tr>
+<td>szPassword
+</td><td>char *
+</td><td>input
+</td><td>Pointer to NULL terminated string containing the password of the user
+</td></tr>
+<tr>
+<td>userID
+</td><td>long *
+</td><td>output
+</td><td>Pointer to a long integer to contain the User ID corresponding to szUserName or –32678 for a guest user.
+</td></tr></table></dd></dl>
+<dl><dd><b>Returns</b>
+</dd><dd>GMS_SUCCESS, GMS_ERROR GMS_NO_ACCESS, GMS_INVALID_PASSWORD, GMS_INVALID_USER, or GMS_INVALID_INSTALLATION .
+</dd></dl>
+<dl><dd><b>Comments</b>
+</dd><dd>The function returns GMS_INVALID_USER if szUserName is not found. If the szPassword is incorrect it returns GMS_INVALID_PASSWORD. If the user’s installation (USERS.INSTALID) is zero (database administrators only) then the function will allow write access to any local database. Otherwise, the function checks that the local installation (INSTLN.INSTALID) is the same as the user’s installation (USERS.INSTALID). If the user’s installation is not zero and does not match the current local database, the function restricts the user to read only access and returns GMS_READ_ONLY. 
+</dd><dd>If the local installation (INSTLN.INSTALID) is negative (new installation) then no further checks are made, but if it is positive (existing installation) then the function checks that the local installation fields are identical to the central fields for the matching installation. If not, the function returns GMS_INVALID_INSTALLATION.
+</dd><dd>The function also checks the security setting specified in the SECURITY key of the ICIS.INI file. If the security setting is 1, the user and password in the INI file is used to open the database and is checked against .  If the security setting is 2, access is allowed only to users with USTATUS = 2 and the password is encrypted to have access to ICIS database.  .  If the security setting is 3, access is allowed only to users with USTAUS = 3.  Password is encrypted to have access to ICIS database and user name is encrypted to have access to central GMS Database.  If the security setting is 4, access is allowed only to users with USTATUS = 4; password is encrypted to have access to RDBMS database and to ICIS DLL.
+</dd><dd>The function returns GMS_ERROR if the one or both GMS databases are not opened successfully, or cause by any internal error.
+</dd></dl>
+<dl><dt>GMS_closeDatabase
+</dt></dl>
+<dl><dd>GMS_closeDatabase closes the connection to both Central and Local databases.  Frees up all allocated memory used by the databases and DLL.
+</dd></dl>
+<dl><dd><b>Syntax</b> (Procedure)
+</dd><dd>GMS_closeDatabase 			
+</dd></dl>
+<dl><dd><b>Arguments</b>
+</dd><dd>No arguments
+</dd></dl>
+<dl><dd><b>Returns</b>
+</dd><dd>No return value
+</dd></dl>
+<p><br />
+</p>
+<dl><dt>GMS_commitData
+</dt><dd>GMS_commitData will permanently write all changes to the database made by calling add or change functions. 
+</dd></dl>
+<dl><dd><b>Syntax</b>
+</dd><dd><b>GMS_commitData	</b>		No arguments, No returns
+</dd></dl>
+<dl><dd><b>Comment</b>
+</dd><dd>Caution should be observed in using this function because it clears the cache used by the SQL driver and clears all SQL transactions. Hence if it is called between a FIND_FIRST and FIND_NEXT sequence in a search, a ‘function sequence error’ will occur on the next search call with fOpt set to FIND_NEXT.
+</dd></dl>
+<a name="DATA_MANAGEMENT_SYSTEM_DATABASE_ACCESS_FUNCTIONS" id="DATA_MANAGEMENT_SYSTEM_DATABASE_ACCESS_FUNCTIONS"></a><h3> <span class="mw-headline">DATA MANAGEMENT SYSTEM DATABASE ACCESS FUNCTIONS</span></h3>
+<dl><dt>DMS_openDatabase
+</dt></dl>
+<dl><dd>DMS_openDatabase is the primary function that establishes connection to the DMS databases through the initialization file identified by the argument szInifile.  Data source names, DBMS user IDs and pass words needed to connect are read from this file.  
+</dd><dd><b>Syntax</b>
+</dd><dd>long DMS_openDatabase(szInifile)
+</dd><dd><b>Arguments</b>
+</dd></dl>
+<dl><dd><table border="1" cellpadding="2">
+<tr>
+<td>Argument
+</td><td>Type
+</td><td>Use
+</td><td>Description
+</td></tr>
+<tr>
+<td>szInifile
+</td><td>Char *
+</td><td>Input
+</td><td>Pointer to a NULL terminated string containing the name of an existing initialization file.  This file must reside in the default WINDOWS directory.
+</td></tr></table></dd></dl>
+<dl><dd><b>Returns</b>
+</dd><dd>DMS_SUCCESS(1), DMS_ERROR(-1)
+</dd></dl>
+<dl><dt>DMS_closeDatabase
+</dt></dl>
+<dl><dd>DMS_closeDatabase closes connection to both Central and Local DMS databases.  The function also frees up allocated memory of  handlers associated with it.
+</dd></dl>
+<dl><dd><b>Syntax</b> (Procedure)
+</dd><dd>void <b>DMS_closeDatabase</b>()
+</dd></dl>
+<dl><dd><b>Arguments</b>
+</dd><dd>No arguments
+</dd></dl>
+<dl><dd><b>Returns</b>
+</dd><dd>No return value
+</dd></dl>
+<a name="INVENTORY_MANAGEMENT_SYSTEM_DATABASE_ACCESS_FUNCTIONS" id="INVENTORY_MANAGEMENT_SYSTEM_DATABASE_ACCESS_FUNCTIONS"></a><h3> <span class="mw-headline">INVENTORY MANAGEMENT SYSTEM DATABASE ACCESS FUNCTIONS</span></h3>
+<dl><dt>IMS_OpenDatabase
+</dt></dl>
+<dl><dd>IMS_OpenDatabase is the primary function that establishes a connection to the inventory database through the initialisation file identified by the argument szInifile.  Data source names, DBMS user IDs and passwords are read from this file.
+</dd></dl>
+<dl><dd><b>Syntax</b>
+</dd><dd>long IMS_OpenDatabase(szInifile)
+</dd><dd><b>Arguments</b>
+</dd></dl>
+<dl><dd><table border="1" cellpadding="2">
+<tr>
+<td>Argument
+</td><td>Type
+</td><td>Use
+</td><td>Description
+</td></tr>
+<tr>
+<td>szInifile
+</td><td>Char
+</td><td>Input
+</td><td>Pointer to a NULL terminated string containing the name of an existing initialisation file. This file must reside in the default WINDOWS directory.
+</td></tr></table></dd></dl>
+<dl><dd><b>Returns</b>
+</dd><dd>IMS_SUCCESS(1), IMS_ERROR(-1)
+</dd></dl>
+<p><br />
+</p>
+<dl><dt>IMS_CloseDatabase
+</dt></dl>
+<dl><dd>IMS_closeDatabase closes connection to the inventory database.  The function also frees up allocated memory used by the DLL.
+</dd></dl>
+<dl><dd><b>Syntax</b>
+</dd><dd>void IMS_closeDatabase()
+</dd></dl>
+<dl><dd><b>Arguments</b>
+</dd><dd>No arguments
+</dd></dl>
+<dl><dd><b>Returns</b>
+</dd><dd>No return value
+</dd></dl>
+<p><br />
+</p>
+<a name="USER_AND_INSTALLATION" id="USER_AND_INSTALLATION"></a><h3> <span class="mw-headline">USER AND INSTALLATION</span></h3>
+<dl><dt>GMS_getUser
+</dt></dl>
+<dl><dd>GMS_getUser will retrieve user information. The first argument is a pointer to a GMS_User structure (6.1.2g).  If the USER_ID element is not zero when the function is called then it returns the details for the corresponding user.  If it is zero then a user name must be supplied in the NAME element and the function returns details for the first user with the specified name if fOpt = FIND_FIRST or for the next available user with that name if fOpt = FIND_NEXT. Any call which fails to get user information returns GMS_NO_DATA.
+</dd></dl>
+<dl><dd><b>Syntax</b>
+</dd><dd>long GMS_getUser(user, fOpt)
+</dd></dl>
+<dl><dd><b>Arguments</b>
+</dd></dl>
+<dl><dd><table border="1" cellpadding="2">
+<tr>
+<td>Argument
+</td><td>Type
+</td><td>Use
+</td><td>Description
+</td></tr>
+<tr>
+<td>User
+</td><td>GMS_User*
+</td><td>input/output
+</td><td>Address of a GMS_User structure
+</td></tr>
+<tr>
+<td>fOpt
+</td><td>Long
+</td><td>input
+</td><td>Either FIND_FIRST  or FIND_NEXT
+</td></tr></table></dd></dl>
+<dl><dd><b>Returns</b>
+</dd><dd>GMS_SUCCESS, GMS_ERROR, GMS_NO_DATA
+</dd></dl>
+<dl><dd><b>Comments</b>
+</dd><dd>The principle of using GMS_getUser is almost the same as GMS_getAttribute.  If there is a problem accessing the database, the function will return GMS_ERROR.
+</dd></dl>
+<dl><dt>GMS_getInstallation
+</dt><dd>GMS_getInstallation will retrieve installation information.
+</dd></dl>
+<dl><dd><b>Syntax</b>
+</dd><dd>long GMS_getInstallation(instln,szDesc,nszDesc)
+</dd></dl>
+<dl><dd><b>Arguments</b>
+</dd></dl>
+<dl><dd><table border="1" cellpadding="2">
+<tr>
+<td>Argument
+</td><td>Type
+</td><td>Use
+</td><td>Description
+</td></tr>
+<tr>
+<td>instln
+</td><td>GMS_Installation*
+</td><td>input/ output
+</td><td>Address of a GMS_Installation structure to contain the installation parameters.
+</td></tr>
+<tr>
+<td>szDesc
+</td><td>char*
+</td><td>output
+</td><td>Address of a character variable to contain the installation description
+</td></tr>
+<tr>
+<td>nszDesc
+</td><td>Long
+</td><td>input
+</td><td>Maximum data size szDesc can hold (including the null terminator).
+</td></tr></table></dd></dl>
+<dl><dd><b>Returns</b>
+</dd><dd>GMS_ERROR, GMS_NO_DATA , GMS_SUCCESS
+</dd></dl>
+<dl><dd><b>Comments</b>
+</dd><dd>If the instno field of instln structure is zero then the function will return the current installation record from the local database. Otherwise, it will return the installation record corresponding to the value of the instno field. The function returns GMS_ERROR  if there is no local INSTALLATION table or if the installation record corresponding to INSTNO field is not found in the central database. Otherwise, it returns GMS_SUCCESS .
+</dd></dl>
+<dl><dt>GMS_addUser
+</dt></dl>
+<dl><dd>GMS_addUser adds a new user to the local USERS table. Details of the reference must be stored in appropriate elements of the user parameter. The next available user number will be returned in the USERID element. New data is not committed to the local database until the function GMS_commitData (6.8.1) has been called, and uncommitted data can be deleted from the buffer with the GMS_rollbackData function (6.8.2)
+</dd></dl>
+<dl><dd><b>Syntax</b>
+</dd><dd>long GMS_addUser(user,szEname,security)
+</dd></dl>
+<dl><dd><b>Arguments</b>
+</dd></dl>
+<dl><dd><table border="1" cellpadding="2">
+<tr>
+<td>Argument
+</td><td>Type
+</td><td>Use
+</td><td>Description
+</td></tr>
+<tr>
+<td>user
+</td><td>GMS_USERS *
+</td><td>input/output
+</td><td>Address of a GMS_BIBREFS structure
+</td></tr>
+<tr>
+<td>szEname
+</td><td>Char *
+</td><td>output
+</td><td>Address of NULL terminated string to place the encrypted user name
+</td></tr>
+<tr>
+<td>security
+</td><td>long
+</td><td>input
+</td><td>The level of security
+</td></tr></table></dd></dl>
+<dl><dd><b>Returns</b>
+</dd><dd>GMS_SUCCESS, GMS_ERROR , GMS_NO_ACCESS
+</dd></dl>
+<a name="GMS_DLL_FUNCTIONS" id="GMS_DLL_FUNCTIONS"></a><h2> <span class="mw-headline">GMS DLL FUNCTIONS</span></h2>
+<a name="SEARCH_FUNCTIONS" id="SEARCH_FUNCTIONS"></a><h3> <span class="mw-headline">SEARCH FUNCTIONS</span></h3>
+<dl><dt>GMS_findName
+</dt><dd>GMS_findName searches all names in the NAMES tables for the search string szNameSrch. If fOpt is FIND_FIRST the function  stores the name details of the first match of the germplasm record that has not been replaced in structure nameData and the NAME value in szName.  The germplasm details of the matched record are retrieved to the structure germData..  If fOpt is FIND_NEXT it stores the succeeding non-replaced match. 
+</dd></dl>
+<dl><dd><b>Syntax</b>
+</dd><dd>long <b>GMS_findName</b>(<i>szNameSrch, nameData, germData,  szName,  nszName, fOpt</i>)
+</dd></dl>
+<dl><dd><b>Arguments</b>
+</dd></dl>
+<dl><dd><table border="1">
+<tr>
+<td>Argument
+</td><td>Type
+</td><td>Use
+</td><td>Description
+</td></tr>
+<tr>
+<td>SzNameSrch
+</td><td>char *
+</td><td>input
+</td><td>Address of NULL terminated string containing the name search
+</td></tr>
+<tr>
+<td>NameData
+</td><td>GMS_NameData*
+</td><td>input/ output
+</td><td>Address of a GMS_NameData structure to contain the name data
+</td></tr>
+<tr>
+<td>GermData
+</td><td>GMS_Germplasm*
+</td><td>output
+</td><td>Address of a GMS_Germplasm Structure to contain Germplasm data for the retrieved germplasm
+</td></tr>
+<tr>
+<td>SzName
+</td><td>char *
+</td><td>output
+</td><td>Address of NULL terminated string to place the NAME
+</td></tr>
+<tr>
+<td>NszName
+</td><td>long
+</td><td>input
+</td><td>Maximum length of szName
+</td></tr>
+<tr>
+<td>Fopt
+</td><td>long
+</td><td>input
+</td><td>Either FIND_FIRST  or FIND_NEXT
+</td></tr></table></dd></dl>
+<dl><dd><b>Returns</b>
+</dd><dd>GMS_SUCCESS, GMS_ERROR, GMS_NO_DATA 
+</dd></dl>
+<dl><dd><b>Comments</b>
+</dd><dd>The target name can contain wildcards within the 128 characters of the string. ‘_’ match any character and a terminal ‘%’ matches any trailing characters.  On the first call to this function, fOpt should have a value of FIND_FIRST then call the function with fOpt set to FIND_NEXT repeatedly until it returns GMS_NO_DATA to find subsequent matching names. 
+</dd><dd>The function updates the name record based on the modification stored in the CHANGES table.
+</dd></dl>
+<dl><dd><b>Returns</b>
+</dd><dd>GMS_ERROR  if any internal ODBC function call fails.
+</dd></dl>
+<p><br />
+</p>
+<dl><dt>GMS_findName2
+</dt></dl>
+<dl><dd>GMS_findName2 searches for string matches to any of three forms of a specified name.  The forms of the name are the specified string, the string with all spaces removed and with name standardization applied (3.1.3, see also the GMS_standardName function 6.9.8).  The function returns name and germplasm data for search matches.  If the STATUS  field of the NameData argument is non-zero then only names of the specified status are returned.
+</dd></dl>
+<dl><dd><b>Note</b>
+<ul><li>This routine calls GMS_applyChanges (6.4.10) internally to update the germplasm record. 
+</li><li>The function updates the name record based on the modification stored in the CHANGES table.
+</li></ul>
+</dd></dl>
+<dl><dd><b>Syntax</b>
+</dd><dd>long <b>GMS_findName2</b> (<i>szNameSrch, nameData, germData, szName, nszName, fOpt</i>)
+</dd></dl>
+<dl><dd><b>Arguments</b>
+</dd><dd>As for GMS_findName except that a new argument Germ is included:
+</dd></dl>
+<dl><dd><table border="1">
+<tr>
+<td>Argument
+</td><td>Type
+</td><td>Use
+</td><td>Description
+</td></tr>
+<tr>
+<td>szNameSrch
+</td><td>char *
+</td><td>input
+</td><td>Address of NULL terminated string containing the name search
+</td></tr>
+<tr>
+<td>NameData
+</td><td>GMS_NameData*
+</td><td>input/ output
+</td><td>Address of a GMS_NameData structure to contain the name data
+</td></tr>
+<tr>
+<td>GermData
+</td><td>GMS_Germplasm*
+</td><td>output
+</td><td>Address of a GMS_Germplasm Structure to contain Germplasm data for the retrieved germplasm
+</td></tr>
+<tr>
+<td>SzName
+</td><td>char *
+</td><td>output
+</td><td>Address of NULL terminated string to place the NAME
+</td></tr>
+<tr>
+<td>NszName
+</td><td>long
+</td><td>input
+</td><td>Maximum length of szName
+</td></tr>
+<tr>
+<td>Fopt
+</td><td>long
+</td><td>input
+</td><td>Either FIND_FIRST  or FIND_NEXT
+</td></tr></table></dd></dl>
+<dl><dd><b>Comments</b>
+</dd><dd>This function works like GMS_findName but searches for matches to the supplied name szNameSrch with any internal spaces removed and after applying the name standardization algorithm (3.1.3 and 6.9.8).  Wildcards characters should appear within the first 128 characters of the strings with spaces removed and after name standardization, otherwise they will not be recognized as wildcards.
+</dd><dd>The function updates the name record based on the modification stored in the CHANGES table.
+</dd></dl>
+<p><br />
+</p>
+<dl><dt>GMS_findName3
+</dt></dl>
+<dl><dd>GMS_findName3 searches for a string in the NAMES table, both as specified and with any spaces removed, and returns name and germplasm data for search matches.  A value in TYPE or STATUS or LOCATION is specified, only those records matching the combination of values are returned.  Otherwise, it functions like GMS_findName. 
+</dd></dl>
+<dl><dd><b>Note</b>
+</dd><dd>This routine calls GMS_applyChanges (6.4.10) internally to update the germplasm record before returning.
+</dd></dl>
+<dl><dd><b>Syntax</b>
+</dd><dd>long <b>GMS_findName3</b> (<i>szNameSrch, nameData, germData, szName, nszName, fOpt</i>)
+</dd></dl>
+<dl><dd><b>Arguments</b>
+</dd><dd>As for GMS_findName except that a new argument GermData is included:
+</dd></dl>
+<dl><dd><table border="1">
+<tr>
+<td>Argument
+</td><td>Type
+</td><td>Use
+</td><td>Description
+</td></tr>
+<tr>
+<td>GermData
+</td><td>GMS_Germplasm*
+</td><td>output
+</td><td>Address of a GMS_Germplasm Structure to contain Germplasm data for the retrieved germplasm
+</td></tr></table></dd></dl>
+<dl><dd><b>Comments</b>
+</dd><dd>This function works like GMS_findName but also returns the germplasm record and also searches for matches to the supplied name szNameSrch with any internal spaces removed but does not apply the name standardization algorithm.
+</dd><dd>The function updates the name record based on the modification stored in the CHANGES table.
+</dd></dl>
+<dl><dd>Also see GMS_findName comments.
+</dd></dl>
+<dl><dd>GMS_ERROR if any internal ODBC function call fails.
+</dd></dl>
+<p><br />
+</p>
+<dl><dt>GMS_getDerivativeNeighbor
+</dt></dl>
+<dl><dd>GMS_getDerivativeNeighbor retrieves the germplasms within the derivative neighborhood of the given GID, m-step backward and n-step forward
+</dd></dl>
+<dl><dd><b>Syntax</b>
+</dd><dd>long <b>GMS_getDerivativeNeighbor</b> (<i>gid, MStep,NStep,idList,idLstSz, blnDH</i>)
+</dd></dl>
+<dl><dd><b>Arguments</b>
+</dd></dl>
+<dl><dd><table border="1">
+<tr>
+<td>Argument
+</td><td>Type
+</td><td>Use
+</td><td>Description
+</td></tr>
+<tr>
+<td>gid
+</td><td>long
+</td><td>input
+</td><td>The GID of the target germplasm
+</td></tr>
+<tr>
+<td>MStep
+</td><td>long
+</td><td>input
+</td><td>Number of step backward within the generation history  from the level of the target germplasm
+</td></tr>
+<tr>
+<td>NStep
+</td><td>long
+</td><td>input
+</td><td>Number of step forward within the generation history  from the level of the target germplasm
+</td></tr>
+<tr>
+<td>idList
+</td><td>long *
+</td><td>output
+</td><td>Array that will contain the germplasm within the specified level of derivative neighborhood
+</td></tr>
+<tr>
+<td>idLstSz
+</td><td>long *
+</td><td>input/output
+</td><td>As input, it is the maximum length of idList and as output, it is the number of germplasms retrieved if lower thatn the maximum length
+</td></tr>
+<tr>
+<td>blnDH
+</td><td>long
+</td><td>input
+</td><td>1 if Double Haploid germplasm is to be excluded as part of derivative neighborhood
+</td></tr></table></dd></dl>
+<p><br />
+</p>
+<dl><dt>GMS_getMgmntNeighbor
+</dt></dl>
+<dl><dd>GMS_getMgmntNeighbor retrieves the management neighbors of the given management group germplasm
+</dd></dl>
+<dl><dd><b>Syntax</b>
+</dd><dd>long <b>GMS_getMgmntNeighbor</b> (<i>mgid, data, name, szName, nszName, fopt</i>)
+</dd></dl>
+<dl><dd><b>Arguments</b>
+</dd></dl>
+<dl><dd><table border="1">
+<tr>
+<td>Argument
+</td><td>Type
+</td><td>Use
+</td><td>Description
+</td></tr>
+<tr>
+<td>mgid
+</td><td>long
+</td><td>input
+</td><td>The GID of the root of the management group
+</td></tr>
+<tr>
+<td>data
+</td><td>GMS_Germplasm*
+</td><td>output
+</td><td>The germplasm record of the management neighbor
+</td></tr>
+<tr>
+<td>name
+</td><td>GMS_NameData*
+</td><td>output
+</td><td>The name record of the management neighbor
+</td></tr>
+<tr>
+<td>szName
+</td><td>Char*
+</td><td>output
+</td><td>Array of characters for the preferred name of the management neighbor
+</td></tr>
+<tr>
+<td>nszName
+</td><td>long
+</td><td>input
+</td><td>length of the szName
+</td></tr>
+<tr>
+<td>fopt
+</td><td>long
+</td><td>input
+</td><td>0 if getting the first record, 1 for succeeding record
+</td></tr></table></dd></dl>
+<a name="DMS_DLL_Functions" id="DMS_DLL_Functions"></a><h2> <span class="mw-headline"> DMS DLL Functions </span></h2>
+<a name="List_DLL_Functions" id="List_DLL_Functions"></a><h2> <span class="mw-headline"> List DLL Functions </span></h2>
+<a name="IMS_DLL_Functions" id="IMS_DLL_Functions"></a><h2> <span class="mw-headline"> IMS DLL Functions </span></h2>
+<a name="LMS_DLL_Functions" id="LMS_DLL_Functions"></a><h2> <span class="mw-headline"> LMS DLL Functions </span></h2>
+<a name="BIBREF_DLL_Functions" id="BIBREF_DLL_Functions"></a><h2> <span class="mw-headline"> BIBREF DLL Functions </span></h2>
+<a name="Integration_of_Web_Services" id="Integration_of_Web_Services"></a><h2> <span class="mw-headline"> Integration of Web Services </span></h2>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 33/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+<div class="printfooter">
+Retrieved from "<a href="http://localhost../../../../articles/t/d/m/TDM_Windows_Application_Programming_Interface_c979.html">http://localhost../../../../articles/t/d/m/TDM_Windows_Application_Programming_Interface_c979.html</a>"</div>
+						<!-- end content -->
+						<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<div class="pBody">
+			<ul>
+	
+				 <li id="ca-nstab-main" class="selected"><a href="../../../../articles/t/d/m/TDM_Windows_Application_Programming_Interface_c979.html" title="View the content page [c]" accesskey="c">Page</a></li>
+				 <li id="ca-talk" class="new"><a href="../../../../articles/t/d/m/Talk%7ETDM_Windows_Application_Programming_Interface_df4f.html" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				 <li id="ca-viewsource"><a href="../../../../articles/t/d/m/TDM_Windows_Application_Programming_Interface_c979.html" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				 <li id="ca-history"><a href="../../../../articles/t/d/m/TDM_Windows_Application_Programming_Interface_c979.html" title="Past versions of this page [h]" accesskey="h">History</a></li>			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="../../../../articles/u/s/e/Special%7EUserLogin_94cd.html" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(../../../../misc/icis-wiki3.png);" href="../../../../index.html" title="Visit the main page [z]" accesskey="z"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class='generated-sidebar portlet' id='p-navigation'>
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="../../../../index.html" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
+				<li id="n-portal"><a href="../../../../articles/c/o/m/ICISWiki%7ECommunity_Portal_7449.html" title="About the project, what you can do, where to find things">Community portal</a></li>
+				<li id="n-recentchanges"><a href="../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+				<li id="n-help"><a href="../../../../articles/c/o/n/Help%7EContents_22de.html" title="The place to find out">Help</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="../../../../articles/s/e/a/Special%7ESearch_a8e5.html" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" title="Search ICISWiki [f]" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="../../../../articles/w/h/a/Special%7EWhatLinksHere_TDM_Windows_Application_Programming_Interface_70ee.html" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="../../../../articles/r/e/c/Special%7ERecentChangesLinked_TDM_Windows_Application_Programming_Interface_4e3f.html" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+<li id="t-specialpages"><a href="../../../../articles/s/p/e/Special%7ESpecialPages_f12b.html" title="List of all special pages [q]" accesskey="q">Special pages</a></li>
+				<li id="t-print"><a href="../../../../articles/t/d/m/TDM_Windows_Application_Programming_Interface_c979.html" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>				<li id="t-permalink"><a href="../../../../articles/t/d/m/TDM_Windows_Application_Programming_Interface_c979.html" title="Permanent link to this version of the page">Permanent link</a></li>			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="../../../../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" /></a></div>
+				<div id="f-copyrightico"><a href="../../../../../COPYING.html"><img src="/icis/skins/common/images/gnu-fdl.png" alt='GNU Free Documentation License 1.2' /></a></div>
+			<ul id="f-list">
+					<li id="credits">This page was last modified 07:10, 17 April 2007 by <a href="../../../../articles/a/p/o/User%7EAportugal_745d.html" title="User:Aportugal">Arllet Portugal</a>. Based on work by <a href="../../../../articles/s/y/a/User%7ESYates-SPARC_662e.html" title="User:SYates-SPARC">Shawn Yates</a>,&#32;<a href="../../../../articles/s/f/r/User%7ESfrade_e1c2.html" title="User:Sfrade">Sebastien Frade</a>&#32;and&#32;<a href="../../../../articles/t/m/e/User%7ETmetz_c741.html" title="User:Tmetz">Thomas Metz</a>.</li>
+					<li id="copyright">Content is available under <a href="../../../../../COPYING.html" class="external " title="../../../../../COPYING.html">GNU Free Documentation License 1.2</a>.</li>
+					<li id="privacy"><a href="../../../../articles/p/r/i/ICISWiki%7EPrivacy_policy_0cbf.html" title="ICISWiki:Privacy policy">Privacy policy</a></li>
+					<li id="about"><a href="../../../../articles/a/b/o/ICISWiki%7EAbout_53aa.html" title="ICISWiki:About">About ICISWiki</a></li>
+					<li id="disclaimer"><a href="../../../../articles/g/e/n/ICISWiki%7EGeneral_disclaimer_9129.html" title="ICISWiki:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+</div>
+
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served in 12.937 secs. --></body></html>

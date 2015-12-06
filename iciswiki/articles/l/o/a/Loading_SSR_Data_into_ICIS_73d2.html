@@ -1,0 +1,746 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta name="generator" content="MediaWiki 1.14.0" />
+		<meta name="keywords" content="Loading SSR Data into ICIS,TDM ICIS Workbook,TDM ICIS Workbook 5.4" />
+		<link rel="shortcut icon" href="../../../../misc/favicon.ico" />
+		<link rel="search" type="application/opensearchdescription+xml" href="../../../../../opensearch_desc.php" title="ICISWiki (en)" />
+		<link title="Creative Commons" type="application/rdf+xml" href="../../../../articles/l/o/a/Loading_SSR_Data_into_ICIS_73d2.html" rel="alternate meta" />
+		<link rel="copyright" href="../../../../../COPYING.html" />
+		<link rel="alternate" type="application/rss+xml" title="ICISWiki RSS Feed" href="http://localhost../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" />
+		<link rel="alternate" type="application/atom+xml" title="ICISWiki Atom Feed" href="http://localhost../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" />
+		<title>Loading SSR Data into ICIS - ICISWiki</title>
+		<link rel="stylesheet" href="../../../../skins/common/shared.css?195" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../../../../skins/common/commonPrint.css?195" type="text/css" media="print" />
+		<link rel="stylesheet" href="../../../../skins/monobook/main.css?195" type="text/css" media="screen" />
+		<!--[if lt IE 5.5000]><link rel="stylesheet" href="../../../../skins/monobook/IE50Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 5.5000]><link rel="stylesheet" href="../../../../skins/monobook/IE55Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 6]><link rel="stylesheet" href="../../../../skins/monobook/IE60Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 7]><link rel="stylesheet" href="../../../../skins/monobook/IE70Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7ECommon.css?195" type="text/css" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7EPrint.css?195" type="text/css" media="print" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7EMonobook.css?195" type="text/css" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/gen.css?195" type="text/css" />
+		<!--[if lt IE 7]><script type="text/javascript" src="../../../../skins/common/IEFixes.js?195"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+
+		<script type= "text/javascript">/*<![CDATA[*/
+		var skin = "monobook";
+		var stylepath = "../../../../skins";
+		var wgArticlePath = "../../../../$1";
+		var wgScriptPath = "../../../../..";
+		var wgScript = "/icis/index.php";
+		var wgVariantArticlePath = false;
+		var wgActionPaths = {};
+		var wgServer = "http://localhost";
+		var wgCanonicalNamespace = "";
+		var wgCanonicalSpecialPageName = false;
+		var wgNamespaceNumber = 0;
+		var wgPageName = "Loading_SSR_Data_into_ICIS";
+		var wgTitle = "Loading SSR Data into ICIS";
+		var wgAction = "view";
+		var wgArticleId = "2149";
+		var wgIsArticle = true;
+		var wgUserName = null;
+		var wgUserGroups = null;
+		var wgUserLanguage = "en";
+		var wgContentLanguage = "en";
+		var wgBreakFrames = false;
+		var wgCurRevisionId = "9437";
+		var wgVersion = "1.14.0";
+		var wgEnableAPI = true;
+		var wgEnableWriteAPI = true;
+		var wgSeparatorTransformTable = ["", ""];
+		var wgDigitTransformTable = ["", ""];
+		var wgRestrictionEdit = [];
+		var wgRestrictionMove = [];
+		/*]]>*/</script>
+
+		<script type="text/javascript" src="../../../../skins/common/wikibits.js?195"><!-- wikibits js --></script>
+		<!-- Head Scripts -->
+		<script type="text/javascript" src="../../../../raw/gen.js"><!-- site js --></script>
+	</head>
+<body class="mediawiki ltr ns-0 ns-subject page-Loading_SSR_Data_into_ICIS skin-monobook">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 id="firstHeading" class="firstHeading">Loading SSR Data into ICIS</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From ICISWiki</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>			<!-- start content -->
+			<table id="toc" class="toc" summary="Contents"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1"><a href="#Using_ICIS_Workbook"><span class="tocnumber">1</span> <span class="toctext">Using ICIS Workbook</span></a>
+<ul>
+<li class="toclevel-2"><a href="#Description_Sheet"><span class="tocnumber">1.1</span> <span class="toctext">Description Sheet</span></a></li>
+<li class="toclevel-2"><a href="#Observation_Sheet"><span class="tocnumber">1.2</span> <span class="toctext">Observation Sheet</span></a></li>
+<li class="toclevel-2"><a href="#Marker_Sheet"><span class="tocnumber">1.3</span> <span class="toctext">Marker Sheet</span></a></li>
+<li class="toclevel-2"><a href="#Protocol_Sheet"><span class="tocnumber">1.4</span> <span class="toctext">Protocol Sheet</span></a></li>
+<li class="toclevel-2"><a href="#Datasheet_Example_1"><span class="tocnumber">1.5</span> <span class="toctext">Datasheet Example 1</span></a></li>
+<li class="toclevel-2"><a href="#Datasheet_Example_2"><span class="tocnumber">1.6</span> <span class="toctext">Datasheet Example 2</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#Using_PostgreSQL_Scripts"><span class="tocnumber">2</span> <span class="toctext">Using PostgreSQL Scripts</span></a>
+<ul>
+<li class="toclevel-2"><a href="#Set_Variables"><span class="tocnumber">2.1</span> <span class="toctext">Set Variables</span></a></li>
+<li class="toclevel-2"><a href="#Create_Table_marker_txt"><span class="tocnumber">2.2</span> <span class="toctext">Create Table marker_txt</span></a></li>
+<li class="toclevel-2"><a href="#Get_Marker_and_Locus_from_the_Marker_txt_Table"><span class="tocnumber">2.3</span> <span class="toctext">Get Marker and Locus from the Marker_txt Table</span></a></li>
+<li class="toclevel-2"><a href="#Create_data_list_table"><span class="tocnumber">2.4</span> <span class="toctext">Create data_list table</span></a></li>
+<li class="toclevel-2"><a href="#Check_if_allele.2Fmvid_exist_in_the_gems_names_table"><span class="tocnumber">2.5</span> <span class="toctext">Check if allele/mvid exist in the gems_names table</span></a></li>
+<li class="toclevel-2"><a href="#Setup_the_study_factor"><span class="tocnumber">2.6</span> <span class="toctext">Setup the study factor</span></a></li>
+<li class="toclevel-2"><a href="#Setup_the_sample_factor"><span class="tocnumber">2.7</span> <span class="toctext">Setup the sample factor</span></a></li>
+<li class="toclevel-2"><a href="#Setup_the_mvid_factor"><span class="tocnumber">2.8</span> <span class="toctext">Setup the mvid factor</span></a></li>
+<li class="toclevel-2"><a href="#Update_data_n_table"><span class="tocnumber">2.9</span> <span class="toctext">Update data_n table</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#Using_GEMS_Prototype_interface"><span class="tocnumber">3</span> <span class="toctext">Using GEMS Prototype interface</span></a>
+<ul>
+<li class="toclevel-2"><a href="#Marker_List_subform"><span class="tocnumber">3.1</span> <span class="toctext">Marker List subform</span></a></li>
+<li class="toclevel-2"><a href="#Marker_Detector_Information_subform"><span class="tocnumber">3.2</span> <span class="toctext">Marker Detector Information subform</span></a></li>
+<li class="toclevel-2"><a href="#Molecular_Variant_Information_subform"><span class="tocnumber">3.3</span> <span class="toctext">Molecular Variant Information subform</span></a></li>
+<li class="toclevel-2"><a href="#Protocol_Information_subform"><span class="tocnumber">3.4</span> <span class="toctext">Protocol Information subform</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </script>
+<a name="Using_ICIS_Workbook" id="Using_ICIS_Workbook"></a><h2> <span class="mw-headline"><a href="../../../../articles/t/d/m/TDM_ICIS_Workbook_8da6.html" title="TDM ICIS Workbook">Using ICIS Workbook</a></span></h2>
+<p>The <a href="../../../../images/c/c7/SSR_template.zip" class="internal" title="SSR template.zip"> ICIS Workbook template</a>  for loading SSR marker data has 5 worksheets. 
+</p>
+<ol><li>Description Worksheet
+</li><li>Observation Worksheet
+</li><li>Marker Worksheet (new)
+</li><li>Protocol Worksheet (new)
+</li><li>Datasheet Worksheet (new)
+</li></ol>
+<a name="Description_Sheet" id="Description_Sheet"></a><h3> <span class="mw-headline">Description Sheet</span></h3>
+<p>The Description sheet contains the information about the experiment or the study. The description sheet has 5 parts (STUDY, CONDITION, FACTOR, VARIATE and CONSTANT). More information on creating workbook templates can be found in the <a href="../../../../articles/t/d/m/TDM_ICIS_Workbook_5.4_14a6.html" title="TDM ICIS Workbook 5.4">ICIS Workbook TDM</a>. The factors used in the example below are primer id, primer, genotype, DNA_GID, ACC_GID and the ALLELE_NO.  The value of the ALLELE_NO is the maximum number of different alleles found in the experiment. The VARIATES used are alleleid, allele, and size,height,volume for each allele.   
+</p><p><a href="../../../../articles/g/e/m/File%7EGEMS_SSR_Template_description.JPG_fac5.html" class="image" title="Image:GEMS_SSR_Template_description.JPG"><img alt="Image:GEMS_SSR_Template_description.JPG" src="../../../../images/8/87/GEMS_SSR_Template_description.JPG" width="640" height="480" border="0" /></a>
+</p>
+<a name="Observation_Sheet" id="Observation_Sheet"></a><h3> <span class="mw-headline">Observation Sheet</span></h3>
+<p>The sample Observation Sheet below shows all the factors and variates already filled out. Initially, the primer_id and the allele_id columns were blank. The values  in the primer_id and alleleid were retrieved from the GEMS database using the workbook tool for GEMS. The tool can be used to look for the primer_id of a given primer in the GEMS_NAMES table. An option to add new markers is also available.  If the user checks the "Register New Names Automatically", all new marker names that are found in the observation sheet but are not found in the database will be automatically added to the database. In adding new markers, the tool first looks for a Markers Sheet from among the existing worksheets in the workbook.  If the information for the new marker is in the Markers Sheet, the new marker will be added to the database. 
+</p><p><a href="../../../../articles/g/e/m/File%7EGEMS_SSR_Template_observation.JPG_80b9.html" class="image" title="Image:GEMS_SSR_Template_observation.JPG"><img alt="Image:GEMS_SSR_Template_observation.JPG" src="../../../../images/d/d3/GEMS_SSR_Template_observation.JPG" width="640" height="322" border="0" /></a>
+</p><p>To get coresponding marker IDs for Marker Names:
+</p>
+<ol><li>Select the first cell of the Column where the Marker IDs will be placed. In the example, the marker IDs will be placed in the Primer_ID column. 
+</li><li>Click on the Get Marker ID from the GEMS tools. 
+</li><li>The following dialog box will appear. Check the "Register New Names" checkbox to add new marker names that were found in the Observation Sheet but is not in the database. <br /><a href="../../../../articles/g/e/t/File%7EGet_markerID.JPG_224a.html" class="image" title="Image:Get_markerID.JPG"><img alt="Image:Get_markerID.JPG" src="../../../../images/7/7d/Get_markerID.JPG" width="351" height="289" border="0" /></a>
+</li><li>Select the column name where the marker names can be found. In the example, the marker names can be found in the Primer column.
+</li><li>Click Ok.
+</li></ol>
+<p>GEMS tool also has functions for retrieving Allele IDs from the GEMS database. This tool can also serve as a batch loading tool for markers.
+</p>
+<a name="Marker_Sheet" id="Marker_Sheet"></a><h3> <span class="mw-headline">Marker Sheet</span></h3>
+<p>The Markers Sheet is used to fill up the marker detector table. It is used to add new markers in the gems_marker_detector table. The Markers Sheet is an additional sheet for ICIS workbook. It is a plain worksheet which has the following columns: Marker, Protocol, motif, forward and reverse primers, minimum and maximum alleles. It should also have "Markers" as its worksheet name. All other columns in the Markers Sheet will be ignored. Data in the minimum and maximum alleles should be numeric.
+</p><p>If the user chooses to add/ register new found markers, the gems tool first looks for the Markers sheet if it exists, then looks for the marker information in the Markers Sheet. If the marker information is present in the Markers Sheet, the new marker will then be added in the GEMS database.  If a  primer/marker is in the observation sheet but is not in the marker sheet, the GEMS tool will return 0.
+</p><p><a href="../../../../articles/g/e/m/File%7EGEMS_SSR_Template_markers.JPG_e823.html" class="image" title="Image:GEMS_SSR_Template_markers.JPG"><img alt="Image:GEMS_SSR_Template_markers.JPG" src="../../../../images/6/62/GEMS_SSR_Template_markers.JPG" width="640" height="321" border="0" /></a>
+</p>
+<a name="Protocol_Sheet" id="Protocol_Sheet"></a><h3> <span class="mw-headline">Protocol Sheet</span></h3>
+<p>The protocol sample template below is specific to SSR. This template is divided into the following portions: PCR Recipe, PCR Conditions, Electrophoresis, Gel Recipe and Visualization. These portions are colored blue. Below each portion are the different components(in black) which can be characterized by property, scale and method (in green).
+</p><p>PCR condition has Initial denaturation, Annealing as components. Properties of denaturation component are temperature, duration and cycle. A Temperature can have Farenheit and Celsius as scales. 
+</p><p><a href="../../../../articles/g/e/m/File%7EGEMS_SSR_Template_protocol.JPG_275f.html" class="image" title="Image:GEMS_SSR_Template_protocol.JPG"><img alt="Image:GEMS_SSR_Template_protocol.JPG" src="../../../../images/b/b1/GEMS_SSR_Template_protocol.JPG" width="410" height="480" border="0" /></a>
+</p>
+<a name="Datasheet_Example_1" id="Datasheet_Example_1"></a><h3> <span class="mw-headline">Datasheet Example 1</span></h3>
+<p>A datasheet with this format can be imported to the Observation worksheet using the Import Genotype tool for GEMS.
+<a href="../../../../articles/g/e/m/File%7EGEMS_SSR_Template_datasheet1.JPG_b87a.html" class="image" title="Image:GEMS_SSR_Template_datasheet1.JPG"><img alt="Image:GEMS_SSR_Template_datasheet1.JPG" src="../../../../images/5/52/GEMS_SSR_Template_datasheet1.JPG" width="640" height="604" border="0" /></a>
+</p>
+<a name="Datasheet_Example_2" id="Datasheet_Example_2"></a><h3> <span class="mw-headline">Datasheet Example 2</span></h3>
+<p><a href="../../../../articles/g/e/m/File%7EGEMS_SSR_Template_datasheet2.JPG_fb9f.html" class="image" title="Image:GEMS_SSR_Template_datasheet2.JPG"><img alt="Image:GEMS_SSR_Template_datasheet2.JPG" src="../../../../images/7/74/GEMS_SSR_Template_datasheet2.JPG" width="640" height="604" border="0" /></a>
+</p>
+<a name="Using_PostgreSQL_Scripts" id="Using_PostgreSQL_Scripts"></a><h2> <span class="mw-headline"> Using PostgreSQL Scripts </span></h2>
+<p>The script described below is designed to load SSR data from the GCP template worksheet.
+</p>
+<a name="Set_Variables" id="Set_Variables"></a><h3> <span class="mw-headline">Set Variables</span></h3>
+<ul><li>Name of Files -- The following variables were used as variables to contain the filenames (with complete path) of the marker.txt and data_list.txt file
+</li></ul>
+<pre>\set marker_file '\'/SSR/tables/markers.txt''
+\set data_file '\'/SSR/tables/data_list.txt''
+</pre>
+<ul><li>STUDY table - The variables were used to contain values from the experiment.txt file. This variables is associated with the study factor.
+</li></ul>
+<pre>\set sname '\'SSR\''
+\set pmkey 0
+\set title '\'SSR data\''
+\set objectiv '\' Genotyping study\''
+\set investid 0
+\set stype '\'E\''
+\set sdate 20040601
+\set edate 20060413
+</pre>
+<ul><li>GEMS_NAMES table -- The location and date variables refers to the location and date when the name (markername or allele name) was assigned.
+</li></ul>
+<pre>\set gnlocn 0
+\set gndate 20040301 
+</pre>
+<ul><li>GEMS_MARKER_DETECTOR -- Since this is specific to the SSR template, marker detector type variable is set to SSR
+</li></ul>
+<pre>\set matype '\'SSR\'' 
+</pre>
+<ul><li>GEMS_MV -- Molecular Variant type is set to 'allele'
+</li></ul>
+<pre>\set mvtype '\'allele\''
+</pre>
+<a name="Create_Table_marker_txt" id="Create_Table_marker_txt"></a><h3> <span class="mw-headline">Create Table marker_txt</span></h3>
+<ul><li>Create the marker_txt table. It will contain the data from the marker_version1.txt. Field types of this table must match the field types of each column in th marker_version1.txt. 
+</li></ul>
+<pre>CREATE TABLE marker_txt
+( 
+  marker varchar(50) NOT NULL,
+  chromosome varchar(10),
+  map varchar(20),
+  position_cm float8,
+  motif varchar(20),
+  forward_primer varchar(50),
+  reverse_primer varchar(50),
+  annealing_tm int8,
+  min_allele float8,
+  max_allele int8,
+  accession_genbank varchar(20),
+  reference varchar(255)
+)
+</pre>
+<ul><li>COPY data from the data file into the newly created marker_txt table. Null values were represented by a <i>.</i>
+</li></ul>
+<pre>copy "marker_txt" from&nbsp;:marker_file WITH NULL AS 
+</pre>
+<a name="Get_Marker_and_Locus_from_the_Marker_txt_Table" id="Get_Marker_and_Locus_from_the_Marker_txt_Table"></a><h3> <span class="mw-headline">Get Marker and Locus from the Marker_txt Table</span></h3>
+<ul><li>Call the check_marker_name() function use the variables set above
+</li></ul>
+<pre>SELECT check_marker_name(:gnlocn,&nbsp;:gndate,&nbsp;:matype);  
+</pre>
+<hr />
+<p><b>Function: check_marker_name(int4, int4, text)</b><br />Loops thru the marker_txt table and checks if markers from the Marker_txt table is also in the GEMS_NAMES table. If it does not exist, add to GEMS_NAMES table and GEMS_MARKER_DETECTOR table
+</p>
+<hr />
+<pre>CREATE OR REPLACE FUNCTION check_marker_name(int4, int4, text)
+  RETURNS int4 AS
+$BODY$
+DECLARE
+	var_gnlocn ALIAS FOR $1;
+	var_gndate ALIAS FOR $2;
+	var_matype ALIAS FOR $3;
+	change INT&nbsp;;
+	new_gnid INT;
+	rec_marker RECORD;
+	name_record RECORD;
+	max_gnid INT;
+	max_mdid INT;
+BEGIN
+	change:=0;
+	select max(gnid) into max_gnid from gems_names;
+	select max(mdid) into max_mdid from gems_marker_detector;
+	FOR rec_marker 
+		IN SELECT * FROM marker_txt  LOOP  
+			change:= change+1;
+			SELECT into name_record * FROM marker_txt,gems_names 
+                       WHERE gems_names.gnval = marker_txt.marker and gems_names.gntype = 2  
+                       and  marker_txt.marker = rec_marker.marker;
+			IF NOT FOUND THEN
+				BEGIN
+				   max_gnid:=max_gnid+1;
+				   max_mdid:=max_mdid+1;
+				   INSERT INTO gems_names (gnid, gobjtype, gobjid, gntype, gnstat, 
+                                                          gnuid, gnval, gnlocn, gndate,gnref)
+				   VALUES (max_gnid, 'gems_marker', max_mdid, 2, 0, 0, 
+                                          rec_marker.marker, var_gnlocn, var_gndate,0);
+				   INSERT INTO gems_marker_detector (mdid,matype,fprimer,rprimer,lmdid,
+                                                                    mauid,maref,minallele,maxallele)
+                                          VALUES (max_mdid,var_matype,rec_marker.forward_primer,  
+                                          rec_marker.reverse_primer, 0,0,rec_marker.reference, 
+                                          rec_marker.min_allele,rec_marker.max_allele);                                                 
+			        END;
+                       END IF;
+ 	 	END LOOP;
+ RETURN change&nbsp;;
+ END;
+ $BODY$
+ LANGUAGE 'plpgsql' VOLATILE;
+</pre>
+<p><br />
+</p>
+<ul><li>Call update locus Function
+</li></ul>
+<pre>Select update_locusid()
+</pre>
+<hr />
+<p>FUNCTION&nbsp;: update_locusid()<br />
+This function gets all distinct combination of map,choromosome and position from the marker_txt table.<br />
+Each combination will be checked against the gems_locus table. The combination will be added to the gems_locus if it  does not exist in the table.
+</p>
+<hr />
+<pre>CREATE OR REPLACE FUNCTION update_locusid() RETURNS int4 AS
+$BODY$
+DECLARE
+       min_locusid INT; 
+       rec RECORD;
+BEGIN
+       SELECT min(locusid)-1 INTO min_locusid FROM gems_locus;
+       FOR rec IN 
+       SELECT DISTINCT chromosome,map, position_cm FROM marker_txt LOOP
+              INSERT INTO gems_locus( locusid, pos, chr,map ) 
+                             VALUES (min_locusid, rec.position_cm,rec.chromosome, rec.map);
+              min_locusid&nbsp;:=min_locusid -1;
+       END LOOP;
+RETURN min_locusid;
+END;
+$BODY$
+LANGUAGE 'plpgsql' VOLATILE;
+</pre>
+<a name="Create_data_list_table" id="Create_data_list_table"></a><h3> <span class="mw-headline">Create data_list table</span></h3>
+<ul><li>Create the data_list table. The data_list table will contain data from the data_list file
+</li></ul>
+<pre>CREATE TABLE data_list
+(
+  sampleid int8 NOT NULL,
+  accession int8 NOT NULL,
+  marker varchar(50) NOT NULL,
+  gel_run varchar(50),
+  dye int8,
+  allele int8,
+  size float8,
+  quality int8,
+  height varchar,
+  volume int8,
+  amount float8,
+)
+</pre>
+<p><br />
+</p>
+<ul><li>Copy data from the data_list file into the newly created data_list table
+</li></ul>
+<pre>copy "data_list" from&nbsp;:data_file WITH NULL AS <i>&nbsp;;</i>
+</pre>
+<ul><li>Add ounitid, entrynumber, mdid, locusid, mvid, snlevel and mvlevel in the data_list table
+</li></ul>
+<pre>ALTER TABLE data_list ADD COLUMN ounitid int NOT NULL DEFAULT 0;
+ALTER TABLE data_list ADD COLUMN entrynumber serial;
+ALTER TABLE data_list ADD COLUMN snlevel int DEFAULT 0;
+ALTER TABLE data_list ADD COLUMN mdid int DEFAULT 0;
+ALTER TABLE data_list ADD COLUMN mvid int DEFAULT 0;
+ALTER TABLE data_list ADD COLUMN locusdi int DEFAULT 0;
+ALTER TABLE data_list ADD COLUMN mvlevel int DEFAULT 0;
+</pre>
+<p><br />
+</p>
+<ul><li>Update the mdid column in the data_list  table
+</li></ul>
+<pre>UPDATE data_list set mdid = gems_names.gobjid from gems_names 
+where gems_names.gnval = data_list.marker and gems_names.gntype = 2&nbsp;;
+</pre>
+<ul><li>Update the locusid column in the data_list table
+</li></ul>
+<pre>UPDATE data_list SET locusid = 
+                            (SELECT DISTINCT locusid 
+                                FROM gems_locus,(SELECT data_list.mdid, marker_txt.marker, 
+                                                 marker_txt.chromosome, marker_txt.position_cm,
+                                                 marker_txt.map 
+                                                 FROM data_list LEFT join marker_txt 
+                                                 ON data_list.marker = marker_txt.marker)as x 
+                                WHERE x.position_cm = gems_locus.pos 
+                                      and x.chromosome = gems_locus.chr 
+                                      and x.map =gems_locus.map 
+                                      and data_list.marker = x.marker)
+</pre>
+<a name="Check_if_allele.2Fmvid_exist_in_the_gems_names_table" id="Check_if_allele.2Fmvid_exist_in_the_gems_names_table"></a><h3> <span class="mw-headline">Check if allele/mvid exist in the gems_names table</span></h3>
+<ul><li>Call check allele function 
+</li></ul>
+<pre>SELECT check_allele_name(:locusid,&nbsp;:mvtype);
+</pre>
+<hr />
+<p>FUNCTION&nbsp;: check_allele_name(text)
+This function checks if the allele value in the allele column in the data_list table exists in the GEMS_NAMES table. If it does not exist, a new mvid value will be assigned and will be inserted to the GEMs_NAMES and GEMS_MV table. 
+</p>
+<hr />
+<pre>CREATE OR REPLACE FUNCTION check_allele_name(text)
+  RETURNS int4 AS
+$BODY$
+DECLARE
+ 	  var_mvtype ALIAS FOR $2;
+         change INT&nbsp;; 
+         new_gnid INT; 
+         name_record RECORD; 
+         max_gnid INT;
+         max_mvid INT;
+ BEGIN
+	  change:=0;
+         select max(gnid) into max_gnid from gems_names;
+         select max(mvid) into max_mvid from gems_mv;
+         FOR rec_allele 
+                IN SELECT mdid,locusid,allele FROM data_list  LOOP
+                 change:= change+1;
+                 SELECT gems_names.gnval, gems_mv.mvid, gems_mv.mdid INTO name_record
+                    FROM gems_names INNER JOIN gems_mv ON gems_names.gobjid=gems_mv.mvid
+                    WHERE gems_names.gntype=3 and gems_mv.mdid = rec_allele.mdid 
+                          and gems_names.gnval = rec_allele.allele;
+                 IF NOT FOUND THEN
+                      BEGIN
+                      max_gnid:=max_gnid+1;
+                      max_mvid:=max_mvid+1;
+                      INSERT INTO gems_names(gnid, gobjtype,objid,gntype,gnstat,gnuid,gnval,gnlocn,gndate,gnref)
+                                     VALUES (max_gnid,'gems_mv',max_mvid,3,0,0,rec_allele.allele,0,0,0);
+                      INSERT INTO gems_mv(mvid, locusid, mvtype,mvuid,mdid,lmvid,mvref,mwt) 
+                                  VALUES (max_mvid,rec_allele.locusid,var_mvtype,0,rec_allele.mdid,0,0,0);
+                      END;
+                  END IF;
+         END LOOP;
+RETURN change&nbsp;;
+END;
+$BODY$
+  LANGUAGE 'plpgsql' VOLATILE;
+</pre>
+<ul><li>Update the mvid column in the data_list table
+</li></ul>
+<pre>Select update_datalistmvid();
+</pre>
+<hr />
+<p>FUNCTION&nbsp;: update_datalistmvid()
+This function updates the mvid column in the data_list table.  
+It looks for the mvid value of the allele in the  gems_names.
+</p>
+<hr />
+<pre>CREATE OR REPLACE FUNCTION update_datalistmvid()
+  RETURNS int4 AS
+ $BODY$ 
+ DECLARE 
+       rec RECORD;
+       change INT;
+ BEGIN
+       change:=0;
+       FOR rec 
+       IN SELECT entrynumber, mdid, allele FROM data_list  LOOP  
+               UPDATE data_list SET mvid =
+                               (SELECT x.mvid 
+                                   FROM
+                                       (SELECT distinct a.gnval as gnval,b.mvid as mvid, b.mdid as mdid 
+                                               FROM gems_names as a, gems_mv as b 
+                                               WHERE a.gobjid = b.mvid  and a.gntype = 3) as x
+                                   WHERE x.gnval = rec.allele and x.mdid = rec.mdid ) 
+               WHERE data_list.entrynumber = rec.entrynumber;
+       END LOOP;
+       RETURN change&nbsp;;
+END;
+$BODY$
+  LANGUAGE 'plpgsql' VOLATILE;
+</pre>
+<a name="Setup_the_study_factor" id="Setup_the_study_factor"></a><h3> <span class="mw-headline">Setup the study factor</span></h3>
+<ul><li>Call the setup study function
+</li></ul>
+<pre>SELECT setup_study(:sname);
+</pre>
+<hr />
+<p>FUNCTION&nbsp;: setup_study(text)<br />
+This function sets the study factor<br />
+Parameter&nbsp;: Study Name<br />
+Output&nbsp;: minimum represno
+This function sets the study factor.  The  study name is inserted as a record in the factor table with its trait,scale and method id. The study is then defined in the level_c, effect and oindex tables. Variates for the study is also defined in the variates table.  All observation units of the study should also be defined in the oindex table. All observation units have the same factorid and levelno as the study.
+</p>
+<hr />
+<pre>CREATE OR REPLACE FUNCTION setup_study(text)
+  RETURNS int4 AS
+$BODY$
+DECLARE 
+       var_sname ALIAS FOR $1;
+       var_studyid INT&nbsp;;
+       min_factorid INT;
+       min_labelid INT;
+       min_levelno INT;
+       min_represno INT;
+       min_effectid INT;
+       min_ounitid INT;
+       rec_stdy RECORD;
+       name_record RECORD;
+BEGIN
+       SELECT studyid INTO var_studyid FROM study where sname = var_sname; 
+       SELECT min(factorid)-1 INTO min_factorid FROM factor&nbsp;;
+       SELECT min(labelid)-1 INTO min_labelid FROM factor;
+       SELECT min(levelno)-1 INTO min_levelno FROM level_c;
+       SELECT min(represno)-1 INTO min_represno FROM effect;
+       SELECT min(effectid)-1 INTO min_effectid FROM effect;
+       SELECT min(ounitid)-1 INTO min_ounitid FROM oindex; 
+       
+       --define the study in the FACTOR  table
+       INSERT INTO factor ( labelid, factorid, fname, studyid, traitid, scaleid,tmethid,ltype )
+                VALUES (min_labelid , min_factorid, 'STUDY' , var_studyid , 201 , 134 , 123, 'C');
+       
+       --define the study in the LEVEL_C table
+       INSERT INTO LEVEL_C ( labelid, factorid, levelno, lvalue ) 
+                    VALUES (min_labelid , min_factorid , min_levelno , var_sname);
+       
+       -define the study in the EFFECT table
+       INSERT INTO effect ( represno, factorid, effectid ) 
+                  VALUES (min_represno , min_factorid, min_effectid);
+                                                                                                                       
+       --define the observation units for the study effect in the OINDEX table
+       INSERT INTO oindex ( ounitid, factorid, levelno, represno ) 
+                   VALUES (min_ounitid, min_factorid, min_levelno, min_represno);
+       
+       --define the amount/frequency variate in the VARIATE table
+       INSERT INTO variate ( variatid, vname, studyid, vtype, traitid, scaleid, tmethid,dtype )
+                 SELECT min(variatid)-1, 'FREQ', var_studyid, 'MV', 501, 508, 508, 'N' FROM variate;
+       
+       --insert studyid in the oindex table
+       FOR rec_stdy IN 
+           SELECT entrynumber FROM data_list LOOP 
+               BEGIN
+               INSERT INTO oindex (ounitid, factorid, levelno, represno)
+                           VALUES (min_ounitid-1, min_factorid,min_levelno, min_represno);
+               
+               -- update the ounitid column in the data_list table 
+               UPDATE data_list SET ounitid = min_ounitid where entrynumber=rec_stdy.entrynumber;
+               min_ounitid:= min_ounitid - 1;
+               END;
+           END LOOP;
+RETURN min_represno;
+END;
+$BODY$
+LANGUAGE 'plpgsql' VOLATILE;
+</pre>
+<a name="Setup_the_sample_factor" id="Setup_the_sample_factor"></a><h3> <span class="mw-headline">Setup the sample factor</span></h3>
+<p>Call the setup sample factor function
+</p>
+<pre>SELECT setup_sample_factor(:sname);
+</pre>
+<hr />
+<p>FUNCTION&nbsp;: setup_sample_factor(text)<br />
+Parameter&nbsp;: Study Name<br />
+Output&nbsp;: minimum represno<br />
+This Function sets the sample factor of the study.  An entrynumber was defined to create a unique identifier for each sample.  Entrynumber was used as the factor while the sampleid and accession were used as labels of the factor entrynumber.  When inserted into the factor table, entrynumber, sampleid and accession share the same factorid but with different labelids, trait, scale and method ids.  &lt;br.
+The sample factor is also defined in the level_n factor. While the sample factor is being inserted in the level_n table, the snlevel column of the data_list table is being updated.  The snlevel is equal to the levelno of the sample unit factor.  The ounitid, snlevel and factorid of each sample unit will then be inserted into the oindex  table.<br />
+The ounitid is the same as the ounitid used in the definition of the study factor.
+</p>
+<hr />
+<pre>CREATE OR REPLACE FUNCTION setup_sample_factor(text) RETURNS int4 AS 
+$BODY$
+DECLARE 
+       var_sname ALIAS FOR $1;
+       var_studyid INT;
+       min_factorid INT;
+       min_labelid INT;
+       min_levelno INT;
+       min_represno INT;
+       min_ounitid INT;
+       e_labelid INT;
+       s_labelid INT;
+       a_labelid INT;
+       rec_entry RECORD;
+BEGIN
+       --setup the sample factor in the FACTOR table
+       SELECT min(factorid)-1 INTO min_factorid FROM factor;
+       SELECT min(labelid)-1 INTO min_labelid FROM factor;
+       SELECT min(levelno)-1 INTO min_levelno FROM level_n;
+       SELECT min(represno) INTO min_represno FROM effect;
+       e_labelid&nbsp;:= min_labelid;
+       s_labelid&nbsp;:= e_labelid -1;
+       a_labelid&nbsp;:= s_labelid -1;
+       SELECT studyid INTO var_studyid FROM study WHERE sname = var_sname;
+       SELECT min(ounitid)-1 INTO min_ounitid FROM OINDEX;
+       INSERT INTO factor ( labelid, factorid, fname, studyid, traitid, scaleid, tmethid,ltype ) 
+                   VALUES (e_labelid, min_factorid, 'ENTRYNUMBER' , var_studyid, 251, 103, 17, 'N');
+       INSERT INTO factor ( labelid, factorid, fname, studyid, traitid, scaleid, tmethid,ltype ) 
+                   VALUES (s_labelid, min_factorid, 'SAMPLEID' , var_studyid, 212, 219, 17, 'N');
+       INSERT INTO factor ( labelid, factorid, fname, studyid, traitid, scaleid, tmethid,ltype ) 
+                   VALUEs (a_labelid, min_factorid, 'ACCESSION' , var_studyid, 251, 97, 17, 'N');
+       --insert entrynumber, sampleid and accession in the level_n table 
+       FOR rec_entry IN
+            SELECT entrynumber,sampleid,accession from data_list LOOP
+                INSERT INTO level_n ( labelid, factorid, levelno, lvalue )
+                             VALUES (e_labelid, min_factorid,min_levelno, rec_entry.entrynumber);
+                INSERT INTO level_n ( labelid, factorid, levelno, lvalue )
+                             VALUES (s_labelid, min_factorid,min_levelno, rec_entry.sampleid);
+                INSERT INTO level_n ( labelid, factorid, levelno, lvalue )
+                             VALUES (a_labelid, min_factorid,min_levelno, rec_entry.accession);
+                UPDATE data_list SET snlevel = min_levelno where entrynumber = rec_entry.entrynumber;
+                min_levelno:= min_levelno-1;
+           END LOOP;
+       
+       INSERT INTO oindex (ounitid, factorid, levelno, represno)
+    SELECT ounitid, min_factorid, snlevel, min_represno from data_list;
+ RETURN min_represno;
+ END;
+ $BODY$
+LANGUAGE 'plpgsql' VOLATILE;
+</pre>
+<a name="Setup_the_mvid_factor" id="Setup_the_mvid_factor"></a><h3> <span class="mw-headline">Setup the mvid factor</span></h3>
+<p>Call setup mvid factor function
+</p>
+<pre>SELECT setup_mvid_factor(:sname);
+</pre>
+<hr />
+<p>FUNCTION&nbsp;: setup_mvid_factor(text) <br />
+Parameter: Study Name
+Output: Minimum represno
+This function sets the sample factor.
+</p>
+<hr />
+<pre>CREATE OR REPLACE FUNCTION setup_mvid_factor(text)RETURNS int4 AS
+$BODY$ 
+DECLARE
+       var_sname ALIAS FOR $1;
+       var_studyid INT;
+       change INT&nbsp;;
+       min_factorid INT;
+       min_labelid INT;
+       min_levelno INT;
+       min_represno INT;
+       min_ounitid INT;
+       rec_mvid RECORD;
+BEGIN
+     SELECT studyid INTO var_studyid FROM study where sname = var_sname;
+     SELECT min(factorid)-1 INTO min_factorid FROM factor;
+     SELECT min(labelid)-1 INTO min_labelid FROM factor;
+     SELECT min(levelno)-1 INTO min_levelno FROM level_n;
+     SELECT min(represno) INTO min_represno FROM effect;
+     
+     --setup the MVID factor in the FACTOR table
+     INSERT INTO factor ( labelid, factorid, fname, studyid, traitid, scaleid, tmethid, ltype ) 
+                  VALUES(min_labelid, min_factorid, 'MVID' , var_studyid, 501, 503, 17, 'N');
+     INSERT INTO factor ( labelid, factorid, fname, studyid, traitid, scaleid, tmethid, ltype 
+                  VALUES(min_labelid-1, min_factorid, 'ALLELE' , var_studyid, 501, 503, 17, 'N');
+     FOR rec_mvid IN 
+           SELECT distinct mvid, allele FROM data_list  LOOP
+                  INSERT INTO level_n ( labelid, factorid, levelno, lvalue )
+                               VALUES (min_labelid, min_factorid,min_levelno, rec_mvid.mvid);
+                  UPDATE data_list SET mvlevel = min_levelno where mvid = rec_mvid.mvid;
+                  INSERT INTO level_n ( labelid, factorid, levelno, lvalue )
+                               VALUES (min_labelid-1, min_factorid,min_levelno, rec_mvid.allele);
+                  min_levelno&nbsp;:= min_levelno-1;
+           END LOOP;
+     
+     INSERT INTO oindex (ounitid, factorid, levelno, represno)
+            SELECT ounitid, min_factorid, mvlevel, min_represno from data_list;
+ RETURN min_represno;
+END; 
+$BODY$
+LANGUAGE 'plpgsql' VOLATILE;
+</pre>
+<a name="Update_data_n_table" id="Update_data_n_table"></a><h3> <span class="mw-headline">Update data_n table </span></h3>
+<p>Call update data Function
+</p>
+<pre>SELECT update_data_n ();
+</pre>
+<hr />
+<p>FUNCTION&nbsp;:  update_data_n()
+This function inserts the variate (amount) into the DATA_N table
+</p>
+<hr />
+<pre>CREATE OR REPLACE FUNCTION update_data_n() RETURNS int4 AS
+$BODY$ 
+DECLARE
+       min_variatid INT;
+BEGIN
+       SELECT min(variatid)INTO min_variatid FROM variate;
+       INSERT INTO data_n ( ounitid, dvalue, variatid ) 
+              SELECT ounitid, amount, min_variatid from data_list;
+       RETURN min_variatid;
+END;
+$BODY$
+LANGUAGE 'plpgsql' VOLATILE;
+</pre>
+<a name="Using_GEMS_Prototype_interface" id="Using_GEMS_Prototype_interface"></a><h2> <span class="mw-headline">Using GEMS Prototype interface</span></h2>
+<p>GEMS Interface was developed using Microsoft Access 2003. The prototype has 4 subforms which shows different information from the database. 
+</p><p><a href="../../../../articles/g/e/m/File%7EGEMS_main_screen.JPG_9070.html" class="image" title="image:GEMS_main_screen.JPG"><img alt="image:GEMS_main_screen.JPG" src="../../../../images/b/ba/GEMS_main_screen.JPG" width="645" height="616" border="0" /></a>
+</p>
+<a name="Marker_List_subform" id="Marker_List_subform"></a><h4> <span class="mw-headline">Marker List subform</span></h4>
+<p>The Marker List Subform contains all existing Marker Detector names from the GEMS database.
+</p><p><a href="../../../../articles/m/a/r/File%7EMarker_list_subform.JPG_d94d.html" class="image" title="image:Marker_list_subform.JPG"><img alt="image:Marker_list_subform.JPG" src="../../../../images/3/37/Marker_list_subform.JPG" width="193" height="243" border="0" /></a>
+</p>
+<a name="Marker_Detector_Information_subform" id="Marker_Detector_Information_subform"></a><h4> <span class="mw-headline">Marker Detector Information subform</span></h4>
+<p>The Marker Detector Information subform contains information about the Marker Detector such as it's name, primers and reference in naming the marker detector.  At the right side of the subform is another subform which contains the name of the Marker or Locus (and its map location) associated with the Marker Detector. 
+</p><p><a href="../../../../articles/m/a/r/File%7EMarker_info_subform.JPG_7764.html" class="image" title="image:Marker_info_subform.JPG"><img alt="image:Marker_info_subform.JPG" src="../../../../images/8/87/Marker_info_subform.JPG" width="449" height="179" border="0" /></a>
+</p>
+<a name="Molecular_Variant_Information_subform" id="Molecular_Variant_Information_subform"></a><h4> <span class="mw-headline">Molecular Variant Information subform</span></h4>
+<p>The Molecular Variant Information subform shows information on all existing molecular variants of a given marker.
+</p><p><a href="../../../../articles/m/v/_/File%7EMv_info_subform.JPG_c108.html" class="image" title="image:mv_info_subform.JPG"><img alt="image:mv_info_subform.JPG" src="../../../../images/7/70/Mv_info_subform.JPG" width="455" height="156" border="0" /></a>
+</p>
+<a name="Protocol_Information_subform" id="Protocol_Information_subform"></a><h4> <span class="mw-headline">Protocol Information subform</span></h4>
+<p><a href="../../../../articles/p/r/o/File%7EProtocol_info_subform.JPG_6c22.html" class="image" title="image:Protocol_info_subform.JPG"><img alt="image:Protocol_info_subform.JPG" src="../../../../images/8/8c/Protocol_info_subform.JPG" width="452" height="196" border="0" /></a>
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 59/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+<div class="printfooter">
+Retrieved from "<a href="http://localhost../../../../articles/l/o/a/Loading_SSR_Data_into_ICIS_73d2.html">http://localhost../../../../articles/l/o/a/Loading_SSR_Data_into_ICIS_73d2.html</a>"</div>
+						<!-- end content -->
+						<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<div class="pBody">
+			<ul>
+	
+				 <li id="ca-nstab-main" class="selected"><a href="../../../../articles/l/o/a/Loading_SSR_Data_into_ICIS_73d2.html" title="View the content page [c]" accesskey="c">Page</a></li>
+				 <li id="ca-talk" class="new"><a href="../../../../articles/l/o/a/Talk%7ELoading_SSR_Data_into_ICIS_8dea.html" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				 <li id="ca-viewsource"><a href="../../../../articles/l/o/a/Loading_SSR_Data_into_ICIS_73d2.html" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				 <li id="ca-history"><a href="../../../../articles/l/o/a/Loading_SSR_Data_into_ICIS_73d2.html" title="Past versions of this page [h]" accesskey="h">History</a></li>			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="../../../../articles/u/s/e/Special%7EUserLogin_94cd.html" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(../../../../misc/icis-wiki3.png);" href="../../../../index.html" title="Visit the main page [z]" accesskey="z"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class='generated-sidebar portlet' id='p-navigation'>
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="../../../../index.html" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
+				<li id="n-portal"><a href="../../../../articles/c/o/m/ICISWiki%7ECommunity_Portal_7449.html" title="About the project, what you can do, where to find things">Community portal</a></li>
+				<li id="n-recentchanges"><a href="../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+				<li id="n-help"><a href="../../../../articles/c/o/n/Help%7EContents_22de.html" title="The place to find out">Help</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="../../../../articles/s/e/a/Special%7ESearch_a8e5.html" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" title="Search ICISWiki [f]" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="../../../../articles/w/h/a/Special%7EWhatLinksHere_Loading_SSR_Data_into_ICIS_97d1.html" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="../../../../articles/r/e/c/Special%7ERecentChangesLinked_Loading_SSR_Data_into_ICIS_a709.html" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+<li id="t-specialpages"><a href="../../../../articles/s/p/e/Special%7ESpecialPages_f12b.html" title="List of all special pages [q]" accesskey="q">Special pages</a></li>
+				<li id="t-print"><a href="../../../../articles/l/o/a/Loading_SSR_Data_into_ICIS_73d2.html" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>				<li id="t-permalink"><a href="../../../../articles/l/o/a/Loading_SSR_Data_into_ICIS_73d2.html" title="Permanent link to this version of the page">Permanent link</a></li>			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="../../../../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" /></a></div>
+				<div id="f-copyrightico"><a href="../../../../../COPYING.html"><img src="/icis/skins/common/images/gnu-fdl.png" alt='GNU Free Documentation License 1.2' /></a></div>
+			<ul id="f-list">
+					<li id="credits">This page was last modified 02:09, 21 December 2007 by <a href="../../../../articles/r/v/a/User%7ERvalerio_c9de.html" title="User:Rvalerio">Rowena Valerio</a>. Based on work by <a href="../../../../articles/m/h/a/User%7EMhabito_276f.html" title="User:Mhabito">Maria Corina de Luna Habito</a>&#32;and&#32;<a href="../../../../articles/z/d/u/User%7EZdummy474_9c35.html" class="new" title="User:Zdummy474 (page does not exist)">zzDummy User</a>.</li>
+					<li id="copyright">Content is available under <a href="../../../../../COPYING.html" class="external " title="../../../../../COPYING.html">GNU Free Documentation License 1.2</a>.</li>
+					<li id="privacy"><a href="../../../../articles/p/r/i/ICISWiki%7EPrivacy_policy_0cbf.html" title="ICISWiki:Privacy policy">Privacy policy</a></li>
+					<li id="about"><a href="../../../../articles/a/b/o/ICISWiki%7EAbout_53aa.html" title="ICISWiki:About">About ICISWiki</a></li>
+					<li id="disclaimer"><a href="../../../../articles/g/e/n/ICISWiki%7EGeneral_disclaimer_9129.html" title="ICISWiki:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+</div>
+
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served in 93.573 secs. --></body></html>

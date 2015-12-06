@@ -1,0 +1,1569 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta name="generator" content="MediaWiki 1.14.0" />
+		<meta name="keywords" content="GO database schema,ICISWiki,ICIS Technical Documentation 6.0,TDM Ontologies and Controlled Vocabularies 6.0" />
+		<link rel="shortcut icon" href="../../../../misc/favicon.ico" />
+		<link rel="search" type="application/opensearchdescription+xml" href="../../../../../opensearch_desc.php" title="ICISWiki (en)" />
+		<link title="Creative Commons" type="application/rdf+xml" href="../../../../articles/g/o/_/GO_database_schema_3098.html" rel="alternate meta" />
+		<link rel="copyright" href="../../../../../COPYING.html" />
+		<link rel="alternate" type="application/rss+xml" title="ICISWiki RSS Feed" href="http://localhost../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" />
+		<link rel="alternate" type="application/atom+xml" title="ICISWiki Atom Feed" href="http://localhost../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" />
+		<title>GO database schema - ICISWiki</title>
+		<link rel="stylesheet" href="../../../../skins/common/shared.css?195" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../../../../skins/common/commonPrint.css?195" type="text/css" media="print" />
+		<link rel="stylesheet" href="../../../../skins/monobook/main.css?195" type="text/css" media="screen" />
+		<!--[if lt IE 5.5000]><link rel="stylesheet" href="../../../../skins/monobook/IE50Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 5.5000]><link rel="stylesheet" href="../../../../skins/monobook/IE55Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 6]><link rel="stylesheet" href="../../../../skins/monobook/IE60Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 7]><link rel="stylesheet" href="../../../../skins/monobook/IE70Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7ECommon.css?195" type="text/css" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7EPrint.css?195" type="text/css" media="print" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7EMonobook.css?195" type="text/css" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/gen.css?195" type="text/css" />
+		<!--[if lt IE 7]><script type="text/javascript" src="../../../../skins/common/IEFixes.js?195"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+
+		<script type= "text/javascript">/*<![CDATA[*/
+		var skin = "monobook";
+		var stylepath = "../../../../skins";
+		var wgArticlePath = "../../../../$1";
+		var wgScriptPath = "../../../../..";
+		var wgScript = "/icis/index.php";
+		var wgVariantArticlePath = false;
+		var wgActionPaths = {};
+		var wgServer = "http://localhost";
+		var wgCanonicalNamespace = "";
+		var wgCanonicalSpecialPageName = false;
+		var wgNamespaceNumber = 0;
+		var wgPageName = "GO_database_schema";
+		var wgTitle = "GO database schema";
+		var wgAction = "view";
+		var wgArticleId = "3808";
+		var wgIsArticle = true;
+		var wgUserName = null;
+		var wgUserGroups = null;
+		var wgUserLanguage = "en";
+		var wgContentLanguage = "en";
+		var wgBreakFrames = false;
+		var wgCurRevisionId = "15235";
+		var wgVersion = "1.14.0";
+		var wgEnableAPI = true;
+		var wgEnableWriteAPI = true;
+		var wgSeparatorTransformTable = ["", ""];
+		var wgDigitTransformTable = ["", ""];
+		var wgRestrictionEdit = [];
+		var wgRestrictionMove = [];
+		/*]]>*/</script>
+
+		<script type="text/javascript" src="../../../../skins/common/wikibits.js?195"><!-- wikibits js --></script>
+		<!-- Head Scripts -->
+		<script type="text/javascript" src="../../../../raw/gen.js"><!-- site js --></script>
+	</head>
+<body class="mediawiki ltr ns-0 ns-subject page-GO_database_schema skin-monobook">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 id="firstHeading" class="firstHeading">GO database schema</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From ICISWiki</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>			<!-- start content -->
+			<p align="center"><b><a href="../../../../articles/i/c/i/ICISWiki_eda0.html" title="ICISWiki">Back to Main Page</a> &gt; <a href="../../../../articles/i/c/i/ICIS_Technical_Documentation_6.0_44cc.html" title="ICIS Technical Documentation 6.0">ICIS 6.0 Home Page</a> &gt; <a href="../../../../articles/t/d/m/TDM_Ontologies_and_Controlled_Vocabularies_6.0_1da3.html" title="TDM Ontologies and Controlled Vocabularies 6.0">Ontologies</a></b></p>
+<p>The Gene Ontology consortium developed a structured, common, controlled vocabulary for describing the roles of genes and gene products in any organism.  Here is the schema.
+</p>
+<table id="toc" class="toc" summary="Contents"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1"><a href="#Table:_association"><span class="tocnumber">1</span> <span class="toctext">Table: association</span></a></li>
+<li class="toclevel-1"><a href="#Table:_category"><span class="tocnumber">2</span> <span class="toctext">Table: category</span></a></li>
+<li class="toclevel-1"><a href="#Table:_dbxref"><span class="tocnumber">3</span> <span class="toctext">Table: dbxref</span></a></li>
+<li class="toclevel-1"><a href="#Table:_edit_session"><span class="tocnumber">4</span> <span class="toctext">Table: edit_session</span></a></li>
+<li class="toclevel-1"><a href="#Table:_evidence"><span class="tocnumber">5</span> <span class="toctext">Table: evidence</span></a></li>
+<li class="toclevel-1"><a href="#Table:_gene_product"><span class="tocnumber">6</span> <span class="toctext">Table: gene_product</span></a></li>
+<li class="toclevel-1"><a href="#Table:_gene_product_count"><span class="tocnumber">7</span> <span class="toctext">Table: gene_product_count</span></a></li>
+<li class="toclevel-1"><a href="#Table:_gene_product_synonym"><span class="tocnumber">8</span> <span class="toctext">Table: gene_product_synonym</span></a></li>
+<li class="toclevel-1"><a href="#Table:_godb_meta_data"><span class="tocnumber">9</span> <span class="toctext">Table: godb_meta_data</span></a></li>
+<li class="toclevel-1"><a href="#Table:graph_path"><span class="tocnumber">10</span> <span class="toctext">Table:graph_path</span></a></li>
+<li class="toclevel-1"><a href="#Table:_graph_path2term"><span class="tocnumber">11</span> <span class="toctext">Table: graph_path2term</span></a></li>
+<li class="toclevel-1"><a href="#Table:_mod_comment"><span class="tocnumber">12</span> <span class="toctext">Table: mod_comment</span></a></li>
+<li class="toclevel-1"><a href="#Table:_modification"><span class="tocnumber">13</span> <span class="toctext">Table: modification</span></a></li>
+<li class="toclevel-1"><a href="#Table:_node_operation"><span class="tocnumber">14</span> <span class="toctext">Table: node_operation</span></a></li>
+<li class="toclevel-1"><a href="#Table:_relationship_type"><span class="tocnumber">15</span> <span class="toctext">Table: relationship_type</span></a></li>
+<li class="toclevel-1"><a href="#Table:_seq"><span class="tocnumber">16</span> <span class="toctext">Table: seq</span></a></li>
+<li class="toclevel-1"><a href="#Table:_seq_dbxref"><span class="tocnumber">17</span> <span class="toctext">Table: seq_dbxref</span></a></li>
+<li class="toclevel-1"><a href="#Table:_seq_property"><span class="tocnumber">18</span> <span class="toctext">Table: seq_property</span></a></li>
+<li class="toclevel-1"><a href="#Table:_species"><span class="tocnumber">19</span> <span class="toctext">Table: species</span></a></li>
+<li class="toclevel-1"><a href="#Table:_synonym_edit"><span class="tocnumber">20</span> <span class="toctext">Table: synonym_edit</span></a></li>
+<li class="toclevel-1"><a href="#Table:_term"><span class="tocnumber">21</span> <span class="toctext">Table: term</span></a></li>
+<li class="toclevel-1"><a href="#Table:_term2term"><span class="tocnumber">22</span> <span class="toctext">Table: term2term</span></a></li>
+<li class="toclevel-1"><a href="#Table:_term_category"><span class="tocnumber">23</span> <span class="toctext">Table: term_category</span></a></li>
+<li class="toclevel-1"><a href="#Table:_term_dbxref"><span class="tocnumber">24</span> <span class="toctext">Table: term_dbxref</span></a></li>
+<li class="toclevel-1"><a href="#Table:_term_dbxref_edit"><span class="tocnumber">25</span> <span class="toctext">Table: term_dbxref_edit</span></a></li>
+<li class="toclevel-1"><a href="#Table:_term_definition"><span class="tocnumber">26</span> <span class="toctext">Table: term_definition</span></a></li>
+<li class="toclevel-1"><a href="#Table:_term_history"><span class="tocnumber">27</span> <span class="toctext">Table: term_history</span></a></li>
+<li class="toclevel-1"><a href="#Table:_term_synonym"><span class="tocnumber">28</span> <span class="toctext">Table: term_synonym</span></a></li>
+<li class="toclevel-1"><a href="#Table:_term_text_edit"><span class="tocnumber">29</span> <span class="toctext">Table: term_text_edit</span></a></li>
+<li class="toclevel-1"><a href="#Table:_wordunit2term"><span class="tocnumber">30</span> <span class="toctext">Table: wordunit2term</span></a></li>
+</ul>
+</td></tr></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </script>
+<a name="Table:_association" id="Table:_association"></a><h4> <span class="mw-headline">Table: association</span></h4>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td align="center" colspan="4">association Structure
+</td></tr>
+<tr>
+<td align="center">F-Key
+</td><td align="center">Name
+</td><td align="center">Type
+</td><td align="center">Description
+</td></tr>
+<tr>
+<td>gene_product
+</td><td>gene_product_id
+</td><td>INT4
+</td><td>NOT NULL
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>Id
+</td><td>SERIAL
+</td><td>NOT NULL PRIMARY KEY
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>is_not
+</td><td>INT4
+</td><td>&nbsp;
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>role_group
+</td><td>INT4
+</td><td>&nbsp;
+</td></tr>
+<tr>
+<td>term
+</td><td>term_id
+</td><td>INT4
+</td><td>NOT NULL
+</td></tr>
+</table>
+<p>Tables referencing this one via Foreign Key Constraints:
+</p>
+<ul><li> evidence
+</li></ul>
+<a name="Table:_category" id="Table:_category"></a><h4> <span class="mw-headline">Table: category</span></h4>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td align="center" colspan="4">category Structure
+</td></tr>
+<tr>
+<td align="center">F-Key
+</td><td align="center">Name
+</td><td align="center">Type
+</td><td align="center">Description
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>description
+</td><td>TEXT
+</td><td>&nbsp;
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>id
+</td><td>SERIAL
+</td><td>NOT NULL PRIMARY KEY
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>name
+</td><td>&nbsp;
+</td><td>NOT NULL
+</td></tr>
+</table>
+<p>Tables referencing this one via Foreign Key Constraints:
+</p>
+<ul><li> term_category
+</li></ul>
+<a name="Table:_dbxref" id="Table:_dbxref"></a><h4> <span class="mw-headline">Table: dbxref</span></h4>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td align="center" colspan="4">dbxref Structure
+</td></tr>
+<tr>
+<td align="center">F-Key
+</td><td align="center">Name
+</td><td align="center">Type
+</td><td align="center">Description
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>id
+</td><td>SERIAL
+</td><td>NOT NULL PRIMARY KEY
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>xref_dbname
+</td><td>&nbsp;
+</td><td>NOT NULL
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>xref_desc
+</td><td>&nbsp;
+</td><td>&nbsp;
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>xref_key
+</td><td>&nbsp;
+</td><td>NOT NULL
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>xref_keytype
+</td><td>&nbsp;
+</td><td>&nbsp;
+</td></tr>
+</table>
+<p><br />
+</p>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td align="center" colspan="2">dbxref Constraints
+</td></tr>
+<tr>
+<td align="center">Name
+</td><td align="center">Constraint
+</td></tr>
+<tr>
+<td>dbxref_xref_key_key
+</td><td>UNIQUE (xref_key, xref_dbname)
+</td></tr>
+</table>
+<p><br /> 
+Tables referencing this one via Foreign Key Constraints:
+</p>
+<ul><li> evidence
+</li><li> gene_product
+</li><li> seq_dbxref
+</li><li> term_dbxref
+</li></ul>
+<a name="Table:_edit_session" id="Table:_edit_session"></a><h4> <span class="mw-headline">Table: edit_session</span></h4>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td align="center" colspan="4">edit_session Structure
+</td></tr>
+<tr>
+<td align="center">F-Key
+</td><td align="center">Name
+</td><td align="center">Type
+</td><td align="center">Description
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>id
+</td><td>SERIAL
+</td><td>NOT NULL PRIMARY KEY
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>mod_time
+</td><td>INT4
+</td><td>NOT NULL
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>person
+</td><td>VARCHAR(32)
+</td><td>NOT NULL
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>session_comment
+</td><td>TEXT
+</td><td>&nbsp;
+</td></tr>
+</table>
+<p>Tables referencing this one via Foreign Key Constraints:
+</p>
+<ul><li> node_operation
+</li></ul>
+<a name="Table:_evidence" id="Table:_evidence"></a><h4> <span class="mw-headline">Table: evidence</span></h4>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td align="center" colspan="4">evidence Structure
+</td></tr>
+<tr>
+<td align="center">F-Key
+</td><td align="center">Name
+</td><td align="center">Type
+</td><td align="center">Description
+</td></tr>
+<tr>
+<td>association
+</td><td>association_id
+</td><td>INT4
+</td><td>NOT NULL
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>code
+</td><td>&nbsp;
+</td><td>NOT NULL
+</td></tr>
+<tr>
+<td>dbxref
+</td><td>dbxref_id
+</td><td>INT4
+</td><td>NOT NULL
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>id
+</td><td>SERIAL
+</td><td>NOT NULL PRIMARY KEY
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>seq_acc
+</td><td>&nbsp;
+</td><td>&nbsp;
+</td></tr>
+</table>
+<p><br />
+</p>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td align="center" colspan="2">evidence Constraints
+</td></tr>
+<tr>
+<td align="center">Name
+</td><td align="center">Constraint
+</td></tr>
+<tr>
+<td>evidence_association_id_key
+</td><td>UNIQUE (association_id, dbxref_id, code, seq_acc)
+</td></tr>
+</table>
+<a name="Table:_gene_product" id="Table:_gene_product"></a><h4> <span class="mw-headline">Table: gene_product</span></h4>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td align="center" colspan="4">gene_product Structure
+</td></tr>
+<tr>
+<td align="center">F-Key
+</td><td align="center">Name
+</td><td align="center">Type
+</td><td align="center">Description
+</td></tr>
+<tr>
+<td>dbxref
+</td><td>dbxref_id
+</td><td>INT4
+</td><td>NOT NULL
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>full_name
+</td><td>TEXT
+</td><td>&nbsp;
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>id
+</td><td>SERIAL
+</td><td>NOT NULL PRIMARY KEY
+</td></tr>
+<tr>
+<td>species
+</td><td>species_id
+</td><td>INT4
+</td><td>NOT NULL
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>symbol
+</td><td>&nbsp;
+</td><td>NOT NULL
+</td></tr>
+</table>
+<p><br />
+</p>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td align="center" colspan="2">gene_product Constraints
+</td></tr>
+<tr>
+<td align="center">Name
+</td><td align="center">Constraint
+</td></tr>
+<tr>
+<td>gene_product_symbol_key
+</td><td>UNIQUE (symbol, dbxref_id)
+</td></tr>
+</table>
+<p>Tables referencing this one via Foreign Key Constraints:
+</p>
+<ul><li> association
+</li><li> gene_product_synonym
+</li></ul>
+<a name="Table:_gene_product_count" id="Table:_gene_product_count"></a><h4> <span class="mw-headline">Table: gene_product_count</span></h4>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td align="center" colspan="4">gene_product_count Structure
+</td></tr>
+<tr>
+<td align="center">F-Key
+</td><td align="center">Name
+</td><td align="center">Type
+</td><td align="center">Description
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>Code
+</td><td>&nbsp;
+</td><td>&nbsp;
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>product_count
+</td><td>INT4
+</td><td>NOT NULL
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>Speciesdbname
+</td><td>&nbsp;
+</td><td>NOT NULL
+</td></tr>
+<tr>
+<td>term
+</td><td>term_id
+</td><td>INT4
+</td><td>NOT NULL
+</td></tr>
+</table>
+<a name="Table:_gene_product_synonym" id="Table:_gene_product_synonym"></a><h4> <span class="mw-headline">Table: gene_product_synonym</span></h4>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td align="center" colspan="4">gene_product_synonym Structure
+</td></tr>
+<tr>
+<td align="center">F-Key
+</td><td align="center">Name
+</td><td align="center">Type
+</td><td align="center">Description
+</td></tr>
+<tr>
+<td>gene_product
+</td><td>gene_product_id
+</td><td>INT4
+</td><td>NOT NULL
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>product_synonym
+</td><td>&nbsp;
+</td><td>NOT NULL
+</td></tr>
+</table>
+<p><br />
+</p>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td align="center" colspan="2">gene_product_synonym Constraints
+</td></tr>
+<tr>
+<td align="center">Name
+</td><td align="center">Constraint
+</td></tr>
+</table>
+<a name="Table:_godb_meta_data" id="Table:_godb_meta_data"></a><h4> <span class="mw-headline">Table: godb_meta_data</span></h4>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td align="center" colspan="4">godb_meta_data Structure
+</td></tr>
+<tr>
+<td align="center">F-Key
+</td><td align="center">Name
+</td><td align="center">Type
+</td><td align="center">Description
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>created_by
+</td><td>VARCHAR(64)
+</td><td>NOT NULL
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>creation_comment
+</td><td>TEXT
+</td><td>&nbsp;
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>current_id
+</td><td>INT4
+</td><td>NOT NULL
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>date_created
+</td><td>INT4
+</td><td>NOT NULL
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>Version
+</td><td>VARCHAR(64)
+</td><td>NOT NULL
+</td></tr>
+</table>
+<p><br /> 
+</p>
+<a name="Table:graph_path" id="Table:graph_path"></a><h4> <span class="mw-headline">Table:graph_path</span></h4>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td align="center" colspan="4">graph_path Structure
+</td></tr>
+<tr>
+<td align="center">F-Key
+</td><td align="center">Name
+</td><td align="center">Type
+</td><td align="center">Description
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>distance
+</td><td>INT4
+</td><td>NOT NULL
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>id
+</td><td>SERIAL
+</td><td>NOT NULL PRIMARY KEY
+</td></tr>
+<tr>
+<td>term
+</td><td>term1_id
+</td><td>INT4
+</td><td>NOT NULL
+</td></tr>
+<tr>
+<td>term
+</td><td>term2_id
+</td><td>INT4
+</td><td>NOT NULL
+</td></tr>
+</table>
+<p>Tables referencing this one via Foreign Key Constraints:
+</p>
+<ul><li> graph_path2term
+</li></ul>
+<a name="Table:_graph_path2term" id="Table:_graph_path2term"></a><h4> <span class="mw-headline">Table: graph_path2term</span></h4>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td align="center" colspan="4">graph_path2term Structure
+</td></tr>
+<tr>
+<td align="center">F-Key
+</td><td align="center">Name
+</td><td align="center">Type
+</td><td align="center">Description
+</td></tr>
+<tr>
+<td>graph_path
+</td><td>graph_path_id
+</td><td>INT4
+</td><td>NOT NULL
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>rank
+</td><td>INT4
+</td><td>NOT NULL
+</td></tr>
+<tr>
+<td>term
+</td><td>term_id
+</td><td>INT4
+</td><td>NOT NULL
+</td></tr>
+</table>
+<a name="Table:_mod_comment" id="Table:_mod_comment"></a><h4> <span class="mw-headline">Table: mod_comment</span></h4>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td align="center" colspan="4">mod_comment Structure
+</td></tr>
+<tr>
+<td align="center">F-Key
+</td><td align="center">Name
+</td><td align="center">Type
+</td><td align="center">Description
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>mod_comment
+</td><td>TEXT
+</td><td>&nbsp;
+</td></tr>
+<tr>
+<td>modification
+</td><td>modification_id
+</td><td>INT4
+</td><td>NOT NULL
+</td></tr>
+</table>
+<a name="Table:_modification" id="Table:_modification"></a><h4> <span class="mw-headline">Table: modification</span></h4>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td align="center" colspan="4">modification Structure
+</td></tr>
+<tr>
+<td align="center">F-Key
+</td><td align="center">Name
+</td><td align="center">Type
+</td><td align="center">Description
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>id
+</td><td>SERIAL
+</td><td>NOT NULL PRIMARY KEY
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>mod_time
+</td><td>INT4
+</td><td>NOT NULL
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>mod_type
+</td><td>&nbsp;
+</td><td>NOT NULL
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>person
+</td><td>&nbsp;
+</td><td>NOT NULL
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>rank
+</td><td>INT4
+</td><td>NOT NULL
+</td></tr>
+</table>
+<p>Tables referencing this one via Foreign Key Constraints:
+</p>
+<ul><li> mod_comment
+</li><li> term2term
+</li><li> term_history
+</li></ul>
+<a name="Table:_node_operation" id="Table:_node_operation"></a><h4> <span class="mw-headline">Table: node_operation</span></h4>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td align="center" colspan="4">node_operation Structure
+</td></tr>
+<tr>
+<td align="center">F-Key
+</td><td align="center">Name
+</td><td align="center">Type
+</td><td align="center">Description
+</td></tr>
+<tr>
+<td>edit_session
+</td><td>edit_session_id
+</td><td>INT4
+</td><td>NOT NULL
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>id
+</td><td>SERIAL
+</td><td>NOT NULL PRIMARY KEY
+</td></tr>
+<tr>
+<td>term
+</td><td>term_id
+</td><td>INT4
+</td><td>NOT NULL
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>type
+</td><td>INT4
+</td><td>&nbsp;
+</td></tr>
+</table>
+<p>Tables referencing this one via Foreign Key Constraints:
+</p>
+<ul><li> synonym_edit
+</li><li> term_dbxref_edit
+</li><li> term_text_edit
+</li></ul>
+<a name="Table:_relationship_type" id="Table:_relationship_type"></a><h4> <span class="mw-headline">Table: relationship_type</span></h4>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td align="center" colspan="4">relationship_type Structure
+</td></tr>
+<tr>
+<td align="center">F-Key
+</td><td align="center">Name
+</td><td align="center">Type
+</td><td align="center">Description
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>id
+</td><td>SERIAL
+</td><td>NOT NULL PRIMARY KEY
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>type_desc
+</td><td>&nbsp;
+</td><td>NOT NULL
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>type_name
+</td><td>&nbsp;
+</td><td>NOT NULL
+</td></tr>
+</table>
+<a name="Table:_seq" id="Table:_seq"></a><h4> <span class="mw-headline">Table: seq</span></h4>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td align="center" colspan="4">seq Structure
+</td></tr>
+<tr>
+<td align="center">F-Key
+</td><td align="center">Name
+</td><td align="center">Type
+</td><td align="center">Description
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>description
+</td><td>&nbsp;
+</td><td>&nbsp;
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>display_id
+</td><td>&nbsp;
+</td><td>&nbsp;
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>id
+</td><td>SERIAL
+</td><td>NOT NULL PRIMARY KEY
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>md5checksum
+</td><td>&nbsp;
+</td><td>&nbsp;
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>moltype
+</td><td>&nbsp;
+</td><td>&nbsp;
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>seq
+</td><td>TEXT
+</td><td>&nbsp;
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>seq_len
+</td><td>INT4
+</td><td>&nbsp;
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>timestamp
+</td><td>INT4
+</td><td>&nbsp;
+</td></tr>
+</table>
+<p><br />
+</p>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td align="center" colspan="2">seq Constraints
+</td></tr>
+<tr>
+<td align="center">Name
+</td><td align="center">Constraint
+</td></tr>
+<tr>
+<td>seq_display_id_key
+</td><td>UNIQUE (display_id, md5checksum)
+</td></tr>
+</table>
+<p>Tables referencing this one via Foreign Key Constraints:
+</p>
+<ul><li> seq_dbxref
+</li><li> seq_property
+</li></ul>
+<a name="Table:_seq_dbxref" id="Table:_seq_dbxref"></a><h4> <span class="mw-headline">Table: seq_dbxref</span></h4>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td align="center" colspan="4">seq_dbxref Structure
+</td></tr>
+<tr>
+<td align="center">F-Key
+</td><td align="center">Name
+</td><td align="center">Type
+</td><td align="center">Description
+</td></tr>
+<tr>
+<td>dbxref
+</td><td>dbxref_id
+</td><td>INT4
+</td><td>NOT NULL
+</td></tr>
+<tr>
+<td>seq
+</td><td>seq_id
+</td><td>INT4
+</td><td>NOT NULL
+</td></tr>
+</table>
+<p><br />
+</p>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td align="center" colspan="2">seq_dbxref Constraints
+</td></tr>
+<tr>
+<td align="center">Name
+</td><td align="center">Constraint
+</td></tr>
+<tr>
+<td>seq_dbxref_seq_id_key
+</td><td>UNIQUE (seq_id, dbxref_id)
+</td></tr>
+</table>
+<a name="Table:_seq_property" id="Table:_seq_property"></a><h4> <span class="mw-headline">Table: seq_property</span></h4>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td align="center" colspan="4">seq_property Structure
+</td></tr>
+<tr>
+<td align="center">F-Key
+</td><td align="center">Name
+</td><td align="center">Type
+</td><td align="center">Description
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>id
+</td><td>SERIAL
+</td><td>NOT NULL PRIMARY KEY
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>property_key
+</td><td>&nbsp;
+</td><td>NOT NULL
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>property_val
+</td><td>&nbsp;
+</td><td>NOT NULL
+</td></tr>
+<tr>
+<td>seq
+</td><td>seq_id
+</td><td>INT4
+</td><td>NOT NULL
+</td></tr>
+</table>
+<p><br />
+</p>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td align="center" colspan="2">seq_property Constraints
+</td></tr>
+<tr>
+<td align="center">Name
+</td><td align="center">Constraint
+</td></tr>
+<tr>
+<td>seq_property_seq_id_key
+</td><td>UNIQUE (seq_id, property_key, property_val)
+</td></tr>
+</table>
+<a name="Table:_species" id="Table:_species"></a><h4> <span class="mw-headline">Table: species</span></h4>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td align="center" colspan="4">species Structure
+</td></tr>
+<tr>
+<td align="center">F-Key
+</td><td align="center">Name
+</td><td align="center">Type
+</td><td align="center">Description
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>common_name
+</td><td>&nbsp;
+</td><td>&nbsp;
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>genus
+</td><td>&nbsp;
+</td><td>&nbsp;
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>id
+</td><td>SERIAL
+</td><td>NOT NULL PRIMARY KEY
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>lineage_string
+</td><td>TEXT
+</td><td>&nbsp;
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>ncbi_taxa_id
+</td><td>INT4
+</td><td>&nbsp;
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>species
+</td><td>&nbsp;
+</td><td>&nbsp;
+</td></tr>
+</table>
+<p>Tables referencing this one via Foreign Key Constraints:
+</p>
+<ul><li> gene_product
+</li></ul>
+<a name="Table:_synonym_edit" id="Table:_synonym_edit"></a><h4> <span class="mw-headline">Table: synonym_edit</span></h4>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td align="center" colspan="4">synonym_edit Structure
+</td></tr>
+<tr>
+<td align="center">F-Key
+</td><td align="center">Name
+</td><td align="center">Type
+</td><td align="center">Description
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>acc
+</td><td>INT4
+</td><td>&nbsp;
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>edit_type
+</td><td>&nbsp;
+</td><td>NOT NULL
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>new_acc
+</td><td>INT4
+</td><td>&nbsp;
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>new_synonym
+</td><td>&nbsp;
+</td><td>&nbsp;
+</td></tr>
+<tr>
+<td>node_operation
+</td><td>operation_id
+</td><td>INT4
+</td><td>&nbsp;
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>synonym_text
+</td><td>&nbsp;
+</td><td>&nbsp;
+</td></tr>
+</table>
+<a name="Table:_term" id="Table:_term"></a><h4> <span class="mw-headline">Table: term</span></h4>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td align="center" colspan="4">term Structure
+</td></tr>
+<tr>
+<td align="center">F-Key
+</td><td align="center">Name
+</td><td align="center">Type
+</td><td align="center">Description
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>acc
+</td><td>INT4
+</td><td>NOT NULL UNIQUE
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>id
+</td><td>SERIAL
+</td><td>NOT NULL PRIMARY KEY
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>is_obsolete
+</td><td>INT4
+</td><td>NOT NULL
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>is_root
+</td><td>INT4
+</td><td>NOT NULL
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>name
+</td><td>&nbsp;
+</td><td>NOT NULL
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>term_type
+</td><td>&nbsp;
+</td><td>NOT NULL
+</td></tr>
+</table>
+<p>Tables referencing this one via Foreign Key Constraints:
+</p>
+<ul><li> association
+</li><li> gene_product_count
+</li><li> graph_path
+</li><li> graph_path
+</li><li> graph_path2term
+</li><li> node_operation
+</li><li> term2term
+</li><li> term2term
+</li><li> term_category
+</li><li> term_dbxref
+</li><li> term_definition
+</li><li> term_history
+</li><li> term_history
+</li><li> term_synonym
+</li><li> wordunit2term
+</li></ul>
+<a name="Table:_term2term" id="Table:_term2term"></a><h4> <span class="mw-headline">Table: term2term</span></h4>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td align="center" colspan="4">term2term Structure
+</td></tr>
+<tr>
+<td align="center">F-Key
+</td><td align="center">Name
+</td><td align="center">Type
+</td><td align="center">Description
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>Id
+</td><td>SERIAL
+</td><td>NOT NULL PRIMARY KEY
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>Is_inheritance
+</td><td>INT4
+</td><td>NOT NULL
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>Is_obsolete
+</td><td>INT4
+</td><td>NOT NULL
+</td></tr>
+<tr>
+<td>modification
+</td><td>modification_id
+</td><td>INT4
+</td><td>NOT NULL
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>relationship_type
+</td><td>&nbsp;
+</td><td>&nbsp;
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>relationship_type_id
+</td><td>INT4
+</td><td>NOT NULL
+</td></tr>
+<tr>
+<td>term
+</td><td>term1_id
+</td><td>INT4
+</td><td>NOT NULL
+</td></tr>
+<tr>
+<td>term
+</td><td>term2_id
+</td><td>INT4
+</td><td>NOT NULL
+</td></tr>
+</table>
+<p><br />
+</p>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td align="center" colspan="2">term2term Constraints
+</td></tr>
+<tr>
+<td align="center">Name
+</td><td align="center">Constraint
+</td></tr>
+<tr>
+<td>term2term_term1_id_key
+</td><td>UNIQUE (term1_id, term2_id)
+</td></tr>
+</table>
+<a name="Table:_term_category" id="Table:_term_category"></a><h4> <span class="mw-headline">Table: term_category</span></h4>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td align="center" colspan="4">term_category Structure
+</td></tr>
+<tr>
+<td align="center">F-Key
+</td><td align="center">Name
+</td><td align="center">Type
+</td><td align="center">Description
+</td></tr>
+<tr>
+<td>category
+</td><td>category_id
+</td><td>INT4
+</td><td>NOT NULL
+</td></tr>
+<tr>
+<td>term
+</td><td>term_id
+</td><td>INT4
+</td><td>NOT NULL
+</td></tr>
+</table>
+<p><br />
+</p>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td align="center" colspan="2">term_category Constraints
+</td></tr>
+<tr>
+<td align="center">Name
+</td><td align="center">Constraint
+</td></tr>
+<tr>
+<td>term_category_term_id_key
+</td><td>UNIQUE (term_id, category_id)
+</td></tr>
+</table>
+<a name="Table:_term_dbxref" id="Table:_term_dbxref"></a><h4> <span class="mw-headline">Table: term_dbxref</span></h4>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td align="center" colspan="4">term_dbxref Structure
+</td></tr>
+<tr>
+<td align="center">F-Key
+</td><td align="center">Name
+</td><td align="center">Type
+</td><td align="center">Description
+</td></tr>
+<tr>
+<td>dbxref
+</td><td>dbxref_id
+</td><td>INT4
+</td><td>NOT NULL
+</td></tr>
+<tr>
+<td>term
+</td><td>term_id
+</td><td>INT4
+</td><td>NOT NULL
+</td></tr>
+</table>
+<p><br />
+</p>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td align="center" colspan="2">term_dbxref Constraints
+</td></tr>
+<tr>
+<td align="center">Name
+</td><td align="center">Constraint
+</td></tr>
+<tr>
+<td>term_dbxref_term_id_key
+</td><td>UNIQUE (term_id, dbxref_id)
+</td></tr>
+</table>
+<a name="Table:_term_dbxref_edit" id="Table:_term_dbxref_edit"></a><h4> <span class="mw-headline">Table: term_dbxref_edit</span></h4>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td align="center" colspan="4">term_dbxref_edit Structure
+</td></tr>
+<tr>
+<td align="center">F-Key
+</td><td align="center">Name
+</td><td align="center">Type
+</td><td align="center">Description
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>edit_type
+</td><td>&nbsp;
+</td><td>NOT NULL
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>new_xref_dbname
+</td><td>&nbsp;
+</td><td>&nbsp;
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>new_xref_key
+</td><td>&nbsp;
+</td><td>&nbsp;
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>new_xref_type
+</td><td>&nbsp;
+</td><td>&nbsp;
+</td></tr>
+<tr>
+<td>node_operation
+</td><td>operation_id
+</td><td>INT4
+</td><td>NOT NULL
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>xref_dbname
+</td><td>&nbsp;
+</td><td>&nbsp;
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>xref_key
+</td><td>&nbsp;
+</td><td>&nbsp;
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>xref_type
+</td><td>&nbsp;
+</td><td>&nbsp;
+</td></tr>
+</table>
+<a name="Table:_term_definition" id="Table:_term_definition"></a><h4> <span class="mw-headline">Table: term_definition</span></h4>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td align="center" colspan="4">term_definition Structure
+</td></tr>
+<tr>
+<td align="center">F-Key
+</td><td align="center">Name
+</td><td align="center">Type
+</td><td align="center">Description
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>term_definition
+</td><td>TEXT
+</td><td>NOT NULL
+</td></tr>
+<tr>
+<td>term
+</td><td>term_id
+</td><td>INT4
+</td><td>NOT NULL UNIQUE
+</td></tr>
+</table>
+<p>Index
+</p>
+<hr />
+<a name="Table:_term_history" id="Table:_term_history"></a><h4> <span class="mw-headline">Table: term_history</span></h4>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td align="center" colspan="4">term_history Structure
+</td></tr>
+<tr>
+<td align="center">F-Key
+</td><td align="center">Name
+</td><td align="center">Type
+</td><td align="center">Description
+</td></tr>
+<tr>
+<td>modification
+</td><td>modification_id
+</td><td>INT4
+</td><td>NOT NULL
+</td></tr>
+<tr>
+<td>term
+</td><td>term1_id
+</td><td>INT4
+</td><td>NOT NULL
+</td></tr>
+<tr>
+<td>term
+</td><td>term2_id
+</td><td>INT4
+</td><td>&nbsp;
+</td></tr>
+</table>
+<p>Index
+</p>
+<hr />
+<a name="Table:_term_synonym" id="Table:_term_synonym"></a><h4> <span class="mw-headline">Table: term_synonym</span></h4>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td align="center" colspan="4">term_synonym Structure
+</td></tr>
+<tr>
+<td align="center">F-Key
+</td><td align="center">Name
+</td><td align="center">Type
+</td><td align="center">Description
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>acc_synonym
+</td><td>INT4
+</td><td>&nbsp;
+</td></tr>
+<tr>
+<td>term
+</td><td>term_id
+</td><td>INT4
+</td><td>NOT NULL
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>term_synonym
+</td><td>&nbsp;
+</td><td>&nbsp;
+</td></tr>
+</table>
+<p><br />
+</p>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td align="center" colspan="2">term_synonym Constraints
+</td></tr>
+<tr>
+<td align="center">Name
+</td><td align="center">Constraint
+</td></tr>
+<tr>
+<td>term_synonym_term_id_key
+</td><td>UNIQUE (term_id, term_synonym)
+</td></tr>
+</table>
+<a name="Table:_term_text_edit" id="Table:_term_text_edit"></a><h4> <span class="mw-headline">Table: term_text_edit</span></h4>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td align="center" colspan="4">term_text_edit Structure
+</td></tr>
+<tr>
+<td align="center">F-Key
+</td><td align="center">Name
+</td><td align="center">Type
+</td><td align="center">Description
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>comment_text
+</td><td>TEXT
+</td><td>&nbsp;
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>name
+</td><td>&nbsp;
+</td><td>&nbsp;
+</td></tr>
+<tr>
+<td>node_operation
+</td><td>operation_id
+</td><td>INT4
+</td><td>NOT NULL
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>term_definition
+</td><td>TEXT
+</td><td>&nbsp;
+</td></tr>
+</table>
+<a name="Table:_wordunit2term" id="Table:_wordunit2term"></a><h4> <span class="mw-headline">Table: wordunit2term</span></h4>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td align="center" colspan="4">wordunit2term Structure
+</td></tr>
+<tr>
+<td align="center">F-Key
+</td><td align="center">Name
+</td><td align="center">Type
+</td><td align="center">Description
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>is_definition
+</td><td>INT4
+</td><td>NOT NULL
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>is_synonym
+</td><td>INT4
+</td><td>NOT NULL
+</td></tr>
+<tr>
+<td>term
+</td><td>term_id
+</td><td>INT4
+</td><td>NOT NULL
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>wordsound
+</td><td>&nbsp;
+</td><td>&nbsp;
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>wordtype
+</td><td>&nbsp;
+</td><td>&nbsp;
+</td></tr>
+<tr>
+<td>&nbsp;
+</td><td>wordunit
+</td><td>&nbsp;
+</td><td>&nbsp;
+</td></tr>
+</table>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 32/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+<div class="printfooter">
+Retrieved from "<a href="http://localhost../../../../articles/g/o/_/GO_database_schema_3098.html">http://localhost../../../../articles/g/o/_/GO_database_schema_3098.html</a>"</div>
+						<!-- end content -->
+						<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<div class="pBody">
+			<ul>
+	
+				 <li id="ca-nstab-main" class="selected"><a href="../../../../articles/g/o/_/GO_database_schema_3098.html" title="View the content page [c]" accesskey="c">Page</a></li>
+				 <li id="ca-talk" class="new"><a href="../../../../articles/g/o/_/Talk%7EGO_database_schema_b43a.html" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				 <li id="ca-viewsource"><a href="../../../../articles/g/o/_/GO_database_schema_3098.html" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				 <li id="ca-history"><a href="../../../../articles/g/o/_/GO_database_schema_3098.html" title="Past versions of this page [h]" accesskey="h">History</a></li>			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="../../../../articles/u/s/e/Special%7EUserLogin_94cd.html" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(../../../../misc/icis-wiki3.png);" href="../../../../index.html" title="Visit the main page [z]" accesskey="z"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class='generated-sidebar portlet' id='p-navigation'>
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="../../../../index.html" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
+				<li id="n-portal"><a href="../../../../articles/c/o/m/ICISWiki%7ECommunity_Portal_7449.html" title="About the project, what you can do, where to find things">Community portal</a></li>
+				<li id="n-recentchanges"><a href="../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+				<li id="n-help"><a href="../../../../articles/c/o/n/Help%7EContents_22de.html" title="The place to find out">Help</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="../../../../articles/s/e/a/Special%7ESearch_a8e5.html" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" title="Search ICISWiki [f]" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="../../../../articles/w/h/a/Special%7EWhatLinksHere_GO_database_schema_132d.html" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="../../../../articles/r/e/c/Special%7ERecentChangesLinked_GO_database_schema_31b1.html" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+<li id="t-specialpages"><a href="../../../../articles/s/p/e/Special%7ESpecialPages_f12b.html" title="List of all special pages [q]" accesskey="q">Special pages</a></li>
+				<li id="t-print"><a href="../../../../articles/g/o/_/GO_database_schema_3098.html" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>				<li id="t-permalink"><a href="../../../../articles/g/o/_/GO_database_schema_3098.html" title="Permanent link to this version of the page">Permanent link</a></li>			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="../../../../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" /></a></div>
+				<div id="f-copyrightico"><a href="../../../../../COPYING.html"><img src="/icis/skins/common/images/gnu-fdl.png" alt='GNU Free Documentation License 1.2' /></a></div>
+			<ul id="f-list">
+					<li id="credits">This page was last modified 05:22, 5 February 2009 by <a href="../../../../articles/r/b/r/User%7ERbruskiewich_a89c.html" title="User:Rbruskiewich">Richard Bruskiewich</a>. </li>
+					<li id="copyright">Content is available under <a href="../../../../../COPYING.html" class="external " title="../../../../../COPYING.html">GNU Free Documentation License 1.2</a>.</li>
+					<li id="privacy"><a href="../../../../articles/p/r/i/ICISWiki%7EPrivacy_policy_0cbf.html" title="ICISWiki:Privacy policy">Privacy policy</a></li>
+					<li id="about"><a href="../../../../articles/a/b/o/ICISWiki%7EAbout_53aa.html" title="ICISWiki:About">About ICISWiki</a></li>
+					<li id="disclaimer"><a href="../../../../articles/g/e/n/ICISWiki%7EGeneral_disclaimer_9129.html" title="ICISWiki:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+</div>
+
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served in 356.845 secs. --></body></html>

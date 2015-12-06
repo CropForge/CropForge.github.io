@@ -1,0 +1,1013 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta name="generator" content="MediaWiki 1.14.0" />
+		<meta name="keywords" content="TDM Gene Management System 5.4,GEMS Name Types,Loading SSR Data into ICIS,Loading of DArT Data into ICIS" />
+		<link rel="shortcut icon" href="../../../../misc/favicon.ico" />
+		<link rel="search" type="application/opensearchdescription+xml" href="../../../../../opensearch_desc.php" title="ICISWiki (en)" />
+		<link title="Creative Commons" type="application/rdf+xml" href="../../../../articles/t/d/m/TDM_Gene_Management_System_5.4_b33d.html" rel="alternate meta" />
+		<link rel="copyright" href="../../../../../COPYING.html" />
+		<link rel="alternate" type="application/rss+xml" title="ICISWiki RSS Feed" href="http://localhost../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" />
+		<link rel="alternate" type="application/atom+xml" title="ICISWiki Atom Feed" href="http://localhost../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" />
+		<title>TDM Gene Management System 5.4 - ICISWiki</title>
+		<link rel="stylesheet" href="../../../../skins/common/shared.css?195" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../../../../skins/common/commonPrint.css?195" type="text/css" media="print" />
+		<link rel="stylesheet" href="../../../../skins/monobook/main.css?195" type="text/css" media="screen" />
+		<!--[if lt IE 5.5000]><link rel="stylesheet" href="../../../../skins/monobook/IE50Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 5.5000]><link rel="stylesheet" href="../../../../skins/monobook/IE55Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 6]><link rel="stylesheet" href="../../../../skins/monobook/IE60Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 7]><link rel="stylesheet" href="../../../../skins/monobook/IE70Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7ECommon.css?195" type="text/css" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7EPrint.css?195" type="text/css" media="print" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7EMonobook.css?195" type="text/css" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/gen.css?195" type="text/css" />
+		<!--[if lt IE 7]><script type="text/javascript" src="../../../../skins/common/IEFixes.js?195"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+
+		<script type= "text/javascript">/*<![CDATA[*/
+		var skin = "monobook";
+		var stylepath = "../../../../skins";
+		var wgArticlePath = "../../../../$1";
+		var wgScriptPath = "../../../../..";
+		var wgScript = "/icis/index.php";
+		var wgVariantArticlePath = false;
+		var wgActionPaths = {};
+		var wgServer = "http://localhost";
+		var wgCanonicalNamespace = "";
+		var wgCanonicalSpecialPageName = false;
+		var wgNamespaceNumber = 0;
+		var wgPageName = "TDM_Gene_Management_System_5.4";
+		var wgTitle = "TDM Gene Management System 5.4";
+		var wgAction = "view";
+		var wgArticleId = "792";
+		var wgIsArticle = true;
+		var wgUserName = null;
+		var wgUserGroups = null;
+		var wgUserLanguage = "en";
+		var wgContentLanguage = "en";
+		var wgBreakFrames = false;
+		var wgCurRevisionId = "15165";
+		var wgVersion = "1.14.0";
+		var wgEnableAPI = true;
+		var wgEnableWriteAPI = true;
+		var wgSeparatorTransformTable = ["", ""];
+		var wgDigitTransformTable = ["", ""];
+		var wgRestrictionEdit = [];
+		var wgRestrictionMove = [];
+		/*]]>*/</script>
+
+		<script type="text/javascript" src="../../../../skins/common/wikibits.js?195"><!-- wikibits js --></script>
+		<!-- Head Scripts -->
+		<script type="text/javascript" src="../../../../raw/gen.js"><!-- site js --></script>
+	</head>
+<body class="mediawiki ltr ns-0 ns-subject page-TDM_Gene_Management_System_5_4 skin-monobook">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 id="firstHeading" class="firstHeading">TDM Gene Management System 5.4</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From ICISWiki</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>			<!-- start content -->
+			<p><font size="+2" color="blue">MANAGEMENT OF GENETIC DATA</font>
+</p>
+<table id="toc" class="toc" summary="Contents"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1"><a href="#Molecular_Data"><span class="tocnumber">2</span> <span class="toctext">Molecular Data</span></a>
+<ul>
+<li class="toclevel-2"><a href="#Molecular_Variant_Data"><span class="tocnumber">2.1</span> <span class="toctext">Molecular Variant Data</span></a></li>
+<li class="toclevel-2"><a href="#Polymorphism_Detectors"><span class="tocnumber">2.2</span> <span class="toctext">Polymorphism Detectors</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#Molecular_Variants"><span class="tocnumber">3</span> <span class="toctext">Molecular Variants</span></a></li>
+<li class="toclevel-1"><a href="#Derived_Data"><span class="tocnumber">4</span> <span class="toctext">Derived Data</span></a>
+<ul>
+<li class="toclevel-2"><a href="#Diversity_Data"><span class="tocnumber">4.1</span> <span class="toctext">Diversity Data</span></a></li>
+<li class="toclevel-2"><a href="#Molecular_Genotype_Data"><span class="tocnumber">4.2</span> <span class="toctext">Molecular Genotype Data</span></a></li>
+<li class="toclevel-2"><a href="#Mapping_Data"><span class="tocnumber">4.3</span> <span class="toctext">Mapping Data</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#The_Gene_Management_System_Table_Structure"><span class="tocnumber">5</span> <span class="toctext">The Gene Management System Table Structure</span></a>
+<ul>
+<li class="toclevel-2"><a href="#Table_Relationships"><span class="tocnumber">5.1</span> <span class="toctext">Table Relationships</span></a></li>
+<li class="toclevel-2"><a href="#Table_Definitions"><span class="tocnumber">5.2</span> <span class="toctext">Table Definitions</span></a>
+<ul>
+<li class="toclevel-3"><a href="#GEMS_NAMES"><span class="tocnumber">5.2.1</span> <span class="toctext">GEMS_NAMES</span></a></li>
+<li class="toclevel-3"><a href="#GEMS_MARKER_DETECTOR"><span class="tocnumber">5.2.2</span> <span class="toctext">GEMS_MARKER_DETECTOR</span></a></li>
+<li class="toclevel-3"><a href="#GEMS_MV"><span class="tocnumber">5.2.3</span> <span class="toctext">GEMS_MV</span></a></li>
+<li class="toclevel-3"><a href="#GEMS_PD"><span class="tocnumber">5.2.4</span> <span class="toctext">GEMS_PD</span></a></li>
+<li class="toclevel-3"><a href="#GEMS_PD_COMP"><span class="tocnumber">5.2.5</span> <span class="toctext">GEMS_PD_COMP</span></a></li>
+<li class="toclevel-3"><a href="#GEMS_COMP"><span class="tocnumber">5.2.6</span> <span class="toctext">GEMS_COMP</span></a></li>
+<li class="toclevel-3"><a href="#GEMS_PROP"><span class="tocnumber">5.2.7</span> <span class="toctext">GEMS_PROP</span></a></li>
+<li class="toclevel-3"><a href="#GEMS_LOCUS"><span class="tocnumber">5.2.8</span> <span class="toctext">GEMS_LOCUS</span></a></li>
+<li class="toclevel-3"><a href="#GEMS_METHOD"><span class="tocnumber">5.2.9</span> <span class="toctext">GEMS_METHOD</span></a></li>
+<li class="toclevel-3"><a href="#GEMS_SCALE"><span class="tocnumber">5.2.10</span> <span class="toctext">GEMS_SCALE</span></a></li>
+<li class="toclevel-3"><a href="#GEMS_MAP"><span class="tocnumber">5.2.11</span> <span class="toctext">GEMS_MAP</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#Examples_of_Data_Input"><span class="tocnumber">6</span> <span class="toctext">Examples of Data Input</span></a>
+<ul>
+<li class="toclevel-2"><a href="#Diversity_Array_Technology.28DArT.29_data"><span class="tocnumber">6.1</span> <span class="toctext">Diversity Array Technology(DArT) data</span></a></li>
+<li class="toclevel-2"><a href="#Simple_Sequence_Repeat_.28SSR.29_data"><span class="tocnumber">6.2</span> <span class="toctext">Simple Sequence Repeat (SSR) data</span></a></li>
+<li class="toclevel-2"><a href="#RAPD_diversity_study"><span class="tocnumber">6.3</span> <span class="toctext">RAPD diversity study</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#Data_Output"><span class="tocnumber">7</span> <span class="toctext">Data Output</span></a></li>
+<li class="toclevel-1"><a href="#Summary"><span class="tocnumber">8</span> <span class="toctext">Summary</span></a></li>
+</ul>
+</td></tr></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </script>
+<a name="Introduction" id="Introduction"></a><h2> <span class="mw-headline"> Introduction </span></h2>
+<p>Crop researchers will increasingly need access to molecular marker data in readily useable formats that can be easily linked to data from classical genetics and phenotypic evaluation. The ICIS data model will therefore store data from molecular analysis of genetic entities (GENs) and integrate these data with information on genealogy and phenotypes. The greatest potential for using molecular data however, is through integration of data across studies and through links to external molecular and sequence databases such as MaizeDB, GrainGenes and RiceGenes for crop specific molecular data and <a href="http://www.embl.org" class="external text" title="http://www.embl.org" rel="nofollow">EMBL</a> and <a href="http://us.expasy.org/sprot/" class="external text" title="http://us.expasy.org/sprot/" rel="nofollow">SWISSPROT</a> for DNA and protein sequence information respectively. The Gene Management System (GEMS) of ICIS will facilitate this integration and linkage. GEMS will manage classical genetic information and molecular characterization in an analogous way to that in which ICIS location management tools handle locations. The specific functions of GEMS are:
+</p>
+<ol><li> unique identification of genetic variants including molecular polymorphisms, sequences and traditional genes;
+</li><li> management of nomenclature of molecular variants;
+</li><li> identification of sources of different molecular variants;
+</li><li> identification of loci and alleles including molecular and physical mapping positions;
+</li><li> linkage of genes to traits and products.
+</li></ol>
+<p>Molecular data result from an analysis of variations in genetic code between different GENs. These molecular polymorphisms or molecular variants (MVs) are detected by the application of polymorphism detectors (PDs) for example, different combinations of restriction with specific enzymes and or amplification with specific primers. Each PD results in a distinct set of identifiable MVs that are present or absent in individual GENs. Depending on the PD used, the molecular variants can be identified simply as morphs or variants (as is the case with dominant PDs) or as alleles (as in the case with co-dominant PDs) or as nucleotides when sequencing technology is used.
+When co-dominant PDs are used, the different forms of the marker should be detectable in diploid organisms to allow the discrimination of homozygotes and heterozygotes. Dominant PDs, however, are not able to distinguish between homozygotes and eterozygotes.
+In the case of both dominant PDs (e.g., AFLPs, RAPDs) and co-dominant PDs (e.g., RFLPs, isozymes, SSRs) the occurrence of variants can be used to assess genetic diversity and to infer relationships among GENs. In both cases, it is also possible to identify the positions or loci of MVs in linkage groups or on chromosomes, by mapping them using linkage disequilibrium in segregating populations. This process identifies both the marker loci and different MVs or alleles that occur at those loci. However it is less common that MVs detected by dominant PDs are mapped, so most data reported in the literature on map position tend to be from co-dominant PDs. Nucleotide differences detected by sequencing can also be mapped to loci.
+</p>
+<a name="Molecular_Data" id="Molecular_Data"></a><h2> <span class="mw-headline"> Molecular Data </span></h2>
+<p>Data produced from molecular studies will be stored in DMS and may be linked to GEMS (the Gene
+Management System). The following sections describe the different types of molecular data that can be
+managed.
+</p>
+<a name="Molecular_Variant_Data" id="Molecular_Variant_Data"></a><h3> <span class="mw-headline"> Molecular Variant Data </span></h3>
+<p>Primary molecular data generally comes in one of two basic forms depending on the detection method used. With gel based detection methods the data are usually presented as a table of values classified by GENs, PDs and MVs. The values are often presence or absence of MVs in each GEN, but may also be
+frequencies or intensities. This basic data can be stored in the DMS and indexed by:
+</p>
+<ul><li> GEN is a factor with trait GENETIC ENTITY with levels identified either by the name of the germplasm or by the Germplasm Identifier (GID) from GMS or both. 
+</li><li> PD is a factor with trait POLYMORPHISM DETECTOR with levels identified byname or PDID from GEMS, or both
+</li><li> MV is a factor of the trait MOLECULAR VARIANT with levels identified by molecular weights, names, row numbers or MVID from GEMS 
+</li></ul>
+<p>Data from automatic sequencers are usually molecular weights and in this case, only two indexing factors are required in the DMS; GEN and PD. In this case MV is a variate of the trait MOLECULAR VARIANT with values being the molecular weights. This data is easily represented in the presence absence format by identifying molecular weights with alleles and recording presence or absence for each GEN.
+</p><p>In the case of presence / absence data, when dominant PDs are used, the occurrences are zero (absence) or one (presence) of each MV. In the case of co-dominant PDs, the ploidy level of the crop affects how the variants are scored. When the crop is a diploid, it is possible to score the alleles as 0 (the allele not present), 1 (one copy of the allele present, i.e. a heterozygote) or 2 (two copies of the allele present, i.e. a homozygote). However, if the crop is a hexaploid, then this numbering system isn’t suitable, and would have to be extended to allow the presence of the allele up to 6 times. Consequently, the decision on how to score co-dominant data is crop dependent. Another score (often 9) is used to indicate a missing datum, for data derived from both dominant and co-dominant PDs. When sequencing PDs are used, the variants are scored as A (adenine), G (guanine), C (cytosine), T (thymine), R (=G or A), Y (=C or T) or N (=A or C or G or T).
+</p>
+<a name="Polymorphism_Detectors" id="Polymorphism_Detectors"></a><h3> <span class="mw-headline"> Polymorphism Detectors </span></h3>
+<p>The PDs that generate the MV data can be classified into four basic categories:
+</p>
+<ol><li> Co-dominant PCR based, e.g. SSRs
+</li><li> Dominant PCR based, e.g. AFLPs, RAPDs
+</li><li> Co-dominant non-PCR based, e.g. RFLP, isozymes
+</li><li> Sequencing.
+</li></ol>
+<p>Table 1 lists information required to document PDs. All the information in the table can be effectively managed as METHODS of the trait POLYMORPHISM DETECTOR in DMS. However, the information in bold type is the minimal required to link the use of a particular PD across studies and thence to link particular MVs. Hence this information is used for the definition of unique PDIDs in GEMS for amalgamating data across studies. 
+</p><p><br />
+<b>Table 1: Information required to document the use of PDs</b>
+</p>
+<table border="1" cellpadding="2">
+<tr>
+<td width="25%"><i>Co-dominant PCR based markers, e.g. SSRs</i>
+</td><td width="25%"><i>Dominant PCR-based markers, e.g. AFLPs, RAPDs</i>
+</td><td width="25%"><i>Co-dominant non-PCR based PDs, e.g. RFLPs, isozymes</i>
+</td><td width="25%"><i>Sequencing</i>
+</td></tr>
+<tr>
+<td><b>Type</b>
+</td><td><b>Type</b>
+</td><td><b>Type</b>
+</td><td><b>Type</b>
+</td></tr>
+<tr>
+<td><b>Primer Sequence</b>
+</td><td><b>Primer Sequence</b>
+</td><td><b>Probe/Enzyme</b>
+</td><td><b>Technique used</b>
+</td></tr>
+<tr>
+<td>Amplification conditions
+</td><td>Amplification conditions
+</td><td>Hybridisation conditions
+</td><td>Amplification conditions
+</td></tr>
+<tr>
+<td>Electrophoresis conditions
+</td><td>Electrophoresis conditions
+</td><td>Electrophoresis conditions
+</td><td>Electrophoresis conditions
+</td></tr>
+<tr>
+<td>Detection Method
+</td><td>Detection Method
+</td><td>Detection Method
+</td><td>Detection Method
+</td></tr>
+<tr>
+<td>How Scored: Lane Standards / Eye vs. Computer aided / GEN Standard
+</td><td>How Scored: Lane Standards / Eye vs. Computer aided / GEN Standard
+</td><td>How Scored: Lane Standards / Eye vs. Computer aided / GEN Standard
+</td><td>How Scored: Automated / Manual
+</td></tr>
+<tr>
+<td>Laboratory
+</td><td>Laboratory
+</td><td>Laboratory
+</td><td>Laboratory
+</td></tr>
+<tr>
+<td>Who interpreted gel
+</td><td>Who interpreted gel
+</td><td>Who interpreted gel
+</td><td>Who interpreted gel
+</td></tr>
+<tr>
+<td>Reference
+</td><td>Reference
+</td><td>Reference
+</td><td>Reference
+</td></tr></table>
+<p>(Minimal essential fields for defining unique PDIDs in GEMS are in bold)
+</p>
+<a name="Molecular_Variants" id="Molecular_Variants"></a><h2> <span class="mw-headline"> Molecular Variants </span></h2>
+<p>Polymorphisms revealed by PDs may be identified only within studies, but are available for more powerful integrative analysis if they are identified across studies. This is usually done by determining (estimating) the molecular weights of specific fragments, if this was not the original MV data and assigning a unique MVID based on the PDID and the molecular weight. Estimation of molecular weights to a sufficient accuracy to identify MVs across studies is an issue to be managed by the system curator. This problem is frequently addressed by including common genotypes in all experiments across all labs. This provides common reference points used to identify individual MVs across studies.
+</p><p><br />
+<b>Table 2: Data on Molecular Variants which can be managed in GEMS</b>
+</p>
+<table border="1" cellpadding="2">
+<tr>
+<td width="25%"> <i>Co-dominant markers PCR based and non PCR based</i>
+</td><td width="25%"> <i>Dominant PCR-based markers, e.g. AFLPs, RAPDs</i>
+</td><td width="25%"> <i>Genes identified by non molecular methods</i>
+</td><td width="25%"> <i>Sequencing</i>
+</td></tr>
+<tr>
+<td><b>GID</b>
+</td><td><b>GID</b>
+</td><td><b>GID</b>
+</td><td><b>GID</b>
+</td></tr>
+<tr>
+<td><b>Polymorphism detector (PDID)</b>
+</td><td><b>PDID</b>
+</td><td><b>Method of discovery (PDID)</b>
+</td><td><b>PDID</b>
+</td></tr>
+<tr>
+<td><b>ID of allele scored (MVID)</b>
+</td><td><b>ID of morph scored (MVID)</b>
+</td><td><b>Allele ID (MVID)</b>
+</td><td><b>ID of nucleotide scored (MVID)</b>
+</td></tr>
+<tr>
+<td>Size of allele scored
+</td><td>Size of morph
+</td><td>
+</td><td>Nucleotide position
+</td></tr>
+<tr>
+<td>Range of possible allele sizes
+</td><td>Range of possible morph sizes
+</td><td>
+</td><td>
+</td></tr>
+<tr>
+<td>Gene/marker to which allele belongs
+</td><td>[Whether morphs identified as alleles]
+</td><td>
+</td><td>The name of the gene/marker being sequenced
+</td></tr>
+<tr>
+<td>Position or locus information
+</td><td>Repeatability
+</td><td>Position or locus information
+</td><td>Repeatability
+</td></tr>
+<tr>
+<td>Image of gel / autorad
+</td><td>Image of gel / autorad
+</td><td>
+</td><td>Image of gel / autorad
+</td></tr>
+<tr>
+<td>Trait(s) affected by gene
+</td><td>
+</td><td>Trait(s) affected by gene
+</td><td>
+</td></tr></table>
+<p>(Minimum data requirements for the definition of molecular variants in GEMS shown in bold)
+</p><p>Table 2 lists information on MVs which can be managed in GEMS to facilitate integrative analysis across studies. The minimum data required to uniquely identify a molecular variant is shown in bold in the table. If this information has not been recorded within a particular study, then the MV data are simply indexed by MV name and GEN in the DMS, together with information on the PD. If it is desirable to compare the data across studies, then it will be necessary to return to original sources and determine the missing information.
+</p>
+<a name="Derived_Data" id="Derived_Data"></a><h2> <span class="mw-headline"> Derived Data </span></h2>
+<p><b>Table 3: Examples of derived molecular data</b>
+</p>
+<table border="1" cellpadding="2">
+<tr>
+<td width="25%"><i>Co-dominant PCR based markers, e.g. SSRs</i>
+</td><td width="25%"><i>Dominant PCR-based markers, e.g. AFLPs, RAPDs</i>
+</td><td width="25%"><i>Co-dominant non-PCR based PDs, e.g. RFLPs, isozymes</i>
+</td><td width="25%"><i>Sequencing</i>
+</td></tr>
+<tr>
+<td>Total number of alleles
+</td><td>Total number of morphs
+</td><td>Total number of alleles
+</td><td>Total number of nucleotides
+</td></tr>
+<tr>
+<td>% polymorphism
+</td><td>% polymorphism
+</td><td>% polymorphism
+</td><td>% polymorphism
+</td></tr>
+<tr>
+<td>Molecular Genotype
+</td><td>Molecular Genotype
+</td><td>Molecular Genotype
+</td><td>
+</td></tr>
+<tr>
+<td>Locus/loci to which allele is mapped
+</td><td>Locus/loci to which allele is mapped
+</td><td>Locus/loci to which allele is mapped
+</td><td>Locus / loci to which sequence is mapped
+</td></tr>
+<tr>
+<td>Linkage group(s) to which locus/ loci belongs
+</td><td>Linkage group(s) to which locus/ loci belongs
+</td><td>Linkage group(s) to which locus/ loci belongs
+</td><td>Linkage group(s) to which locus/ loci belongs
+</td></tr>
+<tr>
+<td>Function of gene
+</td><td>Function of gene
+</td><td>Function of gene
+</td><td>Function of gene
+</td></tr>
+<tr>
+<td>GEN containing MV
+</td><td>GEN containing MV
+</td><td>GEN containing MV
+</td><td>GEN containing MV
+</td></tr></table>
+<p>Various types of information can be derived from the MV data. Table 3 gives examples of derived data. These data can be divided into three basic types.
+</p>
+<a name="Diversity_Data" id="Diversity_Data"></a><h3> <span class="mw-headline"> Diversity Data </span></h3>
+<p>Total number of variants observed and percent polymorphism reflect the genetic diversity of the target GENs. These Derived Variates (DVs) belonging to appropriately defined traits (e.g. TOTAL NUMBER OF MOLECULAR VARIANTS, POLYMORPHISM CONTENT OF MV DATA) can be managed effectively in the DMS. 
+</p>
+<a name="Molecular_Genotype_Data" id="Molecular_Genotype_Data"></a><h3> <span class="mw-headline"> Molecular Genotype Data </span></h3>
+<p>When MV data are collected on a defined population of lines, derived from a specific cross (usually called a mapping population) an analysis of the parental origin of each MV present in one parent but absent in the other results in a table of Molecular Genotype Data. Such data can be stored as a derived variate in the DMS, belonging to the trait MOLECULAR GENOTYPE, indexed by PD, MV and GEN.
+</p>
+<a name="Mapping_Data" id="Mapping_Data"></a><h3> <span class="mw-headline"> Mapping Data </span></h3>
+<p>Mapping data, unlike diversity and molecular genotype data, require the GEMS for effective management, because of the importance of integrating these data across studies, in order to produce consensus maps.
+</p><p>A mapping analysis assigns each MV to a position on a chromosome called a locus. The loci are resolved into linkage groups and when sufficient loci have been isolated in the genome, there will be one linkage group per chromosome. Variants of the same PD that do not recombine are called alleles and assigned to the same locus. Both marker loci and their alleles may be named within studies, but for integrative analysis they should be named consistently across studies. Naming of marker loci and their alleles both across studies and keeping track of their relationships are functions of GEMS.
+</p><p>The loci associated with linkage groups can be ordered into a linear linkage map defined by a group number, often corresponding to a chromosome (if physical mapping has been done), and a linkage distance for each locus along the group. There are two major components of molecular mapping data; linkage group information and information on the distances among loci within a group. Linkage group information is stored in the table LGROUPS in GEMS. The distances are stored as a variate belonging to the trait LINKAGE DISTANCE (LKDIST), and are indexed by locus names (defined in GEMS).
+</p><p>Stored maps can be updated as more data are added to the MV data. The construction of consensus maps entails an assessment of the names and relationships among the PD, MV data, ALLELE and LOCUS across studies. These cross study comparisons require that each entity is uniquely identified and the relationships managed by GEMS. The information on both major genes and QTLs, including information on their phenotypic effects, are also managed by GEMS.
+</p>
+<a name="The_Gene_Management_System_Table_Structure" id="The_Gene_Management_System_Table_Structure"></a><h2> <span class="mw-headline"> The Gene Management System Table Structure </span></h2>
+<p>GEMS uses the following table structure to store details on polymorphism detectors, molecular variants, alleles, genes and loci, which is based on the genetic relationships shown below.
+</p><p><a href="../../../../articles/i/c/i/File%7EIcis18-1.jpg_b71d.html" class="image" title="Image:Icis18-1.jpg"><img alt="Image:Icis18-1.jpg" src="../../../../images/c/cc/Icis18-1.jpg" width="588" height="354" border="0" /></a>
+</p><p><a href="http://cropwiki.irri.org/gcp" class="external text" title="http://cropwiki.irri.org/gcp" rel="nofollow">Generation Challege program</a>  has defined a <a href="http://cropwiki.irri.org/gcp/index.php/Pretoria_genotype" class="external text" title="http://cropwiki.irri.org/gcp/index.php/Pretoria_genotype" rel="nofollow">genotype Model</a> and listed <a href="http://cropwiki.irri.org/gcp/index.php/Genotype_model_dictionary" class="external text" title="http://cropwiki.irri.org/gcp/index.php/Genotype_model_dictionary" rel="nofollow">definitions</a> for some of the terms used for genotype data.
+</p>
+<a name="Table_Relationships" id="Table_Relationships"></a><h3> <span class="mw-headline">Table Relationships</span></h3>
+<p>The central table of GEMS is the Molecular Variant table (gems_mv). This defines whether the molecular variant data scored are alleles, morphs or nucleotides. It also stores the information on the molecular weight of each molecular variant, with the amount of tolerance allowed around this figure. For example, an allele size run on a polyacrylamide gel on an ABI Sequencer may be identified to within &plusmn;1 base pairs. However, if the same allele is run on an agarose gel, the tolerance range may increase to &plusmn;3 base pairs, due to the lower sensitivity of agarose gels. The gems_mv table links to the gems_locus table, which identifies the loci where the alleles are located. The gems_mv table is also linked to the gems_marker_detector table which contains information on markers.  The gems_mv and gems_marker_detector tables are linked to the gems_names table. The mvid field of the gems_mv table and the mdid field of gems_marker_detector are linked to the gobjid of the gems_names table. The gnobtype field of the gems_names table identifies whether a name is an MV or MARKER_DETECTOR. The gems_names table acts as a catalogue of molecular variants names and marker names (possibly other objects in GEMS such as protocol), which can be identified across studies. With these tables linked together, management of synonyms used across studies can be facilitated.
+</p><p>The gems_marker_detector table is linked to the gems_pd table (Polymorphism Detector) table.  The primary key (pdid) in the gems_pd table defines a combination of marker detector id and protocol/condition id. The gems_pd table is linked to tables that define the conditions/protocol that produced the molecular variants. The set of conditions used to define a unique PD corresponds to the fields in bold type in Table 1.
+</p><p>Bibliographic References are stored in the DMS table BIBREFS.
+</p><p><br />
+<a href="../../../../articles/n/e/w/File%7ENew_GEMS_schema.JPG_d337.html" class="image" title="New GEMS schema.JPG"><img alt="" src="../../../../images/thumb/3/37/New_GEMS_schema.JPG/750px-New_GEMS_schema.JPG" width="750" height="345" border="0" /></a>
+</p>
+<a name="Table_Definitions" id="Table_Definitions"></a><h3> <span class="mw-headline">Table Definitions</span></h3>
+<a name="GEMS_NAMES" id="GEMS_NAMES"></a><h4> <span class="mw-headline"> GEMS_NAMES </span></h4>
+<p>GEMS_NAMES table serves as a catalogue of marker detector names and molecular variant names. GOBJTYPE contains the table name where all other information regarding the name specified in the GNVAL field can be found. GNID is the unique identifier of a specific name. GOBJID is the link between the GEMS_NAMES table and the table in the GOBJTYPE.
+</p><p>Ex.
+</p>
+<pre>GNID = 2715
+GOBJID = 1200
+GOBJTYPE = gems_mv
+GNVAL = RM105_143
+...
+this entry indicates that "RM105_143" is a molecular variant name which is identified by 
+unique id = 2715 in the GEMS_NAMES table. It is also identified by a unique id = 1200 
+in the GEMS_MV table. The Unique Identifier in the GEMS_MV table is MVID. 
+</pre>
+<p><b>Table 4. GEMS_NAMES table</b>
+</p>
+<table border="1" cellpadding="2" width="100%">
+<tr>
+<th width="20%"> Fieldname
+</th><th width="20%"> Description
+</th><th width="60%"> Type
+</th></tr>
+<tr>
+<td>gnid</td><td>Long</td><td> Unique ID of the Name
+</td></tr>
+<tr>
+<td>gobjid</td><td>Long</td><td>Unique ID of Name in the gobjtype Table
+</td></tr>
+<tr>
+<td>gobjtype</td><td>Varchar(255)</td><td>Table Name where the name can be found
+</td></tr>
+<tr>
+<td>gntype</td><td>Long</td><td>Type of Name  <a href="../../../../articles/g/e/m/GEMS_Name_Types_0589.html" title="GEMS Name Types">GEMS Name Types</a>
+</td></tr>
+<tr>
+<td>gnstat</td><td>Long</td><td> Status of Name (0- default value 1 - synonyms)
+</td></tr>
+<tr>
+<td>gnval</td><td>Varchar(255)</td><td> Name Value
+</td></tr>
+<tr>
+<td>gnlocn</td><td>Long</td><td>Location where Name was assigned
+</td></tr>
+<tr>
+<td>gndate</td><td>Long</td><td>date when Name was assigned
+</td></tr>
+<tr>
+<td>gnuid</td><td>Long</td><td>User who assigned the Name
+</td></tr>
+<tr>
+<td>gnref</td><td>Long</td><td>Reference	; linked to the BIBREFS table
+</td></tr></table>
+<a name="GEMS_MARKER_DETECTOR" id="GEMS_MARKER_DETECTOR"></a><h4> <span class="mw-headline"> GEMS_MARKER_DETECTOR </span></h4>
+<p>GEMS_MARKER_DETECTOR table contains information on marker detectors. 
+</p><p><b>Table 5. GEMS_MARKER_DETECTOR table</b>
+</p>
+<table border="1" cellpadding="2" width="100%">
+<tr>
+<th width="20%"> Fieldname
+</th><th width="20%"> Description
+</th><th width="60%"> Type
+</th></tr>
+<tr>
+<td>mdid</td><td>Long</td><td>Unique ID of the Marker Detector
+</td></tr>
+<tr>
+<td>matype</td><td>Varchar(255)</td><td>Marker Detector Type (ex. SSR, DArT)
+</td></tr>
+<tr>
+<td>fprimer</td><td>Varchar(255)</td><td>Forward Primer
+</td></tr>
+<tr>
+<td>rprimer</td><td>Varchar(255)</td><td>Reverse Primer
+</td></tr>
+<tr>
+<td>lmdid</td><td>Long</td><td>Local Marker Detector ID
+</td></tr>
+<tr>
+<td>mauid</td><td>Long</td><td>User ID
+</td></tr>
+<tr>
+<td>maref</td><td>Varchar(255)</td><td>Reference	; linked to the BIBREFS table
+</td></tr>
+<tr>
+<td>minallele</td><td>Long</td><td> known minimum allele value
+</td></tr>
+<tr>
+<td>maxallele</td><td>Long</td><td> known maximum allele value
+</td></tr></table>
+<a name="GEMS_MV" id="GEMS_MV"></a><h4> <span class="mw-headline"> GEMS_MV </span></h4>
+<p>GEMS_MV stores information on molecular variant names. Each molecular variant is uniquely identified by the MVID field. Each MVID is associated with an MDID value. The MDID field contains the marker detector ID of the marker detector which detected the variant. It is the link between the GEMS_MV table and the GEMS_MARKER_DETECTOR table.  
+The GEMS_MV table is also linked to the GEMS_LOCUS table via the LOCUSID field.   
+</p><p><b>Table 6. GEMS_MV table</b>
+</p>
+<table border="1" cellpadding="2" width="100%">
+<tr>
+<th width="20%"> Fieldname
+</th><th width="20%"> Description
+</th><th width="60%"> Type
+</th></tr>
+<tr>
+<td>mvid	</td><td>Long 	</td><td>Unique Molecular Variant ID
+</td></tr>
+<tr>
+<td>locusid	</td><td>Long 	</td><td>Locus ID where the MV is associated
+</td></tr>
+<tr>
+<td>mvtype	</td><td>Varchar(255)	</td><td>Type of Molecular Variant (Allele,Morph,Nucleotide)
+</td></tr>
+<tr>
+<td>mwt	</td><td>Long	</td><td>Molecular weight the Molecular Variant
+</td></tr>
+<tr>
+<td>mdid	</td><td>Long	</td><td>Marker Detector ID used to detect the MV
+</td></tr>
+<tr>
+<td>lmvid	</td><td>Long	</td><td>Local MVID
+</td></tr>
+<tr>
+<td>mvuid	</td><td>Long 	</td><td>User ID who defined the MV
+</td></tr>
+<tr>
+<td>mvref	</td><td>Long 	</td><td>Reference&nbsp;; linked to the BIBREFS table
+</td></tr></table>
+<a name="GEMS_PD" id="GEMS_PD"></a><h4> <span class="mw-headline"> GEMS_PD </span></h4>
+<p>GEMS_PD (Polymorphic Detector) contains the different combination of Marker Detector ID(MDID) and condition ID (condid). A marker detector can have one or more condition (or protocols). A protocol/condition can also be used for different markers. This creates a many-to-many relationship between the markers and protocols.
+</p><p><b>Table 7. GEMS_PD table</b>
+</p>
+<table border="1" cellpadding="2" width="100%">
+<tr>
+<th width="20%"> Fieldname
+</th><th width="20%"> Description
+</th><th width="60%"> Type
+</th></tr>
+<tr>
+<td>pdid	</td><td>Long 	</td><td>Polymorphic Detector ID
+</td></tr>
+<tr>
+<td>condid	</td><td>Long 	</td><td>Unique Condition ID
+</td></tr>
+<tr>
+<td>mdid	</td><td>Long	</td><td>Marker Detector ID (link to GEMS_MARKER_DETECTOR table)
+</td></tr></table>
+<a name="GEMS_PD_COMP" id="GEMS_PD_COMP"></a><h4> <span class="mw-headline"> GEMS_PD_COMP </span></h4>
+<p>GEMS_PD_COMP (Polymorphic Detector and Components) table serves as the intermediate table to break the many-to-many relationship between the protocols/conditions and marker detector. Each Polymorphic Detector has many components (cid). Each of these component is futher defined in the GEMS_COMP table.
+</p><p><b>Table 8. GEMS_PD_COMP table</b>
+</p>
+<table border="1" cellpadding="2" width="100%">
+<tr>
+<th width="20%"> Fieldname
+</th><th width="20%"> Description
+</th><th width="60%"> Type
+</th></tr>
+<tr>
+<td>pd_comp	</td><td>Long 	</td><td>Unique ID for the Combination of PDID and CID
+</td></tr>
+<tr>
+<td>Pdid	</td><td>Long 	</td><td>Polymorphic Detector ID(linked to GEMS_PD table)
+</td></tr>
+<tr>
+<td>cid	</td><td>Long	</td><td>Component ID (linked to GEMS_COMP table)
+</td></tr></table>
+<a name="GEMS_COMP" id="GEMS_COMP"></a><h4> <span class="mw-headline"> GEMS_COMP </span></h4>
+<p>The GEMS_COMP table contains the information on each component of a Polymorphic Detector. Each component is defined by its properties  and its value. The Value of the Component is stored in the COMVAL field while its properties is defined thru another table called GEMS_PROP table. The link between this two table is the PID field.  
+</p><p><b>Table 9. GEMS_COMP table</b>
+</p>
+<table border="1" cellpadding="2" width="100%">
+<tr>
+<th width="20%"> Fieldname
+</th><th width="20%"> Description
+</th><th width="60%"> Type
+</th></tr>
+<tr>
+<td>cid	</td><td>Long 	</td><td>Unique ID for the Component
+</td></tr>
+<tr>
+<td>Condid	</td><td>Long 	</td><td>Condition ID
+</td></tr>
+<tr>
+<td>Comid	</td><td>Long 	</td><td>Component Group ID used to group components
+</td></tr>
+<tr>
+<td>Pid	</td><td>Long 	</td><td>Unique Property ID (linked to GEMS_PROP)
+</td></tr>
+<tr>
+<td>Comval	</td><td>Varchar(255)	</td><td>Value
+</td></tr>
+<tr>
+<td>Comuid	</td><td>Long 	</td><td>User ID
+</td></tr>
+<tr>
+<td>Comref	</td><td>Long 	</td><td>Reference; linked to the BIBREFS table
+</td></tr></table>
+<a name="GEMS_PROP" id="GEMS_PROP"></a><h4> <span class="mw-headline"> GEMS_PROP </span></h4>
+<p>GEMS_PROP table defines the property, method and scale used by each component in the GEMS_COMP table.
+</p><p><b>Table 10. GEMS_PROP table</b>
+</p>
+<table border="1" cellpadding="2" width="100%">
+<tr>
+<th width="20%"> Fieldname
+</th><th width="20%"> Description
+</th><th width="60%"> Type
+</th></tr>
+<tr>
+<td>pid	</td><td>Long 	</td><td>Unique ID for the combination of propid, scaleid, methid
+</td></tr>
+<tr>
+<td>propid	</td><td>Long 	</td><td>Property ID
+</td></tr>
+<tr>
+<td>propname	</td><td>Long 	</td><td>Property Name
+</td></tr>
+<tr>
+<td>scaleid	</td><td>Long	</td><td>Scale ID  (linked to GEMS_SCALE table);scale used to measure
+</td></tr>
+<tr>
+<td>methid	</td><td>Long 	</td><td>Method ID (linked to GEMS_METHOD) method used
+</td></tr>
+<tr>
+<td>propgrp	</td><td>Varchar(255)	</td><td>Name of Property Group where property is associated
+</td></tr></table>
+<a name="GEMS_LOCUS" id="GEMS_LOCUS"></a><h4> <span class="mw-headline"> GEMS_LOCUS </span></h4>
+<p>GEMS_LOCUS table contains information on chromosome and location of a molecular variant
+</p><p><b>Table 11. GEMS_LOCUS table</b>
+</p>
+<table border="1" cellpadding="2" width="100%">
+<tr>
+<th width="20%"> Fieldname
+</th><th width="20%"> Description
+</th><th width="60%"> Type
+</th></tr>
+<tr>
+<td>locusid	</td><td>Long 	</td><td>Unique ID for the Locus
+</td></tr>
+<tr>
+<td>chromosome	</td><td>Varchar(50)	</td><td>Name/Type  of Map
+</td></tr>
+<tr>
+<td>position	</td><td>double	</td><td>Position in the Map
+</td></tr></table>
+<a name="GEMS_METHOD" id="GEMS_METHOD"></a><h4> <span class="mw-headline"> GEMS_METHOD </span></h4>
+<p>GEMS_METHOD table contains information on the methods used in the GEMS_COMP table
+</p><p><b>Table 12. GEMS_METHOD table</b>
+</p>
+<table border="1" cellpadding="2" width="100%">
+<tr>
+<th width="20%"> Fieldname
+</th><th width="20%"> Description
+</th><th width="60%"> Type
+</th></tr>
+<tr>
+<td>Methid	</td><td>Long 	</td><td>Unique Id for Method used
+</td></tr>
+<tr>
+<td>mname	</td><td>Varchar(255)	</td><td>Method Name
+</td></tr>
+<tr>
+<td>mabbr	</td><td>Varchar(255)	</td><td>Abbreviated name
+</td></tr>
+<tr>
+<td>mdesc	</td><td>Varchar(255)	</td><td>Description of the method
+</td></tr></table>
+<a name="GEMS_SCALE" id="GEMS_SCALE"></a><h4> <span class="mw-headline"> GEMS_SCALE </span></h4>
+<p>GEMS_SCALE table contains information on the scales used in the GEMS_COMP table. 
+</p><p><b>Table 13. GEMS_SCALE table</b>
+</p>
+<table border="1" cellpadding="2" width="100%">
+<tr>
+<th width="20%"> Fieldname
+</th><th width="20%"> Description
+</th><th width="60%"> Type
+</th></tr>
+<tr>
+<td>Scaleid	</td><td>Long 	</td><td>Unique ID for a scale or measurement unit
+</td></tr>
+<tr>
+<td>Scname	</td><td>Varchar(255) 	</td><td>Scale Name
+</td></tr>
+<tr>
+<td>Sctype	</td><td>Varchar(255)	</td><td>Type of Scale
+</td></tr></table>
+<a name="GEMS_MAP" id="GEMS_MAP"></a><h4> <span class="mw-headline"> GEMS_MAP </span></h4>
+<p>GEMS_MAP table contains information on maps used in GEMS_LOCUS
+</p><p><b>Table 14. GEMS_MAP table</b>
+</p>
+<table border="1" cellpadding="2" width="100%">
+<tr>
+<th width="20%"> Fieldname
+</th><th width="20%"> Description
+</th><th width="60%"> Type
+</th></tr>
+<tr>
+<td>mapid	</td><td>Long 	</td><td>Unique ID for a given map
+</td></tr>
+<tr>
+<td>maptype	</td><td>Varchar(255) 	</td><td>type of map
+</td></tr></table>
+<a name="Examples_of_Data_Input" id="Examples_of_Data_Input"></a><h2> <span class="mw-headline">Examples of Data Input</span></h2>
+<a name="Diversity_Array_Technology.28DArT.29_data" id="Diversity_Array_Technology.28DArT.29_data"></a><h3> <span class="mw-headline"><a href="../../../../articles/l/o/a/Loading_of_DArT_Data_into_ICIS_0db4.html" title="Loading of DArT Data into ICIS">Diversity Array Technology(DArT) data</a></span></h3>
+<a name="Simple_Sequence_Repeat_.28SSR.29_data" id="Simple_Sequence_Repeat_.28SSR.29_data"></a><h3> <span class="mw-headline"><a href="../../../../articles/l/o/a/Loading_SSR_Data_into_ICIS_73d2.html" title="Loading SSR Data into ICIS">Simple Sequence Repeat (SSR) data</a></span></h3>
+<a name="RAPD_diversity_study" id="RAPD_diversity_study"></a><h3> <span class="mw-headline">RAPD diversity study </span></h3>
+<p>Consider the following small data set, 5 GENs by 3 MVs, produced using RAPDs (Random Amplified Polymorphic DNA). The data can be listed in serial format as follows:
+</p>
+<table border="1" cellpadding="2">
+<tr>
+<th width="15%"> GID
+</th><th width="15%"> PDID
+</th><th width="15%"> MVID
+</th><th width="15%"> MV
+</th></tr>
+<tr>
+<td>Rx101
+</td><td>1
+</td><td>1
+</td><td>1
+</td></tr>
+<tr>
+<td>Rx189
+</td><td>1
+</td><td>1
+</td><td>1
+</td></tr>
+<tr>
+<td>Rx235
+</td><td>1
+</td><td>1
+</td><td>0
+</td></tr>
+<tr>
+<td>Rx349
+</td><td>1
+</td><td>1
+</td><td>1
+</td></tr>
+<tr>
+<td>Rx420
+</td><td>1
+</td><td>1
+</td><td>0
+</td></tr>
+<tr>
+<td>Rx101
+</td><td>1
+</td><td>2
+</td><td>1
+</td></tr>
+<tr>
+<td>Rx189
+</td><td>1
+</td><td>2
+</td><td>0
+</td></tr>
+<tr>
+<td>Rx235
+</td><td>1
+</td><td>2
+</td><td>0
+</td></tr>
+<tr>
+<td>Rx349
+</td><td>1
+</td><td>2
+</td><td>1
+</td></tr>
+<tr>
+<td>Rx420
+</td><td>1
+</td><td>2
+</td><td>0
+</td></tr>
+<tr>
+<td>Rx101
+</td><td>1
+</td><td>3
+</td><td>1
+</td></tr>
+<tr>
+<td>Rx189
+</td><td>1
+</td><td>3
+</td><td>0
+</td></tr>
+<tr>
+<td>Rx235
+</td><td>1
+</td><td>3
+</td><td>1
+</td></tr>
+<tr>
+<td>Rx349
+</td><td>1
+</td><td>3
+</td><td>0
+</td></tr>
+<tr>
+<td>Rx420
+</td><td>1
+</td><td>3
+</td><td>0
+</td></tr></table>
+<p><br />
+The first 3 columns are factors in the DMS and the values in the columns are stored as levels of these factors. The last column is a variate and the values in this column are stored as data. In addition, the PDIDs and the MVIDs link to GEMS, as follows:
+</p>
+<table>
+<tr>
+<td>
+</td><td>
+<table border="1">
+<tr>
+<th colspan="2">MV
+</th></tr>
+<tr>
+<td>MVID
+</td><td>1
+</td></tr>
+<tr>
+<td>MVTYPE
+</td><td>Fragment
+</td></tr>
+<tr>
+<td>PDID
+</td><td>1
+</td></tr>
+<tr>
+<td>MWT
+</td><td>240
+</td></tr>
+<tr>
+<td>MWTOL
+</td><td>5
+</td></tr></table>
+<p><br />
+</p>
+</td><td> ===
+</td><td>
+<p><br />
+</p><p><br />
+</p>
+<table border="1">
+<tr>
+<th colspan="2">PD
+</th></tr>
+<tr>
+<td>PDID
+</td><td>1
+</td></tr>
+<tr>
+<td>PDTYPE
+</td><td>RAPD
+</td></tr>
+<tr>
+<td>PROBE
+</td><td> -
+</td></tr>
+<tr>
+<td>PRIMER
+</td><td>UQ203
+</td></tr>
+<tr>
+<td>ENZYME
+</td><td> -
+</td></tr></table>
+</td></tr></table>
+<p><br />
+The GIDs also link to the GMS. If the MVs are mapped at a later stage, the MVIDs can be linked to the locus and linkage groups identified. Further information on the PD is stored as METHODS of the trait POLYMORPHISM DETECTORS.
+</p>
+<a name="Data_Output" id="Data_Output"></a><h2> <span class="mw-headline"> Data Output </span></h2>
+<p>There are four basic functions of data output from GEMS and DMS.
+</p>
+<ol><li> Estimates of diversity / similarity: It will be possible to compare the marker data with observed traits and known pedigrees. In this way, the marker data can act as a tool to validate pedigrees, and can be compared with the output from Coefficients of Parentage and genealogies.
+</li><li> Information on genes and markers for sets of lines: The data can be extracted in tabular form or as dendrograms, and will be very useful in combining information across studies for the production of consensus maps.
+</li><li> Tools for identifying relationships between phenotypic and genetic data
+</li><li> Tools for inferring genotypes based on partial genetic or molecular characterisation and pedigree information.
+</li></ol>
+<a name="Summary" id="Summary"></a><h2> <span class="mw-headline"> Summary </span></h2>
+<p>Both primary and derived data produced from molecular studies can be effectively managed in ICIS through the DMS and GEMS. For more powerful, integrative across studies analyses, it is more appropriate to use GEMS to manage the information associated with both the primary and derived data. However, the user can also enter the data into the DMS alone. This data can be transferred to GEMS at a later date, through a Molecular Biology Interface, if it is considered necessary to compare the data across studies. Table 4 lists the traits that have to be defined for managing the data in the DMS, and their associated scales and methods.
+</p><p>As the methods and scales of the Traits PD and MV show, the amount of information that is necessary to store in the DMS is dependent on whether or not the GEMS is also used. In particular, when the GEMS is used to manage data on the PD, it is not necessary to store information on the type of PD used, the enzymes / probes / primers used in the methods, as this is handled in the PD table.
+</p><p><br />
+<b>Table 14: Information on the traits required for storing molecular data in ICIS in the DMS</b>
+</p>
+<table border="1" cellpadding="2">
+<tr>
+<th width="10%"> NAME
+</th><th width="15%"> TYPE
+</th><th width="25%"> TRAIT
+</th><th width="25%"> SCALEs
+</th><th width="25%"> METHODs
+</th></tr>
+<tr>
+<td>PD
+</td><td>FACTOR
+</td><td>POLYMORPHISM DETECTOR
+</td><td>PD_ID; Type; Not specified;
+</td><td>SCAR; STS; RFLP; SSR; ISSR; RAPD; AFLP; etc.
+</td></tr>
+<tr>
+<td>MV
+</td><td>FACTOR / VARIATE
+</td><td>MOLECULAR VARIANT
+</td><td>Molecular weight (bp); Name; Relative position on gel; MV_ID; Allele name
+</td><td>Detection methods
+</td></tr>
+<tr>
+<td>GEN
+</td><td>FACTOR
+</td><td>GERMPLASM ENTRY
+</td><td>Name; GID; Accession number
+</td><td>Cult method; Not specified
+</td></tr>
+<tr>
+<td>LKDIST
+</td><td>DERIVED VARIATE
+</td><td>LINKAGE DISTANCE
+</td><td>Recombination frequency (%); centrimorgans (cM)
+</td><td>Calculation methods
+</td></tr>
+<tr>
+<td>LG
+</td><td>DERIVED VARIATE
+</td><td>LINKAGE_GROUP
+</td><td>Chromosome identifier; Linkage group identifier
+</td><td>Calculation methods
+</td></tr>
+<tr>
+<td>MG
+</td><td>DERIVED VARIATE
+</td><td>MOLECULAR GENOTYPE
+</td><td>Presence Parent1 / presence parent 2
+</td><td>Calculation methods
+</td></tr>
+<tr>
+<td>MV_NUM
+</td><td>DERIVED VARIATE
+</td><td>TOTAL NUMBER OF MOLECULAR VARIANTS (MVNUM)
+</td><td>Number of mvs
+</td><td>By eye / computer aided
+</td></tr>
+<tr>
+<td>MV_POLY
+</td><td>DERIVED VARIATE
+</td><td>POLYMORPHISM CONTENT OF MOLECULAR VARIANTS (MVPOLY)
+</td><td>%, proportion
+</td><td>Calculation methods
+</td></tr>
+<tr>
+<td>IMAGE
+</td><td>VARIATE
+</td><td>MOLECULAR VARIANT
+</td><td>.Bmp / .jpg / .tif file
+</td><td>Image capture method
+</td></tr></table>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 31/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+<div class="printfooter">
+Retrieved from "<a href="http://localhost../../../../articles/t/d/m/TDM_Gene_Management_System_5.4_b33d.html">http://localhost../../../../articles/t/d/m/TDM_Gene_Management_System_5.4_b33d.html</a>"</div>
+						<!-- end content -->
+						<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<div class="pBody">
+			<ul>
+	
+				 <li id="ca-nstab-main" class="selected"><a href="../../../../articles/t/d/m/TDM_Gene_Management_System_5.4_b33d.html" title="View the content page [c]" accesskey="c">Page</a></li>
+				 <li id="ca-talk" class="new"><a href="../../../../articles/t/d/m/Talk%7ETDM_Gene_Management_System_5.4_58e2.html" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				 <li id="ca-viewsource"><a href="../../../../articles/t/d/m/TDM_Gene_Management_System_5.4_b33d.html" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				 <li id="ca-history"><a href="../../../../articles/t/d/m/TDM_Gene_Management_System_5.4_b33d.html" title="Past versions of this page [h]" accesskey="h">History</a></li>			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="../../../../articles/u/s/e/Special%7EUserLogin_94cd.html" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(../../../../misc/icis-wiki3.png);" href="../../../../index.html" title="Visit the main page [z]" accesskey="z"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class='generated-sidebar portlet' id='p-navigation'>
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="../../../../index.html" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
+				<li id="n-portal"><a href="../../../../articles/c/o/m/ICISWiki%7ECommunity_Portal_7449.html" title="About the project, what you can do, where to find things">Community portal</a></li>
+				<li id="n-recentchanges"><a href="../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+				<li id="n-help"><a href="../../../../articles/c/o/n/Help%7EContents_22de.html" title="The place to find out">Help</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="../../../../articles/s/e/a/Special%7ESearch_a8e5.html" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" title="Search ICISWiki [f]" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="../../../../articles/w/h/a/Special%7EWhatLinksHere_TDM_Gene_Management_System_5.4_9c4a.html" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="../../../../articles/r/e/c/Special%7ERecentChangesLinked_TDM_Gene_Management_System_5.4_b301.html" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+<li id="t-specialpages"><a href="../../../../articles/s/p/e/Special%7ESpecialPages_f12b.html" title="List of all special pages [q]" accesskey="q">Special pages</a></li>
+				<li id="t-print"><a href="../../../../articles/t/d/m/TDM_Gene_Management_System_5.4_b33d.html" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>				<li id="t-permalink"><a href="../../../../articles/t/d/m/TDM_Gene_Management_System_5.4_b33d.html" title="Permanent link to this version of the page">Permanent link</a></li>			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="../../../../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" /></a></div>
+				<div id="f-copyrightico"><a href="../../../../../COPYING.html"><img src="/icis/skins/common/images/gnu-fdl.png" alt='GNU Free Documentation License 1.2' /></a></div>
+			<ul id="f-list">
+					<li id="credits">This page was last modified 18:06, 22 January 2009 by <a href="../../../../articles/a/p/o/User%7EAportugal_745d.html" title="User:Aportugal">Arllet Portugal</a>. Based on work by <a href="../../../../articles/r/v/a/User%7ERvalerio_c9de.html" title="User:Rvalerio">Rowena Valerio</a>,&#32;<a href="../../../../articles/r/b/r/User%7ERbruskiewich_a89c.html" title="User:Rbruskiewich">Richard Bruskiewich</a>&#32;and&#32;<a href="../../../../articles/t/m/e/User%7ETmetz_c741.html" title="User:Tmetz">Thomas Metz</a>.</li>
+					<li id="copyright">Content is available under <a href="../../../../../COPYING.html" class="external " title="../../../../../COPYING.html">GNU Free Documentation License 1.2</a>.</li>
+					<li id="privacy"><a href="../../../../articles/p/r/i/ICISWiki%7EPrivacy_policy_0cbf.html" title="ICISWiki:Privacy policy">Privacy policy</a></li>
+					<li id="about"><a href="../../../../articles/a/b/o/ICISWiki%7EAbout_53aa.html" title="ICISWiki:About">About ICISWiki</a></li>
+					<li id="disclaimer"><a href="../../../../articles/g/e/n/ICISWiki%7EGeneral_disclaimer_9129.html" title="ICISWiki:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+</div>
+
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served in 13.577 secs. --></body></html>

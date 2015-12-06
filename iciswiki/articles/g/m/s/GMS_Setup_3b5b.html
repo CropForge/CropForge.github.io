@@ -1,0 +1,356 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta name="generator" content="MediaWiki 1.14.0" />
+		<meta name="keywords" content="GMS Setup,Access source Codes for GMS Setup,Correcting pedigree,SQL Server source Codes for GMS Setup,TDM GMS Browse,TDM Genealogy Management System,TDM SET GENERATION,Uploading pedigree" />
+		<link rel="shortcut icon" href="../../../../misc/favicon.ico" />
+		<link rel="search" type="application/opensearchdescription+xml" href="../../../../../opensearch_desc.php" title="ICISWiki (en)" />
+		<link title="Creative Commons" type="application/rdf+xml" href="../../../../articles/g/m/s/GMS_Setup_3b5b.html" rel="alternate meta" />
+		<link rel="copyright" href="../../../../../COPYING.html" />
+		<link rel="alternate" type="application/rss+xml" title="ICISWiki RSS Feed" href="http://localhost../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" />
+		<link rel="alternate" type="application/atom+xml" title="ICISWiki Atom Feed" href="http://localhost../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" />
+		<title>GMS Setup - ICISWiki</title>
+		<link rel="stylesheet" href="../../../../skins/common/shared.css?195" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../../../../skins/common/commonPrint.css?195" type="text/css" media="print" />
+		<link rel="stylesheet" href="../../../../skins/monobook/main.css?195" type="text/css" media="screen" />
+		<!--[if lt IE 5.5000]><link rel="stylesheet" href="../../../../skins/monobook/IE50Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 5.5000]><link rel="stylesheet" href="../../../../skins/monobook/IE55Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 6]><link rel="stylesheet" href="../../../../skins/monobook/IE60Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 7]><link rel="stylesheet" href="../../../../skins/monobook/IE70Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7ECommon.css?195" type="text/css" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7EPrint.css?195" type="text/css" media="print" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7EMonobook.css?195" type="text/css" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/gen.css?195" type="text/css" />
+		<!--[if lt IE 7]><script type="text/javascript" src="../../../../skins/common/IEFixes.js?195"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+
+		<script type= "text/javascript">/*<![CDATA[*/
+		var skin = "monobook";
+		var stylepath = "../../../../skins";
+		var wgArticlePath = "../../../../$1";
+		var wgScriptPath = "../../../../..";
+		var wgScript = "/icis/index.php";
+		var wgVariantArticlePath = false;
+		var wgActionPaths = {};
+		var wgServer = "http://localhost";
+		var wgCanonicalNamespace = "";
+		var wgCanonicalSpecialPageName = false;
+		var wgNamespaceNumber = 0;
+		var wgPageName = "GMS_Setup";
+		var wgTitle = "GMS Setup";
+		var wgAction = "view";
+		var wgArticleId = "2073";
+		var wgIsArticle = true;
+		var wgUserName = null;
+		var wgUserGroups = null;
+		var wgUserLanguage = "en";
+		var wgContentLanguage = "en";
+		var wgBreakFrames = false;
+		var wgCurRevisionId = "15759";
+		var wgVersion = "1.14.0";
+		var wgEnableAPI = true;
+		var wgEnableWriteAPI = true;
+		var wgSeparatorTransformTable = ["", ""];
+		var wgDigitTransformTable = ["", ""];
+		var wgRestrictionEdit = [];
+		var wgRestrictionMove = [];
+		/*]]>*/</script>
+
+		<script type="text/javascript" src="../../../../skins/common/wikibits.js?195"><!-- wikibits js --></script>
+		<!-- Head Scripts -->
+		<script type="text/javascript" src="../../../../raw/gen.js"><!-- site js --></script>
+	</head>
+<body class="mediawiki ltr ns-0 ns-subject page-GMS_Setup skin-monobook">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 id="firstHeading" class="firstHeading">GMS Setup</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From ICISWiki</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>			<!-- start content -->
+			<table id="toc" class="toc" summary="Contents"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1"><a href="#SETTING_UP_A_GMS_DATABASE"><span class="tocnumber">1</span> <span class="toctext">SETTING UP A GMS DATABASE</span></a>
+<ul>
+<li class="toclevel-2"><a href="#INTRODUCTION"><span class="tocnumber">1.1</span> <span class="toctext">INTRODUCTION</span></a></li>
+<li class="toclevel-2"><a href="#POPULATING_AND_CORRECTING_GMS_DATABASES"><span class="tocnumber">1.2</span> <span class="toctext">POPULATING AND CORRECTING GMS DATABASES</span></a></li>
+<li class="toclevel-2"><a href="#CHECK_LOCAL_DATABASE_INTEGRITY"><span class="tocnumber">1.3</span> <span class="toctext">CHECK LOCAL DATABASE INTEGRITY</span></a></li>
+<li class="toclevel-2"><a href="#UPDATING_THE_CENTRAL_DATABASE"><span class="tocnumber">1.4</span> <span class="toctext">UPDATING THE CENTRAL DATABASE</span></a>
+<ul>
+<li class="toclevel-3"><a href="#Resolve_Duplicate_Germplasm_Records"><span class="tocnumber">1.4.1</span> <span class="toctext">Resolve Duplicate Germplasm Records</span></a></li>
+<li class="toclevel-3"><a href="#Prepare_local_update_environment"><span class="tocnumber">1.4.2</span> <span class="toctext">Prepare local update environment</span></a></li>
+<li class="toclevel-3"><a href="#Update_Locations"><span class="tocnumber">1.4.3</span> <span class="toctext">Update Locations</span></a></li>
+<li class="toclevel-3"><a href="#Update_Support_Tables"><span class="tocnumber">1.4.4</span> <span class="toctext">Update Support Tables</span></a></li>
+<li class="toclevel-3"><a href="#Extract_all_Local_Germplasm_without_Local_References"><span class="tocnumber">1.4.5</span> <span class="toctext">Extract all Local Germplasm without Local References</span></a></li>
+<li class="toclevel-3"><a href="#Update_all_Remaining_Local_Germplasm_References"><span class="tocnumber">1.4.6</span> <span class="toctext">Update all Remaining Local Germplasm References</span></a></li>
+<li class="toclevel-3"><a href="#Check_Update"><span class="tocnumber">1.4.7</span> <span class="toctext">Check Update</span></a></li>
+<li class="toclevel-3"><a href="#Execute_Central_Changes_and_Restore_the_Local_Database"><span class="tocnumber">1.4.8</span> <span class="toctext">Execute Central Changes and Restore the Local Database</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2"><a href="#CHECK_CENTRAL_DATABASE_INTEGRITY"><span class="tocnumber">1.5</span> <span class="toctext">CHECK CENTRAL DATABASE INTEGRITY</span></a></li>
+<li class="toclevel-2"><a href="#SOURCE_CODE_FOR_THE_ACCESS_QUERIES"><span class="tocnumber">1.6</span> <span class="toctext">SOURCE CODE FOR THE ACCESS QUERIES</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </script>
+<a name="SETTING_UP_A_GMS_DATABASE" id="SETTING_UP_A_GMS_DATABASE"></a><h2> <span class="mw-headline">SETTING UP A GMS DATABASE</span></h2>
+<p>C.G. McLaren, W. Eusebio, A. Portugal 
+</p>
+<a name="INTRODUCTION" id="INTRODUCTION"></a><h3> <span class="mw-headline">INTRODUCTION</span></h3>
+<p>The ICIS GMS database stores and manages information on genesis, genealogy, nomenclature and chronology of germplasm for a particular crop.  Several approaches have been done to populate the databases from historical data of genealogy.  Uploading a local GMS database to central database involves several steps that sometimes require knowledge about the crop genealogy and the GMS database schema.
+</p>
+<a name="POPULATING_AND_CORRECTING_GMS_DATABASES" id="POPULATING_AND_CORRECTING_GMS_DATABASES"></a><h3> <span class="mw-headline">POPULATING AND CORRECTING GMS DATABASES</span></h3>
+<p>GMS database population generally requires parsing historical data from different sources into the GMS structure. There are as many ways to do this as there are historical datasets. Some examples can be found in the original TDM document: <a href="http://www.iris.irri.org/icisdocs/ICIS_III_C_2.doc" class="external text" title="http://www.iris.irri.org/icisdocs/ICIS_III_C_2.doc" rel="nofollow">Setting up a GMS database</a>. Another example is in the problems and solutions section: <a href="../../../../articles/u/p/l/Uploading_pedigree.html" title="Uploading pedigree"> Uploading pedigree data</a>.
+</p><p>It is inevitable that many errors will be discovered in pedigrees onece they are loaded and available for examination with the GMS appllications. Correcting pedigree information is complicated by the number of dependencies which may be present. Algorithms are presented in the TDM section on <a href="../../../../articles/t/d/m/TDM_Genealogy_Management_System_d3f7.html" title="TDM Genealogy Management System">CORRECTING RECORDS IN THE GMS DATABASE</a> and these are implemented in the <a href="../../../../articles/t/d/m/TDM_GMS_Browse_53fa.html" title="TDM GMS Browse">BROWSE</a> application and to a lesser extent in the <a href="../../../../articles/t/d/m/TDM_SET_GENERATION_8a8b.html" title="TDM SET GENERATION">SetGen</a> application. An example of correcting pedigree information is given in the problems and solutions section: <a href="../../../../articles/c/o/r/Correcting_pedigree.html" title="Correcting pedigree"> Correcting pedigree data</a>.
+</p>
+<a name="CHECK_LOCAL_DATABASE_INTEGRITY" id="CHECK_LOCAL_DATABASE_INTEGRITY"></a><h3> <span class="mw-headline">CHECK LOCAL DATABASE INTEGRITY</span></h3>
+<ul><li>Check that the local database is registered (InstlnID) and all users are registered (the UIDs). If not register the local and update all local UID fields.
+</li><li>Check that the local database has not been uploaded. Check that the local database structure corresponds with the template. Check that UID fields and DATE fields have been completed wherever possible. Check that all fields have values (0 for missing). 
+</li><li>Link all GMS tables from the central database to the local database.
+</li><li>Check that all derivative methods have GNPGS=-1 and generative methods have GNPGS&gt;=0. (CHKL01A and CHKL01B require a link to central METHODS).
+</li><li>Check GPID1 &lt;&gt; GID and GPID2 &lt;&gt; GID for any record. [CHKL01C and CHKL01D]
+</li><li>Check that all derivatives with known source (GPID2 &lt;&gt; 0) have known group (GPID1 &lt;&gt; 0) [CHKL01E].
+</li><li>Check for circularities. [CHK04D2 (one step), CHK04D4 (two step) and CHK04D6 (three step)]
+</li><li>Check that replacements in the central database have been reflected in the local GMS, i.e.  No replaced central GID should be referenced in the local GMS [CHKL01G1 &amp;2].
+</li><li>Check that no replacements in the CHANGES table have already been replaced or deleted in the central database [CHKL01H].
+</li><li>Check that all local replacements and changes have been implemented [CHKL01I1 … CHKL01I8]
+</li><li>Check that germplasm in a management group (MGID&lt;&gt;0) has the same group as ist founding germplasm (MGID) [CHKL01J1 … CHKL01J3]. This is  not strictly necessary because management groups can cross generative groups, but none used so far in IRIS and IWIS have done so.
+</li></ul>
+<a name="UPDATING_THE_CENTRAL_DATABASE" id="UPDATING_THE_CENTRAL_DATABASE"></a><h3> <span class="mw-headline">UPDATING THE CENTRAL DATABASE</span></h3>
+<p>The local installation administrator can periodically send information from the local GMS to the administrator to be included in central GMS. In return they receive an updated copy of central GMS including data from all users who have updated central GMS since their last installation.
+</p><p>Users can elect to send subsets of their data defined by a cut-off date according to the GERMPLASM_DATE field of the GERMPLASM table. All data records from the previous update to the cut-off date will be transferred to the central GMS after checking for duplicates from other users and for inconsistencies with prior updates. Records from local supporting tables that were referenced by the updated data records must also be transferred, and all negative key-field values are assigned new, unique positive values. The origin of each updated data record in terms of USER_ID and local GERMPLASM_ID is recorded on the central GMS in the USER_ID and LOCAL_GERMPLASM_ID fields of the GERMPLASM table.
+</p><p>Once the update is completed a new copy of central GMS may be installed at the local site. The installation process deletes all updated data records and all records from the support tables that have been transferred to central GMS. All references to those records in remaining non-updated data records are changed to the corresponding new, positive key values from the central GMS. New records on the local GMS always have decreasing negative keys (-1, -2, -3 …), those for deleted records cannot be reused. An attempt to access a deleted data record triggers a search in central GMS for the corresponding values of the USER_ID and LOCAL_GERMPLASM_ID fields.
+</p><p>The process of updating the central GMS from local databases is one of the key administrative functions of GMS management involving both the local and central database administrators.
+</p><p>There are two main problems associated with the update process which are technically difficult to automate:
+</p>
+<ul><li>Local databases contain replacement and change requests for central germplasm in the form of CHANGE records with positive CRECORD field values.  The central database administrator needs to verify that these changes are correct, and have not already been made by other updates.
+</li><li>Local databases may also contain germplasm records for germplasm which has been updated to the central from other sources.  These must be identified to avoid duplications. (This process can be facilitated by adding a local transfer attribute to any genotype transferred from one local database to another).
+</li></ul>
+<p>To keep these problems manageable, it is recommended that local databases are updated regularly wherever possible.
+The following steps describe an algorithm for the update processes.  They represent a combination of manual and automatic database processes and have so far been executed by direct manipulation of ACCESS databases.  Steps 1-8 should be done by the Local Database Administrator.  Steps 9 and 10 must be done by the Central Database Administrator.  SQL queries to execute many of the steps are saved in&nbsp;:\ICIS\Database\Templates\Access\ GMS databases  The names of queries in the template databases corresponding to different steps are given in square braces in the text.  The SQL statements could be copied and executed under another DBMS.
+</p>
+<a name="Resolve_Duplicate_Germplasm_Records" id="Resolve_Duplicate_Germplasm_Records"></a><h4> <span class="mw-headline">Resolve Duplicate Germplasm Records</span></h4>
+<p>When germplasm records are entered into a local database, they should be checked against records already in central GMS. If matching records in central GMS are incorrect or incomplete, either changes are added to the local database correcting the central record or a new local germplasm record is added and a replacement is made. However, germplasm records may be updated to the central database from a different source after they have been added to a given local database, but before that database is updated.  This results in duplicate germplasm records which must be resolved by the update process. There are currently no set queries for checking for duplicates and users must employ any useful strategies.
+There are three categories of duplicates as follows:
+</p>
+<ul><li>Complete duplicates
+<ul><li>Select records with matching preferred name, GPID1, GPID2 and GNPGS fields in both central and local databases, GRPLCE=0 in both databases and central GID is not in REPLACEMENTS.GID.
+</li><li>If other germplasm fields are different, accept known values over unknown values and resolve differences between non-matching fields with known values.  If these differences cannot be resolved leave two distinct records.
+</li><li>Some of the matches may be collections, releases or other non-breeding derivatives of the same line (or from the same group with unknown source) which we would like to retain as separate germplasm entries.  These usually differ in location, but may only be discernable by other names or attributes such as accession numbers or release attributes. These should be identified and kept separate.
+</li><li>For matches which are true duplicates, replace GIDl with GIDc (3.9.7).
+</li><li>This creates new matches so return to the first step until no new matches occur.
+</li></ul>
+</li><li>Partial duplicates - complete data in Central
+<ul><li>Select records with matching preferred name, and GNPGS fields, central GPID1 and GIPD2 &gt; 0, local GPID1 and GPID2 zero or match central values, GRPLCE both zero and central GID not in REPLACEMENTS.GID.
+</li><li>Resolve differences in other fields as in (a).
+</li><li>Take note of possible non-breeding derivatives as in (a).
+</li><li>For resolved matches, replace local GID with central GID as in 3.9.7.
+</li><li>This could create new matches so return to (a) until no new matches occur.
+</li></ul>
+</li><li>Partial Duplicates - complete data in Local
+<ul><li>Select records with matching preferred name and GNPGS fields, local GPID1 and GPID2 &gt;= 0 and central GPID1 and GPID2 zero or matching local values, GRPLCE = 0 on both records and central GID not in REPLACEMENTS.GID.
+</li><li>Resolve differences in other germplasm fields.
+</li><li>Replace central GID with local GID and add replacements to REPLACEMENTS.
+</li></ul>
+</li></ul>
+<a name="Prepare_local_update_environment" id="Prepare_local_update_environment"></a><h4> <span class="mw-headline">Prepare local update environment</span></h4>
+<ul><li>Set GERMPLSM.LGID = GERMPLSM.GID [UPD03A].
+</li><li>Make a table, MAXTABLE, with fields GID, NID, LOCID, AID, CID and LDID [UPD03B]. Add one record to this table containing the maximum central GERMPLSM.GID value in field GID, the maximum central NAMES.NID value in NID, the maximum central LOCATION.LOCID value in LOCID, the maximum central ATRIBUTS.AID value in AID, the maximum central CHANGES.CID in CID and the maximum central LOCDES.LDID in LDID . This must be done manually, but queries UPD03B1 to UPD03B6 will extract the maximum values for you.
+</li><li>For a new crop implementation the value of MAXTABLE.GID should be zero (0) because there are no germplasm records entered in the central database.
+</li><li>Define a new table, UPDATEGID, with two fields GID and LGID.  GID is auto-increment, long integer with base set to the maximum central GID value. [UPD03C1 AND UPD03C2.  C2 uses MAXTABLE].
+</li><li>Define table UPDATELOC with fields LOCID and LLOCID. LOCID is auto-increment, long integer with base set to the maximum central LOCATION.LOCID [UPD03D1 and UPD03D2].
+</li><li>Define table UPDCHNG with fields CID and LCID. CID is auto-increment, long integer with base set to the maximum central CHANGES.CID [UPD03E1 and UPD03E2].
+</li><li>Define table UPDNAMES with fields NID and LNID. NID is auto-increment, long integer with base set to the maximum central NAMES.NID read from MAXTABLE [UPD03F1 and UPD03F2].
+</li><li>Define table UPDATRIBUTS with fields AID and LAID. AID is auto-increment, long integer with base set to the maximum central ATRIBUTS.AID read from MAXTABLE [UPD03G1 and UPD03G2].
+</li><li>Set INSTLN.UDATE to the current date, set INSTLN.UGID to the minimum local GID, set INSTLN.ULOCN to minimum local location number set INSTLN.UCHNG to the minimum local CHANGES.CID. Similarly set fields UMETHN, UFLDNO, UREFNO, UPID and ULRECID.
+</li></ul>
+<a name="Update_Locations" id="Update_Locations"></a><h4> <span class="mw-headline">Update Locations</span></h4>
+<ul><li>Generate new central LOCIDs [UPD04A]
+</li><li>Update LOCATION.LOCID [UPD04B].
+</li><li>Update LOCDES.LOCID [UPD04C].
+</li><li>Update GERMPLSM.GLOCN [UPD04D].
+</li><li>Update NAMES.NLOCN [UPD04E].
+</li><li>Update ATRIBUTS.ALOCN [UPD04F].
+</li><li>Update sub-national division fields in LOCATION [UPD04G, UPD04H and UPD04I]
+</li></ul>
+<a name="Update_Support_Tables" id="Update_Support_Tables"></a><h4> <span class="mw-headline">Update Support Tables</span></h4>
+<ul><li>Update METHODS, UDFLDS and BIBREFS in the same way as LOCATIONS. No set queries are currently available for this, but they can be set up following the pattern for locations: UPD03D1, UPD03D2, UPD04A – F.
+</li></ul>
+<a name="Extract_all_Local_Germplasm_without_Local_References" id="Extract_all_Local_Germplasm_without_Local_References"></a><h4> <span class="mw-headline">Extract all Local Germplasm without Local References</span></h4>
+<ul><li>Append GERMPLSM.GID to UPDATEGID.LGID where GPID1 &gt;0, GPID2 &gt;0 and GRPLCE= 0 (should also check PROGNTRS.PID &gt; 0).  UPDATEGID.GID will be automatically incremented [UPD06A].
+</li><li>Set GERMPLSM.GID = UPDATEGID.GID where GERMPLSM.GID = UPDATEGID.LGID [UPD06B1 &amp; UPD06B2].
+</li><li>Set GERMPLSM.GPID1 = UPDATEGID.GID where GERMPLSM.GPID1 = UPDATEGID.LGID.  Do the same for GPID2 and for PROGNTRS.PID [UPD06C1-UPD06C3].
+</li><li>This process may create more germplasm records without local references.  If so return to the first step in this section and repeat until no such new records are created.
+<ul><li>Note 1:	For new crop implementation after running the queries [UPD04A to UPD06C3] for the first cycle, delete the first record in the UPDATE table that has GID = 0 and LGID = 0 to avoid replacement circularity.
+</li><li>Note 2:	The queries from UPD06A to UPD06C3 can be executed by running the macro in the Macro tab of MS Access named Macro1.
+</li></ul>
+</li></ul>
+<a name="Update_all_Remaining_Local_Germplasm_References" id="Update_all_Remaining_Local_Germplasm_References"></a><h4> <span class="mw-headline">Update all Remaining Local Germplasm References</span></h4>
+<ul><li>Set NAMES.GID = UPDATEGID.GID where NAMES.GID = UPDATEGID.LGID [UPD07A].
+</li><li>Repeat for ATRIBUTS [UPD07B].
+</li><li>Set LISTDATA.GID to UPDATEGID.GID where LISTDATA.GID=UPDATEGID.LGID[UPD07C].
+</li></ul>
+<a name="Check_Update" id="Check_Update"></a><h4> <span class="mw-headline">Check Update</span></h4>
+<ul><li>There should be no records in GERMPLSM with negative GIDs and GRPLCE = 0 [UPD08A].
+</li><li>The only negative GIDs in the NAMES and ATRIBUTS table should belong to replaced or deleted records [UPD08B and UPD08C].
+</li><li>All GIDs and PIDs in PROGENITORS table should be positive [UPD08D].
+</li></ul>
+<a name="Execute_Central_Changes_and_Restore_the_Local_Database" id="Execute_Central_Changes_and_Restore_the_Local_Database"></a><h4> <span class="mw-headline">Execute Central Changes and Restore the Local Database</span></h4>
+<ul><li>Move all records with positive IDs from local to central tables.  To use the ACCESS queries the corresponding central tables must be linked as NAMES1, ATRIBUTS1, etc.
+<ul><li>LOCATIONS [UPD09A1a] followed by [UPD09A1b]
+</li><li>LOCDES Queries not available yet
+</li><li>METHODS Queries not available yet
+</li><li>UDFLDS Queries not available yet
+</li><li>BIBREF Queries not available yet
+</li><li>NAMES [UPD09A5a] followed by [UPD09A5b]
+</li><li>ATRIBUTS [UPD09A6a] followed by [UPD09A6b]
+</li><li>GERMPLSM [UPD09A7]
+</li><li>PROGNTRS [UPD09A8]
+</li></ul>
+</li><li>Update local INSTLN table with the current date and fields UGID, UNID, ULOCID, UAID, UCID and ULDID set to the new minimum values in the local database.
+</li><li>Update central INSTLN table, i.e. replace the central INSTLN record for the current installation with the updated local record.
+</li><li>Replace local target GIDs in central change and replacement records with new GIDs [UPD09C4].  
+</li><li>Execute replacement and deletion changes in central [UPD09C5 and UPD09C6].
+</li><li>Apply changes to GPID1, GPID2, GDATE, GLOCN, METHN and GNPGS. Check the old value (CFROM) before applying the new value (CTO) and, if successful, also change CSTATUS to 2. Changes with CRECORD&gt;0 and CSTATUS=0 remaining in the local CHANGES table either contain local GIDs or were not applied because their CFROM value did not match the target field value in the central database [UPD09D5-UPD09D10]. Repeat each command until 0 results.
+</li><li>Apply changes to NAMES table fields. Only the queries for changes to NSTAT, NTYPE and NLOCN are available at the moment [UPD09D11 and UPD09D13]. Repeat each command until 0 results.
+</li><li>Apply changes to ATRIBUTS table fields. Queries for ATYPE and ALOCN are available, [UPD09D15-UPD09D16]. Repeat each command until 0 results.
+</li><li>Allocate positive CID values and move all change records to the central CHANGES table [UPD09E3–UPD09E5].
+</li><li>Update negative GID values in LISTDATA using the UPDATEGID table and move lists which should be published to central.
+</li><li>Empty local GMS tables (except INSTLN). Remove uploaded records from LISTNMS and LISTDATA but leave records for non-published lists.
+</li><li>Delete tables MAXTABLE, UPDATEGID, UPDATELOC, UPDCHNG. 
+</li><li>Update the central INSTLN1 record for the Central Database (INSTLN1.INSTLID=1) with the current date and fields UGID, UNID, ULOCID, UAID, UCID and ULDID set to the new maximum values in the central which can be obtained by running queries UPD03B1 to UPD03B6.
+</li><li>Factors (and possibly variates) in the local DMS with SCALE=GID may have negative GIDs. You should check for replacements and update to the new central GIDs.
+</li><li>Transaction records in IMS may have RECORDIDs pointing to LISTDATA records which have been uploaded. These should be updated with the new central LRECID values.
+</li><li>Compress the local database.
+</li></ul>
+<a name="CHECK_CENTRAL_DATABASE_INTEGRITY" id="CHECK_CENTRAL_DATABASE_INTEGRITY"></a><h3> <span class="mw-headline">CHECK CENTRAL DATABASE INTEGRITY</span></h3>
+<ul><li>Check that all derivative germplasm have GNPGS = -1 [CHK01A].
+</li><li>Check that all generative germplasm have GNPGS &gt;= 0 [CHK01B].
+</li><li>Check that GPID1 &lt;&gt; GID [CHK01C].
+</li><li>Check that GPID2 &lt;&gt; GID [CHK01D].
+</li><li>Check that all derivatives with known source (GPID2 &lt;&gt; 0) have known group (GPID1 &lt;&gt; 0) [CHK01E].
+</li><li>Check that there are no references to deleted or replaced germplasm in central [CHK10L2] for GPID1, [CHK10L3] for GPID2 and&nbsp;:CHK10L4 (progenitors). (These queries use CHK10L1 to get a list of all replaced or deleted germplasm)
+</li><li>Check for one-step circularities [CHK04D2].
+</li></ul>
+<dl><dd>This first calls CHK04D1 to get a list of all non replaced derivative germplasm (NRDG), GIDx with source GPID2x. Then it finds all sources of these (GIDy with GIDy=GPID2x) which have their sources GIPD2y=GIDx.
+</dd></dl>
+<ul><li>Check for two-step circularities [CHK04D4]
+</li></ul>
+<dl><dd>This calls CHK04D1 to find all NRDG, GIDx, and then finds the sources of those with query CHK04D3, GIDy, and finally finds the sources of those, GIDz, which have GPID2z=GIDx 
+</dd></dl>
+<ul><li>Check for three-step circularities [CHK04D6]
+</li></ul>
+<dl><dd>This calls CHK04D1 to find all NRDG, GIDx, then finds the sources of those with query CHK04D3, GIDy, and then finde the sources of those with query CHK04D5, GIDz, and finally finds the sources of those, GIDw, which have GPID2w=GIDx 
+</dd></dl>
+<ul><li>Check that all group IDs are generative or have unknown source (-1, 0, 0) [CHK01G1]
+</li></ul>
+<dl><dd>This finds non-generative group sources with non-zero GPID1 or GPID2. (This calls CHK04D1 first to find NRDG).
+</dd></dl>
+<ul><li>Check that all source germplasm which are not also the group sources are derivative [CHK01I2] 
+</li></ul>
+<dl><dd>Does this by finding all NRDG with non-zero sources and then finding those sources which are not also group sources (GPID1) but are generative.
+</dd></dl>
+<ul><li>Check that NRDG has the same group ID as its derivative source [CHK01I3]
+</li></ul>
+<dl><dd>Find NRDG which have different groups (CHK01I1.GPID1) to their derivative sources (GERMPLSM.GPID1).
+</dd></dl>
+<ul><li>Check special name relationships, e.g., Group source for IR nnn-  -  -  should have name IR nnn. CHK04F1 – CHK04F3 (somewhat IRIS specific but can be adapted to similar situations).
+</li></ul>
+<p><br />
+</p>
+<a name="SOURCE_CODE_FOR_THE_ACCESS_QUERIES" id="SOURCE_CODE_FOR_THE_ACCESS_QUERIES"></a><h3> <span class="mw-headline">SOURCE CODE FOR THE ACCESS QUERIES</span></h3>
+<p>The source code for the Access queries can be seen here:
+<a href="../../../../articles/a/c/c/Access_source_Codes_for_GMS_Setup_b0dd.html" title="Access source Codes for GMS Setup"> Access source Codes</a>
+</p><p>The source code when using in SQL Server can be seen here:
+<a href="../../../../articles/s/q/l/SQL_Server_source_Codes_for_GMS_Setup_e565.html" title="SQL Server source Codes for GMS Setup"> SQL Server source Codes</a>
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 16/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+<div class="printfooter">
+Retrieved from "<a href="http://localhost../../../../articles/g/m/s/GMS_Setup_3b5b.html">http://localhost../../../../articles/g/m/s/GMS_Setup_3b5b.html</a>"</div>
+						<!-- end content -->
+						<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<div class="pBody">
+			<ul>
+	
+				 <li id="ca-nstab-main" class="selected"><a href="../../../../articles/g/m/s/GMS_Setup_3b5b.html" title="View the content page [c]" accesskey="c">Page</a></li>
+				 <li id="ca-talk" class="new"><a href="../../../../articles/g/m/s/Talk%7EGMS_Setup_b283.html" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				 <li id="ca-viewsource"><a href="../../../../articles/g/m/s/GMS_Setup_3b5b.html" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				 <li id="ca-history"><a href="../../../../articles/g/m/s/GMS_Setup_3b5b.html" title="Past versions of this page [h]" accesskey="h">History</a></li>			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="../../../../articles/u/s/e/Special%7EUserLogin_94cd.html" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(../../../../misc/icis-wiki3.png);" href="../../../../index.html" title="Visit the main page [z]" accesskey="z"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class='generated-sidebar portlet' id='p-navigation'>
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="../../../../index.html" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
+				<li id="n-portal"><a href="../../../../articles/c/o/m/ICISWiki%7ECommunity_Portal_7449.html" title="About the project, what you can do, where to find things">Community portal</a></li>
+				<li id="n-recentchanges"><a href="../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+				<li id="n-help"><a href="../../../../articles/c/o/n/Help%7EContents_22de.html" title="The place to find out">Help</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="../../../../articles/s/e/a/Special%7ESearch_a8e5.html" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" title="Search ICISWiki [f]" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="../../../../articles/w/h/a/Special%7EWhatLinksHere_GMS_Setup_82c4.html" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="../../../../articles/r/e/c/Special%7ERecentChangesLinked_GMS_Setup_63c6.html" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+<li id="t-specialpages"><a href="../../../../articles/s/p/e/Special%7ESpecialPages_f12b.html" title="List of all special pages [q]" accesskey="q">Special pages</a></li>
+				<li id="t-print"><a href="../../../../articles/g/m/s/GMS_Setup_3b5b.html" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>				<li id="t-permalink"><a href="../../../../articles/g/m/s/GMS_Setup_3b5b.html" title="Permanent link to this version of the page">Permanent link</a></li>			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="../../../../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" /></a></div>
+				<div id="f-copyrightico"><a href="../../../../../COPYING.html"><img src="/icis/skins/common/images/gnu-fdl.png" alt='GNU Free Documentation License 1.2' /></a></div>
+			<ul id="f-list">
+					<li id="credits">This page was last modified 17:39, 2 March 2009 by <a href="../../../../articles/j/n/o/User%7EJnorgaard_e415.html" title="User:Jnorgaard">Jesper Nørgaard Welen</a>. Based on work by <a href="../../../../articles/g/m/c/User%7EGmclaren_b845.html" title="User:Gmclaren">Graham McLaren</a>,&#32;<a href="../../../../articles/s/f/r/User%7ESfrade_e1c2.html" title="User:Sfrade">Sebastien Frade</a>&#32;and&#32;<a href="../../../../articles/m/h/a/User%7EMhabito_276f.html" title="User:Mhabito">Maria Corina de Luna Habito</a>.</li>
+					<li id="copyright">Content is available under <a href="../../../../../COPYING.html" class="external " title="../../../../../COPYING.html">GNU Free Documentation License 1.2</a>.</li>
+					<li id="privacy"><a href="../../../../articles/p/r/i/ICISWiki%7EPrivacy_policy_0cbf.html" title="ICISWiki:Privacy policy">Privacy policy</a></li>
+					<li id="about"><a href="../../../../articles/a/b/o/ICISWiki%7EAbout_53aa.html" title="ICISWiki:About">About ICISWiki</a></li>
+					<li id="disclaimer"><a href="../../../../articles/g/e/n/ICISWiki%7EGeneral_disclaimer_9129.html" title="ICISWiki:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+</div>
+
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served in 84.582 secs. --></body></html>

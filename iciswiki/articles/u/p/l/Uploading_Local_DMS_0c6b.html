@@ -1,0 +1,451 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta name="generator" content="MediaWiki 1.14.0" />
+		<meta name="keywords" content="Uploading Local DMS" />
+		<link rel="shortcut icon" href="../../../../misc/favicon.ico" />
+		<link rel="search" type="application/opensearchdescription+xml" href="../../../../../opensearch_desc.php" title="ICISWiki (en)" />
+		<link title="Creative Commons" type="application/rdf+xml" href="../../../../articles/u/p/l/Uploading_Local_DMS_0c6b.html" rel="alternate meta" />
+		<link rel="copyright" href="../../../../../COPYING.html" />
+		<link rel="alternate" type="application/rss+xml" title="ICISWiki RSS Feed" href="http://localhost../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" />
+		<link rel="alternate" type="application/atom+xml" title="ICISWiki Atom Feed" href="http://localhost../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" />
+		<title>Uploading Local DMS - ICISWiki</title>
+		<link rel="stylesheet" href="../../../../skins/common/shared.css?195" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../../../../skins/common/commonPrint.css?195" type="text/css" media="print" />
+		<link rel="stylesheet" href="../../../../skins/monobook/main.css?195" type="text/css" media="screen" />
+		<!--[if lt IE 5.5000]><link rel="stylesheet" href="../../../../skins/monobook/IE50Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 5.5000]><link rel="stylesheet" href="../../../../skins/monobook/IE55Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 6]><link rel="stylesheet" href="../../../../skins/monobook/IE60Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 7]><link rel="stylesheet" href="../../../../skins/monobook/IE70Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7ECommon.css?195" type="text/css" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7EPrint.css?195" type="text/css" media="print" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7EMonobook.css?195" type="text/css" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/gen.css?195" type="text/css" />
+		<!--[if lt IE 7]><script type="text/javascript" src="../../../../skins/common/IEFixes.js?195"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+
+		<script type= "text/javascript">/*<![CDATA[*/
+		var skin = "monobook";
+		var stylepath = "../../../../skins";
+		var wgArticlePath = "../../../../$1";
+		var wgScriptPath = "../../../../..";
+		var wgScript = "/icis/index.php";
+		var wgVariantArticlePath = false;
+		var wgActionPaths = {};
+		var wgServer = "http://localhost";
+		var wgCanonicalNamespace = "";
+		var wgCanonicalSpecialPageName = false;
+		var wgNamespaceNumber = 0;
+		var wgPageName = "Uploading_Local_DMS";
+		var wgTitle = "Uploading Local DMS";
+		var wgAction = "view";
+		var wgArticleId = "3035";
+		var wgIsArticle = true;
+		var wgUserName = null;
+		var wgUserGroups = null;
+		var wgUserLanguage = "en";
+		var wgContentLanguage = "en";
+		var wgBreakFrames = false;
+		var wgCurRevisionId = "12985";
+		var wgVersion = "1.14.0";
+		var wgEnableAPI = true;
+		var wgEnableWriteAPI = true;
+		var wgSeparatorTransformTable = ["", ""];
+		var wgDigitTransformTable = ["", ""];
+		var wgRestrictionEdit = [];
+		var wgRestrictionMove = [];
+		/*]]>*/</script>
+
+		<script type="text/javascript" src="../../../../skins/common/wikibits.js?195"><!-- wikibits js --></script>
+		<!-- Head Scripts -->
+		<script type="text/javascript" src="../../../../raw/gen.js"><!-- site js --></script>
+	</head>
+<body class="mediawiki ltr ns-0 ns-subject page-Uploading_Local_DMS skin-monobook">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 id="firstHeading" class="firstHeading">Uploading Local DMS</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From ICISWiki</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>			<!-- start content -->
+			<table id="toc" class="toc" summary="Contents"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1"><a href="#MICROSOFT_ACCESS_DATABASE"><span class="tocnumber">1</span> <span class="toctext">MICROSOFT ACCESS DATABASE</span></a></li>
+<li class="toclevel-1"><a href="#MYSQL_DATABASE"><span class="tocnumber">2</span> <span class="toctext">MYSQL DATABASE</span></a>
+<ul>
+<li class="toclevel-2"><a href="#STEPS_IN_UPLOADING_LOCAL_DMS_TO_CENTRAL_DMS"><span class="tocnumber">2.1</span> <span class="toctext">STEPS IN UPLOADING LOCAL DMS TO CENTRAL DMS</span></a>
+<ul>
+<li class="toclevel-3"><a href="#1._Call_the_checkCentralTMS_procedure"><span class="tocnumber">2.1.1</span> <span class="toctext">1. Call the checkCentralTMS procedure</span></a></li>
+<li class="toclevel-3"><a href="#2._Curate_Trait.2C_Method_and_Scale_Tables"><span class="tocnumber">2.1.2</span> <span class="toctext">2. Curate Trait, Method and Scale Tables</span></a></li>
+<li class="toclevel-3"><a href="#3._Call_the_uploadDMS_procedure"><span class="tocnumber">2.1.3</span> <span class="toctext">3. Call the uploadDMS procedure</span></a>
+<ul>
+<li class="toclevel-4"><a href="#UploadDMS_without_upload_queries"><span class="tocnumber">2.1.3.1</span> <span class="toctext">UploadDMS without upload queries</span></a></li>
+<li class="toclevel-4"><a href="#uploadDMS_with_upload_queries"><span class="tocnumber">2.1.3.2</span> <span class="toctext">uploadDMS with upload queries</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-2"><a href="#PROCEDURES_USED"><span class="tocnumber">2.2</span> <span class="toctext">PROCEDURES USED</span></a>
+<ul>
+<li class="toclevel-3"><a href="#checkCentralTMS"><span class="tocnumber">2.2.1</span> <span class="toctext">checkCentralTMS</span></a></li>
+<li class="toclevel-3"><a href="#UploadDMS"><span class="tocnumber">2.2.2</span> <span class="toctext">UploadDMS</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2"><a href="#TRIGGERS_USED"><span class="tocnumber">2.3</span> <span class="toctext">TRIGGERS USED</span></a>
+<ul>
+<li class="toclevel-3"><a href="#UpdateTrait"><span class="tocnumber">2.3.1</span> <span class="toctext">UpdateTrait</span></a></li>
+<li class="toclevel-3"><a href="#UpdateScale"><span class="tocnumber">2.3.2</span> <span class="toctext">UpdateScale</span></a></li>
+<li class="toclevel-3"><a href="#UpdateTmethod"><span class="tocnumber">2.3.3</span> <span class="toctext">UpdateTmethod</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2"><a href="#Observed_MySQL_bugs_for_some_versions"><span class="tocnumber">2.4</span> <span class="toctext">Observed MySQL bugs for some versions</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </script>
+<a name="MICROSOFT_ACCESS_DATABASE" id="MICROSOFT_ACCESS_DATABASE"></a><h2> <span class="mw-headline">MICROSOFT ACCESS DATABASE</span></h2>
+<a name="MYSQL_DATABASE" id="MYSQL_DATABASE"></a><h2> <span class="mw-headline">MYSQL DATABASE</span></h2>
+<p>This approach of uploading a local DMS into central DMS in MysQL database uses procedures and triggers thus requiring version 5.0 or higher.  The procedures can be called just like any MySQL query. 
+</p>
+<a name="STEPS_IN_UPLOADING_LOCAL_DMS_TO_CENTRAL_DMS" id="STEPS_IN_UPLOADING_LOCAL_DMS_TO_CENTRAL_DMS"></a><h3> <span class="mw-headline"> STEPS IN UPLOADING LOCAL DMS TO CENTRAL DMS </span></h3>
+<a name="1._Call_the_checkCentralTMS_procedure" id="1._Call_the_checkCentralTMS_procedure"></a><h4> <span class="mw-headline"> 1. Call the checkCentralTMS procedure</span></h4>
+<pre>call checkCentralTMS ('centralDatabaseName','localDatabaseName')
+</pre>
+<p><b>Procedure Description&nbsp;:</b> 
+</p><p>The checkCentralTMS procedure checks records in local Trait, Tmethod and Scale tables if it already exists in the Central Trait, Tmethod and Scale tables. If a Trait, Tmethod or Scale value in the local DMS already exists in the Central DMS, the value in the local DMS tables will be replaced by the value from the Central DMS. If a value in the Trait, Tmethod or Scale table is changed, a trigger will update the other values in the tables where this value is linked.  For example, if a trname from the local Trait table is existing in the Central Trait table, the local traitid value will be updated with the central traitid value. This update on Trait table will trigger the updateTrait trigger which updates the traitid values in the factor, variate and scale tables. 
+</p><p>All positive Trait, Tmethod and Scale values in the local DMS will be marked as 'deleted'. Only negative values should be left in the local Trait, Tmethod and Scale tables after calling this procedure.
+</p>
+<a name="2._Curate_Trait.2C_Method_and_Scale_Tables" id="2._Curate_Trait.2C_Method_and_Scale_Tables"></a><h4> <span class="mw-headline"> 2. Curate Trait, Method and Scale Tables </span></h4>
+<p>Curation is needed if:
+</p>
+<ol><li> scale, trait or method name in the local table is not consistent with the central values. It may have  spaces or underscores(_) or dashes(-) but may mean the same thing. Ex. MARKER DETECTOR is also the same as MARKER_DETECTOR and MARKER-DETECTOR.
+</li><li>there are duplicate values
+</li><li>
+</li></ol>
+<p><br />
+</p><p>.
+</p>
+<a name="3._Call_the_uploadDMS_procedure" id="3._Call_the_uploadDMS_procedure"></a><h4> <span class="mw-headline"> 3. Call the uploadDMS procedure </span></h4>
+<pre>call uploadDMS ('centralDatabaseName','localDatabaseName')
+</pre>
+<p><b>Procedure Description&nbsp;:</b> 
+</p><p>This procedure should be executed after the execution of checkCentralTMS procedure. UploadDMS assumes that all values remaining in the Trait, Method and Scale tables are negative values.  The procedure does the following:
+</p>
+<ul><li>gets all maximum ids in the central database
+</li><li>creates new tables that will serve as the lookup table for new IDs
+</li><li>inserts all negative IDs from the local DMS to the newly created tables
+</li><li>generates new IDs (maximum ID from central + an auto_increment number) which will be used to replace the negative values
+</li><li>create index in the newly created tables for faster searching of values
+</li><li>updates the negative IDs in the local DMS tables with the newly generated IDs from the new tables
+</li><li>drops the new tables.
+</li></ul>
+<p><br />
+</p>
+<a name="UploadDMS_without_upload_queries" id="UploadDMS_without_upload_queries"></a><h5> <span class="mw-headline">UploadDMS without upload queries</span></h5>
+<p>This procedure does not have insert queries which directly inserts the local DMS into the Central DMS. Instead a mysqldump file of the local DMS is created. This dump file is then restored into the Central DMS. To create the dump file&nbsp;:
+</p>
+<pre>mysqldump -u username -ppassword localDatabaseName <b>-t</b> &gt; dumpFile.sql
+</pre>
+<p>The -t option is used so that the dump file will only have insert queries. This option will create a dump file without "CREATE TABLE" and "DROP TABLE" statements. 
+</p><p>To restore the dumpfile:
+</p>
+<pre> mysql -u username -ppassword centralDatabaseName &lt;dumpFile.sql
+</pre>
+<p>Caution: 
+</p><p>Make sure that the fields in the Local DMS tables corresponds with the fields in the Central DMS. It might insert values on the wrong field.
+</p>
+<a name="uploadDMS_with_upload_queries" id="uploadDMS_with_upload_queries"></a><h5> <span class="mw-headline">uploadDMS with upload queries</span></h5>
+<p>The procedure contains a prepared statement that inserts local DMS values into the central DMS tables. Example of an query in the procedure.
+</p>
+<pre>SET @upload = concat('INSERT INTO ',centraldb,'.study ( StudyID, SNAME, PMKEY, Title, OBJECTIV, STYPE, SDATE, EDATE, USERID )
+       SELECT STUDYID, SNAME, PMKEY, TITLE,OBJECTIV, STYPE, SDATE, EDATE,USERID
+       FROM  ',localdb,'.study');
+       PREPARE stmnt1 FROM @upload;
+       EXECUTE stmnt1;
+       DEALLOCATE PREPARE stmnt1;
+</pre>
+<a name="PROCEDURES_USED" id="PROCEDURES_USED"></a><h3> <span class="mw-headline"> PROCEDURES USED </span></h3>
+<a name="checkCentralTMS" id="checkCentralTMS"></a><h4> <span class="mw-headline">checkCentralTMS</span></h4>
+<pre>DELIMITER $$;
+DROP PROCEDURE IF EXISTS `checkCentralTMS`$$
+CREATE PROCEDURE `checkCentralTMS`(IN centraldb varchar(50), IN localdb varchar(50) )
+BEGIN
+SET @updateTrait = concat('update ',localdb,'.trait lt, ',centraldb,'.trait ct 
+                           set lt.traitid  = ct.traitid
+                           where lt.trname = ct.trname');
+PREPARE stmnt1 FROM @updateTrait;
+EXECUTE stmnt1;
+DEALLOCATE PREPARE stmnt1;
+SET @updateScale = concat('update ',localdb,'.scale ls, ',centraldb,'.scale cs  
+                          set ls.scaleid  = cs.scaleid, ls.traitid = cs.traitid
+                          where ls.scname = cs.scname and ls.traitid = cs.traitid');
+PREPARE stmnt1 FROM @updateScale;
+EXECUTE stmnt1;
+DEALLOCATE PREPARE stmnt1;
+SET @updateMethod = concat('update ',localdb,'.tmethod lt, ',centraldb,'.tmethod ct  
+                            set lt.tmethid  = ct.tmethid, lt.traitid = ct.traitid
+                            where lt.tmname = ct.tmname and lt.traitid = ct.traitid');
+PREPARE stmnt1 FROM @updateMethod;
+EXECUTE stmnt1;
+DEALLOCATE PREPARE stmnt1;
+END$$
+DELIMITER&nbsp;;$$
+</pre>
+<a name="UploadDMS" id="UploadDMS"></a><h4> <span class="mw-headline">UploadDMS</span></h4>
+<pre>DELIMITER $$;
+DROP PROCEDURE IF EXISTS `icis54`.`uploadDMS`$$ 
+CREATE PROCEDURE `uploadDMS`(IN centraldb varchar(50), IN localdb varchar(50) )
+BEGIN
+DECLARE maxStudyid INT;
+DECLARE maxLevelno INT;
+DECLARE maxLabelid INT;
+DECLARE maxTid INT;
+DECLARE maxScaleid  INT;
+DECLARE maxTmethid INT;
+DECLARE maxVariatid INT; 
+DECLARE maxOunitid INT;
+DECLARE maxDmsatid INT;
+DECLARE maxEffectid  INT;
+DECLARE maxRepresno INT;
+DECLARE maxTraitid INT;
+-- GET MAXIMUM IDs for each table
+SET @getMax = concat('SELECT MAX(studyid) INTO @maxStudyid FROM ',centraldb,'.study');
+PREPARE stmnt1 FROM @getMax;
+EXECUTE stmnt1;
+DEALLOCATE PREPARE stmnt1;
+SET @getMax = concat('SELECT MAX(levelTable.levelno) INTO @maxLevelno
+                        FROM
+                      (SELECT levelno FROM ',centraldb,'.level_c 
+                      UNION DISTINCT
+                      SELECT  levelno FROM ',centraldb,'.level_n) levelTable');
+PREPARE stmnt1 FROM @getMax;
+EXECUTE stmnt1;
+DEALLOCATE PREPARE stmnt1;
+SET @getMax = concat('SELECT MAX(labelid) INTO @maxLabelid FROM ',centraldb,'.factor');
+PREPARE stmnt1 FROM @getMax;
+EXECUTE stmnt1;
+DEALLOCATE PREPARE stmnt1;
+SET @getMax = concat('SELECT MAX(tid) INTO @maxTid FROM ',centraldb,'.trait');
+PREPARE stmnt1 FROM @getMax;
+EXECUTE stmnt1;
+DEALLOCATE PREPARE stmnt1;
+SET @getMax = concat('SELECT MAX(scaleid) INTO @maxScaleid FROM ',centraldb,'.scale');
+PREPARE stmnt1 FROM @getMax;
+EXECUTE stmnt1;
+DEALLOCATE PREPARE stmnt1;
+SET @getMax = concat('SELECT MAX(tmethid) INTO @maxTmethid FROM ',centraldb,'.tmethod');
+PREPARE stmnt1 FROM @getMax;
+EXECUTE stmnt1;
+DEALLOCATE PREPARE stmnt1;
+SET @getMax = concat('SELECT MAX(variatid) INTO @maxVariatid FROM ',centraldb,'.variate');
+PREPARE stmnt1 FROM @getMax;
+EXECUTE stmnt1;
+DEALLOCATE PREPARE stmnt1;
+SET @getMax = concat('SELECT MAX(ounitid) INTO @maxOunitid FROM ',centraldb,'.oindex');
+PREPARE stmnt1 FROM @getMax;
+EXECUTE stmnt1;
+DEALLOCATE PREPARE stmnt1;
+SET @getMax = concat('SELECT MAX(dmsatid) INTO @maxDmsatid FROM ',centraldb,'.dmsattr');
+PREPARE stmnt1 FROM @getMax;
+EXECUTE stmnt1;
+DEALLOCATE PREPARE stmnt1;
+SET @getMax = concat('SELECT MAX(effectid) INTO @maxEffectid FROM ',centraldb,'.effect');
+PREPARE stmnt1 FROM @getMax;
+EXECUTE stmnt1;
+DEALLOCATE PREPARE stmnt1;
+SET @getMax = concat('SELECT MAX(represno) INTO @maxRepresno FROM ',centraldb,'.effect');
+PREPARE stmnt1 FROM @getMax;
+EXECUTE stmnt1;
+DEALLOCATE PREPARE stmnt1;
+SET @getMax = concat('SELECT MAX(traitid) INTO @maxTraitid FROM ',centraldb,'.trait');
+PREPARE stmnt1 FROM @getMax;
+EXECUTE stmnt1;
+DEALLOCATE PREPARE stmnt1; 
+-- Create all new Tables
+CREATE TABLE zNewStudy ( studyid int);
+CREATE TABLE zNewLabel ( labelid int);
+CREATE TABLE zNewLevel ( levelno int);
+CREATE TABLE zNewOunit ( ounitid int);
+CREATE TABLE zNewVariate ( variatid int);
+CREATE TABLE zNewEffect ( effectid int); 
+CREATE TABLE zNewRepresno ( represno int);
+CREATE TABLE zNewTrait ( traitid int); 
+CREATE TABLE zNewScale ( scaleid int);
+CREATE TABLE zNewTmethod ( tmethid int); 
+-- INSERT all IDs to the new tables
+INSERT INTO zNewStudy 
+            SELECT DISTINCT studyid FROM study where studyid&lt;0;
+INSERT INTO zNewLabel 
+            SELECT DISTINCT labelid FROM factor where labelid&lt;0;
+INSERT INTO zNewLevel 
+            Select newLevelTable.levelno FROM
+            (SELECT levelno FROM level_c  where levelno&lt;0
+            UNION DISTINCT
+            SELECT  levelno FROM level_n where levelno&lt;0) as newLevelTable;
+INSERT INTO zNewOunit 
+            SELECT DISTINCT ounitid FROM oindex where ounitid &lt;0;
+INSERT INTO zNewVariate 
+            SELECT DISTINCT variatid FROM variate where variatid&lt;0;
+INSERT INTO zNewEffect 
+            SELECT DISTINCT effectid FROM effect where effectid&lt;0;
+INSERT INTO zNewRepresno
+            SELECT DISTINCT represno FROM effect where represno&lt;0;
+INSERT INTO zNewTrait
+            SELECT DISTINCT traitid FROM trait where traitid&lt;0;
+INSERT INTO zNewScale
+            SELECT DISTINCT scaleid FROM scale where scaleid&lt;0;
+INSERT INTO zNewTmethod 
+            SELECT DISTINCT  tmethid FROM tmethod where tmethid&lt;0;
+-- ADD new Auto increment column to the tables
+ALTER TABLE zNewStudy ADD COLUMN (newStudyid INT, id INT AUTO_INCREMENT NOT NULL PRIMARY KEY);
+ALTER TABLE zNewLabel ADD COLUMN (newLabelid INT, id INT AUTO_INCREMENT NOT NULL PRIMARY KEY);
+ALTER TABLE zNewLevel ADD COLUMN (newlevelno INT, id INT AUTO_INCREMENT NOT NULL PRIMARY KEY);
+ALTER TABLE zNewOunit ADD COLUMN (newOunitid INT, id INT  AUTO_INCREMENT NOT NULL PRIMARY KEY); 
+ALTER TABLE zNewVariate ADD COLUMN (newVariatid INT , id INT AUTO_INCREMENT NOT NULL PRIMARY KEY);
+ALTER TABLE zNewEffect ADD COLUMN (newEffectid INT , id INT AUTO_INCREMENT NOT NULL PRIMARY KEY);
+ALTER TABLE zNewRepresno ADD COLUMN (newRepresno INT , id INT AUTO_INCREMENT NOT NULL PRIMARY KEY);
+ALTER TABLE zNewTrait ADD COLUMN (newTraitid INT , id INT AUTO_INCREMENT NOT NULL PRIMARY KEY);
+ALTER TABLE zNewScale ADD COLUMN (newScaleid INT , id INT AUTO_INCREMENT NOT NULL PRIMARY KEY);
+ALTER TABLE zNewTmethod ADD COLUMN (newTmethid INT , id INT AUTO_INCREMENT NOT NULL PRIMARY KEY);
+</pre>
+<a name="TRIGGERS_USED" id="TRIGGERS_USED"></a><h3> <span class="mw-headline">TRIGGERS USED </span></h3>
+<a name="UpdateTrait" id="UpdateTrait"></a><h4> <span class="mw-headline">UpdateTrait</span></h4>
+<p>This trigger is an update trigger for the local Trait table. It updates the traitid value in the Factor, Scale and Variate tables if the traitid field in the Trait table is updated.
+</p>
+<pre>DELIMITER $$;
+CREATE TRIGGER `updateTrait`
+AFTER UPDATE ON Trait for each row
+BEGIN
+UPDATE factor set factor.traitid  = new.traitid where factor.traitid = old.traitid;
+UPDATE scale set scaleid.traitid = new.traitid where scale.traitid = old.traitid;
+UPDATE variate set variate.traitid = new.traitid where variate.traitid = old.traitid;
+UPDATE tmethod set tmethod.traitid = new.traitid where tmethod.traitid = old.traitid;
+END$$
+DELIMITER&nbsp;;$$
+</pre>
+<a name="UpdateScale" id="UpdateScale"></a><h4> <span class="mw-headline">UpdateScale</span></h4>
+<p>This trigger is an update trigger for the local Scale table. It updates the scaleid value in the Factor, Variate, scalecon, scaledis and dmsattr  tables if the traitid field in the Trait table is updated.
+</p>
+<pre>DELIMITER $$;
+CREATE TRIGGER `updateScale`
+AFTER UPDATE ON scale for each row
+BEGIN
+UPDATE factor set factor.scaleid  = new.scaleid 
+             where factor.traitid = old.traitid and factor.scaleid = old.scaleid; 
+UPDATE variate set variate.scaleid = new.scaleid 
+             where variate.traitid = old.traitid and variate.scaleid = old.scaleid; 
+UPDATE scalecon set scalecon.scaleid = new.scaleid where scalecon.scaleid = old.scaleid; 
+UPDATE scaledis set scaledis.scaleid = new.scaleid where scaledis.scaleid = old.scaleid; 
+END$$
+DELIMITER&nbsp;;$$
+</pre>
+<a name="UpdateTmethod" id="UpdateTmethod"></a><h4> <span class="mw-headline">UpdateTmethod</span></h4>
+<p>This trigger is an update trigger for the Tmethod table in the local DMS. It updates the tmethid field in the factor and variate table if the traitid field in the Trait table is updated.
+</p>
+<pre>DELIMITER $$;
+DROP TRIGGER `updateTmethod`$$
+CREATE TRIGGER `updateTmethod` AFTER UPDATE on `tmethod`
+FOR EACH ROW 
+BEGIN
+UPDATE factor SET factor.tmethid  = new.tmethid 
+       WHERE factor.tmethid = old.tmethid;
+UPDATE variate SET variate.tmethid = new.tmethid 
+       WHERE variate.tmethid = old.tmethid;
+END$$
+DELIMITER&nbsp;;$$
+</pre>
+<a name="Observed_MySQL_bugs_for_some_versions" id="Observed_MySQL_bugs_for_some_versions"></a><h3> <span class="mw-headline"> Observed MySQL bugs for some versions </span></h3>
+<ul><li> Auto_increment in version 5.0.15-nt - If there are more than one auto_increment field, the next auto_increment field will begin with the last value of the first auto_increment field.  
+</li><li> Error in Usage of Union and INTO statement in version 5.1.22 - values from a UNION of tables cannot be stored into a variable.
+</li></ul>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 17/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+<div class="printfooter">
+Retrieved from "<a href="http://localhost../../../../articles/u/p/l/Uploading_Local_DMS_0c6b.html">http://localhost../../../../articles/u/p/l/Uploading_Local_DMS_0c6b.html</a>"</div>
+						<!-- end content -->
+						<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<div class="pBody">
+			<ul>
+	
+				 <li id="ca-nstab-main" class="selected"><a href="../../../../articles/u/p/l/Uploading_Local_DMS_0c6b.html" title="View the content page [c]" accesskey="c">Page</a></li>
+				 <li id="ca-talk" class="new"><a href="../../../../articles/u/p/l/Talk%7EUploading_Local_DMS_cbb8.html" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				 <li id="ca-viewsource"><a href="../../../../articles/u/p/l/Uploading_Local_DMS_0c6b.html" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				 <li id="ca-history"><a href="../../../../articles/u/p/l/Uploading_Local_DMS_0c6b.html" title="Past versions of this page [h]" accesskey="h">History</a></li>			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="../../../../articles/u/s/e/Special%7EUserLogin_94cd.html" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(../../../../misc/icis-wiki3.png);" href="../../../../index.html" title="Visit the main page [z]" accesskey="z"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class='generated-sidebar portlet' id='p-navigation'>
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="../../../../index.html" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
+				<li id="n-portal"><a href="../../../../articles/c/o/m/ICISWiki%7ECommunity_Portal_7449.html" title="About the project, what you can do, where to find things">Community portal</a></li>
+				<li id="n-recentchanges"><a href="../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+				<li id="n-help"><a href="../../../../articles/c/o/n/Help%7EContents_22de.html" title="The place to find out">Help</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="../../../../articles/s/e/a/Special%7ESearch_a8e5.html" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" title="Search ICISWiki [f]" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="../../../../articles/w/h/a/Special%7EWhatLinksHere_Uploading_Local_DMS_2091.html" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="../../../../articles/r/e/c/Special%7ERecentChangesLinked_Uploading_Local_DMS_4a03.html" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+<li id="t-specialpages"><a href="../../../../articles/s/p/e/Special%7ESpecialPages_f12b.html" title="List of all special pages [q]" accesskey="q">Special pages</a></li>
+				<li id="t-print"><a href="../../../../articles/u/p/l/Uploading_Local_DMS_0c6b.html" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>				<li id="t-permalink"><a href="../../../../articles/u/p/l/Uploading_Local_DMS_0c6b.html" title="Permanent link to this version of the page">Permanent link</a></li>			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="../../../../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" /></a></div>
+				<div id="f-copyrightico"><a href="../../../../../COPYING.html"><img src="/icis/skins/common/images/gnu-fdl.png" alt='GNU Free Documentation License 1.2' /></a></div>
+			<ul id="f-list">
+					<li id="credits">This page was last modified 07:35, 16 May 2008 by <a href="../../../../articles/r/v/a/User%7ERvalerio_c9de.html" title="User:Rvalerio">Rowena Valerio</a>. </li>
+					<li id="copyright">Content is available under <a href="../../../../../COPYING.html" class="external " title="../../../../../COPYING.html">GNU Free Documentation License 1.2</a>.</li>
+					<li id="privacy"><a href="../../../../articles/p/r/i/ICISWiki%7EPrivacy_policy_0cbf.html" title="ICISWiki:Privacy policy">Privacy policy</a></li>
+					<li id="about"><a href="../../../../articles/a/b/o/ICISWiki%7EAbout_53aa.html" title="ICISWiki:About">About ICISWiki</a></li>
+					<li id="disclaimer"><a href="../../../../articles/g/e/n/ICISWiki%7EGeneral_disclaimer_9129.html" title="ICISWiki:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+</div>
+
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served in 229.060 secs. --></body></html>

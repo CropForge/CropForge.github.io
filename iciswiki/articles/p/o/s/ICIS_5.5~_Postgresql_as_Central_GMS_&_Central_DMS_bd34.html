@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta name="generator" content="MediaWiki 1.14.0" />
+		<meta name="keywords" content="ICIS 5.5: Postgresql as Central GMS &amp; Central DMS" />
+		<link rel="shortcut icon" href="../../../../misc/favicon.ico" />
+		<link rel="search" type="application/opensearchdescription+xml" href="../../../../../opensearch_desc.php" title="ICISWiki (en)" />
+		<link title="Creative Commons" type="application/rdf+xml" href="../../../../articles/p/o/s/ICIS_5.5%7E_Postgresql_as_Central_GMS_%26_Central_DMS_bd34.html" rel="alternate meta" />
+		<link rel="copyright" href="../../../../../COPYING.html" />
+		<link rel="alternate" type="application/rss+xml" title="ICISWiki RSS Feed" href="http://localhost../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" />
+		<link rel="alternate" type="application/atom+xml" title="ICISWiki Atom Feed" href="http://localhost../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" />
+		<title>ICIS 5.5: Postgresql as Central GMS &amp; Central DMS - ICISWiki</title>
+		<link rel="stylesheet" href="../../../../skins/common/shared.css?195" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../../../../skins/common/commonPrint.css?195" type="text/css" media="print" />
+		<link rel="stylesheet" href="../../../../skins/monobook/main.css?195" type="text/css" media="screen" />
+		<!--[if lt IE 5.5000]><link rel="stylesheet" href="../../../../skins/monobook/IE50Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 5.5000]><link rel="stylesheet" href="../../../../skins/monobook/IE55Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 6]><link rel="stylesheet" href="../../../../skins/monobook/IE60Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 7]><link rel="stylesheet" href="../../../../skins/monobook/IE70Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7ECommon.css?195" type="text/css" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7EPrint.css?195" type="text/css" media="print" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7EMonobook.css?195" type="text/css" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/gen.css?195" type="text/css" />
+		<!--[if lt IE 7]><script type="text/javascript" src="../../../../skins/common/IEFixes.js?195"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+
+		<script type= "text/javascript">/*<![CDATA[*/
+		var skin = "monobook";
+		var stylepath = "../../../../skins";
+		var wgArticlePath = "../../../../$1";
+		var wgScriptPath = "../../../../..";
+		var wgScript = "/icis/index.php";
+		var wgVariantArticlePath = false;
+		var wgActionPaths = {};
+		var wgServer = "http://localhost";
+		var wgCanonicalNamespace = "";
+		var wgCanonicalSpecialPageName = false;
+		var wgNamespaceNumber = 0;
+		var wgPageName = "ICIS_5.5:_Postgresql_as_Central_GMS_\x26_Central_DMS";
+		var wgTitle = "ICIS 5.5: Postgresql as Central GMS \x26 Central DMS";
+		var wgAction = "view";
+		var wgArticleId = "3640";
+		var wgIsArticle = true;
+		var wgUserName = null;
+		var wgUserGroups = null;
+		var wgUserLanguage = "en";
+		var wgContentLanguage = "en";
+		var wgBreakFrames = false;
+		var wgCurRevisionId = "13776";
+		var wgVersion = "1.14.0";
+		var wgEnableAPI = true;
+		var wgEnableWriteAPI = true;
+		var wgSeparatorTransformTable = ["", ""];
+		var wgDigitTransformTable = ["", ""];
+		var wgRestrictionEdit = [];
+		var wgRestrictionMove = [];
+		/*]]>*/</script>
+
+		<script type="text/javascript" src="../../../../skins/common/wikibits.js?195"><!-- wikibits js --></script>
+		<!-- Head Scripts -->
+		<script type="text/javascript" src="../../../../raw/gen.js"><!-- site js --></script>
+	</head>
+<body class="mediawiki ltr ns-0 ns-subject page-ICIS_5_5_Postgresql_as_Central_GMS_Central_DMS skin-monobook">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 id="firstHeading" class="firstHeading">ICIS 5.5: Postgresql as Central GMS &amp; Central DMS</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From ICISWiki</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>			<!-- start content -->
+			<table id="toc" class="toc" summary="Contents"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1"><a href="#Setup"><span class="tocnumber">1</span> <span class="toctext">Setup</span></a>
+<ul>
+<li class="toclevel-2"><a href="#Installation_Diagnostic_Tool_5.5.1"><span class="tocnumber">1.1</span> <span class="toctext">Installation Diagnostic Tool 5.5.1</span></a></li>
+<li class="toclevel-2"><a href="#GMS_Search_5.5.1"><span class="tocnumber">1.2</span> <span class="toctext">GMS Search 5.5.1</span></a>
+<ul>
+<li class="toclevel-3"><a href="#Search_for_name_.22APO.22"><span class="tocnumber">1.2.1</span> <span class="toctext">Search for name "APO"</span></a></li>
+<li class="toclevel-3"><a href="#Expand_pedigree_tree_.28Expand_All.29_for_.22APO.22"><span class="tocnumber">1.2.2</span> <span class="toctext">Expand pedigree tree (Expand All) for "APO"</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2"><a href="#Browse_5.5.1"><span class="tocnumber">1.3</span> <span class="toctext">Browse 5.5.1</span></a>
+<ul>
+<li class="toclevel-3"><a href="#Enter_search_string_.22IR8.22"><span class="tocnumber">1.3.1</span> <span class="toctext">Enter search string "IR8"</span></a></li>
+<li class="toclevel-3"><a href="#Command_string:_Display_GMS_data_for_GID_675472"><span class="tocnumber">1.3.2</span> <span class="toctext">Command string: Display GMS data for GID 675472</span></a></li>
+<li class="toclevel-3"><a href="#Command_string:_List_close_relatives_of_GID_675472"><span class="tocnumber">1.3.3</span> <span class="toctext">Command string: List close relatives of GID 675472</span></a></li>
+<li class="toclevel-3"><a href="#Command_string:_Display_all_group_relatives_of_GID_675472"><span class="tocnumber">1.3.4</span> <span class="toctext">Command string: Display all group relatives of GID 675472</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2"><a href="#ICISWorkbook_5.5.1"><span class="tocnumber">1.4</span> <span class="toctext">ICISWorkbook 5.5.1</span></a>
+<ul>
+<li class="toclevel-3"><a href="#STUDY_Menu"><span class="tocnumber">1.4.1</span> <span class="toctext">STUDY Menu</span></a>
+<ul>
+<li class="toclevel-4"><a href="#Study_--.3E_Convert_Excel_file"><span class="tocnumber">1.4.1.1</span> <span class="toctext">Study --&gt; Convert Excel file</span></a></li>
+<li class="toclevel-4"><a href="#Study_--.3E_Template_from_database"><span class="tocnumber">1.4.1.2</span> <span class="toctext">Study --&gt; Template from database</span></a></li>
+<li class="toclevel-4"><a href="#Study_--.3E_Retrieve:_Factors_.26_Variates"><span class="tocnumber">1.4.1.3</span> <span class="toctext">Study --&gt; Retrieve: Factors &amp; Variates</span></a></li>
+<li class="toclevel-4"><a href="#Study_--.3E_Retrieve:_Dataset"><span class="tocnumber">1.4.1.4</span> <span class="toctext">Study --&gt; Retrieve: Dataset</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3"><a href="#ADD-INS_Menu"><span class="tocnumber">1.4.2</span> <span class="toctext">ADD-INS Menu</span></a>
+<ul>
+<li class="toclevel-4"><a href="#Add-Ins_--.3E_Import_data_from_Setgen"><span class="tocnumber">1.4.2.1</span> <span class="toctext">Add-Ins --&gt; Import data from Setgen</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3"><a href="#GMS_Menu"><span class="tocnumber">1.4.3</span> <span class="toctext">GMS Menu</span></a>
+<ul>
+<li class="toclevel-4"><a href="#GMS_--.3E_Get_Unique_Sample_ID"><span class="tocnumber">1.4.3.1</span> <span class="toctext">GMS --&gt; Get Unique Sample ID</span></a></li>
+<li class="toclevel-4"><a href="#GMS_--.3E_Get_Species"><span class="tocnumber">1.4.3.2</span> <span class="toctext">GMS --&gt; Get Species</span></a></li>
+<li class="toclevel-4"><a href="#GMS_--.3E_Get_Origin"><span class="tocnumber">1.4.3.3</span> <span class="toctext">GMS --&gt; Get Origin</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</td></tr></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </script>
+<a name="Setup" id="Setup"></a><h1> <span class="mw-headline"> Setup </span></h1>
+<p>The following items are results of ICIS application tests using an <b>IRIS central (GMS, DMS, GEMS) database</b> in PostgreSQL.
+Local databases are in MS Access.
+</p><p>ICIS Schema version: 5.5
+</p><p><br />
+</p>
+<a name="Installation_Diagnostic_Tool_5.5.1" id="Installation_Diagnostic_Tool_5.5.1"></a><h2> <span class="mw-headline"> Installation Diagnostic Tool 5.5.1 </span></h2>
+<a name="GMS_Search_5.5.1" id="GMS_Search_5.5.1"></a><h2> <span class="mw-headline"> GMS Search 5.5.1 </span></h2>
+<a name="Search_for_name_.22APO.22" id="Search_for_name_.22APO.22"></a><h3> <span class="mw-headline"> Search for name "APO" </span></h3>
+<a name="Expand_pedigree_tree_.28Expand_All.29_for_.22APO.22" id="Expand_pedigree_tree_.28Expand_All.29_for_.22APO.22"></a><h3> <span class="mw-headline"> Expand pedigree tree (Expand All) for "APO" </span></h3>
+<a name="Browse_5.5.1" id="Browse_5.5.1"></a><h2> <span class="mw-headline"> Browse 5.5.1 </span></h2>
+<a name="Enter_search_string_.22IR8.22" id="Enter_search_string_.22IR8.22"></a><h3> <span class="mw-headline"> Enter search string "IR8" </span></h3>
+<pre> ENTER SEARCH OR COMMAND STRING (.HLP=HELP, ./END)
+IR8
+</pre>
+<p><br />
+</p>
+<a name="Command_string:_Display_GMS_data_for_GID_675472" id="Command_string:_Display_GMS_data_for_GID_675472"></a><h3> <span class="mw-headline"> Command string: Display GMS data for GID 675472 </span></h3>
+<pre> ENTER SEARCH OR COMMAND STRING (.HLP=HELP, ./END)
+.GID 675472
+</pre>
+<p><br />
+</p>
+<a name="Command_string:_List_close_relatives_of_GID_675472" id="Command_string:_List_close_relatives_of_GID_675472"></a><h3> <span class="mw-headline"> Command string: List close relatives of GID 675472 </span></h3>
+<pre> ENTER SEARCH OR COMMAND STRING (.HLP=HELP, ./END)
+.REL 675472
+</pre>
+<p><br />
+</p>
+<a name="Command_string:_Display_all_group_relatives_of_GID_675472" id="Command_string:_Display_all_group_relatives_of_GID_675472"></a><h3> <span class="mw-headline"> Command string: Display all group relatives of GID 675472 </span></h3>
+<pre> ENTER SEARCH OR COMMAND STRING (.HLP=HELP, ./END)
+.GRP 675472
+</pre>
+<p><br />
+</p>
+<a name="ICISWorkbook_5.5.1" id="ICISWorkbook_5.5.1"></a><h2> <span class="mw-headline"> ICISWorkbook 5.5.1 </span></h2>
+<a name="STUDY_Menu" id="STUDY_Menu"></a><h3> <span class="mw-headline"> STUDY Menu </span></h3>
+<a name="Study_--.3E_Convert_Excel_file" id="Study_--.3E_Convert_Excel_file"></a><h4> <span class="mw-headline"> Study --&gt; Convert Excel file </span></h4>
+<a name="Study_--.3E_Template_from_database" id="Study_--.3E_Template_from_database"></a><h4> <span class="mw-headline"> Study --&gt; Template from database </span></h4>
+<p>Settings: List studies from local AND central databases; select study "1990WS-CHA"
+</p><p><br />
+</p>
+<a name="Study_--.3E_Retrieve:_Factors_.26_Variates" id="Study_--.3E_Retrieve:_Factors_.26_Variates"></a><h4> <span class="mw-headline"> Study --&gt; Retrieve: Factors &amp; Variates </span></h4>
+<a name="Study_--.3E_Retrieve:_Dataset" id="Study_--.3E_Retrieve:_Dataset"></a><h4> <span class="mw-headline"> Study --&gt; Retrieve: Dataset </span></h4>
+<a name="ADD-INS_Menu" id="ADD-INS_Menu"></a><h3> <span class="mw-headline"> ADD-INS Menu </span></h3>
+<a name="Add-Ins_--.3E_Import_data_from_Setgen" id="Add-Ins_--.3E_Import_data_from_Setgen"></a><h4> <span class="mw-headline"> Add-Ins --&gt; Import data from Setgen </span></h4>
+<p>SetGen list name: 1980-001
+</p><p><br />
+</p>
+<a name="GMS_Menu" id="GMS_Menu"></a><h3> <span class="mw-headline"> GMS Menu </span></h3>
+<a name="GMS_--.3E_Get_Unique_Sample_ID" id="GMS_--.3E_Get_Unique_Sample_ID"></a><h4> <span class="mw-headline"> GMS --&gt; Get Unique Sample ID </span></h4>
+<a name="GMS_--.3E_Get_Species" id="GMS_--.3E_Get_Species"></a><h4> <span class="mw-headline"> GMS --&gt; Get Species </span></h4>
+<a name="GMS_--.3E_Get_Origin" id="GMS_--.3E_Get_Origin"></a><h4> <span class="mw-headline"> GMS --&gt; Get Origin </span></h4>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 23/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+<div class="printfooter">
+Retrieved from "<a href="http://localhost../../../../articles/p/o/s/ICIS_5.5%7E_Postgresql_as_Central_GMS_%26_Central_DMS_bd34.html">http://localhost../../../../articles/p/o/s/ICIS_5.5%7E_Postgresql_as_Central_GMS_%26_Central_DMS_bd34.html</a>"</div>
+						<!-- end content -->
+						<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<div class="pBody">
+			<ul>
+	
+				 <li id="ca-nstab-main" class="selected"><a href="../../../../articles/p/o/s/ICIS_5.5%7E_Postgresql_as_Central_GMS_%26_Central_DMS_bd34.html" title="View the content page [c]" accesskey="c">Page</a></li>
+				 <li id="ca-talk" class="new"><a href="../../../../articles/i/c/i/Talk%7EICIS_5.5%7E_Postgresql_as_Central_GMS_%26_Central_DMS_eb64.html" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				 <li id="ca-viewsource"><a href="../../../../articles/p/o/s/ICIS_5.5%7E_Postgresql_as_Central_GMS_%26_Central_DMS_bd34.html" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				 <li id="ca-history"><a href="../../../../articles/p/o/s/ICIS_5.5%7E_Postgresql_as_Central_GMS_%26_Central_DMS_bd34.html" title="Past versions of this page [h]" accesskey="h">History</a></li>			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="../../../../articles/u/s/e/Special%7EUserLogin_94cd.html" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(../../../../misc/icis-wiki3.png);" href="../../../../index.html" title="Visit the main page [z]" accesskey="z"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class='generated-sidebar portlet' id='p-navigation'>
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="../../../../index.html" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
+				<li id="n-portal"><a href="../../../../articles/c/o/m/ICISWiki%7ECommunity_Portal_7449.html" title="About the project, what you can do, where to find things">Community portal</a></li>
+				<li id="n-recentchanges"><a href="../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+				<li id="n-help"><a href="../../../../articles/c/o/n/Help%7EContents_22de.html" title="The place to find out">Help</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="../../../../articles/s/e/a/Special%7ESearch_a8e5.html" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" title="Search ICISWiki [f]" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="../../../../articles/w/h/a/Special%7EWhatLinksHere_ICIS_5.5%7E_Postgresql_as_Central_GMS_%26_Central_DMS_2202.html" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="../../../../articles/r/e/c/Special%7ERecentChangesLinked_ICIS_5.5%7E_Postgresql_as_Central_GMS_%26_Central_DMS_8c3e.html" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+<li id="t-specialpages"><a href="../../../../articles/s/p/e/Special%7ESpecialPages_f12b.html" title="List of all special pages [q]" accesskey="q">Special pages</a></li>
+				<li id="t-print"><a href="../../../../articles/p/o/s/ICIS_5.5%7E_Postgresql_as_Central_GMS_%26_Central_DMS_bd34.html" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>				<li id="t-permalink"><a href="../../../../articles/p/o/s/ICIS_5.5%7E_Postgresql_as_Central_GMS_%26_Central_DMS_bd34.html" title="Permanent link to this version of the page">Permanent link</a></li>			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="../../../../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" /></a></div>
+				<div id="f-copyrightico"><a href="../../../../../COPYING.html"><img src="/icis/skins/common/images/gnu-fdl.png" alt='GNU Free Documentation License 1.2' /></a></div>
+			<ul id="f-list">
+					<li id="credits">This page was last modified 03:27, 24 July 2008 by <a href="../../../../articles/m/h/a/User%7EMhabito_276f.html" title="User:Mhabito">Maria Corina de Luna Habito</a>. </li>
+					<li id="copyright">Content is available under <a href="../../../../../COPYING.html" class="external " title="../../../../../COPYING.html">GNU Free Documentation License 1.2</a>.</li>
+					<li id="privacy"><a href="../../../../articles/p/r/i/ICISWiki%7EPrivacy_policy_0cbf.html" title="ICISWiki:Privacy policy">Privacy policy</a></li>
+					<li id="about"><a href="../../../../articles/a/b/o/ICISWiki%7EAbout_53aa.html" title="ICISWiki:About">About ICISWiki</a></li>
+					<li id="disclaimer"><a href="../../../../articles/g/e/n/ICISWiki%7EGeneral_disclaimer_9129.html" title="ICISWiki:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+</div>
+
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served in 326.189 secs. --></body></html>

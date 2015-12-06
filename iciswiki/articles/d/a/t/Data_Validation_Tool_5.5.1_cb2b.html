@@ -1,0 +1,952 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta name="generator" content="MediaWiki 1.14.0" />
+		<meta name="keywords" content="Data Validation Tool 5.5.1,Data Validation Tool 5.5,ICIS Technical Documentation 5.5" />
+		<link rel="shortcut icon" href="../../../../misc/favicon.ico" />
+		<link rel="search" type="application/opensearchdescription+xml" href="../../../../../opensearch_desc.php" title="ICISWiki (en)" />
+		<link title="Creative Commons" type="application/rdf+xml" href="../../../../articles/d/a/t/Data_Validation_Tool_5.5.1_cb2b.html" rel="alternate meta" />
+		<link rel="copyright" href="../../../../../COPYING.html" />
+		<link rel="alternate" type="application/rss+xml" title="ICISWiki RSS Feed" href="http://localhost../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" />
+		<link rel="alternate" type="application/atom+xml" title="ICISWiki Atom Feed" href="http://localhost../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" />
+		<title>Data Validation Tool 5.5.1 - ICISWiki</title>
+		<link rel="stylesheet" href="../../../../skins/common/shared.css?195" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../../../../skins/common/commonPrint.css?195" type="text/css" media="print" />
+		<link rel="stylesheet" href="../../../../skins/monobook/main.css?195" type="text/css" media="screen" />
+		<!--[if lt IE 5.5000]><link rel="stylesheet" href="../../../../skins/monobook/IE50Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 5.5000]><link rel="stylesheet" href="../../../../skins/monobook/IE55Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 6]><link rel="stylesheet" href="../../../../skins/monobook/IE60Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 7]><link rel="stylesheet" href="../../../../skins/monobook/IE70Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7ECommon.css?195" type="text/css" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7EPrint.css?195" type="text/css" media="print" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7EMonobook.css?195" type="text/css" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/gen.css?195" type="text/css" />
+		<!--[if lt IE 7]><script type="text/javascript" src="../../../../skins/common/IEFixes.js?195"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+
+		<script type= "text/javascript">/*<![CDATA[*/
+		var skin = "monobook";
+		var stylepath = "../../../../skins";
+		var wgArticlePath = "../../../../$1";
+		var wgScriptPath = "../../../../..";
+		var wgScript = "/icis/index.php";
+		var wgVariantArticlePath = false;
+		var wgActionPaths = {};
+		var wgServer = "http://localhost";
+		var wgCanonicalNamespace = "";
+		var wgCanonicalSpecialPageName = false;
+		var wgNamespaceNumber = 0;
+		var wgPageName = "Data_Validation_Tool_5.5.1";
+		var wgTitle = "Data Validation Tool 5.5.1";
+		var wgAction = "view";
+		var wgArticleId = "3128";
+		var wgIsArticle = true;
+		var wgUserName = null;
+		var wgUserGroups = null;
+		var wgUserLanguage = "en";
+		var wgContentLanguage = "en";
+		var wgBreakFrames = false;
+		var wgCurRevisionId = "15273";
+		var wgVersion = "1.14.0";
+		var wgEnableAPI = true;
+		var wgEnableWriteAPI = true;
+		var wgSeparatorTransformTable = ["", ""];
+		var wgDigitTransformTable = ["", ""];
+		var wgRestrictionEdit = [];
+		var wgRestrictionMove = [];
+		/*]]>*/</script>
+
+		<script type="text/javascript" src="../../../../skins/common/wikibits.js?195"><!-- wikibits js --></script>
+		<!-- Head Scripts -->
+		<script type="text/javascript" src="../../../../raw/gen.js"><!-- site js --></script>
+	</head>
+<body class="mediawiki ltr ns-0 ns-subject page-Data_Validation_Tool_5_5_1 skin-monobook">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 id="firstHeading" class="firstHeading">Data Validation Tool 5.5.1</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From ICISWiki</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>			<!-- start content -->
+			<p><i><b>M.C. Habito, A.R. Llorca, R. Sackville Hamilton</b></i>
+</p><p><br />
+<a href="../../../../articles/i/c/i/ICIS_Technical_Documentation_5.5_642d.html" title="ICIS Technical Documentation 5.5"> ICIS Technical Documentation 5.5</a> &gt; <a href="../../../../articles/d/a/t/Data_Validation_Tool_5.5_eaf6.html" title="Data Validation Tool 5.5"> Data Validation Tool 5.5</a> &gt; Data Validation Tool 5.5.1
+</p>
+<table id="toc" class="toc" summary="Contents"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1"><a href="#Download"><span class="tocnumber">1</span> <span class="toctext">Download</span></a></li>
+<li class="toclevel-1"><a href="#Introduction"><span class="tocnumber">2</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1"><a href="#Genealogy_Management_System"><span class="tocnumber">3</span> <span class="toctext">Genealogy Management System</span></a>
+<ul>
+<li class="toclevel-2"><a href="#Incorrect_parent_references_.5B2_checks.5D"><span class="tocnumber">3.1</span> <span class="toctext">Incorrect parent references [2 checks]</span></a></li>
+<li class="toclevel-2"><a href="#Circular_references_.5B3_checks.5D"><span class="tocnumber">3.2</span> <span class="toctext">Circular references [3 checks]</span></a></li>
+<li class="toclevel-2"><a href="#Deleted_parent_references_.5B3_checks.5D"><span class="tocnumber">3.3</span> <span class="toctext">Deleted parent references [3 checks]</span></a></li>
+<li class="toclevel-2"><a href="#Replaced_parent_references_.5B3_checks.5D"><span class="tocnumber">3.4</span> <span class="toctext">Replaced parent references [3 checks]</span></a></li>
+<li class="toclevel-2"><a href="#No_names_.5B1_check.5D"><span class="tocnumber">3.5</span> <span class="toctext">No names [1 check]</span></a></li>
+<li class="toclevel-2"><a href="#Duplicate_Names_.5B2_checks.5D"><span class="tocnumber">3.6</span> <span class="toctext">Duplicate Names [2 checks]</span></a></li>
+<li class="toclevel-2"><a href="#Count_preferred_IDs_.5B2_checks.5D"><span class="tocnumber">3.7</span> <span class="toctext">Count preferred IDs [2 checks]</span></a></li>
+<li class="toclevel-2"><a href="#Count_preferred_names_.5B2_checks.5D"><span class="tocnumber">3.8</span> <span class="toctext">Count preferred names [2 checks]</span></a></li>
+<li class="toclevel-2"><a href="#Incorrect_germplasm_method_.5B2_checks.5D"><span class="tocnumber">3.9</span> <span class="toctext">Incorrect germplasm method [2 checks]</span></a></li>
+<li class="toclevel-2"><a href="#Method_-_name_type_combinations_.5B3_checks.5D"><span class="tocnumber">3.10</span> <span class="toctext">Method - name type combinations [3 checks]</span></a></li>
+<li class="toclevel-2"><a href="#Germplasm_location"><span class="tocnumber">3.11</span> <span class="toctext">Germplasm location</span></a></li>
+<li class="toclevel-2"><a href="#DATES"><span class="tocnumber">3.12</span> <span class="toctext">DATES</span></a>
+<ul>
+<li class="toclevel-3"><a href="#Germplasm_creation_date_.28GDATE.29_.5B3_checks.5D"><span class="tocnumber">3.12.1</span> <span class="toctext">Germplasm creation date (GDATE) [3 checks]</span></a></li>
+<li class="toclevel-3"><a href="#GDATE_of_progenitors_.5B2_checks.5D"><span class="tocnumber">3.12.2</span> <span class="toctext">GDATE of progenitors [2 checks]</span></a></li>
+<li class="toclevel-3"><a href="#Name_date_.5B2_checks.5D"><span class="tocnumber">3.12.3</span> <span class="toctext">Name date [2 checks]</span></a></li>
+<li class="toclevel-3"><a href="#NDATE_vs_GDATE"><span class="tocnumber">3.12.4</span> <span class="toctext">NDATE vs GDATE</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#Data_Management_System"><span class="tocnumber">4</span> <span class="toctext">Data Management System</span></a>
+<ul>
+<li class="toclevel-2"><a href="#Check_GIDs_in_DMS_that_have_been_replaced_in_the_GMS"><span class="tocnumber">4.1</span> <span class="toctext">Check GIDs in DMS that have been replaced in the GMS</span></a></li>
+<li class="toclevel-2"><a href="#OINDEX_table_.28Factor_ID_or_Level_No_is_zero.29"><span class="tocnumber">4.2</span> <span class="toctext">OINDEX table (Factor ID or Level No is zero)</span></a></li>
+<li class="toclevel-2"><a href="#Trait-Scale-Method_relationship_.5B4_checks.5D"><span class="tocnumber">4.3</span> <span class="toctext">Trait-Scale-Method relationship [4 checks]</span></a></li>
+<li class="toclevel-2"><a href="#Duplicate_records_in_LEVEL_N.2C_LEVEL_C_tables"><span class="tocnumber">4.4</span> <span class="toctext">Duplicate records in LEVEL_N, LEVEL_C tables</span></a></li>
+<li class="toclevel-2"><a href="#Duplicate_records_in_DATA_N.2C_DATA_C_tables"><span class="tocnumber">4.5</span> <span class="toctext">Duplicate records in DATA_N, DATA_C tables</span></a></li>
+<li class="toclevel-2"><a href="#Level_inconsistency_in_labels_of_a_factor"><span class="tocnumber">4.6</span> <span class="toctext">Level inconsistency in labels of a factor</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#Rice-specific"><span class="tocnumber">5</span> <span class="toctext">Rice-specific</span></a>
+<ul>
+<li class="toclevel-2"><a href="#Name_type_occurrence_.5B3_checks.5D"><span class="tocnumber">5.1</span> <span class="toctext">Name type occurrence [3 checks]</span></a></li>
+<li class="toclevel-2"><a href="#Name_sharing_.5B4_checks.5D"><span class="tocnumber">5.2</span> <span class="toctext">Name sharing [4 checks]</span></a></li>
+<li class="toclevel-2"><a href="#Name_type_GACC_.28Genebank_accession.29_.2F_IRGC_accession_.5B5_checks.5D"><span class="tocnumber">5.3</span> <span class="toctext">Name type GACC (Genebank accession) / IRGC accession [5 checks]</span></a></li>
+<li class="toclevel-2"><a href="#Name_inheritance_from_GPID2_.28NSTAT.2C_NDATE.2C_NLOCN.29_.5B3_checks.5D"><span class="tocnumber">5.4</span> <span class="toctext">Name inheritance from GPID2 (NSTAT, NDATE, NLOCN) [3 checks]</span></a></li>
+<li class="toclevel-2"><a href="#IRTP_name_format"><span class="tocnumber">5.5</span> <span class="toctext">IRTP name format</span></a></li>
+<li class="toclevel-2"><a href="#IRGC_name_format"><span class="tocnumber">5.6</span> <span class="toctext">IRGC name format</span></a></li>
+<li class="toclevel-2"><a href="#Preferred_name_eligibility_.28name_types.29"><span class="tocnumber">5.7</span> <span class="toctext">Preferred name eligibility (name types)</span></a></li>
+<li class="toclevel-2"><a href="#Preferred_ID_eligibility_.28name_types.29_.5B2_checks.5D"><span class="tocnumber">5.8</span> <span class="toctext">Preferred ID eligibility (name types) [2 checks]</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#Database_foreign_key_references_by_tables"><span class="tocnumber">6</span> <span class="toctext">Database foreign key references by tables</span></a></li>
+<li class="toclevel-1"><a href="#Miscellaneous_Features"><span class="tocnumber">7</span> <span class="toctext">Miscellaneous Features</span></a></li>
+<li class="toclevel-1"><a href="#DataError_Index_Listing"><span class="tocnumber">8</span> <span class="toctext">DataError Index Listing</span></a></li>
+<li class="toclevel-1"><a href="#What.27s_New_in_Version_5.5.1"><span class="tocnumber">9</span> <span class="toctext">What's New in Version 5.5.1</span></a></li>
+<li class="toclevel-1"><a href="#Data_Validation_Tool_Changes.txt"><span class="tocnumber">10</span> <span class="toctext">Data Validation Tool Changes.txt</span></a></li>
+</ul>
+</td></tr></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </script>
+<a name="Download" id="Download"></a><h2> <span class="mw-headline"> Download </span></h2>
+<p>Latest version is here: <a href="http://cropforge.org/frs/shownotes.php?release_id=456" class="external text" title="http://cropforge.org/frs/shownotes.php?release_id=456" rel="nofollow">Data Validate 5.5.1.1</a>
+</p>
+<a name="Introduction" id="Introduction"></a><h2> <span class="mw-headline"> Introduction </span></h2>
+<p>The ICIS Data Validation Tool is an application that searches ICIS for data errors that might render it meaningless. This is useful in making sure that published data are always of excellent quality.
+</p><p><a href="../../../../articles/i/c/i/File%7EIcis-validate5.5.1.JPG_5c30.html" class="image" title="Image:Icis-validate5.5.1.JPG"><img alt="Image:Icis-validate5.5.1.JPG" src="../../../../images/4/40/Icis-validate5.5.1.JPG" width="867" height="642" border="0" /></a>
+</p><p>Just choose the tests you want to execute and click on the "Run" button.
+If you wish to run several or all tests, it is recommended to leave this tool running overnight.
+</p>
+<a name="Genealogy_Management_System" id="Genealogy_Management_System"></a><h2> <span class="mw-headline"> Genealogy Management System </span></h2>
+<p>Checks the GMS database (applicable to all ICIS implementations) --&gt; see screenshot above.
+</p><p><br />
+</p>
+<a name="Incorrect_parent_references_.5B2_checks.5D" id="Incorrect_parent_references_.5B2_checks.5D"></a><h3> <span class="mw-headline"> Incorrect parent references [2 checks]</span></h3>
+<table border="0" cellpadding="2" style="background:#d0d0d0" width="95%">
+
+<tr>
+<th width="25%" align="left"> Summary
+</th><td> Error Message
+</td><td> Notes
+</td></tr>
+<tr>
+<td style="background:#ffffff" valign="top" rowspan="2"> Query GIDs in the GMS.GERMPLSM table that have unknown group source, and with non-generative group source.
+</td><td style="background:#ffffff"> DataError-0001: Unknown group source
+</td><td style="background:#ffffff"> CHK01E
+</td></tr>
+<tr>
+<td style="background:#ffffff"> DataError-0002: Germplasm with non-generative group source
+</td><td style="background:#ffffff">
+</td></tr>
+</table>
+<p><br />
+</p>
+<a name="Circular_references_.5B3_checks.5D" id="Circular_references_.5B3_checks.5D"></a><h3> <span class="mw-headline"> Circular references [3 checks] </span></h3>
+<table border="0" cellpadding="2" style="background:#d0d0d0" width="95%">
+
+<tr>
+<th width="25%" align="left"> Summary
+</th><td> Error Message
+</td><td> Notes
+</td></tr>
+<tr>
+<td style="background:#ffffff" valign="top" rowspan="3"> If <b>germplasm A</b> has <b>germplasm B</b> as one of its parent and if <b>germplasm B</b> has <b>germplasm A</b> as one of its parents, then we have a circular reference situation. This option also checks for two and three-level circularity.
+</td><td style="background:#ffffff"> DataError-0003: 1st level circular reference
+</td><td style="background:#ffffff"> <b>A</b> references <b>B</b>, and <b>B</b> references <b>A</b> <font color="blue"> <b>[CHK01C,CHK01D]</b> </font>
+</td></tr>
+<tr>
+<td style="background:#ffffff"> DataError-0004: 2nd level circular reference
+</td><td style="background:#ffffff"> <b>A</b> references <b>B</b>, and <b>B</b> references <b>C</b>, and <b>C</b> references <b>A</b>
+</td></tr>
+<tr>
+<td style="background:#ffffff"> DataError-0005: 3rd level circular reference
+</td><td style="background:#ffffff"> <b>A</b> references <b>B</b>, and <b>B</b> references <b>C</b>, and <b>C</b> references <b>D</b>, and <b>D</b> references <b>A</b>
+</td></tr>
+</table>
+<p><br />
+</p><p><br />
+</p><p><br />
+</p>
+<a name="Deleted_parent_references_.5B3_checks.5D" id="Deleted_parent_references_.5B3_checks.5D"></a><h3> <span class="mw-headline"> Deleted parent references [3 checks]</span></h3>
+<table border="0" cellpadding="2" style="background:#d0d0d0" width="95%">
+
+<tr>
+<th width="25%" align="left"> Summary
+</th><td> Error Message
+</td><td> Notes
+</td></tr>
+<tr>
+<td style="background:#ffffff" valign="top" rowspan="3"> A GID should not reference a deleted GPID1, GPID2 or MGID.
+</td><td style="background:#ffffff"> DataError-0007A: Germplasm with deleted parent references (GPID1)
+</td><td style="background:#ffffff">
+</td></tr>
+<tr>
+<td style="background:#ffffff"> DataError-0007B: Germplasm with deleted parent references (GPID2)
+</td><td style="background:#ffffff">
+</td></tr>
+<tr>
+<td style="background:#ffffff"> DataError-0007C: Germplasm with deleted parent references (MGID)
+</td><td style="background:#ffffff">
+</td></tr>
+</table>
+<p><br />
+</p>
+<a name="Replaced_parent_references_.5B3_checks.5D" id="Replaced_parent_references_.5B3_checks.5D"></a><h3> <span class="mw-headline"> Replaced parent references [3 checks] <a href="../../../../articles/n/e/w/File%7ENew_indicator.jpg_c24d.html" class="image" title="New indicator.jpg"><img alt="" src="../../../../images/thumb/d/dc/New_indicator.jpg/40px-New_indicator.jpg" width="40" height="30" border="0" /></a></span></h3>
+<table border="0" cellpadding="2" style="background:#d0d0d0" width="95%">
+
+<tr>
+<th width="25%" align="left"> Summary
+</th><td> Error Message
+</td><td> Notes
+</td></tr>
+<tr>
+<td style="background:#ffffff" valign="top" rowspan="3"> Let us say <b>germplasm A</b> is replaced with <b>germplasm B</b> as shown in the GERMPLSM.GRPLCE database column. All germplasm that references <b>germplasm A</b> should be corrected to <b>germplasm B</b>.
+</td><td style="background:#ffffff"> DataError-0015A: Germplasm with replaced parent references (GPID1)
+</td><td style="background:#ffffff">
+</td></tr>
+<tr>
+<td style="background:#ffffff"> DataError-0015B: Germplasm with replaced parent references (GPID2)
+</td><td style="background:#ffffff">
+</td></tr>
+<tr>
+<td style="background:#ffffff"> DataError-0015C: Germplasm with replaced parent references (MGID)
+</td><td style="background:#ffffff">
+</td></tr>
+</table>
+<a name="No_names_.5B1_check.5D" id="No_names_.5B1_check.5D"></a><h3> <span class="mw-headline"> No names [1 check] <a href="../../../../articles/n/e/w/File%7ENew_indicator.jpg_c24d.html" class="image" title="New indicator.jpg"><img alt="" src="../../../../images/thumb/d/dc/New_indicator.jpg/40px-New_indicator.jpg" width="40" height="30" border="0" /></a></span></h3>
+<p>Checks germplasm with no NAMES records.
+</p>
+<a name="Duplicate_Names_.5B2_checks.5D" id="Duplicate_Names_.5B2_checks.5D"></a><h3> <span class="mw-headline"> Duplicate Names [2 checks] <a href="../../../../articles/n/e/w/File%7ENew_indicator.jpg_c24d.html" class="image" title="New indicator.jpg"><img alt="" src="../../../../images/thumb/d/dc/New_indicator.jpg/40px-New_indicator.jpg" width="40" height="30" border="0" /></a> </span></h3>
+<p><i><a href="http://cropforge.org/tracker/?func=detail&amp;aid=710&amp;group_id=5&amp;atid=112" class="external text" title="http://cropforge.org/tracker/?func=detail&amp;aid=710&amp;group_id=5&amp;atid=112" rel="nofollow">CropForge Feature Request # 710 (rhamilton,mhabito)</a></i>
+</p><p><br />
+</p>
+<table border="0" cellpadding="3" style="background:#d0d0d0" width="95%">
+
+<tr>
+<th width="25%" align="left"> Summary
+</th><td> Error Message
+</td><td> Notes
+</td></tr>
+<tr>
+<td style="background:#ffffff"> NAMES table: GID-NVAL-NTYPE (Germplasm ID - Name value - Name type) should be unique in any implementation of ICIS.
+</td><td style="background:#ffffff"> DataError-0032: Germplasm with duplicate names
+</td><td style="background:#ffffff">
+</td></tr>
+<tr>
+<td style="background:#ffffff"> <b>Possible</b> duplicates. NVALs may only have slight differences in spelling
+</td><td style="background:#ffffff"> DataError-0010: Germplasm with possible duplicate names (NTYPE-NSTAT combination occurring more than once)
+</td><td style="background:#ffffff">
+</td></tr>
+</table>
+<a name="Count_preferred_IDs_.5B2_checks.5D" id="Count_preferred_IDs_.5B2_checks.5D"></a><h3> <span class="mw-headline"> Count preferred IDs [2 checks] </span></h3>
+<p><i><a href="http://cropforge.org/tracker/index.php?func=detail&amp;aid=160&amp;group_id=5&amp;atid=112" class="external text" title="http://cropforge.org/tracker/index.php?func=detail&amp;aid=160&amp;group_id=5&amp;atid=112" rel="nofollow">CropForge Feature Request # 160 (rhamilton)</a> and/or <a href="http://cropwiki.irri.org/icis/index.php/Talk:Data_Validation_Tool" class="external text" title="http://cropwiki.irri.org/icis/index.php/Talk:Data_Validation_Tool" rel="nofollow">Version 5.3 Discussion Article on ICISWiki </a></i>
+</p><p><br />
+</p>
+<table border="0" cellpadding="3" style="background:#d0d0d0" width="95%">
+
+<tr>
+<th width="25%" align="left"> Summary
+</th><td> Error Message
+</td><td> Notes
+</td></tr>
+<tr>
+<td style="background:#ffffff" rowspan="2"> No more (or less) than one name of a GID can have a "preferred ID" status (<i>NSTAT =8</i>)
+</td><td style="background:#ffffff"> DataError-0011: Germplasm with no preferred ID (NSTAT=8)
+</td><td style="background:#ffffff">
+</td></tr>
+<tr>
+<td style="background:#ffffff"> DataError-0020: Germplasm with multiple preferred IDs (NSTAT=8)
+</td><td style="background:#ffffff">
+</td></tr>
+</table>
+<a name="Count_preferred_names_.5B2_checks.5D" id="Count_preferred_names_.5B2_checks.5D"></a><h3> <span class="mw-headline"> Count preferred names [2 checks] </span></h3>
+<p><i><a href="http://cropforge.org/tracker/index.php?func=detail&amp;aid=160&amp;group_id=5&amp;atid=112" class="external text" title="http://cropforge.org/tracker/index.php?func=detail&amp;aid=160&amp;group_id=5&amp;atid=112" rel="nofollow">CropForge Feature Request # 160 (rhamilton)</a> and/or <a href="http://cropwiki.irri.org/icis/index.php/Talk:Data_Validation_Tool" class="external text" title="http://cropwiki.irri.org/icis/index.php/Talk:Data_Validation_Tool" rel="nofollow">Version 5.3 Discussion Article on ICISWiki </a></i>
+</p><p><br />
+</p>
+<table border="0" cellpadding="3" style="background:#d0d0d0" width="95%">
+
+<tr>
+<th width="25%" align="left"> Summary
+</th><td> Error Message
+</td><td> Notes
+</td></tr>
+<tr>
+<td style="background:#ffffff" rowspan="2"> No more (or less) than one name of a GID can have a "preferred name" status (<i>NSTAT =1</i>)
+</td><td style="background:#ffffff"> DataError-0017: Germplasm with multiple preferred English names (NSTAT=1)
+</td><td style="background:#ffffff">
+</td></tr>
+<tr>
+<td style="background:#ffffff"> DataError-0018: Germplasm with no preferred English name (NSTAT=1)
+</td><td style="background:#ffffff">
+</td></tr>
+</table>
+<a name="Incorrect_germplasm_method_.5B2_checks.5D" id="Incorrect_germplasm_method_.5B2_checks.5D"></a><h3> <span class="mw-headline"> Incorrect germplasm method [2 checks]</span></h3>
+<table border="0" cellpadding="2" style="background:#d0d0d0" width="95%">
+
+<tr>
+<th width="25%" align="left"> Summary
+</th><td> Error Message
+</td><td> Notes
+</td></tr>
+<tr>
+<td style="background:#ffffff" valign="top" rowspan="2"> The method of genesis for the germplasm (METHN) should have a corresponding value for number of progenitors (GNPGS)
+</td><td style="background:#ffffff"> DataError-0006A: Incorrect germplasm method (Method = DER but GNPGS &lt;&gt; -1)
+</td><td style="background:#ffffff"> For a derivative process (Method = DER), GNPGS must be -1 <font color="BLUE"><b>[CHK01A]</b></font>
+</td></tr>
+<tr>
+<td style="background:#ffffff"> DataError-0006B: Incorrect germplasm method (Method = GEN but GNPGS &lt; 0)
+</td><td style="background:#ffffff"> For a generative process (Method = GEN), GNPGS must be greater than 0 <font color="blue"> <b>[CHK01B]</b> </font>
+</td></tr></table>
+<p><br />
+</p>
+<a name="Method_-_name_type_combinations_.5B3_checks.5D" id="Method_-_name_type_combinations_.5B3_checks.5D"></a><h3> <span class="mw-headline"> Method - name type combinations [3 checks] </span></h3>
+<p><i><a href="http://cropforge.org/tracker/index.php?func=detail&amp;aid=160&amp;group_id=5&amp;atid=112" class="external text" title="http://cropforge.org/tracker/index.php?func=detail&amp;aid=160&amp;group_id=5&amp;atid=112" rel="nofollow">CropForge Feature Request # 160 (rhamilton)</a> and/or <a href="http://cropwiki.irri.org/icis/index.php/Talk:Data_Validation_Tool" class="external text" title="http://cropwiki.irri.org/icis/index.php/Talk:Data_Validation_Tool" rel="nofollow">Version 5.3 Discussion Article on ICISWiki </a></i>
+</p><p><br />
+Only certain combinations of name type and germplasm creation method are acceptable. Namely:
+</p><p><br />
+</p>
+<table border="0" cellpadding="3" style="background:#d0d0d0" width="95%">
+
+<tr>
+<th width="25%" align="left"> Summary
+</th><td> Error Message
+</td><td> Notes
+</td></tr>
+<tr>
+<td style="background:#ffffff"> Method type GEN: valid name types are: CRSNM, UNCRS, UNRES
+</td><td style="background:#ffffff"> DataError-0024: Invalid method-name type combination for method GEN (generative)
+</td><td style="background:#ffffff">
+</td></tr>
+<tr>
+<td style="background:#ffffff"> Method type DER: valid name types are: RELNM, DRVNM, CVNAM, CVABR, NTEST, LNAME, ADVNM, ACVNM, AABBR, OLDMUT1, OLDMUT2, ELITE, UNRES
+</td><td style="background:#ffffff"> DataError-0025: Invalid method-name type combination for method DER (derivative)
+</td><td style="background:#ffffff">
+</td></tr>
+<tr>
+<td style="background:#ffffff"> Method type MAN: valid name types are: ACCNO, RELNM, CVNAM, CVABR, COLNO, FACCN, ITEST, NTEST, LNAME, TACC, ADVNM, ACVNM, ELITE, GACC, DACCN, LCNAM, CIATGB
+</td><td style="background:#ffffff">  DataError-0026: Invalid method-name type combination for method MAN (maintenance)
+</td><td style="background:#ffffff">
+</td></tr>
+
+</table>
+<a name="Germplasm_location" id="Germplasm_location"></a><h3> <span class="mw-headline"> Germplasm location </span></h3>
+<table border="0" cellpadding="3" style="background:#d0d0d0" width="95%">
+
+<tr>
+<th width="25%" align="left"> Summary
+</th><td> Error Message
+</td><td> Notes
+</td></tr>
+<tr>
+<td style="background:#ffffff"> For all germplasm with germplasm creation NOT method ID 62 (Import), germplasm location (GLOCN) of a GID should be the same as the GLOCN of its GPID2
+<p><i><a href="http://cropforge.org/tracker/index.php?func=detail&amp;aid=160&amp;group_id=5&amp;atid=112" class="external text" title="http://cropforge.org/tracker/index.php?func=detail&amp;aid=160&amp;group_id=5&amp;atid=112" rel="nofollow">CropForge Feature Request # 160 (rhamilton)</a> and/or <a href="http://cropwiki.irri.org/icis/index.php/Talk:Data_Validation_Tool" class="external text" title="http://cropwiki.irri.org/icis/index.php/Talk:Data_Validation_Tool" rel="nofollow">Version 5.3 Discussion Article on ICISWiki </a></i>
+</p>
+</td><td style="background:#ffffff"> DataError-0023B: Germplasm with GLOCN different from GLOCN of GPID2 (METHOD &lt;&gt; IMPORT)
+</td><td style="background:#ffffff">
+</td></tr>
+</table>
+<a name="DATES" id="DATES"></a><h3> <span class="mw-headline"> DATES </span></h3>
+<p><a href="../../../../articles/i/c/i/File%7EIcis-validate5.5.1_dates.JPG_68af.html" class="image" title="Image: Icis-validate5.5.1 dates.JPG"><img alt="Image: Icis-validate5.5.1 dates.JPG" src="../../../../images/1/13/Icis-validate5.5.1_dates.JPG" width="265" height="199" border="0" /></a>
+</p>
+<dl><dd> *With option to specify precision <a href="../../../../articles/n/e/w/File%7ENew_indicator.jpg_c24d.html" class="image" title="New indicator.jpg"><img alt="" src="../../../../images/thumb/d/dc/New_indicator.jpg/40px-New_indicator.jpg" width="40" height="30" border="0" /></a> 
+<dl><dd> 1. YYYY only
+</dd><dd> 2. YYYYMM only
+</dd><dd> 3. YYYYMMDD
+</dd></dl>
+</dd></dl>
+<a name="Germplasm_creation_date_.28GDATE.29_.5B3_checks.5D" id="Germplasm_creation_date_.28GDATE.29_.5B3_checks.5D"></a><h4> <span class="mw-headline"> Germplasm creation date (GDATE) [3 checks] <a href="../../../../articles/n/e/w/File%7ENew_indicator.jpg_c24d.html" class="image" title="New indicator.jpg"><img alt="" src="../../../../images/thumb/d/dc/New_indicator.jpg/40px-New_indicator.jpg" width="40" height="30" border="0" /></a> </span></h4>
+<table border="0" cellpadding="3" style="background:#d0d0d0" width="95%">
+
+<tr>
+<th width="25%" align="left"> Summary
+</th><td> Error Message
+</td><td> Notes
+</td></tr>
+<tr>
+<td style="background:#ffffff" valign="top" rowspan="3"> Check for existence/format/value of germplasm creation date (GDATE)
+</td><td style="background:#ffffff"> DataError-0034A: Germplasm with METHOD = IMPORT but with no germplasm creation date
+</td><td style="background:#ffffff"> Imported germplasm require a germplasm creation date
+</td></tr>
+<tr>
+<td style="background:#ffffff"> DataError-0034B: Germplasm with incorrect creation date (GDATE) format
+</td><td style="background:#ffffff"> If GDATE is not 0, there should be exactly 8 digits and the format should be YYYYMMDD
+</td></tr>
+<tr>
+<td style="background:#ffffff"> DataError-0034C: Germplasm with creation date (GDATE) after current date
+</td><td style="background:#ffffff">
+</td></tr>
+</table>
+<a name="GDATE_of_progenitors_.5B2_checks.5D" id="GDATE_of_progenitors_.5B2_checks.5D"></a><h4> <span class="mw-headline"> GDATE of progenitors [2 checks] </span></h4>
+<p><i><a href="http://cropforge.org/tracker/index.php?func=detail&amp;aid=160&amp;group_id=5&amp;atid=112" class="external text" title="http://cropforge.org/tracker/index.php?func=detail&amp;aid=160&amp;group_id=5&amp;atid=112" rel="nofollow">CropForge Feature Request # 160 (rhamilton)</a> and/or <a href="http://cropwiki.irri.org/icis/index.php/Talk:Data_Validation_Tool#Check_1" class="external text" title="http://cropwiki.irri.org/icis/index.php/Talk:Data_Validation_Tool#Check_1" rel="nofollow">Check #1: Version 5.3 Discussion Article on ICISWiki</a></i>
+</p><p><br />
+</p>
+<table border="0" cellpadding="3" style="background:#d0d0d0" width="95%">
+
+<tr>
+<th width="25%" align="left"> Summary
+</th><td> Error Message
+</td><td> Notes
+</td></tr>
+<tr>
+<td style="background:#ffffff" valign="top" rowspan="2"> The GDate of a GID must not predate GDate of any of its progenitors. (Beware of missing links in the chain of dates! If the test checks only the GDATE of the progenitors GPID1, GPID2 and MGID, then it will not detect the following error: non-zero GPID1, GPID2 or MGID has GDATE=0 but their GPID1, GPID2 or MGID are younger than the target GID. Therefore, if a GPID1, GPID2 or MGID has GDate=0, iterate to check their GPID1, GPID2 and MGID)
+</td><td style="background:#ffffff"> DataError-0012: Germplasm with germplasm creation date (GDATE) earlier than GDATE of parent (GPID1, GPID2 or both)
+</td><td style="background:#ffffff">
+</td></tr>
+<tr>
+<td style="background:#ffffff"> DataError-0013: Germplasm with germplasm creation date (GDATE) earlier than GDATE of MGID
+</td><td style="background:#ffffff">
+</td></tr>
+</table>
+<a name="Name_date_.5B2_checks.5D" id="Name_date_.5B2_checks.5D"></a><h4> <span class="mw-headline"> Name date [2 checks] </span></h4>
+<dl><dd><ul><li> DataError-0035A: Germplasm with incorrect name date (NDATE) format
+</li></ul>
+</dd></dl>
+<dl><dd><ul><li> DataError-0035B: Germplasm with NAME date (NDATE) after current date
+</li></ul>
+</dd></dl>
+<a name="NDATE_vs_GDATE" id="NDATE_vs_GDATE"></a><h4> <span class="mw-headline"> NDATE vs GDATE </span></h4>
+<p><i><a href="http://cropforge.org/tracker/index.php?func=detail&amp;aid=631&amp;group_id=5&amp;atid=112" class="external text" title="http://cropforge.org/tracker/index.php?func=detail&amp;aid=631&amp;group_id=5&amp;atid=112" rel="nofollow">CropForge Feature Request #631 (jnorgaard)</a></i>
+</p><p>Name Date (NAMES.NDATE) could also be checked with the Germplasm Date (GERMPLSM.GDATE) to make sure it is not older.
+SQL modified to check only non-inherited names.
+</p>
+<a name="Data_Management_System" id="Data_Management_System"></a><h2> <span class="mw-headline"> Data Management System </span></h2>
+<p>Checks the DMS database (applicable to all ICIS implementations).
+</p><p><br />
+<a href="../../../../articles/i/c/i/File%7EIcis-validate-dms-5.5.1.JPG_4aa5.html" class="image" title="Image:icis-validate-dms-5.5.1.JPG"><img alt="Image:icis-validate-dms-5.5.1.JPG" src="../../../../images/c/c3/Icis-validate-dms-5.5.1.JPG" width="493" height="640" border="0" /></a>
+</p><p><br />
+</p>
+<a name="Check_GIDs_in_DMS_that_have_been_replaced_in_the_GMS" id="Check_GIDs_in_DMS_that_have_been_replaced_in_the_GMS"></a><h3> <span class="mw-headline"> Check GIDs in DMS that have been replaced in the GMS <a href="../../../../articles/n/e/w/File%7ENew_indicator.jpg_c24d.html" class="image" title="New indicator.jpg"><img alt="" src="../../../../images/thumb/d/dc/New_indicator.jpg/40px-New_indicator.jpg" width="40" height="30" border="0" /></a> </span></h3>
+<p><i><a href="https://cropforge.org/tracker/?func=detail&amp;aid=935&amp;group_id=5&amp;atid=112" class="external text" title="https://cropforge.org/tracker/?func=detail&amp;aid=935&amp;group_id=5&amp;atid=112" rel="nofollow">CropForge Feature Request # 935 (aportugal)</a></i>
+</p>
+<a name="OINDEX_table_.28Factor_ID_or_Level_No_is_zero.29" id="OINDEX_table_.28Factor_ID_or_Level_No_is_zero.29"></a><h3> <span class="mw-headline"> OINDEX table (Factor ID or Level No is zero) <a href="../../../../articles/n/e/w/File%7ENew_indicator.jpg_c24d.html" class="image" title="New indicator.jpg"><img alt="" src="../../../../images/thumb/d/dc/New_indicator.jpg/40px-New_indicator.jpg" width="40" height="30" border="0" /></a> </span></h3>
+<p>(Requested by: tmetz, aportugal)
+</p>
+<a name="Trait-Scale-Method_relationship_.5B4_checks.5D" id="Trait-Scale-Method_relationship_.5B4_checks.5D"></a><h3> <span class="mw-headline"> Trait-Scale-Method relationship [4 checks] </span></h3>
+<p><i><a href="http://cropforge.org/tracker/index.php?func=detail&amp;aid=610&amp;group_id=5&amp;atid=112" class="external text" title="http://cropforge.org/tracker/index.php?func=detail&amp;aid=610&amp;group_id=5&amp;atid=112" rel="nofollow">CropForge Feature Request # 610 (aportugal)</a></i> 
+</p><p>Check the consistency of the trait, scale and method in the FACTOR and
+VARIATE tables. The Scale and Method specified in those tables should be related to the the Trait. This can be determine
+when the traitid in the factor/variate is the same as the traitid in the SCALE and TMETHOD tables for the entered
+scaleid/tmethid.
+</p><p><br />
+</p>
+<pre>DataError-0031A: SCALE.TRAITID is not equal to FACTOR.TRAITID (given the same SCALEID)
+DataError-0031B: TMETHOD.TRAITID is not equal to FACTOR.TRAITID (given the same TMETHID)
+DataError-0031C: SCALE.TRAITID is not equal to VARIATE.TRAITID (given the same SCALEID)
+DataError-0031D: TMETHOD.TRAITID is not equal to VARIATE.TRAITID (given the same TMETHID)
+</pre>
+<a name="Duplicate_records_in_LEVEL_N.2C_LEVEL_C_tables" id="Duplicate_records_in_LEVEL_N.2C_LEVEL_C_tables"></a><h3> <span class="mw-headline"> Duplicate records in LEVEL_N, LEVEL_C tables <a href="../../../../articles/n/e/w/File%7ENew_indicator.jpg_c24d.html" class="image" title="New indicator.jpg"><img alt="" src="../../../../images/thumb/d/dc/New_indicator.jpg/40px-New_indicator.jpg" width="40" height="30" border="0" /></a> </span></h3>
+<p>(Requested by: tmetz, aportugal)
+</p>
+<a name="Duplicate_records_in_DATA_N.2C_DATA_C_tables" id="Duplicate_records_in_DATA_N.2C_DATA_C_tables"></a><h3> <span class="mw-headline"> Duplicate records in DATA_N, DATA_C tables <a href="../../../../articles/n/e/w/File%7ENew_indicator.jpg_c24d.html" class="image" title="New indicator.jpg"><img alt="" src="../../../../images/thumb/d/dc/New_indicator.jpg/40px-New_indicator.jpg" width="40" height="30" border="0" /></a> </span></h3>
+<p>(Requested by: tmetz, aportugal)
+</p>
+<a name="Level_inconsistency_in_labels_of_a_factor" id="Level_inconsistency_in_labels_of_a_factor"></a><h3> <span class="mw-headline"> Level inconsistency in labels of a factor <a href="../../../../articles/n/e/w/File%7ENew_indicator.jpg_c24d.html" class="image" title="New indicator.jpg"><img alt="" src="../../../../images/thumb/d/dc/New_indicator.jpg/40px-New_indicator.jpg" width="40" height="30" border="0" /></a> </span></h3>
+<p>(Requested by: tmetz, aportugal)
+</p>
+<a name="Rice-specific" id="Rice-specific"></a><h2> <span class="mw-headline"> Rice-specific </span></h2>
+<p>Checks for Rice.
+</p><p><a href="../../../../articles/i/c/i/File%7EIcis-validate5.5.1_ricespecific.JPG_24d7.html" class="image" title="Image: Icis-validate5.5.1 ricespecific.JPG"><img alt="Image: Icis-validate5.5.1 ricespecific.JPG" src="../../../../images/7/79/Icis-validate5.5.1_ricespecific.JPG" width="492" height="641" border="0" /></a>
+</p>
+<a name="Name_type_occurrence_.5B3_checks.5D" id="Name_type_occurrence_.5B3_checks.5D"></a><h3> <span class="mw-headline"> Name type occurrence [3 checks] </span></h3>
+<p><i><a href="http://cropforge.org/tracker/index.php?func=detail&amp;aid=160&amp;group_id=5&amp;atid=112" class="external text" title="http://cropforge.org/tracker/index.php?func=detail&amp;aid=160&amp;group_id=5&amp;atid=112" rel="nofollow">CropForge Feature Request # 160 (rmahilton)</a> and/or <a href="http://cropwiki.irri.org/icis/index.php/Talk:Data_Validation_Tool" class="external text" title="http://cropwiki.irri.org/icis/index.php/Talk:Data_Validation_Tool" rel="nofollow">Version 5.3 Discussion Article on ICISWiki </a></i>
+</p><p><br />
+</p>
+<table border="0" cellpadding="3" style="background:#d0d0d0" width="95%">
+
+<tr>
+<th width="25%" align="left"> Summary
+</th><td> Error Message
+</td><td> Notes
+</td></tr>
+<tr>
+<td style="background:#ffffff"> Some name types must not occur more than once for a single GID. These are ACCNO, CRSNM, UNCRS, COLNO, ITEST, GACC, CIATGB, RELNM, DRVNM, CVNAM
+</td><td style="background:#ffffff"> DataError-0027: Germplasm with certain name types occurring more than once
+</td><td style="background:#ffffff">
+</td></tr>
+<tr>
+<td style="background:#ffffff"> Cross-names (CRSNM) and Line-names (LNAME) cannot occur together
+</td><td style="background:#ffffff"> DataError-0028: Germplasm with both CRSNM and LNAME name types
+</td><td style="background:#ffffff">
+</td></tr>
+<tr>
+<td style="background:#ffffff"> Release names (RELNM) and Collector's Numbers (COLNO) cannot occur together
+</td><td style="background:#ffffff"> DataError-0029: Germplasm with both RELNM and COLNO name types
+</td><td style="background:#ffffff">
+</td></tr>
+
+</table>
+<a name="Name_sharing_.5B4_checks.5D" id="Name_sharing_.5B4_checks.5D"></a><h3> <span class="mw-headline"> Name sharing [4 checks]</span></h3>
+<p><i><a href="http://cropforge.org/tracker/index.php?func=detail&amp;aid=160&amp;group_id=5&amp;atid=112" class="external text" title="http://cropforge.org/tracker/index.php?func=detail&amp;aid=160&amp;group_id=5&amp;atid=112" rel="nofollow">CropForge Feature Request # 160 (rhamilton)</a> and/or <a href="http://cropwiki.irri.org/icis/index.php/Talk:Data_Validation_Tool" class="external text" title="http://cropwiki.irri.org/icis/index.php/Talk:Data_Validation_Tool" rel="nofollow">Version 5.3 Discussion Article on ICISWiki </a></i>
+</p><p><br />
+</p>
+<table border="0" cellpadding="3" style="background:#d0d0d0" width="95%">
+
+<tr>
+<th width="25%" align="left"> Summary
+</th><td> Error Message
+</td><td> Notes
+</td></tr>
+<tr>
+<td style="background:#ffffff"> Germplasms cannot share the same name (NVAL) if the NTYPE is ACCNO
+</td><td style="background:#ffffff"> DataError-0030A: Multiple germplasms sharing the same name (ACCNO)
+</td><td style="background:#ffffff">
+</td></tr>
+<tr>
+<td style="background:#ffffff"> Germplasms cannot share the same name (NVAL) if the NTYPE is ITEST
+</td><td style="background:#ffffff"> DataError-0030B: Multiple germplasms sharing the same name (ITEST)
+</td><td style="background:#ffffff">
+</td></tr>
+<tr>
+<td style="background:#ffffff"> Germplasms cannot share the same name (NVAL) if the NTYPE is GACC
+</td><td style="background:#ffffff"> DataError-0030C: Multiple germplasms sharing the same name (GACC)
+</td><td style="background:#ffffff">
+</td></tr>
+<tr>
+<td style="background:#ffffff"> A Release Name (RELNM) cannot occur more then once for a GID-GLOCN-COUNTRY combination. Two GIDs can share the same RELNM only if their GLOCNs are in different countries
+</td><td style="background:#ffffff"> DataError-0030D: Germplasm sharing a RELNM (release name) with another germplasm in the SAME country
+</td><td style="background:#ffffff">
+</td></tr>
+</table>
+<a name="Name_type_GACC_.28Genebank_accession.29_.2F_IRGC_accession_.5B5_checks.5D" id="Name_type_GACC_.28Genebank_accession.29_.2F_IRGC_accession_.5B5_checks.5D"></a><h3> <span class="mw-headline"> Name type GACC (Genebank accession) / IRGC accession [5 checks] <a href="../../../../articles/n/e/w/File%7ENew_indicator.jpg_c24d.html" class="image" title="New indicator.jpg"><img alt="" src="../../../../images/thumb/d/dc/New_indicator.jpg/40px-New_indicator.jpg" width="40" height="30" border="0" /></a> </span></h3>
+<p><i><a href="http://cropforge.org/tracker/index.php?func=detail&amp;aid=160&amp;group_id=5&amp;atid=112" class="external text" title="http://cropforge.org/tracker/index.php?func=detail&amp;aid=160&amp;group_id=5&amp;atid=112" rel="nofollow">CropForge Feature Request # 160 (rhamilton)</a> and/or <a href="http://cropwiki.irri.org/icis/index.php/Talk:Data_Validation_Tool" class="external text" title="http://cropwiki.irri.org/icis/index.php/Talk:Data_Validation_Tool" rel="nofollow">Version 5.3 Discussion Article on ICISWiki </a></i>
+</p><p>All names of type GACC must have...
+</p>
+<table border="0" cellpadding="3" style="background:#d0d0d0" width="95%">
+
+<tr>
+<th width="25%" align="left"> Summary
+</th><td> Error Message
+</td><td> Notes
+</td></tr>
+<tr>
+<td style="background:#ffffff">...a METHN with MTYPE = MAN
+</td><td style="background:#ffffff"> DataError-0036A: Genebank accessions (name type GACC) with MTYPE &lt;&gt; Management (MAN)
+</td><td style="background:#ffffff">
+</td></tr>
+<tr>
+<td style="background:#ffffff">...MGID &lt;&gt; 0
+</td><td style="background:#ffffff"> DataError-0036B: Genebank accessions (name type GACC) with MGID = 0
+</td><td style="background:#ffffff">
+</td></tr>
+<tr>
+<td style="background:#ffffff">...GPID1=MGID if its MGID has GPID1=0
+</td><td style="background:#ffffff"> DataError-0036C: Genebank accessions (name type GACC) with GPID1 &lt;&gt; MGID.
+<p>(If a germplasm has an MGID with GPID1=0, then a GID's GPID1 and MGID must be equal)
+</p>
+</td><td style="background:#ffffff">
+</td></tr>
+<tr>
+<td style="background:#ffffff">...GPID1=[GPID1 of MGID] if [GPID1 of MGID] is not 0
+</td><td style="background:#ffffff"> DataError-0036D: Genebank accessions (name type GACC) with GPID1 &lt;&gt; MGID'S GPID1
+<p>(If a germplasm has an MGID with GPID1 not 0, then GPID1 and the MGID's GPID1 must be equal)
+</p>
+</td><td style="background:#ffffff">
+</td></tr>
+<tr>
+<td style="background:#ffffff"> IRGC accession must not have a cross name
+</td><td style="background:#ffffff"> DataError-0036E: International Rice Genebank Collection (IRGC) accession with Cross Name (NTYPE = 2)
+</td><td style="background:#ffffff">
+</td></tr>
+
+
+</table>
+<p><br />
+</p>
+<a name="Name_inheritance_from_GPID2_.28NSTAT.2C_NDATE.2C_NLOCN.29_.5B3_checks.5D" id="Name_inheritance_from_GPID2_.28NSTAT.2C_NDATE.2C_NLOCN.29_.5B3_checks.5D"></a><h3> <span class="mw-headline"> Name inheritance from GPID2 (NSTAT, NDATE, NLOCN) [3 checks] </span></h3>
+<p><i><a href="http://cropforge.org/tracker/index.php?func=detail&amp;aid=160&amp;group_id=5&amp;atid=112" class="external text" title="http://cropforge.org/tracker/index.php?func=detail&amp;aid=160&amp;group_id=5&amp;atid=112" rel="nofollow">CropForge Feature Request # 160 (rhamilton)</a> and/or <a href="http://cropwiki.irri.org/icis/index.php/Talk:Data_Validation_Tool#Check_2" class="external text" title="http://cropwiki.irri.org/icis/index.php/Talk:Data_Validation_Tool#Check_2" rel="nofollow">Check #2: Version 5.3 Discussion Article on ICISWiki </a></i>
+</p><p><br />
+</p>
+<table border="0" cellpadding="3" style="background:#d0d0d0" width="95%">
+
+<tr>
+<th width="25%" align="left"> Summary
+</th><td> Error Message
+</td><td> Notes
+</td></tr>
+
+<tr>
+<td style="background:#ffffff" rowspan="3"> If a GID inherits a name from its source (GPID2) then that name record must also inherit the name date (NDATE), name location (NLOCN), and preferred name status (NSTAT=1)
+</td><td style="background:#ffffff"> DataError-0014: MAN germplasm with inherited name from GPID2 but NSTAT not inherited
+</td><td style="background:#ffffff">
+</td></tr>
+<tr>
+<td style="background:#ffffff"> DataError-0015: Germplasm with inherited name from GPID2 but NDATE not inherited
+</td><td style="background:#ffffff">
+</td></tr>
+<tr>
+<td style="background:#ffffff"> DataError-0016: Germplasm with inherited name from GPID2 but NLOCN not inherited
+</td><td style="background:#ffffff">
+</td></tr>
+
+</table>
+<p><br />
+</p>
+<a name="IRTP_name_format" id="IRTP_name_format"></a><h3> <span class="mw-headline"> IRTP name format <a href="../../../../articles/n/e/w/File%7ENew_indicator.jpg_c24d.html" class="image" title="New indicator.jpg"><img alt="" src="../../../../images/thumb/d/dc/New_indicator.jpg/40px-New_indicator.jpg" width="40" height="30" border="0" /></a> </span></h3>
+<p>(Requested by: aportugal)
+</p><p>If NSTAT=1, check if everything that follows "IRTP" is numeric.
+</p>
+<a name="IRGC_name_format" id="IRGC_name_format"></a><h3> <span class="mw-headline"> IRGC name format <a href="../../../../articles/n/e/w/File%7ENew_indicator.jpg_c24d.html" class="image" title="New indicator.jpg"><img alt="" src="../../../../images/thumb/d/dc/New_indicator.jpg/40px-New_indicator.jpg" width="40" height="30" border="0" /></a> </span></h3>
+<p>(Requested by: aportugal)
+</p><p>If NSTAT=1, check if everything that follows "IRGC" is numeric.
+</p>
+<a name="Preferred_name_eligibility_.28name_types.29" id="Preferred_name_eligibility_.28name_types.29"></a><h3> <span class="mw-headline"> Preferred name eligibility (name types) </span></h3>
+<p><i><a href="http://cropforge.org/tracker/index.php?func=detail&amp;aid=160&amp;group_id=5&amp;atid=112" class="external text" title="http://cropforge.org/tracker/index.php?func=detail&amp;aid=160&amp;group_id=5&amp;atid=112" rel="nofollow">CropForge Feature Request # 160 (rhamilton)</a> and/or <a href="http://cropwiki.irri.org/icis/index.php/Talk:Data_Validation_Tool" class="external text" title="http://cropwiki.irri.org/icis/index.php/Talk:Data_Validation_Tool" rel="nofollow">Version 5.3 Discussion Article on ICISWiki </a></i>
+</p><p><br />
+</p>
+<table border="0" cellpadding="3" style="background:#d0d0d0" width="95%">
+
+<tr>
+<th width="25%" align="left"> Summary
+</th><td> Error Message
+</td><td> Notes
+</td></tr>
+<tr>
+<td style="background:#ffffff"> Names eligible to be the preferred name are: CRSNM, RELNM, DRVNM, CVNAM, ELITE
+</td><td style="background:#ffffff"> DataError-0019: Germplasm with invalid name type as preferred name
+</td><td style="background:#ffffff"> Only checks germplasm with more than one NAMES record.
+</td></tr>
+</table>
+<a name="Preferred_ID_eligibility_.28name_types.29_.5B2_checks.5D" id="Preferred_ID_eligibility_.28name_types.29_.5B2_checks.5D"></a><h3> <span class="mw-headline"> Preferred ID eligibility (name types) [2 checks] </span></h3>
+<p><i><a href="http://cropforge.org/tracker/index.php?func=detail&amp;aid=160&amp;group_id=5&amp;atid=112" class="external text" title="http://cropforge.org/tracker/index.php?func=detail&amp;aid=160&amp;group_id=5&amp;atid=112" rel="nofollow">CropForge Feature Request # 160 (rhamilton)</a> and/or <a href="http://cropwiki.irri.org/icis/index.php/Talk:Data_Validation_Tool" class="external text" title="http://cropwiki.irri.org/icis/index.php/Talk:Data_Validation_Tool" rel="nofollow">Version 5.3 Discussion Article on ICISWiki </a></i>
+</p><p><br />
+</p>
+<table border="0" cellpadding="3" style="background:#d0d0d0" width="95%">
+
+<tr>
+<th width="25%" align="left"> Summary
+</th><td> Error Message
+</td><td> Notes
+</td></tr>
+<tr>
+<td style="background:#ffffff"> The following names types are eligible to be preferred ID: DRVNM, COLNO, ACCNO (if present), GACC (if present), ITEST (if present), CIATGB (if present)
+</td><td style="background:#ffffff"> DataError-0021: Germplasm with invalid name type as preferred ID
+</td><td style="background:#ffffff"> Only checks germplasm with more than one NAMES record
+</td></tr>
+<tr>
+<td style="background:#ffffff"> The preferred ID must be unique for the given name type – that is, two accessions must not share the same name of the same type if one or both is a preferred ID.
+</td><td style="background:#ffffff">  DataError-0022: Germplasm with preferred ID not unique for the given name type
+</td><td style="background:#ffffff">
+</td></tr>
+
+</table>
+<a name="Database_foreign_key_references_by_tables" id="Database_foreign_key_references_by_tables"></a><h2> <span class="mw-headline"> Database foreign key references by tables <a href="../../../../articles/n/e/w/File%7ENew_indicator.jpg_c24d.html" class="image" title="New indicator.jpg"><img alt="" src="../../../../images/thumb/d/dc/New_indicator.jpg/40px-New_indicator.jpg" width="40" height="30" border="0" /></a> </span></h2>
+<p>The ICIS database has no foreign key constraints enabled so we need to check if the foreign key definition is violated.
+Check for foreign key references used by tables:
+</p><p><a href="../../../../articles/i/c/i/File%7EIcis-validate5.5.1_foreignkeys.JPG_fec6.html" class="image" title="Image: Icis-validate5.5.1 foreignkeys.JPG"><img alt="Image: Icis-validate5.5.1 foreignkeys.JPG" src="../../../../images/c/c2/Icis-validate5.5.1_foreignkeys.JPG" width="492" height="642" border="0" /></a>
+</p>
+<a name="Miscellaneous_Features" id="Miscellaneous_Features"></a><h2> <span class="mw-headline"> Miscellaneous Features </span></h2>
+<ul><li> "About" form containing more information, plus the GNU General Public License. CRIL and IRRI logos also included.
+</li></ul>
+<p><a href="../../../../articles/a/b/o/File%7EAboutIcisValidate.JPG_3a7e.html" class="image" title="Image:AboutIcisValidate.JPG"><img alt="Image:AboutIcisValidate.JPG" src="../../../../images/8/8e/AboutIcisValidate.JPG" width="587" height="375" border="0" /></a>
+</p>
+<ul><li> Application icon
+</li></ul>
+<p><a href="../../../../articles/i/c/o/File%7EIcon_validate5.4.JPG_b094.html" class="image" title="Image:Icon_validate5.4.JPG"><img alt="Image:Icon_validate5.4.JPG" src="../../../../images/2/2e/Icon_validate5.4.JPG" width="91" height="84" border="0" /></a>
+</p>
+<a name="DataError_Index_Listing" id="DataError_Index_Listing"></a><h2> <span class="mw-headline"> DataError Index Listing </span></h2>
+<ul><li> DataError-0001: Unknown group source
+</li><li> DataError-0002: Germplasm with non-generative group source 
+</li><li> DataError-0003: 1st level circular reference 
+</li><li> DataError-0004: 2nd level circular reference 
+</li><li> DataError-0005: 3rd level circular reference 
+</li><li> DataError-0006A: Incorrect germplasm method (Method = DER but GNPGS &lt;&gt; -1) 
+</li><li> DataError-0006B: Incorrect germplasm method (Method = GEN but GNPGS &lt; 0) 
+</li><li> DataError-0007A: Germplasm with deleted parent references (GPID1) 
+</li><li> DataError-0007B: Germplasm with deleted parent references (GPID2)
+</li><li> DataError-0007C: Germplasm with deleted parent references (MGID) 
+</li><li> DataError-0008: Germplasm with no NAMES records 
+</li><li> DataError-0009: Germplasm with duplicate names (GID-NVAL-NTYPE not unique)
+</li><li> DataError-0010: Germplasm with possible duplicate names (NTYPE-NSTAT combination occurring more than once)
+</li><li> DataError-0011: Germplasm with no preferred ID (NSTAT=8) 
+</li><li> DataError-0012: Germplasm with germplasm creation date (GDATE) earlier than GDATE of parent (GPID1, GPID2 or both) 
+</li><li> DataError-0013: Germplasm with germplasm creation date (GDATE) earlier than GDATE of MGID 
+</li><li> DataError-0014: MAN germplasm with inherited name from GPID2 but NSTAT not inherited 
+</li><li> DataError-0015: Germplasm with inherited name from GPID2 but NDATE not inherited 
+</li><li> DataError-0016: Germplasm with inherited name from GPID2 but NLOCN not inherited 
+</li><li> DataError-0017: Germplasm with multiple preferred English names (NSTAT=1) 
+</li><li> DataError-0018: Germplasm with no preferred English name (NSTAT=1) 
+</li><li> DataError-0019: Germplasm with invalid name type as preferred name 
+</li><li> DataError-0020: Germplasm with multiple preferred IDs (NSTAT=8) 
+</li><li> DataError-0021: Germplasm with invalid name type as preferred ID 
+</li><li> DataError-0022: Germplasm with preferred ID not unique for the given name type 
+</li><li> DataError-0023: Germplasm with GLOCN different from GLOCN of GPID2 (METHOD &lt;&gt; IMPORT) 
+</li><li> DataError-0024: Invalid method-name type combination for method GEN (generative)
+</li><li> DataError-0025: Invalid method-name type combination for method DER (derivative)
+</li><li> DataError-0026: Invalid method-name type combination for method MAN (maintenance)
+</li><li> DataError-0027: Germplasm with certain name types occurring more than once 
+</li><li> DataError-0028: Germplasm with both CRSNM and LNAME name types 
+</li><li> DataError-0029: Germplasm with both RELNM and COLNO name types 
+</li><li> DataError-0030A: Multiple germplasms sharing the same name (ACCNO)
+</li><li> DataError-0030B: Multiple germplasms sharing the same name (ITEST) 
+</li><li> DataError-0030C: Multiple germplasms sharing the same name (GACC)
+</li><li> DataError-0030D: Germplasm sharing a RELNM (release name) with another germplasm in the SAME country
+</li><li> DataError-0031A: SCALE.TRAITID is not equal to FACTOR.TRAITID (given the same SCALEID)
+</li><li> DataError-0031B: TMETHOD.TRAITID is not equal to FACTOR.TRAITID (given the same TMETHID)
+</li><li> DataError-0031C: SCALE.TRAITID is not equal to VARIATE.TRAITID (given the same SCALEID)
+</li><li> DataError-0031D: TMETHOD.TRAITID is not equal to VARIATE.TRAITID (given the same TMETHID)
+</li><li> DataError-0032A: Level inconsistency in labels of factors in LEVEL_N table
+</li><li> DataError-0032B: Level inconsistency in labels of factors in LEVEL_C table
+</li><li> DataError-0034A: Germplasm with METHOD = IMPORT but with no germplasm creation date
+</li><li> DataError-0034B: Germplasm with incorrect creation date (GDATE) format  
+</li><li> DataError-0034C: Germplasm with creation date (GDATE) after current date  
+</li><li> DataError-0035A: Germplasm with incorrect name date (NDATE) format  
+</li><li> DataError-0035B: Germplasm with NAME date (NDATE) after current date     
+</li><li> DataError-0036A: Genebank accessions (name type GACC) with MTYPE &lt;&gt; Maintenance (MAN)
+</li><li> DataError-0036B: Genebank accessions (name type GACC) with MGID = 0
+</li><li> DataError-0036C: Genebank accessions (name type GACC) with GPID1 &lt;&gt; MGID.
+</li><li> DataError-0036D: Genebank accessions (name type GACC) with GPID1 &lt;&gt; MGID'S GPID1
+</li><li> DataError-0036E: International Rice Genebank Collection (IRGC) accession with Cross Name (NTYPE = 2)
+</li><li> DataError-0037: GID in DMS was replaced in GMS
+</li><li> DataError-0038: Factorid ID or Level No is zero in OINDEX table
+</li><li> DataError-0039-IRTP/IRGC: IRTP/IRGC accession with invalid characters in names
+</li><li> DataError-0040A: Duplicate OUNITID-VARIATID IN DATA_C (same value)  
+</li><li> DataError-0040B: Duplicate OUNITID-VARIATID IN DATA_C (different value)  
+</li><li> DataError-0041A: Duplicate LABELID-LEVELNO IN LEVEL_C          
+</li><li> DataError-0041B: Duplicate LABELID-LEVELNO IN LEVEL_N
+</li></ul>
+<a name="What.27s_New_in_Version_5.5.1" id="What.27s_New_in_Version_5.5.1"></a><h2> <span class="mw-headline"> What's New in Version 5.5.1 </span></h2>
+<ul><li> Improved user interface (display of results):
+<ul><li> 1. Listview that contains the file name, number of records returned, source database. If listview is double-clicked, the specified file will be opened.
+</li><li> 2. Separate memobox for displaying status messages, SQLs.
+</li></ul>
+</li></ul>
+<p><a href="../../../../articles/i/c/i/File%7EIcis-validate5.5.1_results.JPG_c48f.html" class="image" title="Image: Icis-validate5.5.1 results.JPG"><img alt="Image: Icis-validate5.5.1 results.JPG" src="../../../../images/1/1a/Icis-validate5.5.1_results.JPG" width="1280" height="934" border="0" /></a>
+</p><p><br />
+</p>
+<ul><li> Added option to check local database also.
+</li></ul>
+<p><br />
+</p>
+<ul><li> New checks for germplasm creation date (GDATE)
+<ul><li> (If germplasm is imported, GDATE should not be blank) 
+</li><li> (Incorrect GDATE format)
+</li><li>  (GDATE later than current date)
+</li></ul>
+</li></ul>
+<p><br />
+</p>
+<ul><li> New checks for GMS.NAMES table
+<ul><li> (Name date (NDATE) earlier than germplasm creation date (GDATE)) <a href="http://cropforge.org/tracker/?func=detail&amp;aid=631&amp;group_id=5&amp;atid=112" class="external text" title="http://cropforge.org/tracker/?func=detail&amp;aid=631&amp;group_id=5&amp;atid=112" rel="nofollow">CropForge Feature Request #631</a>
+</li><li> (Incorrect NDATE format)
+</li><li> (NDATE later than current date)
+</li><li> No NAMES record
+</li><li> Duplicate names
+</li></ul>
+</li></ul>
+<p><br />
+</p>
+<ul><li> New checks for Genebank accession (NTYPE=GACC)
+<ul><li> (MTYPE &lt;&gt; Management (MAN))
+</li><li> (MGID = 0)
+</li><li> (GPID1 &lt;&gt; MGID: If a germplasm has an MGID with GPID1=0, then a GID's GPID1 and MGID must be equal )
+</li><li> (GPID1 &lt;&gt; MGID'S GPID1: If a germplasm has an MGID with GPID1 not 0, then GPID1 and the MGID's GPID1 must be equal )
+</li></ul>
+</li></ul>
+<p><br />
+</p>
+<ul><li> New check for DMS: Trait-Scale-Method relationship
+<ul><li>SCALE.TRAITID is not equal to FACTOR.TRAITID (given the same SCALEID)
+</li><li>TMETHOD.TRAITID is not equal to FACTOR.TRAITID (given the same TMETHID)
+</li><li>SCALE.TRAITID is not equal to VARIATE.TRAITID (given the same SCALEID)
+</li><li>TMETHOD.TRAITID is not equal to VARIATE.TRAITID (given the same TMETHID)
+</li></ul>
+</li></ul>
+<ul><li> Option to specify/change INI file to use
+</li></ul>
+<ul><li> Changed error code messaging from "Error-xxxx" to "DataError-xxxx" (prefixed with "Data" to distinguish from error codes of Installation Diagnostic Tool)
+</li></ul>
+<ul><li> Separation of test status messages and result datasets
+</li></ul>
+<ul><li> Option to print result dataset(s) in a TEXT file or EXCEL file.
+</li></ul>
+<ul><li> Option to choose format of filename containing result datasets
+<ul><li> 1. Datetime stamp first or Dataerror code first?
+</li><li> 2. Include description of DataError in filename?
+</li></ul>
+</li></ul>
+<p><br />
+</p>
+<ul><li> If "Print result dataset to MS Excel format" is enabled but no. of records &gt; 65530 (maximum row capacity of Excel is 65536), result dataset will instead be output in a text file.
+</li></ul>
+<a name="Data_Validation_Tool_Changes.txt" id="Data_Validation_Tool_Changes.txt"></a><h2> <span class="mw-headline"> Data Validation Tool Changes.txt</span></h2>
+<pre>//
+//	Legend:		[+] Addition/New feature
+//			[-] Removal
+//			[*] Modification/Bug Fix
+//
+######################################################################
+#
+#	DATA VALIDATION TOOL <a href="http://cropforge.org/frs/shownotes.php?release_id=456" class="external text" title="http://cropforge.org/frs/shownotes.php?release_id=456" rel="nofollow">V5.5.1.1</a>
+#
+######################################################################
+[+] added check for GLOCN of imported germplasms
+######################################################################
+#
+#	DATA VALIDATION TOOL V5.5.0.11 / V5.5.1.0 OFFICIAL RELEASE
+#
+######################################################################
+[+] Added option to specify level of precision in checking of dates (CropForge feature request # 1066)
+[+] Added grouping of output files in folders according to database (Cropforge feature request # 1058)
+[+] Addded check for replaced GIDS in DMS (Cropforge feature request #935)
+[*] Modified SQL for NDATE vs GDATE check (Cropforge feature request #631)
+######################################################################
+#
+#	DATA VALIDATION TOOL V5.5.0.10
+#
+######################################################################
+[*] Bug fix: Erroneous SQL in check 0023B and 0037E (Cropforge bug # #983)
+######################################################################
+#
+#	DATA VALIDATION TOOL V5.5.0.9
+#
+######################################################################
+[+] CropForge Feature Request #844: Naming conventions for Data Validation Tool Excel files
+[+] CropForge feature request #610: Checking the consistency of the Trait, Scale and Method
+[+] CropForge feature request #710: Check for duplicate names
+[+] CropFroge feature request #779: Include USERID in reporting of errors
+[+] Added viewing pane for text/Excel files generated from test
+[*] Disabled "query with batch update" (temporary only)
+######################################################################
+#
+#	DATA VALIDATION TOOL V5.5.0.8 
+#
+######################################################################
+[*] Modified SQL: checking of foreign key references -- added filter (exclude 0's)
+[*] Modified SQL: GDATE &amp; NDATE after current date -- added filter (GDATE &lt;&gt; 0; length should be 8) 
+[*] Modified SQL: checking for number of preferred IDs and preferred names
+[*] Bug fix: preferred ID-name type matching
+######################################################################
+#
+#	DATA VALIDATION TOOL V5.5.0.7 
+#
+######################################################################
+[*] Bug fix: SQL for DataError-0006B (Invalid methods)
+[*] Modified SQL for checking of progenitor GDATEs, NDATE vs GDATE.
+######################################################################
+#
+#	DATA VALIDATION TOOL V5.5.0.6 
+#
+######################################################################
+[*] Result datasets printed separately from test status messsages.
+[*] New radiobuttons: Option to print result dataset(s) in TEXT file or EXCEL file
+[+] Added filter to SQLs: with GERMPLSM.GRPLCE = 0
+[*] Bug fix: SQL for DataError-0030 (GID-RELNM-COUNTRY check)
+######################################################################
+#
+#	DATA VALIDATION TOOL V5.5.0.5 
+#
+######################################################################
+[+] New buttons: Select all, deselect all
+[+] Default printing of result dataset is now on a separate text (.TXT) file. In cases where "Output to Excel" is selected,
+ but no. of records is greater than 65,530: dataset is printed on a text file instead.
+</pre>
+<!-- 
+NewPP limit report
+Preprocessor node count: 44/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+<div class="printfooter">
+Retrieved from "<a href="http://localhost../../../../articles/d/a/t/Data_Validation_Tool_5.5.1_cb2b.html">http://localhost../../../../articles/d/a/t/Data_Validation_Tool_5.5.1_cb2b.html</a>"</div>
+						<!-- end content -->
+						<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<div class="pBody">
+			<ul>
+	
+				 <li id="ca-nstab-main" class="selected"><a href="../../../../articles/d/a/t/Data_Validation_Tool_5.5.1_cb2b.html" title="View the content page [c]" accesskey="c">Page</a></li>
+				 <li id="ca-talk" class="new"><a href="../../../../articles/d/a/t/Talk%7EData_Validation_Tool_5.5.1_c613.html" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				 <li id="ca-viewsource"><a href="../../../../articles/d/a/t/Data_Validation_Tool_5.5.1_cb2b.html" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				 <li id="ca-history"><a href="../../../../articles/d/a/t/Data_Validation_Tool_5.5.1_cb2b.html" title="Past versions of this page [h]" accesskey="h">History</a></li>			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="../../../../articles/u/s/e/Special%7EUserLogin_94cd.html" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(../../../../misc/icis-wiki3.png);" href="../../../../index.html" title="Visit the main page [z]" accesskey="z"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class='generated-sidebar portlet' id='p-navigation'>
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="../../../../index.html" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
+				<li id="n-portal"><a href="../../../../articles/c/o/m/ICISWiki%7ECommunity_Portal_7449.html" title="About the project, what you can do, where to find things">Community portal</a></li>
+				<li id="n-recentchanges"><a href="../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+				<li id="n-help"><a href="../../../../articles/c/o/n/Help%7EContents_22de.html" title="The place to find out">Help</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="../../../../articles/s/e/a/Special%7ESearch_a8e5.html" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" title="Search ICISWiki [f]" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="../../../../articles/w/h/a/Special%7EWhatLinksHere_Data_Validation_Tool_5.5.1_fea3.html" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="../../../../articles/r/e/c/Special%7ERecentChangesLinked_Data_Validation_Tool_5.5.1_b55a.html" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+<li id="t-specialpages"><a href="../../../../articles/s/p/e/Special%7ESpecialPages_f12b.html" title="List of all special pages [q]" accesskey="q">Special pages</a></li>
+				<li id="t-print"><a href="../../../../articles/d/a/t/Data_Validation_Tool_5.5.1_cb2b.html" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>				<li id="t-permalink"><a href="../../../../articles/d/a/t/Data_Validation_Tool_5.5.1_cb2b.html" title="Permanent link to this version of the page">Permanent link</a></li>			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="../../../../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" /></a></div>
+				<div id="f-copyrightico"><a href="../../../../../COPYING.html"><img src="/icis/skins/common/images/gnu-fdl.png" alt='GNU Free Documentation License 1.2' /></a></div>
+			<ul id="f-list">
+					<li id="credits">This page was last modified 08:36, 6 February 2009 by <a href="../../../../articles/m/h/a/User%7EMhabito_276f.html" title="User:Mhabito">Maria Corina de Luna Habito</a>. </li>
+					<li id="copyright">Content is available under <a href="../../../../../COPYING.html" class="external " title="../../../../../COPYING.html">GNU Free Documentation License 1.2</a>.</li>
+					<li id="privacy"><a href="../../../../articles/p/r/i/ICISWiki%7EPrivacy_policy_0cbf.html" title="ICISWiki:Privacy policy">Privacy policy</a></li>
+					<li id="about"><a href="../../../../articles/a/b/o/ICISWiki%7EAbout_53aa.html" title="ICISWiki:About">About ICISWiki</a></li>
+					<li id="disclaimer"><a href="../../../../articles/g/e/n/ICISWiki%7EGeneral_disclaimer_9129.html" title="ICISWiki:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+</div>
+
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served in 242.159 secs. --></body></html>

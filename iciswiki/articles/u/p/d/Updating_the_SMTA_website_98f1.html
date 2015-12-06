@@ -1,0 +1,967 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta name="generator" content="MediaWiki 1.14.0" />
+		<meta name="keywords" content="Updating the SMTA website" />
+		<link rel="shortcut icon" href="../../../../misc/favicon.ico" />
+		<link rel="search" type="application/opensearchdescription+xml" href="../../../../../opensearch_desc.php" title="ICISWiki (en)" />
+		<link title="Creative Commons" type="application/rdf+xml" href="../../../../articles/u/p/d/Updating_the_SMTA_website_98f1.html" rel="alternate meta" />
+		<link rel="copyright" href="../../../../../COPYING.html" />
+		<link rel="alternate" type="application/rss+xml" title="ICISWiki RSS Feed" href="http://localhost../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" />
+		<link rel="alternate" type="application/atom+xml" title="ICISWiki Atom Feed" href="http://localhost../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" />
+		<title>Updating the SMTA website - ICISWiki</title>
+		<link rel="stylesheet" href="../../../../skins/common/shared.css?195" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../../../../skins/common/commonPrint.css?195" type="text/css" media="print" />
+		<link rel="stylesheet" href="../../../../skins/monobook/main.css?195" type="text/css" media="screen" />
+		<!--[if lt IE 5.5000]><link rel="stylesheet" href="../../../../skins/monobook/IE50Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 5.5000]><link rel="stylesheet" href="../../../../skins/monobook/IE55Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 6]><link rel="stylesheet" href="../../../../skins/monobook/IE60Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 7]><link rel="stylesheet" href="../../../../skins/monobook/IE70Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7ECommon.css?195" type="text/css" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7EPrint.css?195" type="text/css" media="print" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7EMonobook.css?195" type="text/css" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/gen.css?195" type="text/css" />
+		<!--[if lt IE 7]><script type="text/javascript" src="../../../../skins/common/IEFixes.js?195"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+
+		<script type= "text/javascript">/*<![CDATA[*/
+		var skin = "monobook";
+		var stylepath = "../../../../skins";
+		var wgArticlePath = "../../../../$1";
+		var wgScriptPath = "../../../../..";
+		var wgScript = "/icis/index.php";
+		var wgVariantArticlePath = false;
+		var wgActionPaths = {};
+		var wgServer = "http://localhost";
+		var wgCanonicalNamespace = "";
+		var wgCanonicalSpecialPageName = false;
+		var wgNamespaceNumber = 0;
+		var wgPageName = "Updating_the_SMTA_website";
+		var wgTitle = "Updating the SMTA website";
+		var wgAction = "view";
+		var wgArticleId = "3055";
+		var wgIsArticle = true;
+		var wgUserName = null;
+		var wgUserGroups = null;
+		var wgUserLanguage = "en";
+		var wgContentLanguage = "en";
+		var wgBreakFrames = false;
+		var wgCurRevisionId = "15771";
+		var wgVersion = "1.14.0";
+		var wgEnableAPI = true;
+		var wgEnableWriteAPI = true;
+		var wgSeparatorTransformTable = ["", ""];
+		var wgDigitTransformTable = ["", ""];
+		var wgRestrictionEdit = [];
+		var wgRestrictionMove = [];
+		/*]]>*/</script>
+
+		<script type="text/javascript" src="../../../../skins/common/wikibits.js?195"><!-- wikibits js --></script>
+		<!-- Head Scripts -->
+		<script type="text/javascript" src="../../../../raw/gen.js"><!-- site js --></script>
+	</head>
+<body class="mediawiki ltr ns-0 ns-subject page-Updating_the_SMTA_website skin-monobook">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 id="firstHeading" class="firstHeading">Updating the SMTA website</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From ICISWiki</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>			<!-- start content -->
+			<table id="toc" class="toc" summary="Contents"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1"><a href="#The_IRRI_SMTA_Web_Portal"><span class="tocnumber">1</span> <span class="toctext">The IRRI SMTA Web Portal</span></a>
+<ul>
+<li class="toclevel-2"><a href="#Creation_of_the_SMTA_document_and_Loading_its_information_into_IRIS_local_database"><span class="tocnumber">1.1</span> <span class="toctext">Creation of the SMTA document and Loading its information into IRIS local database</span></a></li>
+<li class="toclevel-2"><a href="#Updating_the_SMTA_database_.28MySQL.29_on_www.iris.irri.org"><span class="tocnumber">1.2</span> <span class="toctext">Updating the SMTA database (MySQL) on www.iris.irri.org</span></a>
+<ul>
+<li class="toclevel-3"><a href="#SMTA_Warehouse_Tables"><span class="tocnumber">1.2.1</span> <span class="toctext">SMTA Warehouse Tables</span></a></li>
+<li class="toclevel-3"><a href="#Update_Process"><span class="tocnumber">1.2.2</span> <span class="toctext">Update Process</span></a>
+<ul>
+<li class="toclevel-4"><a href="#.281.29_Backup_the_current_database_on_www.iris.irri.org"><span class="tocnumber">1.2.2.1</span> <span class="toctext">(1) Backup the current database on www.iris.irri.org</span></a></li>
+<li class="toclevel-4"><a href="#.282.29_Setup_warehouse_tables_on_your_local_MySQL_database"><span class="tocnumber">1.2.2.2</span> <span class="toctext">(2) Setup warehouse tables on your local MySQL database</span></a></li>
+<li class="toclevel-4"><a href="#.283.29_Retrieve_SMTA_database_.28MS_Access.29_from_the_Seed_Health_Unit"><span class="tocnumber">1.2.2.3</span> <span class="toctext">(3) Retrieve SMTA database (MS Access) from the Seed Health Unit</span></a></li>
+<li class="toclevel-4"><a href="#.284.29_Create_queries_in_SMTA_database_.28MS_Access.29"><span class="tocnumber">1.2.2.4</span> <span class="toctext">(4) Create queries in SMTA database (MS Access)</span></a>
+<ul>
+<li class="toclevel-5"><a href="#OUTGOING_SMTAS"><span class="tocnumber">1.2.2.4.1</span> <span class="toctext">OUTGOING_SMTAS</span></a></li>
+<li class="toclevel-5"><a href="#SMTA_ENTRIES"><span class="tocnumber">1.2.2.4.2</span> <span class="toctext">SMTA_ENTRIES</span></a></li>
+<li class="toclevel-5"><a href="#ANCESTRAL_MLS"><span class="tocnumber">1.2.2.4.3</span> <span class="toctext">ANCESTRAL_MLS</span></a></li>
+</ul>
+</li>
+<li class="toclevel-4"><a href="#.285.29_Export_MS_Access_data_to_CSV_file"><span class="tocnumber">1.2.2.5</span> <span class="toctext">(5) Export MS Access data to CSV file</span></a></li>
+<li class="toclevel-4"><a href="#.286.29_Import_CSV_data_into_MySQL"><span class="tocnumber">1.2.2.6</span> <span class="toctext">(6) Import CSV data into MySQL</span></a></li>
+<li class="toclevel-4"><a href="#.287.29_Generate_dump_files"><span class="tocnumber">1.2.2.7</span> <span class="toctext">(7) Generate dump files</span></a></li>
+<li class="toclevel-4"><a href="#.288.29_Run_the_.SQL_files_on_www.iris.irri.org"><span class="tocnumber">1.2.2.8</span> <span class="toctext">(8) Run the .SQL files on www.iris.irri.org</span></a></li>
+<li class="toclevel-4"><a href="#.289.29_Hiding_.22temporarily_confidential.22_materials"><span class="tocnumber">1.2.2.9</span> <span class="toctext">(9) Hiding "temporarily confidential" materials</span></a></li>
+<li class="toclevel-4"><a href="#.2810.29_Updating_Multi-Crop_Passport_Descriptor_.28MCPD.29_Data"><span class="tocnumber">1.2.2.10</span> <span class="toctext">(10) Updating Multi-Crop Passport Descriptor (MCPD) Data</span></a></li>
+<li class="toclevel-4"><a href="#Unhiding_.22temporarily_confidential.22_materials"><span class="tocnumber">1.2.2.11</span> <span class="toctext">Unhiding "temporarily confidential" materials</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3"><a href="#Miscellaneous_queries_.28Central_IRIS_GMS:_MS_Access.29"><span class="tocnumber">1.2.3</span> <span class="toctext">Miscellaneous queries (Central IRIS GMS: MS Access)</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2"><a href="#IRRI_SMTA_Web_Portal_www.iris.irri.org.2Fsmta"><span class="tocnumber">1.3</span> <span class="toctext">IRRI SMTA Web Portal www.iris.irri.org/smta</span></a>
+<ul>
+<li class="toclevel-3"><a href="#Web_Pages"><span class="tocnumber">1.3.1</span> <span class="toctext">Web Pages</span></a>
+<ul>
+<li class="toclevel-4"><a href="#List_of_Outgoing_SMTAs"><span class="tocnumber">1.3.1.1</span> <span class="toctext">List of Outgoing SMTAs</span></a></li>
+<li class="toclevel-4"><a href="#List_of_Entries_of_SMTA"><span class="tocnumber">1.3.1.2</span> <span class="toctext">List of Entries of SMTA</span></a></li>
+<li class="toclevel-4"><a href="#The_MCPD"><span class="tocnumber">1.3.1.3</span> <span class="toctext">The MCPD</span></a></li>
+<li class="toclevel-4"><a href="#The_Pedigree_of_an_Entry"><span class="tocnumber">1.3.1.4</span> <span class="toctext">The Pedigree of an Entry</span></a></li>
+<li class="toclevel-4"><a href="#The_Characterization_Study_of_an_Entry"><span class="tocnumber">1.3.1.5</span> <span class="toctext">The Characterization Study of an Entry</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3"><a href="#Installation_of_the_SMTA_Web_Portal"><span class="tocnumber">1.3.2</span> <span class="toctext">Installation of the SMTA Web Portal</span></a>
+<ul>
+<li class="toclevel-4"><a href="#System_Requirements"><span class="tocnumber">1.3.2.1</span> <span class="toctext">System Requirements</span></a></li>
+<li class="toclevel-4"><a href="#Installation"><span class="tocnumber">1.3.2.2</span> <span class="toctext">Installation</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3"><a href="#Additional_Documents_of_the_SMTA_Web_Application"><span class="tocnumber">1.3.3</span> <span class="toctext">Additional Documents of the SMTA Web Application</span></a>
+<ul>
+<li class="toclevel-4"><a href="#Use_Cases"><span class="tocnumber">1.3.3.1</span> <span class="toctext">Use Cases</span></a></li>
+<li class="toclevel-4"><a href="#Sequence_Diagram"><span class="tocnumber">1.3.3.2</span> <span class="toctext">Sequence Diagram</span></a>
+<ul>
+<li class="toclevel-5"><a href="#View_List_of_Outgoing_SMTAs"><span class="tocnumber">1.3.3.2.1</span> <span class="toctext">View List of Outgoing SMTAs</span></a></li>
+</ul>
+</li>
+<li class="toclevel-4"><a href="#Class_Diagrams"><span class="tocnumber">1.3.3.3</span> <span class="toctext">Class Diagrams</span></a>
+<ul>
+<li class="toclevel-5"><a href="#SMTA_DTO_Classes"><span class="tocnumber">1.3.3.3.1</span> <span class="toctext">SMTA DTO Classes</span></a></li>
+<li class="toclevel-5"><a href="#SMTA_Core_Classes"><span class="tocnumber">1.3.3.3.2</span> <span class="toctext">SMTA Core Classes</span></a></li>
+<li class="toclevel-5"><a href="#SMTA_Web_Classes"><span class="tocnumber">1.3.3.3.3</span> <span class="toctext">SMTA Web Classes</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</td></tr></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </script>
+<a name="The_IRRI_SMTA_Web_Portal" id="The_IRRI_SMTA_Web_Portal"></a><h1> <span class="mw-headline"> The IRRI SMTA Web Portal </span></h1>
+<p>The information in the IRRI SMTA Web Portal are generated involving several components.
+</p>
+<ol><li> Creation of the SMTA document and Loading its information to IRIS local database
+</li><li> Update of the SMTA warehouse tables
+</li><li> The IRRI SMTA Web Portal application
+</li></ol>
+<a name="Creation_of_the_SMTA_document_and_Loading_its_information_into_IRIS_local_database" id="Creation_of_the_SMTA_document_and_Loading_its_information_into_IRIS_local_database"></a><h2> <span class="mw-headline"> Creation of the SMTA document and Loading its information into IRIS local database</span></h2>
+<p>This procedure is tightly related with the <a href="http://cropwiki.irri.org/icis/index.php/ICIS_ddd_002#Implementation_of_the_new_Standard_MTA_Jan_2007_using_IRIS" class="external text" title="http://cropwiki.irri.org/icis/index.php/ICIS_ddd_002#Implementation_of_the_new_Standard_MTA_Jan_2007_using_IRIS" rel="nofollow">processing of outgoing seeds</a>.  However, the information used in the SMTA document is curated in the  International Rice Information System (IRIS) which is part of the processing of incoming seeds. The flow of information from import to export and its relation to SMTA is described in this <a href="http://cropwiki.irri.org/icis/images/e/e5/ICISWorkShop2007_SMTA.pdf" class="external text" title="http://cropwiki.irri.org/icis/images/e/e5/ICISWorkShop2007_SMTA.pdf" rel="nofollow">document</a>.
+</p>
+<a name="Updating_the_SMTA_database_.28MySQL.29_on_www.iris.irri.org" id="Updating_the_SMTA_database_.28MySQL.29_on_www.iris.irri.org"></a><h2> <span class="mw-headline"> Updating the SMTA database (MySQL) on <b>www.iris.irri.org</b> </span></h2>
+<a name="SMTA_Warehouse_Tables" id="SMTA_Warehouse_Tables"></a><h4> <span class="mw-headline"> SMTA Warehouse Tables </span></h4>
+<p>For faster execution time, the SMTA web application accesses four warehouse tables, instead of querying the original ICIS database tables (e.g. STUDY, FACTOR, etc.). These four tables are:
+</p><p><br />
+1) <b>OUTGOING_SMTAS</b> 
+</p>
+<ul><li> (Effective Jan 1, 2008: SMTAID &amp; SMTA_FILE_URL length is <b>20</b> (increased from 8 and 15, respectively))
+</li><li> (Effective May 16, 2008: new columns SENDER and SHU_REQUEST_NUMBER but both are not visible on the website; added for reporting 
+</li></ul>
+<p>purposes of SHU)
+</p>
+<ul><li> (Effective Jan 7, 2009: New column ANON. Length of column SMTA_FILE_URL increased to 30)
+</li></ul>
+<pre>CREATE TABLE `outgoing_smtas` (
+ `smtaid`         varchar(20), 
+ `studyid`        int(10),
+ `smta_date`      int(10),
+ `smta_file_url`  varchar(30),
+ `recipient`      varchar(255),
+ `country`        varchar(255),
+ `num_samples`    int(10),
+ `shu_request_number`         varchar(50),
+ `sender`         varchar(50), 
+ `remarks`        varchar(255),
+ `anon` boolean
+);
+</pre>
+<p>2) <b>SMTA_ENTRIES</b>
+</p>
+<ul><li> (Effective Nov 28, 2008: new column MATERIALTYPE, but is not visible on the website; added for reporting purposes of SHU)
+</li><li> (Effective Nov 28, 2008: length of column MTA_STATUS reduced to 20 (from 255))
+</li></ul>
+<pre>CREATE TABLE `smta_entries` (
+ `studyid`      int(10) NOT NULL,
+ `ounitid`      int(10),
+ `gid`          int(10),
+ `uniquesampleid`  varchar(255),
+ `designation`  varchar(255),
+ `origin`       varchar(255),
+ `mta_status`   varchar(20),
+ `materialtype`  varchar(255)
+);
+</pre>
+<p><br />
+3) <b>ANCESTRAL_MLS</b>
+</p>
+<pre>CREATE TABLE `ancestral_mls` (
+ `gid`                  int(10) NOT NULL,
+ `ancestral_sample_id`  varchar(255),
+ `ancestral_origin`     varchar(255),
+ `studyid`              int(10)
+);
+</pre>
+<p><br />
+</p><p>4) <b>PASSPORT</b>. For storing MCPD data
+</p>
+<pre>CREATE TABLE `passport` (                     
+           `studyid` int(10) default NULL,             
+           `AcceNumb` varchar(255) default NULL,       
+           `CollNo` varchar(128) default NULL,         
+           `COLLCODE` varchar(255) default NULL,       
+           `Species` varchar(255) default NULL,        
+           `CropName` varchar(255) default NULL,       
+           `AcceName` varchar(255) default NULL,       
+           `AcqDate` int(10) default NULL,             
+           `OrigCty` varchar(255) default NULL,        
+           `COLLSITE` varchar(255) default NULL,       
+           `LATITUDE` varchar(255) default NULL,       
+           `LONGITUD` varchar(255) default NULL,       
+           `ELEVATIO` varchar(255) default NULL,       
+           `CollDate` varchar(255) default NULL,       
+           `BredCode` varchar(255) default NULL,       
+           `SampStat` varchar(255) default NULL,       
+           `CollSrc` varchar(255) default NULL,        
+           `DONORCODE` varchar(255) default NULL,      
+           `DonorNum` varchar(128) default NULL,       
+           `DuplSite` varchar(255) default NULL,       
+           `Storage` varchar(255) default NULL,        
+           `REMARKS` varchar(255) default NULL,        
+           `CultivarGroup` varchar(255) default NULL,  
+           KEY `BredCode` (`BredCode`),                
+           KEY `COLLCODE` (`COLLCODE`),                
+           KEY `DONORCODE` (`DONORCODE`),              
+           KEY `DonorNum` (`DonorNum`),                
+           KEY `studyid` (`studyid`)                   
+         );
+</pre>
+<a name="Update_Process" id="Update_Process"></a><h3> <span class="mw-headline"> Update Process </span></h3>
+<a name=".281.29_Backup_the_current_database_on_www.iris.irri.org" id=".281.29_Backup_the_current_database_on_www.iris.irri.org"></a><h4> <span class="mw-headline"> (1) Backup the current database on www.iris.irri.org</span></h4>
+<ul><li>Remotely connect to www.iris.irri.org with your username and password
+</li><li>Use the mysqldump facility to backup the database. Example:
+</li></ul>
+<pre>mysqldump -usomeusername -p smta &gt; smta_jul202007_bak.sql 
+</pre>
+<p>Login to mysql then take note of the latest STUDYID present in the <b>outgoing_smtas</b> table.
+</p>
+<pre>mysql&gt; select min(studyid) from outgoing_smtas;
+</pre>
+<p><br />
+Let <i><b>STUDYID</b></i> = min(studyid)
+</p>
+<a name=".282.29_Setup_warehouse_tables_on_your_local_MySQL_database" id=".282.29_Setup_warehouse_tables_on_your_local_MySQL_database"></a><h4> <span class="mw-headline"> (2) Setup warehouse tables on your local MySQL database </span></h4>
+<p><b>(The warehouse tables already exist on www.iris.irri.org)</b>
+</p>
+<ul><li> Create a database named "smta" on your local MySQL, which will contain the SMTA warehouse tables as descibed above .
+</li><li> Free software for managing your MySQL databases: SQLyog MySQL GUI - Community Edition (Stable) at <a href="http://www.webyog.com/en/downloads.php" class="external free" title="http://www.webyog.com/en/downloads.php" rel="nofollow">http://www.webyog.com/en/downloads.php</a>
+</li></ul>
+<p><br />
+</p><p><b>IMPORTANT:</b> For every update process of the SMTA database, all tables on your local MySQL database must be empty. Take note, new data will be <b>appended</b> to the SMTA database on www.iris.irri.org. Partial update only!
+</p><p>Tip: It's good practice to import data into your local MySQL database first for test purposes (instead of directly importing to the database on www.iris.irri.org)
+</p>
+<a name=".283.29_Retrieve_SMTA_database_.28MS_Access.29_from_the_Seed_Health_Unit" id=".283.29_Retrieve_SMTA_database_.28MS_Access.29_from_the_Seed_Health_Unit"></a><h4> <span class="mw-headline"> (3) Retrieve SMTA database (MS Access) from the Seed Health Unit </span></h4>
+<p>Get the latest Microsoft Access database (.MDB) containing SMTA IDs (and related information) that haven't been uploaded to the SMTA website. Copy this database and paste to your local machine. This database can be found in one of the folders at: <b>\\e351mc982v\SHUPortal\SHU\SHU Local DB\</b>
+</p><p><br />
+</p>
+<a name=".284.29_Create_queries_in_SMTA_database_.28MS_Access.29" id=".284.29_Create_queries_in_SMTA_database_.28MS_Access.29"></a><h4> <span class="mw-headline"> (4) Create queries in SMTA database (MS Access) </span></h4>
+<ul><li> Open your local copy of the SMTA database (MS Access) you retrieved from the Seed Health Unit shared folder.
+</li><li> Go to <b>Objects</b> --&gt; <b>Queries</b>. Create the following queries: (make sure to only include the studies not yet on the SMTA website)
+</li></ul>
+<a name="OUTGOING_SMTAS" id="OUTGOING_SMTAS"></a><h5> <span class="mw-headline"> OUTGOING_SMTAS </span></h5>
+<p>Save as "<b>select_outgoing_smtas_step01</b>": <i>Get count of materials per study/SMTA</i>
+</p>
+<pre>SELECT distinct factor.studyid, count(oindex.ounitid) 
+from veffect inner join variate on veffect.variatid = variate.variatid 
+  inner join ((oindex inner join 
+  (factor inner join level_n on factor.labelid = level_n.labelid) on oindex.levelno = level_n.levelno)) 
+  on veffect.represno = oindex.represno
+where study.sname like '*SMTA*' 
+and factor.scaleid=91
+and factor.studyid &lt;= <font color="blue"><b>STUDYID</b></font>
+and factor.studyid &gt;= xendstudyid
+group by factor.studyid, variate.traitid
+having variate.traitid=-2;
+</pre>
+<p>Save as "<b>select_outgoing_smtas_step02</b>": <i>Get STUDYID, SMTA_DATE, RECIPIENT, COUNTRY</i>. <b>Must specify a STUDYID here.</b> 
+</p>
+<pre>SELECT study.studyid, 
+   sdate AS smta_date, 
+   level_c_1.lvalue AS recipient, 
+   level_c.lvalue AS country
+FROM factor,factor AS factor_1, study, level_c, level_c AS level_c_1
+  WHERE factor.studyid = study.studyid
+ AND factor.labelid = level_c.labelid
+ AND study.studyid = factor_1.studyid
+ AND factor_1.labelid = level_c_1.labelid
+ AND factor_1.scaleid = 119
+ AND factor.scaleid = -6
+AND study.studyid &lt;= <font color="blue"><b>STUDYID</b></font>
+ORDER BY study.studyid DESC;
+</pre>
+<p><br />
+Save as "<b>select_outgoing_smtas_step03</b>": <i>Retrieve the IRRI_MTA_ID</i> (which will serve as the SMTA ID and file name of the PDF (SMTA document)on the website)
+</p>
+<pre>  SELECT factor.studyid, 
+         level_c.lvalue AS irri_mta_id
+  FROM factor, study, level_c
+    WHERE factor.studyid = study.studyid
+    AND factor.labelid = level_c.labelid
+    AND factor.scaleid = -13;
+</pre>
+<p>Save as "<b>select_outgoing_smtas_step04</b>": <i>Merge entries count, SMTAID, and SMTA file URL with previously retrieved info</i>
+</p>
+<pre>SELECT c.irri_mta_id AS smtaid, 
+       a.studyid, 
+       a.smta_date, 
+       c.irri_mta_id &amp; '.pdf' AS smta_file_url, 
+       a.recipient, 
+       a.country, 
+       b.num_samples, 
+       NULL AS remarks
+FROM select_outgoing_smtas_step02 AS a, 
+    select_outgoing_smtas_step01 AS b, 
+    select_outgoing_smtas_step03 AS c
+WHERE a.studyid = b.studyid
+      and a.studyid = c.studyid
+ORDER BY c.irri_mta_id;
+</pre>
+<p>Save as "<b>select_outgoing_smtas_step05</b>": <i>Retrieve the RECIPIENT_INSTITUTION per SMTA</i>
+</p>
+<pre> SELECT study.studyid, 
+        level_c.lvalue AS recipient_institution
+ FROM factor, 
+      study, 
+      level_c   
+ WHERE factor.studyid = study.studyid
+    AND factor.labelid = level_c.labelid
+    AND factor.scaleid = -27;
+</pre>
+<p><br />
+Save as "<b>select_outgoing_smtas_step06</b>": <i>Merge RECIPIENT_INSTITUTION with the rest of the info</i>
+</p>
+<pre>SELECT a.smtaid, 
+  a.studyid, 
+  a.smta_date, 
+  a.smta_file_url, 
+  IIF(b.recipient_institution IS NULL,a.recipient,a.recipient &amp; " / " &amp;  b.recipient_institution) AS recipient, 
+  a.country, 
+  a.num_samples, 
+  a.remarks
+FROM select_outgoing_smtas_step04 AS a LEFT JOIN select_outgoing_smtas_step05 AS b ON a.studyid = b.studyid
+ORDER BY a.smtaid;
+</pre>
+<p><br />
+Save as "<b>select_outgoing_smtas_step07</b>": <i>Retrieve SENDER information</i>
+</p>
+<pre>SELECT study.studyid, level_c.lvalue AS sender
+FROM factor, study, level_c
+WHERE factor.studyid = study.studyid
+ AND factor.labelid = level_c.labelid
+ AND factor.scaleid = 173;
+</pre>
+<p><br />
+Save as "<b>select_outgoing_smtas_step08</b>": <i>Retrieve SHU request number</i>
+</p>
+<pre>SELECT study.studyid, level_c.lvalue AS shu_request_number
+FROM factor, study, level_c
+WHERE factor.studyid = study.studyid
+ AND factor.labelid = level_c.labelid
+ AND factor.scaleid = -1
+and factor.tmethid = -3;
+</pre>
+<p><br />
+Save as "<b>select_outgoing_smtas_step09</b>": <i>Retrieve SENDER info with the rest of previously retrieved data</i>
+</p>
+<pre>SELECT a.smtaid, 
+       a.studyid, 
+       a.smta_date, 
+       a.smta_file_url, 
+       a.recipient, 
+       a.country, 
+       a.num_samples, 
+       a.remarks, 
+       b.sender
+FROM select_outgoing_smtas_step06 AS a LEFT JOIN select_outgoing_smtas_step07 AS b ON a.studyid = b.studyid
+ORDER BY a.smtaid;
+</pre>
+<p><br />
+Save as "<b>select_outgoing_smtas_step10</b>": <i>Retrieve SHU request number with the rest of previously retrieved data</i>
+</p>
+<pre>SELECT a.*, 
+       b.shu_request_number
+FROM select_outgoing_smtas_step09 AS a LEFT JOIN select_outgoing_smtas_step08 AS b ON a.studyid = b.studyid
+ORDER BY a.smtaid;
+</pre>
+<a name="SMTA_ENTRIES" id="SMTA_ENTRIES"></a><h5> <span class="mw-headline"> SMTA_ENTRIES </span></h5>
+<p>Save as "<b>select_smta_entries_step1</b>": <i>Retrieve ORIGIN of each material</i>
+</p>
+<pre>SELECT variate.vname, 
+  data_c.ounitid, 
+  data_c.dvalue
+FROM variate INNER JOIN data_c ON variate.variatid = data_c.VARIATID
+WHERE variate.vname="ORIGIN";
+</pre>
+<p><br />
+Save as "<b>select_smta_entries_step2</b>": <i>Retrieve STUDYID,OUNITID,GID,DESIGNATION,MTA_STATUS of each material</i>
+</p>
+<pre>SELECT DISTINCT study.STUDYID, 
+  oindex.OUNITID, 
+  level_n.LVALUE AS gid, 
+  level_c.LVALUE AS designation, 
+  data_c_1.DVALUE AS mta_status
+FROM (variate AS variate_1 INNER JOIN data_c AS data_c_1 ON variate_1.VARIATID = data_c_1.VARIATID) 
+  INNER JOIN (factor AS factor_1 INNER JOIN (level_c INNER JOIN (oindex INNER JOIN 
+  (((factor INNER JOIN level_n ON factor.LABELID = level_n.LABELID) INNER JOIN study ON factor.STUDYID = study.STUDYID) 
+  INNER JOIN effect ON level_n.FACTORID = effect.FACTORID) ON (oindex.LEVELNO = level_n.LEVELNO) 
+  AND (oindex.REPRESNO = effect.REPRESNO)) ON level_c.LEVELNO = level_n.LEVELNO) 
+  ON factor_1.LABELID = level_c.LABELID) ON data_c_1.OUNITID = oindex.OUNITID
+WHERE study.STUDYID &lt;= <font color="blue"><b>STUDYID</b></font>
+ AND factor.SCALEID=91 
+ AND factor_1.SCALEID=92 
+ AND effect.REPRESNO Not In (select effect.represno
+    from factor inner join effect on factor.labelid = effect.factorid
+    where factor.fname="NO") 
+AND variate_1.VNAME="MTA STATUS"
+ORDER BY oindex.OUNITID DESC;
+</pre>
+<p><br />
+Save as "<b>select_smta_entries_step3</b>": <i>Merge ORIGINs with other information</i>
+</p>
+<pre>SELECT DISTINCT b.studyid, 
+  b.ounitid, 
+  b.gid,      
+  b.designation, 
+  a.dvalue AS origin, 
+  b.mta_status
+FROM select_smta_entries_step1 as a RIGHT JOIN select_smta_entries_step2 as b 
+ ON a.OUNITID = b.OUNITID;
+</pre>
+<p><br />
+Save as "<b>select_smta_entries_step4</b>": <i>Retrieve UNIQUE SAMPLE IDs of each material</i>
+</p>
+<pre>SELECT DISTINCT factor.studyid, 
+   oindex.ounitid, 
+   level_n.LVALUE AS gid, 
+   level_c.LVALUE AS uniquesampleid
+FROM factor AS factor_1 INNER JOIN (level_c INNER JOIN 
+  (oindex INNER JOIN (((factor INNER JOIN level_n ON factor.LABELID = level_n.LABELID) 
+   INNER JOIN study ON factor.STUDYID = study.STUDYID) INNER JOIN effect ON 
+   level_n.FACTORID = effect.FACTORID) ON (oindex.LEVELNO = level_n.LEVELNO) AND 
+  (oindex.REPRESNO = effect.REPRESNO)) ON level_c.LEVELNO = level_n.LEVELNO) 
+   ON factor_1.LABELID = level_c.LABELID
+WHERE factor.STUDYID &lt;= <font color="blue"><b>STUDYID</b></font>
+and factor.studyid = factor_1.studyid
+AND factor.SCALEID=91 
+AND factor_1.SCALEID=-10
+AND effect.REPRESNO Not In (select effect.represno
+    from factor inner join effect on factor.labelid = effect.factorid
+    where factor.fname="NO");
+</pre>
+<p><br />
+Save as "<b>select_smta_entries_step5</b>": <i>Merge UNIQUE SAMPLE IDs with other information</i>
+</p>
+<pre>SELECT DISTINCT b.studyid, 
+   b.OUNITID, 
+   b.gid, 
+   a.uniquesampleid, 
+   b.designation, 
+   b.origin, 
+   b.mta_status
+FROM select_smta_entries_step4 AS a RIGHT JOIN select_smta_entries_step3 AS b ON a.OUNITID = b.OUNITID;
+</pre>
+<p>Save as "<b>select_smta_entries_step6</b>": <i>Retrieve the MATERIAL TYPE of each SMTA entry</i>
+</p>
+<pre>SELECT VARIATE.VNAME, DATA_C.OUNITID, DATA_C.DVALUE
+FROM VARIATE INNER JOIN DATA_C ON VARIATE.VARIATID = DATA_C.VARIATID
+WHERE VARIATE.VNAME="MATERIAL TYPE";
+</pre>
+<p>Save as "<b>select_smta_entries_step7</b>": <i>Merge the MATERIAL TYPE data with the rest of the info</i>
+</p>
+<pre>SELECT DISTINCT b.studyid, 
+                b.OUNITID, 
+                b.gid, 
+                b.uniquesampleid, 
+                b.designation, 
+                b.origin, 
+                b.mta_status, 
+                a.dvalue AS materialtype
+FROM select_smta_entries_step6 AS a RIGHT JOIN select_smta_entries_step5 AS b ON a.OUNITID = b.OUNITID;
+</pre>
+<a name="ANCESTRAL_MLS" id="ANCESTRAL_MLS"></a><h5> <span class="mw-headline"> ANCESTRAL_MLS </span></h5>
+<p>Save as "select_ancestral_mls":
+</p>
+<pre>SELECT DISTINCT level_n.lvalue AS gid, 
+   data_c.dvalue AS ancestral_sample_id, 
+   data_c_1.dvalue AS ancestral_origin, 
+   factor.studyid AS studyid
+FROM variate AS variate_1 INNER JOIN (data_c AS data_c_1 INNER JOIN ((data_c INNER JOIN variate 
+   ON data_c.variatid = variate.variatid) INNER JOIN ((level_n INNER JOIN factor ON level_n.labelid = factor.labelid) 
+   INNER JOIN oindex ON level_n.levelno = oindex.levelno) ON data_c.ounitid = oindex.ounitid) 
+   ON data_c_1.ounitid = oindex.ounitid) ON variate_1.variatid = data_c_1.variatid
+WHERE (factor.scaleid=91) 
+   AND (variate.vname='Ancestral_SampleID') 
+   AND (variate_1.vname='Ancestral_Origin')
+   and factor.studyid &lt;= <font color="blue"><b>STUDYID</b></font>
+ORDER BY level_n.lvalue
+</pre>
+<a name=".285.29_Export_MS_Access_data_to_CSV_file" id=".285.29_Export_MS_Access_data_to_CSV_file"></a><h4> <span class="mw-headline"> (5) Export MS Access data to CSV file </span></h4>
+<ul><li> Open your local copy of the SMTA database then do the following for each of the queries you created (select_outgoing_smtas9b, smta_entries, ancestral_mls):
+</li></ul>
+<p><br />
+</p>
+<ul><li> Go to FILE menu of MS Access then click "Export..."
+</li></ul>
+<p><a href="../../../../articles/s/m/t/File%7ESmtaupd_exportquery.JPG_691d.html" class="image" title="Center"><img alt="Center" src="../../../../images/a/aa/Smtaupd_exportquery.JPG" width="372" height="401" border="0" /></a>
+</p><p><br />
+</p>
+<ul><li> Specify the name of the destination file. Save as type "Text files". Then click the "Export All" button.
+</li></ul>
+<p><a href="../../../../articles/s/m/t/File%7ESmtaupd_selectcsvfile.JPG_c2ea.html" class="image" title="Center"><img alt="Center" src="../../../../images/0/0c/Smtaupd_selectcsvfile.JPG" width="597" height="392" border="0" /></a>
+</p><p><br />
+</p>
+<ul><li> Select "Delimited" option. Then click the "Advanced..." button at the bottom left corner of the window.
+</li></ul>
+<p><a href="../../../../articles/s/m/t/File%7ESmtaupd_choosedelimited.JPG_2e0c.html" class="image" title="Center"><img alt="Center" src="../../../../images/e/e9/Smtaupd_choosedelimited.JPG" width="487" height="390" border="0" /></a>
+</p><p><br />
+</p>
+<ul><li> The "Export Specification" window will appear. Make the following settings:
+<ul><li> File format = <b>DELIMITED</b>
+</li><li> Field delimiter = <b>^</b> (SHIFT+6)
+</li><li> Text qualifier = NONE
+</li></ul>
+</li></ul>
+<ul><li> Set the codepage as "Unicode (UTF-8)"
+</li></ul>
+<p><br />
+</p>
+<ul><li> A new window will appear. Select "^" option when asked to choose the delimiter that will separate fields. NO text qualifier {NONE}.
+</li></ul>
+<p><br />
+</p>
+<ul><li> Click the "Finish" button to export the data.
+</li></ul>
+<p><a href="../../../../articles/s/m/t/File%7ESmtaupd_finishexport.JPG_61d8.html" class="image" title="Center"><img alt="Center" src="../../../../images/f/f9/Smtaupd_finishexport.JPG" width="486" height="390" border="0" /></a>
+</p>
+<a name=".286.29_Import_CSV_data_into_MySQL" id=".286.29_Import_CSV_data_into_MySQL"></a><h4> <span class="mw-headline"> (6) Import CSV data into MySQL </span></h4>
+<ul><li> Open SQLyog MYSQL GUI.
+</li></ul>
+<ul><li> Connect to <b>smta</b> database on your local MySQL.
+</li></ul>
+<ul><li> For all three warehouse tables (OUTGOING_SMTAS, SMTA_ENTRIES, ANCESTRAL_MLS), do the following:
+</li></ul>
+<p>Right-click on the table displayed in the left panel, then select "Import data from CSV..."
+</p><p><a href="../../../../articles/s/m/t/File%7ESmtaupd_importcsv.JPG_8118.html" class="image" title="Image:Smtaupd_importcsv.JPG"><img alt="Image:Smtaupd_importcsv.JPG" src="../../../../images/7/7b/Smtaupd_importcsv.JPG" width="578" height="613" border="0" /></a>
+</p><p><br />
+</p><p>Select the CSV file to import. These should be the import settings: 
+</p>
+<pre>Terminated by   ^
+Enclosed by     {NONE}
+Escaped by      {NONE}
+</pre>
+<p>Click the "Import" button to proceed.
+</p><p><br />
+</p>
+<ul><li> Mta status "SMTA Underdeveloped" should be in is this format ("_" is a space): 'SMTA_-_UD' 
+</li></ul>
+<pre>update smta_entries
+set mta_status = 'SMTA - UD'
+where mta_status like '%UD%'
+</pre>
+<a name=".287.29_Generate_dump_files" id=".287.29_Generate_dump_files"></a><h4> <span class="mw-headline"> (7) Generate dump files </span></h4>
+<p>Using the mysqldump facility, create the .SQL files for appending to the warehouse tables on IRIS external.
+Include this in the mysqldump command: <b>-t --no-create-info</b>
+</p><p><br />
+OUTGOING_SMTAS. e.g.:
+</p>
+<pre>mysqldump -usomeusername -p -t --no-create-info smta outgoing_smtas &gt; outgoing_smtas_jul102007_upd.sql
+</pre>
+<p>SMTA_ENTRIES. e.g.:
+</p>
+<pre>mysqldump -usomeusername -p -t --no-create-info smta smta_entries &gt; smta_entries_jul102007_upd.sql
+</pre>
+<p>ANCESTRAL_MLS. e.g.:
+</p>
+<pre>mysqldump -usomeusername -p -t --no-create-info smta ancestral_mls &gt; ancestral_mls_jul102007_upd.sql
+</pre>
+<a name=".288.29_Run_the_.SQL_files_on_www.iris.irri.org" id=".288.29_Run_the_.SQL_files_on_www.iris.irri.org"></a><h4> <span class="mw-headline"> (8) Run the .SQL files on www.iris.irri.org </span></h4>
+<ul><li> Login to mysql
+</li><li> Select the smta database:
+</li></ul>
+<pre>mysql&gt; use smta;
+</pre>
+<ul><li> Run the sql script. e.g.:
+</li></ul>
+<pre>mysql&gt; source /home/someusername/smta_jul202007_upd.sql;
+</pre>
+<p>The SMTA website is here: <a href="http://www.iris.irri.org/smta" class="external free" title="http://www.iris.irri.org/smta" rel="nofollow">http://www.iris.irri.org/smta</a>
+</p>
+<a name=".289.29_Hiding_.22temporarily_confidential.22_materials" id=".289.29_Hiding_.22temporarily_confidential.22_materials"></a><h4> <span class="mw-headline"> (9) Hiding "temporarily confidential" materials  </span></h4>
+<p><i><b>"Temporarily confidential" means that details of the materials will be made available after completion of blind tests by the recipient.</b></i> 
+</p><p><br /> 
+</p>
+<ul><li>CONFIDENTIAL table should exist on www.iris.irri.org. This is for storing the STUDYIDs of the SMTAs with materials marked as "temporarily confidential". (e.g. Rice flour materials from Dr. Melissa Fitzgerald). Fill up this table with the specific distinct STUDYIDs.
+</li></ul>
+<pre>CREATE TABLE `confidential` (
+ `studyid`      int(10) 
+);
+</pre>
+<p><br /> 
+</p>
+<ul><li>SMTA_ENTRIES_CONFIDENTIAL table should exist on www.iris.irri.org. This is for storing materials with information marked as "temporarily confidential". The structure of this table is identical to the SMTA_ENTRIES table:
+</li></ul>
+<p>CREATE TABLE `smta_entries_confidential` (
+</p>
+<pre>`studyid`      int(10) NOT NULL,
+`ounitid`      int(10),
+`gid`          int(10),
+`uniquesampleid`  varchar(255),
+`designation`  varchar(255),
+`origin`       varchar(255),
+`mta_status`   varchar(20),
+`materialtype`  varchar(255)
+</pre>
+<p>);
+</p><p><br />
+<b>On the iris external database (www.iris.irri.org), do the following:</b> 
+</p>
+<ul><li>Add the STUDYIDs of the SMTAs (with "temporarily confidential" materials) to the CONFIDENTIAL table:
+</li></ul>
+<pre> insert into confidential values ( &lt;studyid goes here&gt; );
+</pre>
+<p>OR 
+</p>
+<pre> insert into confidential values ( &lt;studyid_1&gt; ) , ( &lt;studyid_2&gt; ) , etc... 
+</pre>
+<ul><li>Copy records from SMTA_ENTRIES to SMTA_ENTRIES_CONFIDENTIAL:
+</li></ul>
+<pre>insert into smta_entries_confidential
+select * from smta_entries
+ where studyid in (select studyid from confidential);
+</pre>
+<ul><li>"Hide" entries by deleting entries in SMTA_ENTRIES
+</li></ul>
+<pre>delete from smta_entries
+ where studyid in (select studyid from confidential);
+</pre>
+<ul><li>Place an "indicator" on the SMTAs with temporarily confidential entries:
+</li></ul>
+<pre>update outgoing_smtas
+ set remarks = 'Details of the materials will be made available after completion of blind tests by the recipient'
+where studyid in (select studyid from confidential);
+</pre>
+<a name=".2810.29_Updating_Multi-Crop_Passport_Descriptor_.28MCPD.29_Data" id=".2810.29_Updating_Multi-Crop_Passport_Descriptor_.28MCPD.29_Data"></a><h4> <span class="mw-headline"> (10) Updating Multi-Crop Passport Descriptor (MCPD) Data  </span></h4>
+<ul><li> Get mcpd_iris.sql file from <b>\\e351mc982v\SHUPortal\SHU\SHU Local DB</b> and copy to your local directory
+</li></ul>
+<p>(Take note, this file appends new data; no create table info)
+</p>
+<ul><li> Open the mcpd_iris.sql file using MS Wordpad or MS Notepad. Replace all instances of "INSERT INTO mcpd" with "INSERT INTO passport". Save your changes.
+</li></ul>
+<ul><li> Move the modified mcpd_iris.sql file to www.iris.irri.org. Run the script on the smta database.
+</li></ul>
+<ul><li> Create table PASSPORT_CONFIDENTIAL in iris external database (for MCPDs associated with "temporarily confidential" materials; this table is identical to the structure of the PASSPORT table)
+</li></ul>
+<pre>CREATE TABLE `passport_confidential` (
+ `studyid` int(10) default NULL,
+ `AcceNumb` varchar(255) default NULL,
+ `CollNo` varchar(128) default NULL,
+ `COLLCODE` varchar(255) default NULL,
+ `Species` varchar(255) default NULL,
+ `CropName` varchar(255) default NULL,
+ `AcceName` varchar(255) default NULL,
+ `AcqDate` int(10) default NULL,
+ `OrigCty` varchar(255) default NULL,
+ `COLLSITE` varchar(255) default NULL,
+ `LATITUDE` varchar(255) default NULL,
+ `LONGITUD` varchar(255) default NULL,
+ `ELEVATIO` varchar(255) default NULL,
+ `CollDate` varchar(255) default NULL,
+ `BredCode` varchar(255) default NULL,
+ `SampStat` varchar(255) default NULL,
+ `CollSrc` varchar(255) default NULL,
+ `DONORCODE` varchar(255) default NULL,
+ `DonorNum` varchar(128) default NULL,
+ `DuplSite` varchar(255) default NULL,
+ `Storage` varchar(255) default NULL,
+ `REMARKS` varchar(255) default NULL,
+ `CultivarGroup` varchar(255) default NULL,
+ KEY `BredCode` (`BredCode`),
+ KEY `COLLCODE` (`COLLCODE`),
+ KEY `DONORCODE` (`DONORCODE`),
+ KEY `DonorNum` (`DonorNum`),
+ KEY `studyid` (`studyid`)
+);
+</pre>
+<ul><li> Hide MCPD data associated with a study with remarks "Details of the materials will be made available after completion of blind tests by the recipient". 
+</li></ul>
+<p>Copy data from PASSPORT to PASSPORT_CONFIDENTIAL:
+</p>
+<pre>insert into passport_confidential
+select * from passport
+ where studyid in (select studyid from confidential);
+</pre>
+<p><br />
+"Hide" data by deleting entries in PASSPORT
+</p>
+<pre>delete from passport
+ where studyid in (select studyid from confidential);
+</pre>
+<a name="Unhiding_.22temporarily_confidential.22_materials" id="Unhiding_.22temporarily_confidential.22_materials"></a><h4> <span class="mw-headline"> Unhiding "temporarily confidential" materials </span></h4>
+<p><i><b>Details of materials will now be made available AFTER completion of blind tests by the recipient (IRRI will be notified).</b></i>
+</p><p><br />
+</p>
+<ul><li> Copy data from SMTA_ENTRIES_CONFIDENTIAL to SMTA_ENTRIES
+</li></ul>
+<pre>insert into smta_entries_confidential
+select * from smta_entries
+where studyid = &lt;studyid_of_smta_to_unhide&gt;
+
+</pre>
+<ul><li> Delete data from SMTA_ENTRIES_CONFIDENTIAL table
+</li></ul>
+<pre>delete from smta_entries_confidential
+where studyid = &lt;studyid_of_smta_to_unhide&gt;
+</pre>
+<ul><li> Copy data from PASSPORT_CONFIDENTIAL to PASSPORT
+</li></ul>
+<pre>insert into passport
+select * passport_confidential
+where studyid = &lt;studyid_of_smta_to_unhide&gt;
+
+</pre>
+<ul><li> Delete data from PASSPORT_CONFIDENTIAL table
+</li></ul>
+<pre>delete from passport_confidential
+where studyid = &lt;studyid_of_smta_to_unhide&gt;
+
+</pre>
+<ul><li> Delete data from CONFIDENTIAL table
+</li></ul>
+<pre>delete from confidential
+where studyid = &lt;studyid_of_smta_to_unhide&gt;
+</pre>
+<ul><li> Remove the "indicator" on the SMTAs:
+</li></ul>
+<pre>update outgoing_smtas
+ set remarks = NULL
+where remarks like '%Details%'
+and studyid = &lt;studyid_of_smta_to_unhide&gt;
+</pre>
+<p><br />
+</p>
+<a name="Miscellaneous_queries_.28Central_IRIS_GMS:_MS_Access.29" id="Miscellaneous_queries_.28Central_IRIS_GMS:_MS_Access.29"></a><h3> <span class="mw-headline"> Miscellaneous queries (Central IRIS GMS: MS Access) </span></h3>
+<p>Get list of germplasm with IP status "FOR DISTRIBUTION" (also display germplasm creation location (GLOCN), GLOCN of source/GPID2, MTA (SHU reference number)
+</p>
+<pre>SELECT g.gid, 
+m.mname as method, 
+g.glocn, 
+l.lname as glocn_description, 
+g.gpid2 as gid_of_source,
+gpid2_loc.lname as  location_of_source,
+a.aval as ipstatus, 
+a2.aval as MTA
+FROM (germplsm as g inner join atributs as a on g.gid = a.gid), 
+ methods as m, 
+ location as l,
+ germplsm as source, 
+ location as  gpid2_loc,
+ (germplsm as g2 inner join atributs as a2 on g2.gid = a2.gid)
+where g.methn = m.mid
+ and g.gpid2 = source.gid
+ and g.glocn = l.locid
+ and source.glocn = gpid2_loc.locid
+ and a.atype = 1131
+ and a2.atype = 1130
+ and a.aval like 'FOR DISTRIBUTION*';
+</pre>
+<ul><li> ATYPE = 1131 is attribute IPSTATUS
+</li><li> ATYPE = 1130 is attribute MTA (Seed Health Unit reference number)
+</li></ul>
+<a name="IRRI_SMTA_Web_Portal_www.iris.irri.org.2Fsmta" id="IRRI_SMTA_Web_Portal_www.iris.irri.org.2Fsmta"></a><h2> <span class="mw-headline"> IRRI SMTA Web Portal <b><a href="http://www.iris.irri.org/smta" class="external text" title="http://www.iris.irri.org/smta" rel="nofollow">www.iris.irri.org/smta</a></b> </span></h2>
+<a name="Web_Pages" id="Web_Pages"></a><h3> <span class="mw-headline"> Web Pages </span></h3>
+<p>The IRRI SMTA Web portal application is one of the several applications maintained in cropforge.  The package can be downloaded from the Files section of <a href="http://cropforge.org/projects/smta/" class="external text" title="http://cropforge.org/projects/smta/" rel="nofollow">SMTA project</a>. The codes are available in the CVS repository of the said project
+</p><p><a href="../../../../articles/s/m/t/File%7ESMTA_Web_portal.jpg_c1c4.html" class="image" title="IRRI SMTA WEb Portal"><img alt="IRRI SMTA WEb Portal" src="../../../../images/thumb/b/b7/SMTA_Web_portal.jpg/500px-SMTA_Web_portal.jpg" width="500" height="322" border="0" /></a>
+</p><p><br />
+</p>
+<a name="List_of_Outgoing_SMTAs" id="List_of_Outgoing_SMTAs"></a><h4> <span class="mw-headline"> List of Outgoing SMTAs </span></h4>
+<p><a href="../../../../articles/s/m/t/File%7ESMTA_list.jpg_8552.html" class="image" title="SMTA list.jpg"><img alt="" src="../../../../images/thumb/1/14/SMTA_list.jpg/500px-SMTA_list.jpg" width="500" height="307" border="0" /></a>
+</p><p>The list of outgoing SMTAs uses the OUTGOING_SMTAS warehouse table. The button under the <b>SMTA Full Text</b> column will show a copy of the SMTA document sent to Recipient. The documents of the SMTAa are stored in one of the folders in the www.iris.irri.org web server. The SHU MTA Controller uses a tool to upload documents to the said folder.
+</p><p>Clicking the Entries link under the List Of Entries column will show the succeeding web page.
+</p>
+<a name="List_of_Entries_of_SMTA" id="List_of_Entries_of_SMTA"></a><h4> <span class="mw-headline"> List of Entries of SMTA </span></h4>
+<p><a href="../../../../articles/s/m/t/File%7ESMTA_list_of_entries.JPG_2280.html" class="image" title="SMTA list of entries.JPG"><img alt="" src="../../../../images/thumb/3/38/SMTA_list_of_entries.JPG/500px-SMTA_list_of_entries.JPG" width="500" height="308" border="0" /></a>
+</p><p>The List of Entries web page uses the SMTA_ENTRIES warehouse table.  But the records are limited to a certain StudyID associated with the SMTA.
+</p><p>The MCPD button will show the following page
+</p>
+<a name="The_MCPD" id="The_MCPD"></a><h4> <span class="mw-headline"> The MCPD  </span></h4>
+<p><a href="../../../../articles/s/m/t/File%7ESMTA_MCPD.jpg_263e.html" class="image" title="SMTA MCPD.jpg"><img alt="" src="../../../../images/thumb/5/5e/SMTA_MCPD.jpg/500px-SMTA_MCPD.jpg" width="500" height="342" border="0" /></a>
+</p><p>The MCPD page uses the PASSPORT warehouse table.
+</p>
+<a name="The_Pedigree_of_an_Entry" id="The_Pedigree_of_an_Entry"></a><h4> <span class="mw-headline"> The Pedigree of an Entry </span></h4>
+<p>The <b>pedigree</b> button in the <a href="http://cropwiki.irri.org/icis/index.php/Updating_the_SMTA_website#List_of_Entries_of_SMTA" class="external text" title="http://cropwiki.irri.org/icis/index.php/Updating_the_SMTA_website#List_of_Entries_of_SMTA" rel="nofollow">List of Entries</a> page will show a separate page by calling the viewInfo function of the IRIS Web page (<a href="http://www.iris.irri.org/" class="external free" title="http://www.iris.irri.org/" rel="nofollow">http://www.iris.irri.org/</a>). The GID (Germplasm Identification) of the particular entry is the parameter to the function.
+</p><p><a href="../../../../articles/i/r/i/File%7EIRIS_Pedigree.jpg_94f4.html" class="image" title="IRIS Pedigree.jpg"><img alt="" src="../../../../images/thumb/f/f0/IRIS_Pedigree.jpg/500px-IRIS_Pedigree.jpg" width="500" height="434" border="0" /></a>
+</p>
+<a name="The_Characterization_Study_of_an_Entry" id="The_Characterization_Study_of_an_Entry"></a><h4> <span class="mw-headline"> The Characterization Study of an Entry </span></h4>
+<p>Similarly, the <b>description</b> button under the Descriptive Data column of <a href="http://cropwiki.irri.org/icis/index.php/Updating_the_SMTA_website#List_of_Entries_of_SMTA" class="external text" title="http://cropwiki.irri.org/icis/index.php/Updating_the_SMTA_website#List_of_Entries_of_SMTA" rel="nofollow">List of Entries</a> page will also show a separate page by calling viewStudy function of the IRIS Web page with GID as parameter.
+</p><p><br />
+<a href="../../../../articles/i/r/i/File%7EIRIS_Studies.jpg_6388.html" class="image" title="IRIS Studies.jpg"><img alt="" src="../../../../images/thumb/8/8c/IRIS_Studies.jpg/500px-IRIS_Studies.jpg" width="500" height="499" border="0" /></a>
+</p><p><br />
+</p>
+<a name="Installation_of_the_SMTA_Web_Portal" id="Installation_of_the_SMTA_Web_Portal"></a><h3> <span class="mw-headline"> Installation of the SMTA Web Portal </span></h3>
+<a name="System_Requirements" id="System_Requirements"></a><h4> <span class="mw-headline"> System Requirements </span></h4>
+<p>Please make sure that these are installed in the server:
+</p>
+<pre> MySQL 5.0 or higher (See <a href="http://dev.mysql.com/downloads/index.html" class="external free" title="http://dev.mysql.com/downloads/index.html" rel="nofollow">http://dev.mysql.com/downloads/index.html</a>)   
+ JAVA 1.5 or higher (See in <a href="http://java.sun.com/javase/downloads/index.jsp" class="external free" title="http://java.sun.com/javase/downloads/index.jsp" rel="nofollow">http://java.sun.com/javase/downloads/index.jsp</a>)
+ TOMCAT 5.5 or higher (See in <a href="http://tomcat.apache.org/index.html" class="external free" title="http://tomcat.apache.org/index.html" rel="nofollow">http://tomcat.apache.org/index.html</a>)   
+ SMTA database as prescribed above
+</pre>
+<p><br />
+</p>
+<a name="Installation" id="Installation"></a><h4> <span class="mw-headline"> Installation </span></h4>
+<pre> 1. Download a copy of the smta.war file in <a href="http://cropforge.org/frs/?group_id=78" class="external text" title="http://cropforge.org/frs/?group_id=78" rel="nofollow">Cropforge</a>.
+ 2. Deploy smta.war in Tomcat.  For detailed info on how to deploy to Tomcat via Tomcat Manager,
+    visit <a href="http://tomcat.apache.org/tomcat-5.5-doc/manager-howto.html" class="external text" title="http://tomcat.apache.org/tomcat-5.5-doc/manager-howto.html" rel="nofollow">Tomcat Manager How-To</a>.
+    Tomcat will unpack smta.war to a folder named 'smta' (if Host tag in server.xml 
+    is configured with unpackWARs=true). 
+ 3. Review configuration files located in $TOMCAT_HOME$\webapps\smta\WEB-INF\classes\
+    a) resource-cropinfo.properties 
+       This property file contains most importantly database configuration and location of 
+       SMTA pdf files.  
+       Specify the values on the left side.          
+</pre>
+<pre>       # Configuration for MySQL (url = jdbc:mysql://localhost:3306/mydb)
+       cropinfo.db.driverClassName = com.mysql.jdbc.Driver
+       cropinfo.db.protocol = jdbc
+       cropinfo.db.database = mysql
+       cropinfo.db.host = localhost
+       cropinfo.db.port = 3306
+       cropinfo.db.catalog = smta       -&gt; contains the database name    
+       cropinfo.db.username = root      -&gt; root is the username.  Change as neccessary.
+       cropinfo.db.password =           -&gt; specify password to the smta database if any        
+</pre>
+<pre>       Specify the directory of .pdf files (displayed when SMTA Full text button is clicked) here:
+</pre>
+<pre>       prefix.smta.file.path = /usr/local/tomcat/webapps/smta/files  
+</pre>
+<pre>    b) log4j.properties   
+       This is the property file for logging.  
+       Specify Tomcat directory here:
+</pre>
+<pre>       tomcat.home=/usr/local/tomcat    -&gt; Change the value to your default Tomcat directory
+</pre>
+<pre>       Specify location and name of log file here:    
+</pre>
+<pre>       log4j.appender.logger.File=${tomcat.home}/logs/cropinfo.log  
+</pre>
+<pre> 4. Reload SMTA web application via Tomcat Manager.  Visit <a href="http://tomcat.apache.org/tomcat-5.5-doc/manager-howto.html" class="external text" title="http://tomcat.apache.org/tomcat-5.5-doc/manager-howto.html" rel="nofollow">Tomcat Manager How-To</a>.
+</pre>
+<a name="Additional_Documents_of_the_SMTA_Web_Application" id="Additional_Documents_of_the_SMTA_Web_Application"></a><h3> <span class="mw-headline"> Additional Documents of the SMTA Web Application </span></h3>
+<a name="Use_Cases" id="Use_Cases"></a><h4> <span class="mw-headline"> Use Cases </span></h4>
+<p><a href="../../../../articles/u/s/e/File%7EUse_Case_Diagram_smta.jpg_7801.html" class="image" title="Image:Use_Case_Diagram__smta.jpg"><img alt="Image:Use_Case_Diagram__smta.jpg" src="../../../../images/7/7a/Use_Case_Diagram_smta.jpg" width="475" height="405" border="0" /></a>
+</p>
+<a name="Sequence_Diagram" id="Sequence_Diagram"></a><h4> <span class="mw-headline"> Sequence Diagram </span></h4>
+<a name="View_List_of_Outgoing_SMTAs" id="View_List_of_Outgoing_SMTAs"></a><h5> <span class="mw-headline"> View List of Outgoing SMTAs </span></h5>
+<p><a href="../../../../articles/s/e/q/File%7ESequence_Diagram_smta.jpg_ed72.html" class="image" title="Sequence Diagram smta.jpg"><img alt="" src="../../../../images/thumb/0/08/Sequence_Diagram_smta.jpg/700px-Sequence_Diagram_smta.jpg" width="700" height="394" border="0" /></a>
+</p>
+<a name="Class_Diagrams" id="Class_Diagrams"></a><h4> <span class="mw-headline"> Class Diagrams </span></h4>
+<a name="SMTA_DTO_Classes" id="SMTA_DTO_Classes"></a><h5> <span class="mw-headline"> SMTA DTO Classes </span></h5>
+<p><a href="../../../../articles/c/l/a/File%7EClass_Diagram_smta.jpg_65a0.html" class="image" title="Class Diagram smta.jpg"><img alt="" src="../../../../images/thumb/e/ee/Class_Diagram_smta.jpg/700px-Class_Diagram_smta.jpg" width="700" height="682" border="0" /></a>
+</p>
+<a name="SMTA_Core_Classes" id="SMTA_Core_Classes"></a><h5> <span class="mw-headline"> SMTA Core Classes </span></h5>
+<p><a href="../../../../articles/c/l/a/File%7EClass_Diagram_smta-core.jpg_0415.html" class="image" title="Class Diagram smta-core.jpg"><img alt="" src="../../../../images/thumb/2/2b/Class_Diagram_smta-core.jpg/700px-Class_Diagram_smta-core.jpg" width="700" height="685" border="0" /></a>
+</p>
+<a name="SMTA_Web_Classes" id="SMTA_Web_Classes"></a><h5> <span class="mw-headline"> SMTA Web Classes </span></h5>
+<p><a href="../../../../articles/c/l/a/File%7EClass_Diagram_smta-web.jpg_58fa.html" class="image" title="Class Diagram smta-web.jpg"><img alt="" src="../../../../images/thumb/c/c6/Class_Diagram_smta-web.jpg/700px-Class_Diagram_smta-web.jpg" width="700" height="805" border="0" /></a>
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 46/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+<div class="printfooter">
+Retrieved from "<a href="http://localhost../../../../articles/u/p/d/Updating_the_SMTA_website_98f1.html">http://localhost../../../../articles/u/p/d/Updating_the_SMTA_website_98f1.html</a>"</div>
+						<!-- end content -->
+						<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<div class="pBody">
+			<ul>
+	
+				 <li id="ca-nstab-main" class="selected"><a href="../../../../articles/u/p/d/Updating_the_SMTA_website_98f1.html" title="View the content page [c]" accesskey="c">Page</a></li>
+				 <li id="ca-talk" class="new"><a href="../../../../articles/u/p/d/Talk%7EUpdating_the_SMTA_website_bdfc.html" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				 <li id="ca-viewsource"><a href="../../../../articles/u/p/d/Updating_the_SMTA_website_98f1.html" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				 <li id="ca-history"><a href="../../../../articles/u/p/d/Updating_the_SMTA_website_98f1.html" title="Past versions of this page [h]" accesskey="h">History</a></li>			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="../../../../articles/u/s/e/Special%7EUserLogin_94cd.html" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(../../../../misc/icis-wiki3.png);" href="../../../../index.html" title="Visit the main page [z]" accesskey="z"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class='generated-sidebar portlet' id='p-navigation'>
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="../../../../index.html" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
+				<li id="n-portal"><a href="../../../../articles/c/o/m/ICISWiki%7ECommunity_Portal_7449.html" title="About the project, what you can do, where to find things">Community portal</a></li>
+				<li id="n-recentchanges"><a href="../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+				<li id="n-help"><a href="../../../../articles/c/o/n/Help%7EContents_22de.html" title="The place to find out">Help</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="../../../../articles/s/e/a/Special%7ESearch_a8e5.html" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" title="Search ICISWiki [f]" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="../../../../articles/w/h/a/Special%7EWhatLinksHere_Updating_the_SMTA_website_653e.html" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="../../../../articles/r/e/c/Special%7ERecentChangesLinked_Updating_the_SMTA_website_cb7a.html" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+<li id="t-specialpages"><a href="../../../../articles/s/p/e/Special%7ESpecialPages_f12b.html" title="List of all special pages [q]" accesskey="q">Special pages</a></li>
+				<li id="t-print"><a href="../../../../articles/u/p/d/Updating_the_SMTA_website_98f1.html" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>				<li id="t-permalink"><a href="../../../../articles/u/p/d/Updating_the_SMTA_website_98f1.html" title="Permanent link to this version of the page">Permanent link</a></li>			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="../../../../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" /></a></div>
+				<div id="f-copyrightico"><a href="../../../../../COPYING.html"><img src="/icis/skins/common/images/gnu-fdl.png" alt='GNU Free Documentation License 1.2' /></a></div>
+			<ul id="f-list">
+					<li id="credits">This page was last modified 06:37, 17 March 2009 by <a href="../../../../articles/m/h/a/User%7EMhabito_276f.html" title="User:Mhabito">Maria Corina de Luna Habito</a>. Based on work by <a href="../../../../articles/c/p/i/User%7ECpimentel_117e.html" title="User:Cpimentel">Clarissa Pimentel</a>&#32;and&#32;<a href="../../../../articles/a/p/o/User%7EAportugal_745d.html" title="User:Aportugal">Arllet Portugal</a>.</li>
+					<li id="copyright">Content is available under <a href="../../../../../COPYING.html" class="external " title="../../../../../COPYING.html">GNU Free Documentation License 1.2</a>.</li>
+					<li id="privacy"><a href="../../../../articles/p/r/i/ICISWiki%7EPrivacy_policy_0cbf.html" title="ICISWiki:Privacy policy">Privacy policy</a></li>
+					<li id="about"><a href="../../../../articles/a/b/o/ICISWiki%7EAbout_53aa.html" title="ICISWiki:About">About ICISWiki</a></li>
+					<li id="disclaimer"><a href="../../../../articles/g/e/n/ICISWiki%7EGeneral_disclaimer_9129.html" title="ICISWiki:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+</div>
+
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served in 235.004 secs. --></body></html>

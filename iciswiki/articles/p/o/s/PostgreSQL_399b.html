@@ -1,0 +1,288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta name="generator" content="MediaWiki 1.14.0" />
+		<meta name="keywords" content="PostgreSQL,Database backends" />
+		<link rel="shortcut icon" href="../../../../misc/favicon.ico" />
+		<link rel="search" type="application/opensearchdescription+xml" href="../../../../../opensearch_desc.php" title="ICISWiki (en)" />
+		<link title="Creative Commons" type="application/rdf+xml" href="../../../../articles/p/o/s/PostgreSQL_399b.html" rel="alternate meta" />
+		<link rel="copyright" href="../../../../../COPYING.html" />
+		<link rel="alternate" type="application/rss+xml" title="ICISWiki RSS Feed" href="http://localhost../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" />
+		<link rel="alternate" type="application/atom+xml" title="ICISWiki Atom Feed" href="http://localhost../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" />
+		<title>PostgreSQL - ICISWiki</title>
+		<link rel="stylesheet" href="../../../../skins/common/shared.css?195" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../../../../skins/common/commonPrint.css?195" type="text/css" media="print" />
+		<link rel="stylesheet" href="../../../../skins/monobook/main.css?195" type="text/css" media="screen" />
+		<!--[if lt IE 5.5000]><link rel="stylesheet" href="../../../../skins/monobook/IE50Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 5.5000]><link rel="stylesheet" href="../../../../skins/monobook/IE55Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 6]><link rel="stylesheet" href="../../../../skins/monobook/IE60Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 7]><link rel="stylesheet" href="../../../../skins/monobook/IE70Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7ECommon.css?195" type="text/css" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7EPrint.css?195" type="text/css" media="print" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7EMonobook.css?195" type="text/css" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/gen.css?195" type="text/css" />
+		<!--[if lt IE 7]><script type="text/javascript" src="../../../../skins/common/IEFixes.js?195"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+
+		<script type= "text/javascript">/*<![CDATA[*/
+		var skin = "monobook";
+		var stylepath = "../../../../skins";
+		var wgArticlePath = "../../../../$1";
+		var wgScriptPath = "../../../../..";
+		var wgScript = "/icis/index.php";
+		var wgVariantArticlePath = false;
+		var wgActionPaths = {};
+		var wgServer = "http://localhost";
+		var wgCanonicalNamespace = "";
+		var wgCanonicalSpecialPageName = false;
+		var wgNamespaceNumber = 0;
+		var wgPageName = "PostgreSQL";
+		var wgTitle = "PostgreSQL";
+		var wgAction = "view";
+		var wgArticleId = "2332";
+		var wgIsArticle = true;
+		var wgUserName = null;
+		var wgUserGroups = null;
+		var wgUserLanguage = "en";
+		var wgContentLanguage = "en";
+		var wgBreakFrames = false;
+		var wgCurRevisionId = "13106";
+		var wgVersion = "1.14.0";
+		var wgEnableAPI = true;
+		var wgEnableWriteAPI = true;
+		var wgSeparatorTransformTable = ["", ""];
+		var wgDigitTransformTable = ["", ""];
+		var wgRestrictionEdit = [];
+		var wgRestrictionMove = [];
+		/*]]>*/</script>
+
+		<script type="text/javascript" src="../../../../skins/common/wikibits.js?195"><!-- wikibits js --></script>
+		<!-- Head Scripts -->
+		<script type="text/javascript" src="../../../../raw/gen.js"><!-- site js --></script>
+	</head>
+<body class="mediawiki ltr ns-0 ns-subject page-PostgreSQL skin-monobook">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 id="firstHeading" class="firstHeading">PostgreSQL</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From ICISWiki</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>			<!-- start content -->
+			<p><a href="../../../../articles/d/a/t/Database_backends.html" title="Database backends"> Database backends</a> &gt; PostgreSQL
+</p>
+<table id="toc" class="toc" summary="Contents"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1"><a href="#PostgreSQL_Software_Catalogue"><span class="tocnumber">1</span> <span class="toctext">PostgreSQL Software Catalogue</span></a></li>
+<li class="toclevel-1"><a href="#Editing_the_PostgreSQL_Configuration_File"><span class="tocnumber">2</span> <span class="toctext">Editing the PostgreSQL Configuration File</span></a></li>
+<li class="toclevel-1"><a href="#New_language_for_Web_and_PostgreSQL_application.2C_Alinous-Core_1.0_Released"><span class="tocnumber">3</span> <span class="toctext">New language for Web and PostgreSQL application, Alinous-Core 1.0 Released</span></a></li>
+<li class="toclevel-1"><a href="#psqlODBC_08.02.0400_Released_.28PostgreSQL_ODBC_Driver.29"><span class="tocnumber">4</span> <span class="toctext">psqlODBC 08.02.0400 Released (PostgreSQL ODBC Driver)</span></a></li>
+<li class="toclevel-1"><a href="#psqlODBC_08.02.0300_Released_.28PostgreSQL_ODBC_Driver.29"><span class="tocnumber">5</span> <span class="toctext">psqlODBC 08.02.0300 Released (PostgreSQL ODBC Driver)</span></a></li>
+<li class="toclevel-1"><a href="#Freeware_for_converting_MS_Access_database_to_PostgreSQL_.28ongoing_project.29"><span class="tocnumber">6</span> <span class="toctext">Freeware for converting MS Access database to PostgreSQL (ongoing project)</span></a></li>
+<li class="toclevel-1"><a href="#PostgreSQL_Diff_Tool_1.0.0_beta20_released"><span class="tocnumber">7</span> <span class="toctext">PostgreSQL Diff Tool 1.0.0_beta20 released</span></a></li>
+<li class="toclevel-1"><a href="#pgAdmin_III_v1.6.3_released"><span class="tocnumber">8</span> <span class="toctext">pgAdmin III v1.6.3 released</span></a></li>
+<li class="toclevel-1"><a href="#PostgreSQL_Maestro_7.3_released"><span class="tocnumber">9</span> <span class="toctext">PostgreSQL Maestro 7.3 released</span></a></li>
+<li class="toclevel-1"><a href="#pg_bulkload_released"><span class="tocnumber">10</span> <span class="toctext">pg_bulkload released</span></a></li>
+<li class="toclevel-1"><a href="#mysql2pgsql_Version_1.2_released"><span class="tocnumber">11</span> <span class="toctext">mysql2pgsql Version 1.2 released</span></a></li>
+<li class="toclevel-1"><a href="#PostgreSQL_offers_advanced_cursor_support_as_part_of_its_core_functionality."><span class="tocnumber">12</span> <span class="toctext">PostgreSQL offers advanced cursor support as part of its core functionality.</span></a></li>
+</ul>
+</td></tr></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </script>
+<a name="PostgreSQL_Software_Catalogue" id="PostgreSQL_Software_Catalogue"></a><h2> <span class="mw-headline"> PostgreSQL Software Catalogue </span></h2>
+<p><i>(Posted June 11, 2008)</i>
+</p><p>Linked from the Download section of the PostgreSQL website, the
+Software Catalogue aims to list all the drivers, tools, applications
+and other software available to work with and on PostgreSQL in a
+single place to avoid all that tedious googling previously required! See <a href="http://www.postgresql.org/download/product-categories" class="external free" title="http://www.postgresql.org/download/product-categories" rel="nofollow">http://www.postgresql.org/download/product-categories</a>
+</p>
+<a name="Editing_the_PostgreSQL_Configuration_File" id="Editing_the_PostgreSQL_Configuration_File"></a><h2> <span class="mw-headline">Editing the PostgreSQL Configuration File </span></h2>
+<p><i>(Posted April 18, 2008)</i>
+</p><p>See:
+</p>
+<ul><li><a href="http://www.postgresql.org/files/documentation/books/aw_pgsql/hw_performance.pdf" class="external text" title="http://www.postgresql.org/files/documentation/books/aw_pgsql/hw_performance.pdf" rel="nofollow">PostgreSQL Hardware Performance Tuning</a> by Bruce Momjian
+</li><li><a href="http://www.revsys.com/writings/postgresql-performance.html" class="external text" title="http://www.revsys.com/writings/postgresql-performance.html" rel="nofollow">Performance Tuning PostgreSQL</a> by Frank Wiles
+</li></ul>
+<a name="New_language_for_Web_and_PostgreSQL_application.2C_Alinous-Core_1.0_Released" id="New_language_for_Web_and_PostgreSQL_application.2C_Alinous-Core_1.0_Released"></a><h2> <span class="mw-headline"> New language for Web and PostgreSQL application, Alinous-Core 1.0 Released   </span></h2>
+<p><i>(Posted August 6, 2007)</i>
+Tomohiro Iizuka:
+</p><p>CROSSFIRE JAPAN,INC. released new language and the development environment. 
+</p>
+<ul><li> Develop web applications using database with HTML and SQL
+</li><li> The development environment is free, and you can download it from the official website. 
+</li><li> By using Alinous-Core, it is not necessary to learn Java, PHP, Perl or Ruby. If you know HTML and SQL, you can make a WebDB application smoothly.
+</li></ul>
+<p>More information at: <a href="http://alinous.org/" class="external free" title="http://alinous.org/" rel="nofollow">http://alinous.org/</a>
+</p><p><br />
+</p><p><br />
+</p>
+<a name="psqlODBC_08.02.0400_Released_.28PostgreSQL_ODBC_Driver.29" id="psqlODBC_08.02.0400_Released_.28PostgreSQL_ODBC_Driver.29"></a><h2> <span class="mw-headline"> psqlODBC 08.02.0400 Released (PostgreSQL ODBC Driver) </span></h2>
+<p><i>(Posted May 2, 2007)</i>
+</p><p>Hiroshi Inoue: "This release corrects a problem with the source tarball of the previous
+release, and fixes some some issues discovered in the code." 
+</p><p>Release notes: <a href="http://psqlodbc.projects.postgresql.org/release.html" class="external free" title="http://psqlodbc.projects.postgresql.org/release.html" rel="nofollow">http://psqlodbc.projects.postgresql.org/release.html</a>
+Downloads: <a href="http://www.postgresql.org/ftp/odbc/versions/" class="external free" title="http://www.postgresql.org/ftp/odbc/versions/" rel="nofollow">http://www.postgresql.org/ftp/odbc/versions/</a> 
+</p><p><br />
+</p><p><br />
+</p>
+<a name="psqlODBC_08.02.0300_Released_.28PostgreSQL_ODBC_Driver.29" id="psqlODBC_08.02.0300_Released_.28PostgreSQL_ODBC_Driver.29"></a><h2> <span class="mw-headline"> psqlODBC 08.02.0300 Released (PostgreSQL ODBC Driver) </span></h2>
+<p><i>(Posted April 26, 2007)</i>
+</p><p>Hiroshi Inoue: "With this release two versions of the driver are provided for Windows;
+'PostgreSQL ANSI' which supports single and multibyte applications
+through the ANSI ODBC API, and 'PostgreSQL Unicode' which provides
+Unicode support through the Unicode ODBC API. On Unix systems, the
+driver type may be selected via a configure option. MSDTC is also
+supported on Windows, and 64 bit support is now included in the source
+code (binaries are not yet available)." 
+</p><p>Release notes: <a href="http://psqlodbc.projects.postgresql.org/release.html" class="external free" title="http://psqlodbc.projects.postgresql.org/release.html" rel="nofollow">http://psqlodbc.projects.postgresql.org/release.html</a> 
+Downloads: <a href="http://www.postgresql.org/ftp/odbc/versions/" class="external free" title="http://www.postgresql.org/ftp/odbc/versions/" rel="nofollow">http://www.postgresql.org/ftp/odbc/versions/</a> 
+</p><p><br />
+</p><p><br />
+</p>
+<a name="Freeware_for_converting_MS_Access_database_to_PostgreSQL_.28ongoing_project.29" id="Freeware_for_converting_MS_Access_database_to_PostgreSQL_.28ongoing_project.29"></a><h2> <span class="mw-headline"> Freeware for converting MS Access database to PostgreSQL (ongoing project) </span></h2>
+<p><i>(Posted April 10, 2007)</i>
+</p><p>PgFoundry: "Convert MS Access DB to PostgreSQL with indexes and cascading update/delete and autoincrement, oh my. Windows Only, it's in Visual Basic." PgFoundry has <b>not</b> released any files for this project as of today.
+Keep your eye on this page for developments: <a href="http://pgfoundry.org/projects/msdbtopg/" class="external free" title="http://pgfoundry.org/projects/msdbtopg/" rel="nofollow">http://pgfoundry.org/projects/msdbtopg/</a>
+</p><p><br />
+</p><p><br />
+</p>
+<a name="PostgreSQL_Diff_Tool_1.0.0_beta20_released" id="PostgreSQL_Diff_Tool_1.0.0_beta20_released"></a><h2> <span class="mw-headline"> PostgreSQL Diff Tool 1.0.0_beta20 released </span></h2>
+<p><i>(Posted April 10, 2007)</i>
+</p><p>PgFoundry: "Simple PostgreSQL diff tool that is useful for schema upgrades. The tool compares two schema dump files and creates output file that is (after some hand-made modifications) suitable for upgrade of old schema."
+Project information at: <a href="http://pgfoundry.org/projects/apgdiff/" class="external free" title="http://pgfoundry.org/projects/apgdiff/" rel="nofollow">http://pgfoundry.org/projects/apgdiff/</a>
+</p><p><br />
+</p><p><br />
+</p>
+<a name="pgAdmin_III_v1.6.3_released" id="pgAdmin_III_v1.6.3_released"></a><h2> <span class="mw-headline"> pgAdmin III v1.6.3 released </span></h2>
+<p><i>(Posted March 28, 2007)</i>
+</p><p>The pgAdmin Development Team is pleased to announce the release of
+pgAdmin 1.6.3, the Open Source graphical PostgreSQL administration tool
+for Windows, Linux, FreeBSD , Mac OS X and Solaris, now available for
+download in source and a variety of binary formats from: <a href="http://www.pgadmin.org/download/" class="external free" title="http://www.pgadmin.org/download/" rel="nofollow">http://www.pgadmin.org/download/</a>
+</p><p><br />
+</p><p><br />
+</p>
+<a name="PostgreSQL_Maestro_7.3_released" id="PostgreSQL_Maestro_7.3_released"></a><h2> <span class="mw-headline"> PostgreSQL Maestro 7.3 released </span></h2>
+<p><i>(Posted March 26, 2007)</i>
+</p><p>...A powerful Windows GUI solution for PostgreSQL administration and database development. 
+</p><p>"The main feature of the new version is the Graphical Database Designer - a
+case tool for managing your database in a few mouse clicks. This piece of
+our software is intended for creation of physical Entity Relationship
+Diagrams that represent objects in your PostgreSQL databases. Each diagram
+displays the tables of your database and the relationships between them."
+</p><p>More information available at:
+<a href="http://www.sqlmaestro.com/products/postgresql/maestro/" class="external free" title="http://www.sqlmaestro.com/products/postgresql/maestro/" rel="nofollow">http://www.sqlmaestro.com/products/postgresql/maestro/</a>
+</p><p><br />
+</p>
+<a name="pg_bulkload_released" id="pg_bulkload_released"></a><h2> <span class="mw-headline"> pg_bulkload released </span></h2>
+<p><i>(Posted March 19, 2007)</i>  
+</p><p>Introduction (from README.pg_bulkload): "pg_bulkload provides high-speed data loading capability to PostgreSQL users.When we load huge amount of data to a database, it is common situation that
+data set to be loaded is valid and consistent.   For example, dedicated tools
+are used to prepare such data, providing data validation in advance.   In such
+cases, we'd like to bypass any overheads within database system to load data as
+quickly as possible.  pg_bulkload is developed to help such situations.
+Therefore, it is not pg_bulkload's goal to provide detailed data validation.
+Rather, pg_bulkload assumes that loaded data set is validated by separate means.
+If you're not in such situation, you should use COPY command in PostgreSQL."
+Download pg_bulkload here: <a href="http://pgfoundry.org/projects/pgbulkload/" class="external free" title="http://pgfoundry.org/projects/pgbulkload/" rel="nofollow">http://pgfoundry.org/projects/pgbulkload/</a>
+</p><p><br />
+</p><p><br />
+</p>
+<a name="mysql2pgsql_Version_1.2_released" id="mysql2pgsql_Version_1.2_released"></a><h2> <span class="mw-headline"> mysql2pgsql Version 1.2 released </span></h2>
+<p><i>(Posted March 12, 2007)</i>
+</p><p>A Perl script that converts a mysqlDump.sql file to a postgresDump.sql file. 
+Download at: <a href="http://pgfoundry.org/projects/mysql2pgsql/" class="external free" title="http://pgfoundry.org/projects/mysql2pgsql/" rel="nofollow">http://pgfoundry.org/projects/mysql2pgsql/</a> 
+</p><p><br />
+</p><p><br />
+</p>
+<a name="PostgreSQL_offers_advanced_cursor_support_as_part_of_its_core_functionality." id="PostgreSQL_offers_advanced_cursor_support_as_part_of_its_core_functionality."></a><h2> <span class="mw-headline"> PostgreSQL offers advanced cursor support as part of its core functionality. </span></h2>
+<p><i>(Posted January 25, 2007)</i>
+</p><p>Cursor support has been available since at least <a href="http://www.postgresql.org/docs/6.4/static/sql-declare.htm" class="external text" title="http://www.postgresql.org/docs/6.4/static/sql-declare.htm" rel="nofollow">version 6.4</a>. See: <a href="http://archives.postgresql.org/pgsql-advocacy/2003-09/msg00076.php" class="external free" title="http://archives.postgresql.org/pgsql-advocacy/2003-09/msg00076.php" rel="nofollow">http://archives.postgresql.org/pgsql-advocacy/2003-09/msg00076.php</a>
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 13/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+<div class="printfooter">
+Retrieved from "<a href="http://localhost../../../../articles/p/o/s/PostgreSQL_399b.html">http://localhost../../../../articles/p/o/s/PostgreSQL_399b.html</a>"</div>
+						<!-- end content -->
+						<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<div class="pBody">
+			<ul>
+	
+				 <li id="ca-nstab-main" class="selected"><a href="../../../../articles/p/o/s/PostgreSQL_399b.html" title="View the content page [c]" accesskey="c">Page</a></li>
+				 <li id="ca-talk" class="new"><a href="../../../../articles/p/o/s/Talk%7EPostgreSQL_a1be.html" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				 <li id="ca-viewsource"><a href="../../../../articles/p/o/s/PostgreSQL_399b.html" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				 <li id="ca-history"><a href="../../../../articles/p/o/s/PostgreSQL_399b.html" title="Past versions of this page [h]" accesskey="h">History</a></li>			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="../../../../articles/u/s/e/Special%7EUserLogin_94cd.html" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(../../../../misc/icis-wiki3.png);" href="../../../../index.html" title="Visit the main page [z]" accesskey="z"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class='generated-sidebar portlet' id='p-navigation'>
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="../../../../index.html" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
+				<li id="n-portal"><a href="../../../../articles/c/o/m/ICISWiki%7ECommunity_Portal_7449.html" title="About the project, what you can do, where to find things">Community portal</a></li>
+				<li id="n-recentchanges"><a href="../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+				<li id="n-help"><a href="../../../../articles/c/o/n/Help%7EContents_22de.html" title="The place to find out">Help</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="../../../../articles/s/e/a/Special%7ESearch_a8e5.html" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" title="Search ICISWiki [f]" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="../../../../articles/w/h/a/Special%7EWhatLinksHere_PostgreSQL_4dce.html" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="../../../../articles/r/e/c/Special%7ERecentChangesLinked_PostgreSQL_ff67.html" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+<li id="t-specialpages"><a href="../../../../articles/s/p/e/Special%7ESpecialPages_f12b.html" title="List of all special pages [q]" accesskey="q">Special pages</a></li>
+				<li id="t-print"><a href="../../../../articles/p/o/s/PostgreSQL_399b.html" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>				<li id="t-permalink"><a href="../../../../articles/p/o/s/PostgreSQL_399b.html" title="Permanent link to this version of the page">Permanent link</a></li>			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="../../../../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" /></a></div>
+				<div id="f-copyrightico"><a href="../../../../../COPYING.html"><img src="/icis/skins/common/images/gnu-fdl.png" alt='GNU Free Documentation License 1.2' /></a></div>
+			<ul id="f-list">
+					<li id="credits">This page was last modified 02:56, 11 June 2008 by <a href="../../../../articles/m/h/a/User%7EMhabito_276f.html" title="User:Mhabito">Maria Corina de Luna Habito</a>. Based on work by <a href="../../../../articles/r/v/a/User%7ERvalerio_c9de.html" title="User:Rvalerio">Rowena Valerio</a>.</li>
+					<li id="copyright">Content is available under <a href="../../../../../COPYING.html" class="external " title="../../../../../COPYING.html">GNU Free Documentation License 1.2</a>.</li>
+					<li id="privacy"><a href="../../../../articles/p/r/i/ICISWiki%7EPrivacy_policy_0cbf.html" title="ICISWiki:Privacy policy">Privacy policy</a></li>
+					<li id="about"><a href="../../../../articles/a/b/o/ICISWiki%7EAbout_53aa.html" title="ICISWiki:About">About ICISWiki</a></li>
+					<li id="disclaimer"><a href="../../../../articles/g/e/n/ICISWiki%7EGeneral_disclaimer_9129.html" title="ICISWiki:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+</div>
+
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served in 121.932 secs. --></body></html>

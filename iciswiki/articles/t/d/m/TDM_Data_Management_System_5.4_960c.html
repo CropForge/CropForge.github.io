@@ -1,0 +1,936 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta name="generator" content="MediaWiki 1.14.0" />
+		<meta name="keywords" content="TDM Data Management System 5.4" />
+		<link rel="shortcut icon" href="../../../../misc/favicon.ico" />
+		<link rel="search" type="application/opensearchdescription+xml" href="../../../../../opensearch_desc.php" title="ICISWiki (en)" />
+		<link title="Creative Commons" type="application/rdf+xml" href="../../../../articles/t/d/m/TDM_Data_Management_System_5.4_960c.html" rel="alternate meta" />
+		<link rel="copyright" href="../../../../../COPYING.html" />
+		<link rel="alternate" type="application/rss+xml" title="ICISWiki RSS Feed" href="http://localhost../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" />
+		<link rel="alternate" type="application/atom+xml" title="ICISWiki Atom Feed" href="http://localhost../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" />
+		<title>TDM Data Management System 5.4 - ICISWiki</title>
+		<link rel="stylesheet" href="../../../../skins/common/shared.css?195" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../../../../skins/common/commonPrint.css?195" type="text/css" media="print" />
+		<link rel="stylesheet" href="../../../../skins/monobook/main.css?195" type="text/css" media="screen" />
+		<!--[if lt IE 5.5000]><link rel="stylesheet" href="../../../../skins/monobook/IE50Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 5.5000]><link rel="stylesheet" href="../../../../skins/monobook/IE55Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 6]><link rel="stylesheet" href="../../../../skins/monobook/IE60Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 7]><link rel="stylesheet" href="../../../../skins/monobook/IE70Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7ECommon.css?195" type="text/css" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7EPrint.css?195" type="text/css" media="print" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7EMonobook.css?195" type="text/css" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/gen.css?195" type="text/css" />
+		<!--[if lt IE 7]><script type="text/javascript" src="../../../../skins/common/IEFixes.js?195"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+
+		<script type= "text/javascript">/*<![CDATA[*/
+		var skin = "monobook";
+		var stylepath = "../../../../skins";
+		var wgArticlePath = "../../../../$1";
+		var wgScriptPath = "../../../../..";
+		var wgScript = "/icis/index.php";
+		var wgVariantArticlePath = false;
+		var wgActionPaths = {};
+		var wgServer = "http://localhost";
+		var wgCanonicalNamespace = "";
+		var wgCanonicalSpecialPageName = false;
+		var wgNamespaceNumber = 0;
+		var wgPageName = "TDM_Data_Management_System_5.4";
+		var wgTitle = "TDM Data Management System 5.4";
+		var wgAction = "view";
+		var wgArticleId = "2645";
+		var wgIsArticle = true;
+		var wgUserName = null;
+		var wgUserGroups = null;
+		var wgUserLanguage = "en";
+		var wgContentLanguage = "en";
+		var wgBreakFrames = false;
+		var wgCurRevisionId = "8514";
+		var wgVersion = "1.14.0";
+		var wgEnableAPI = true;
+		var wgEnableWriteAPI = true;
+		var wgSeparatorTransformTable = ["", ""];
+		var wgDigitTransformTable = ["", ""];
+		var wgRestrictionEdit = [];
+		var wgRestrictionMove = [];
+		/*]]>*/</script>
+
+		<script type="text/javascript" src="../../../../skins/common/wikibits.js?195"><!-- wikibits js --></script>
+		<!-- Head Scripts -->
+		<script type="text/javascript" src="../../../../raw/gen.js"><!-- site js --></script>
+	</head>
+<body class="mediawiki ltr ns-0 ns-subject page-TDM_Data_Management_System_5_4 skin-monobook">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 id="firstHeading" class="firstHeading">TDM Data Management System 5.4</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From ICISWiki</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>			<!-- start content -->
+			<table id="toc" class="toc" summary="Contents"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1"><a href="#INTRODUCTION"><span class="tocnumber">1</span> <span class="toctext">INTRODUCTION</span></a></li>
+<li class="toclevel-1"><a href="#THE_DMS_DATA_MODEL"><span class="tocnumber">2</span> <span class="toctext">THE DMS DATA MODEL</span></a>
+<ul>
+<li class="toclevel-2"><a href="#STUDY"><span class="tocnumber">2.1</span> <span class="toctext">STUDY</span></a></li>
+<li class="toclevel-2"><a href="#FACTORS.2C_LABELS_and_LEVELS"><span class="tocnumber">2.2</span> <span class="toctext">FACTORS, LABELS and LEVELS</span></a></li>
+<li class="toclevel-2"><a href="#OBSERVATION_UNITS"><span class="tocnumber">2.3</span> <span class="toctext">OBSERVATION UNITS</span></a></li>
+<li class="toclevel-2"><a href="#VARIATES"><span class="tocnumber">2.4</span> <span class="toctext">VARIATES</span></a></li>
+<li class="toclevel-2"><a href="#DATUM_and_VALUE"><span class="tocnumber">2.5</span> <span class="toctext">DATUM and VALUE</span></a></li>
+<li class="toclevel-2"><a href="#Multiple_representations_of_OBSERVATION_UNITS"><span class="tocnumber">2.6</span> <span class="toctext">Multiple representations of OBSERVATION UNITS</span></a></li>
+<li class="toclevel-2"><a href="#EFFECTS"><span class="tocnumber">2.7</span> <span class="toctext">EFFECTS</span></a></li>
+<li class="toclevel-2"><a href="#ATTRIBUTES"><span class="tocnumber">2.8</span> <span class="toctext">ATTRIBUTES</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#THE_ICIS_DMS_SCHEMA"><span class="tocnumber">3</span> <span class="toctext">THE ICIS DMS SCHEMA</span></a>
+<ul>
+<li class="toclevel-2"><a href="#STUDY_Table"><span class="tocnumber">3.1</span> <span class="toctext">STUDY Table</span></a></li>
+<li class="toclevel-2"><a href="#VARIATE_Table"><span class="tocnumber">3.2</span> <span class="toctext">VARIATE Table</span></a></li>
+<li class="toclevel-2"><a href="#FACTOR_Table"><span class="tocnumber">3.3</span> <span class="toctext">FACTOR Table</span></a></li>
+<li class="toclevel-2"><a href="#LEVEL__Tables"><span class="tocnumber">3.4</span> <span class="toctext">LEVEL  Tables</span></a></li>
+<li class="toclevel-2"><a href="#EFFECT_Table"><span class="tocnumber">3.5</span> <span class="toctext">EFFECT Table</span></a></li>
+<li class="toclevel-2"><a href="#OINDEX_Table"><span class="tocnumber">3.6</span> <span class="toctext">OINDEX Table</span></a></li>
+<li class="toclevel-2"><a href="#DATA_Tables_.28DATA_N.2C__DATA_C.2C__DATA_T.29"><span class="tocnumber">3.7</span> <span class="toctext">DATA Tables (DATA_N,  DATA_C,  DATA_T)</span></a></li>
+<li class="toclevel-2"><a href="#DMSATTR_Table"><span class="tocnumber">3.8</span> <span class="toctext">DMSATTR Table</span></a></li>
+<li class="toclevel-2"><a href="#DATATTR_Table."><span class="tocnumber">3.9</span> <span class="toctext">DATATTR Table.</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </script>
+<a name="INTRODUCTION" id="INTRODUCTION"></a><h3> <span class="mw-headline"> <b>INTRODUCTION</b> </span></h3>
+<p>The Data Management System (DMS) is the component of ICIS that manages environmental data, germplasm characterization data and evaluation data for genetic resources and crop improvement projects. DMS links these data to genotype information in the ICIS Genealogy Management System (GMS) and to location information in the Location Management Module (LMM) as well as providing links to other specialized data sources. DMS also allows integration of data from different studies, thus permitting a broad range of queries across trials or types of factors and variates.
+</p><p>The Functions of the DMS are to:
+</p>
+<ol><li>store and manage documented and structured data from genetic resource, variety evaluation and crop improvement studies,
+</li><li>link data to specialised data sources such as GMS, soil and climate databases and 
+</li><li>facilitate enquiries, searches and data extraction across studies according to structured criteria for data selection.
+</li></ol>
+<p>Although there is an implicit emphasis on germplasm in the ICIS project, the DMS can be used for data from other research areas, e.g., natural resources and economics. Consequently, the logical structure being developed will consider any research data, whether explicitly concerned with genetic resources or not. Clearly, data which are not concerned with genotypes need not be linked to GMS, but other functions remain relevant.
+</p><p>All types of data will be accommodated in DMS including raw data observed data, derived data and summary statistics. Data may have continuous or discrete numeric values or text or categorical character values. For example, observations on disease resistance or nutrient efficiency of a genotype can be numerical measurements, scored or calculated indices or text data. More complex forms of data, such as pictures or documents will also be considered.
+</p><p>As a general principle, any data that are routinely represented in field books or laboratory books or spread sheets will be accommodated in DMS provided they are static. That is, data linked by dynamic formulae to other data in tables or spreadsheets will be considered as fixed at the values they had at the time the data is loaded into DMS. Another principle underlying the design of DMS is that it will handle data and documentation on the basis of individual studies. Integration across studies will be facilitated by another module known as the Data Property Management Module  (DPMM) described in Chapter 8.
+</p><p>Research programs are routinely managed in a hierarchy of aggregation. For example at IRRI, this is represented by the sequence: Program, Project, Output and Activity. Below this are the individual experiments or surveys which we will term Studies. The first four levels are administrative and are managed by a Project Management System which is largely concerned with budgeting, planning, resource allocation and reporting. The DMS is concerned with the last category, Study, and at IRRI the DMS will link to the Project Monitoring System via a Project Monitoring Key.
+</p>
+<a name="THE_DMS_DATA_MODEL" id="THE_DMS_DATA_MODEL"></a><h3> <span class="mw-headline">THE DMS DATA MODEL</span></h3>
+<p>In order to clarify the definition of entities in the DMS data model we will consider data from a typical split-plot field experiment. Results of such a study could be represented as in the following table:
+</p><p>Table 4.1 Serial Spread-sheet Representation for a Split-plot experiment
+</p>
+<table border="1" cellpadding="2">
+<tr>
+<th width="12.5%"> STUDY
+</th><th width="12.5%"> REP
+</th><th width="12.5%"> MAINPLOT
+</th><th width="12.5%"> SUBPLOT
+</th><th width="12.5%"> VARIETY
+</th><th width="12.5%"> GID
+</th><th width="12.5%"> FERT
+</th><th width="12.5%"> YIELD
+</th></tr>
+<tr>
+<td>S9801
+</td><td>1
+</td><td>1
+</td><td>1
+</td><td>B
+</td><td>100
+</td><td>100
+</td><td>10.3
+</td></tr>
+<tr>
+<td>S9801
+</td><td>1
+</td><td>1
+</td><td>2
+</td><td>B
+</td><td>100
+</td><td>200
+</td><td>12.7
+</td></tr>
+<tr>
+<td>S9801
+</td><td>1
+</td><td>2
+</td><td>1
+</td><td>C
+</td><td>102
+</td><td>200
+</td><td>18.4
+</td></tr>
+<tr>
+<td>S9801
+</td><td>1
+</td><td>2
+</td><td>2
+</td><td>C
+</td><td>102
+</td><td>100
+</td><td>13.7
+</td></tr>
+<tr>
+<td>S9801
+</td><td>1
+</td><td>3
+</td><td>1
+</td><td>A
+</td><td>105
+</td><td>100
+</td><td>12.6
+</td></tr>
+<tr>
+<td>S9801
+</td><td>1
+</td><td>3
+</td><td>2
+</td><td>A
+</td><td>105
+</td><td>200
+</td><td>16.7
+</td></tr>
+<tr>
+<td>S9801
+</td><td>2
+</td><td>1
+</td><td>1
+</td><td>B
+</td><td>100
+</td><td>200
+</td><td>19.2
+</td></tr>
+<tr>
+<td>S9801
+</td><td>2
+</td><td>1
+</td><td>2
+</td><td>B
+</td><td>100
+</td><td>100
+</td><td>12.3
+</td></tr>
+<tr>
+<td>S9801
+</td><td>2
+</td><td>2
+</td><td>1
+</td><td>A
+</td><td>105
+</td><td>100
+</td><td>17.1
+</td></tr>
+<tr>
+<td>S9801
+</td><td>2
+</td><td>2
+</td><td>2
+</td><td>A
+</td><td>105
+</td><td>200
+</td><td>14.1
+</td></tr>
+<tr>
+<td>S9801
+</td><td>2
+</td><td>3
+</td><td>1
+</td><td>C
+</td><td>102
+</td><td>200
+</td><td>16.3
+</td></tr>
+<tr>
+<td>S9801
+</td><td>2
+</td><td>3
+</td><td>2
+</td><td>C
+</td><td>102
+</td><td>100
+</td><td>12.2
+</td></tr></table>
+<p><br />
+Data sets are typically arranged in columns as in Table 4.1, we call the columns VARIABLES since each row may record a different value for each variable.  The first seven variables define the source and context of the data. We refer to such variables as FACTORS. The eighth variable contains measured data. We call these data variables VARIATES, there are usually several variates in a data set.  Table 4.1 represents all factors serially. Occasionally, for easier comparison or more compact presentation, variates are split into parallel columns, one for each level of a factor. For example  we could have used a table with six rows, four columns containing factors, and two columns containing the variate, one for YIELD AT FERT 100 and one for YIELD AT FERT 200, deleting the SUBPLOT and FERT columns. In this representation the factor FERT is in parallel. Such parallel spreadsheets can always be converted to serial format and hence we consider spreadsheets with all variates represented serially to motivate ourdata model.   The factor STUDY has only one level and so is usually omitted in field books, but it is always implied and we shall use it explicitly to link other study properties to the data.
+</p><p><br />
+The distinction between FACTORS and VARIATES is not always as clear as in Example 4.1 and certainly a variable describing a property such as nitrogen fertilizer may appear as a FACTOR in one experiment and as a VARIATE in a survey study. This ambiguity is accepted by the data model but the DPMM accommodates it and allows integration across studies by using a common controlled vocabulary for FACTORS and VARIATES. Location and time of observations are treated in the same way as other contextual information. Georeferences, rows and columns or other coordinates may appear as FACTORS or VARIATES and in the case of georeferences are linked to the LMM and are hence accessible to GIS applications. Discrete sampling times or locations may be expressed as FACTORS, but continuous ones need to be treated as VARIATES which are linked by context to the observation variates they describe.
+</p>
+<a name="STUDY" id="STUDY"></a><h4> <span class="mw-headline"> STUDY</span></h4>
+<p>A STUDY is the basic, reportable unit of research, it is synonymous with the notions of experiment, nursery or survey. Since DMS must deal with any of these we will use  the term study. A study is characterized by a set of scientific objectives and testable hypotheses and results in the collection of one or more data sets similar to that in table 4.1. The division of data into sets is usually motivated by convenience, for example data collected from different sampling scales is most conveniently treated in different data sets. Similarly, data collected at different times or from different locations are also often treated as different data sets, although it is feasible to treat these divisions in a single data set. The point is that DMS is flexible enough to manage data in all the ways that researchers require.
+</p>
+<a name="FACTORS.2C_LABELS_and_LEVELS" id="FACTORS.2C_LABELS_and_LEVELS"></a><h4> <span class="mw-headline">FACTORS, LABELS and LEVELS</span></h4>
+<p>FACTORS are classifying variables in a study which take values from finite sets of discrete LEVELS. These levels are usually labeled in some way to document the source and context of the data by expressing the conditions under which the data were collected or derived. For example, the names of treatments or design structures applying to the unit or units from which the data are recorded, or conditions such as the time and location of measurement. These LABELS are usually listed in columns in the data set as in Table 4.1 The study itself will be treated in the data model as a factor with exactly one level, the study name.  Hence, every study has at least one factor.
+</p><p>A single factor is often represented by more than one set of LABELs. For example the genetic entities in a trial may be represented by entry number and entry name. Each of these is a different LABEL for the factor. Generally labels carry different information about the levels. VARIETY and GID in Table 4.1 are labels of the same factor, one containing names, A, B, C and the other containing GIDs which link to GMS. In DMS, LABELS belonging to the same factor are linked together by a single Factor ID.  Note that while the first, and possibly only, LABEL for a factor must uniquely identify all LEVELS of that factor, subsequent LABELs need not identify all levels or may even label several levels in the same way. However no level can have more than one value of the same LABEL. Hence, in Table 4.1, FERT is not a label of MAINPLOT, and VARIETY is not a label of SUBPLOT, these are independent factors which lead to alternative representations of the field objects.
+Factors are named and described in each study, they have three main attributes, the PROPERTY of the experimental material or survey units being manipulated or stratified, the METHOD or procedure by which the levels are applied and the SCALE or measurement units in which the levels are expressed. All levels of a particular factor are expressed in the same scale. Names of factors are consistent within studies and equivalent factors are linked across studies through common PROPERTYs. PROPERTY is subject to a controlled vocabulary to facilitate this linkage. This vocabulary is managed through the Data Property Management Module (Chapter 8).
+</p><p>STUDY FACTORS are factors with a single level which applies to all observation units in a study. The study itself is such a factor with study name as the sole level. Other study factors are represented as labels of the study name and can be used to document global conditions. The same PROPERTY may be represented by a STUDY FACTOR in one study and a multi-level factor in another. As far as possible, general properties of all units in a study should be expressed as STUDY FACTORS because the factor structure and management will allow full integration across studies. For example, non-treatment conditions, which could include variety, irrigation, planting method and weed control should, where possible, be expressed as STUDY FACTORS.
+</p>
+<a name="OBSERVATION_UNITS" id="OBSERVATION_UNITS"></a><h4> <span class="mw-headline">OBSERVATION UNITS</span></h4>
+<p>Data sources such as field objects or sampling units are identified by combinations of levels of design or sampling factors. In Table 4.1 the factors REP, MAINPLOT and SUBPLOT are all design factors and combinations of one level from each identify physical sub-plots in the study. Other factors define the context of the data, in experiments these are called treatment factors. Combinations of one level from each treatment factor define the treatments which are applied to field objects. In Table 4.1 VARIETY and FERT are treatment factors. Data values such as treatment means are associated with level combinations of treatment factors which do not correspond to field objects but which can be thought of as data sources. Both types of data sources, field objects and treatment combinations, are referred to as OBSERVATION UNITS. Observation units are conceptually equivalent to rows in a serially structured spreadsheet.
+OBSERVATION UNITS are the real and conceptual data sources in a study defined by distinct level combinations of one or more factors. Not all factors in a study are involved in this indexing for every OBSERVATION UNIT. However the STUDY FACTOR, with its single level, is involved in indexing every OBSERVATION UNIT. Hence OBSERVATION UNITS belong to unique studies. Every study has a STUDY UNIT which is the single observation unit indexed by the level of the STUDY FACTOR alone.
+</p>
+<a name="VARIATES" id="VARIATES"></a><h4> <span class="mw-headline">VARIATES</span></h4>
+<p>Each study involves the recording of data for one or more properties of some observation units. The data being recorded are described by VARIATES and are often represented as columns in spreadsheets, such as the YIELD column in table 4.1. Each VARIATE has the same three attributes as a FACTOR: the PROPERTY or trait being measured, the METHOD or procedure by which the value is observed or derived and the SCALE or measurement units in which the value is expressed. VARIATES are named and described within studies and the name should be consistent throughout a study. The common vocabulary of PROPERTYs links VARIATES across studies in the same way that FACTORS are linked across studies.
+All values of a particular variate should be of the same data type. At present three types are being considered numeric, character (&lt;50bytes) and text (memo). This range can be extended to cover other types such as binary, picture, link or other object. There is also the possibility to define variate types such as observed scaler, derived scaler, observed vector element, derived vector element. This gives the possibility to define multivariate observations: Ids of variates with vector type could point to a vector table indicating the other elements of the multivariate structure.
+</p>
+<a name="DATUM_and_VALUE" id="DATUM_and_VALUE"></a><h4> <span class="mw-headline">DATUM and VALUE</span></h4>
+<p>The central entity in the DMS data model is the DATUM which links to exactly one OBSERVATION UNIT and exactly one VARIATE. The DATUM is conceptually equivalent to a cell in a variate column of a spreadsheet or field book. The most important attribute of a datum is its VALUE which is the recorded value of the associated VARIATE for the associated OBSERVATION UNIT. 
+Each DATUM belongs to a unique study according to its VARIATE and OBSERVATION UNIT. Data values which pertain to the whole study, such as measured site characteristics in a single site study, are linked to the STUDY UNIT. Data in DMS will not be actively linked to other data values by formulae as is possible in some spreadsheets.  Data values can have any data type such as integer, real, character, text, date, time or even image or document. Data from multiple studies may be exported for reporting or combined analysis, but if they are to be managed as a set in DMS they must be copied to a single study which may have integrative interpretation as its sole objective.
+It may be necessary to ensure that each VARIATE-OBSERVATION UNIT pair can have only one DATUM. This is required to uniquely identify a data value, for example to link it with a data attribute (4.2.8). The consequences of this are that repeat observations on any unit or multiple observations taken at irregular time intervals need to be indexed by a new factor which may have numerous of varying numbers of levels for each field object.
+</p>
+<a name="Multiple_representations_of_OBSERVATION_UNITS" id="Multiple_representations_of_OBSERVATION_UNITS"></a><h4> <span class="mw-headline">Multiple representations of OBSERVATION UNITS</span></h4>
+<p>Clearly, in Table 4.1 we have more factors than necessary to identify the 12 sub-plots. In fact the level combinations of REP, MAINPLOT and SUBPLOT or any triple with MAINPLOT and/or SUBPLOT replaced by VARIETY and FERT respectively, will uniquely define the sub-plots. One reason why this redundancy occurs is because different factorial representations of observation units are convenient at different times during the execution of a study. At the design stage, REP, MAINPLOT and SUBPLOT will be used. At the lay-out stage, a new factor, PLOT, may be defined, as in Table 4.2, with levels PLT01 to PLT12 which label the sub-plots. At the time of treatment application, REP, VARIETY and FERT may be recorded.
+</p><p>Table 4.2 illustrates how a new variate like pre-planting weed density, WEEDS, and a new FACTOR like PLOT may be added to existing data in a study.  In some cases the new data may come from new OBSERVATION UNITS, but in this case PLOT is a new representation of existing units, the sub-plots. It is important to note that whenever a new representation is used for the first time it must appear with one of the previous representations of the same units. For example to load the new data in Table 4.2 we would have to add REP, MAINPLOT and SUBPLOT or REP, VARIETY and FERT columns to explicitly define the representation otherwise the rows of the new table will be treated as new OBSERVATION UNITS.
+</p><p>Table 4.2 Data obtained from the Lay-out stage of a Split-plot experiment
+</p>
+<table border="1" cellpadding="2">
+<tr>
+<th>STUDY
+</th><th>PLOT
+</th><th>WEEDS
+</th></tr>
+<tr>
+<td>STUDY
+</td><td>PLOT
+</td><td>WEEDS
+</td></tr>
+<tr>
+<td>S9801
+</td><td>PLT01
+</td><td>HIGH
+</td></tr>
+<tr>
+<td>S9801
+</td><td>PLT02
+</td><td>HIGH
+</td></tr>
+<tr>
+<td>S9801
+</td><td>PLT03
+</td><td>MED
+</td></tr>
+<tr>
+<td>S9801
+</td><td>PLT04
+</td><td>LOW
+</td></tr>
+<tr>
+<td>S9801
+</td><td>PLT05
+</td><td>HIGH
+</td></tr>
+<tr>
+<td>S9801
+</td><td>PLT06
+</td><td>LOW
+</td></tr>
+<tr>
+<td>S9801
+</td><td>PLT07
+</td><td>LOW
+</td></tr>
+<tr>
+<td>S9801
+</td><td>PLT08
+</td><td>MED
+</td></tr>
+<tr>
+<td>S9801
+</td><td>PLT09
+</td><td>HIGH
+</td></tr>
+<tr>
+<td>S9801
+</td><td>PLT10
+</td><td>LOW
+</td></tr>
+<tr>
+<td>S9801
+</td><td>PLT11
+</td><td>MED
+</td></tr>
+<tr>
+<td>S9801
+</td><td>PLT12
+</td><td>LOW
+</td></tr></table>
+<a name="EFFECTS" id="EFFECTS"></a><h4> <span class="mw-headline">EFFECTS</span></h4>
+<p>Effects are sets of observation units in a study which are indexed by levels of 
+subsets of the FACTORS in the study. For example in Table 4.1, with the STUDY factor fixed, REP and MAINPLOT index the set of six main plots in the study. Similarly, VARIETY and FERT index a set of units relating to each treatment. 
+</p><p>Effects form natural hierarchies according to the nesting of their index-factor subsets. For example the sub-plot effect of Table 4.1, indexed by factors REP, MAINPLOT and SUBPLOT, is nested within the main-plot effect indexed by REP and MAINPLOT only. Several effect hierarchies may be important in a single study. For example the design hierarchy for Table 4.1 includes sub-plots, whole plots, reps, and site but there is also a treatment hierarchy. This also starts with sub-plots, but now indexed by REP, VARIETY and FERT which are nested in a treatment effect indexed by VARIETY and FERT and which in turn nests VARIETY and FERT effects. The treatment hierarchy amalgamates different sets of field objects from the design hierarchy because of the randomization of treatments to field objects. Other studies have yet other hierarchies of interest such as genetic studies where there may be a genealogical hierarchy.
+</p><p>Data associated with different effects may result from data collection at different sampling scales or on different field objects, but they often arise by statistical amalgamation of data values over related units in lower level effects. The interest in data amalgamated over different hierarchies is another reason why multiple representations of OBSERVATION UNITS occur.
+</p><p><br />
+Table 4.3 Treatment means for the  Split-plot experiment of Table 4.1
+</p>
+<table border="1" cellpadding="2">
+<tr>
+<th>STUDY
+</th><th>TRT
+</th><th>VARIETY
+</th><th>FERT
+</th><th>YIELD
+</th></tr>
+<tr>
+<td>S9801
+</td><td>1
+</td><td>A
+</td><td>100
+</td><td>14.85
+</td></tr>
+<tr>
+<td>S9801
+</td><td>2
+</td><td>A
+</td><td>200
+</td><td>15.40
+</td></tr>
+<tr>
+<td>S9801
+</td><td>3
+</td><td>B
+</td><td>100
+</td><td>11.30
+</td></tr>
+<tr>
+<td>S9801
+</td><td>4
+</td><td>B
+</td><td>200
+</td><td>15.95
+</td></tr>
+<tr>
+<td>S9801
+</td><td>5
+</td><td>C
+</td><td>100
+</td><td>12.95
+</td></tr>
+<tr>
+<td>S9801
+</td><td>6
+</td><td>C
+</td><td>200
+</td><td>17.35
+</td></tr></table>
+<p>Table 4.3 shows treatment means from Table 4.1. It introduces new OBSERVATION UNITS for the treatment effect, and these have two representations, one indexed by existing factors VARIETY and FERT and another defined by the new factor TRT. It is possible to define sub-effects by fixing levels of some indexing factors. This would allow more precise grouping of OBSERVATION UNITS. Also, special EFFECT UNITS could be defined to represent all units in a particular effect. In this way data relating to all the units, such as Standard Errors or other statistical parameters can be linked to EFFECT UNITS instead of having to be repeated for every OBSERVATION UNIT in the effect. EFFECT UNITS could be managed like other OBSERVATION UNITS but with missing values for the levels of indexing factors.
+</p>
+<a name="ATTRIBUTES" id="ATTRIBUTES"></a><h4> <span class="mw-headline">ATTRIBUTES</span></h4>
+<p>It is possible for users to define new data fields for any entity in the data model – USER DEFINED FIELDS. These can be stored as DMS ATTRIBUTES for elements having unique Ids within entities. For example studies, variates or factors. Data values require two Ids, VARIATE and OBSERVATION UNIT so attributes for data values are managed as DATA ATTRIBUTES. 
+</p><p>Fig 4.2.1	SCHEMATIC EXAMPLE OF THE DMS DATA MODEL
+The following tables give a schematic representation of the example data from tables 4.2.1, 4.2.2, and 4.2.3 in the format of the DMS data model
+</p><p><a href="../../../../articles/t/a/b/File%7ETable4_3_1.JPG_4ab2.html" class="image" title="Image:Table4_3_1.JPG"><img alt="Image:Table4_3_1.JPG" src="../../../../images/6/62/Table4_3_1.JPG" width="523" height="275" border="0" /></a>
+</p><p><a href="../../../../articles/t/m/d/File%7ETMD_DMS_Observation_Units.JPG_7600.html" class="image" title="Image:TMD_DMS_Observation_Units.JPG"><img alt="Image:TMD_DMS_Observation_Units.JPG" src="../../../../images/a/a6/TMD_DMS_Observation_Units.JPG" width="569" height="495" border="0" /></a>
+</p><p><b>Figure 4.2.2 The DMS data model for ICIS</b>
+</p>
+<div class="center"><div class="floatnone"><a href="../../../../articles/d/m/s/File%7EDMS_Data_Model.jpg_3cbc.html" class="image" title="DMS Data Model.jpg"><img alt="" src="../../../../images/thumb/6/68/DMS_Data_Model.jpg/500px-DMS_Data_Model.jpg" width="500" height="375" border="0" /></a></div></div>
+<a name="THE_ICIS_DMS_SCHEMA" id="THE_ICIS_DMS_SCHEMA"></a><h3> <span class="mw-headline">THE ICIS DMS SCHEMA</span></h3>
+<a name="STUDY_Table" id="STUDY_Table"></a><h4> <span class="mw-headline">STUDY Table</span></h4>
+<p>The table with the research studies
+</p>
+<table border="1" cellpadding="2">
+<tr>
+<th>Field name
+</th><th>Description
+</th><th>Type
+</th><th>Length
+</th></tr>
+<tr>
+<td>STUDYID
+</td><td>Unique identifier of the Study. Link to the VARIATE and FACTOR table
+</td><td>Number (long)
+</td><td>4
+</td></tr>
+<tr>
+<td>SNAME
+</td><td>Working name of the study, e.g., 1998/brw/1
+</td><td>Char
+</td><td>50
+</td></tr>
+<tr>
+<td>PMKEY
+</td><td>The program/project/activity  which the study is  related. Link to the Project Management Database
+</td><td>Number (long)
+</td><td>4
+</td></tr>
+<tr>
+<td>TITLE
+</td><td>The title of the study
+</td><td>Char
+</td><td>255
+</td></tr>
+<tr>
+<td>OBJECTIV
+</td><td>The objectives and hypotheses of the study.
+</td><td>Text
+</td><td>&nbsp;
+</td></tr>
+<tr>
+<td>INVESTID
+</td><td>The primary  investigator of the Study. Link to the PERSONS table
+</td><td>Number (long)
+</td><td>4
+</td></tr>
+<tr>
+<td>STYPE
+</td><td>The type of the study.  It can be Experiment, Nursery, Survey, Genotype, sMTA, Linkage Map Study , Transcript Expression Study. (E,N,S,G,M,L, T)
+</td><td>Char
+</td><td>1
+</td></tr>
+<tr>
+<td>SDATE
+</td><td>The date the study is started: YYYYMMDD
+</td><td>Number (long)
+</td><td>4
+</td></tr>
+<tr>
+<td>EDATE
+</td><td>The date the study is ended YYYYMMDD
+</td><td>Number (long)
+</td><td>4
+</td></tr>
+<tr>
+<td>USERID
+</td><td>The ID of the user who loaded the study
+</td><td>Number (long)
+</td><td>4
+</td></tr></table>
+<a name="VARIATE_Table" id="VARIATE_Table"></a><h4> <span class="mw-headline">VARIATE Table</span></h4>
+<p>The table of variates which are observed in the studies.
+</p>
+<table border="1" cellpadding="2">
+<tr>
+<th>Field name
+</th><th>Description
+</th><th>Type
+</th><th>Length
+</th></tr>
+<tr>
+<td>VARIATID
+</td><td>Unique identifier for a variate. Link to the DATA tables
+</td><td>Number (long)
+</td><td>4
+</td></tr>
+<tr>
+<td>VNAME
+</td><td>The name of the variate
+</td><td>Char
+</td><td>50
+</td></tr>
+<tr>
+<td>VTYPE
+</td><td>The type of the variate It can be a Measurement Variate, Derived Variate,  or Summary
+<p>Variate. (MV, DV, SV)	
+</p>
+</td><td>Char
+</td><td>2
+</td></tr>
+<tr>
+<td>STUDYID
+</td><td>The study where the variate has been observed. Link to the STUDY table
+</td><td>Number (long)
+</td><td>4
+</td></tr>
+<tr>
+<td>TRAITID
+</td><td>The corresponding Property of the variate. Link to the TRAIT table
+</td><td>Number (long)
+</td><td>4
+</td></tr>
+<tr>
+<td>SCALEID
+</td><td>The corresponding scale, used for measuring the variate. Link to the SCALES table
+</td><td>Number (long)
+</td><td>4
+</td></tr>
+<tr>
+<td>TMETHID
+</td><td>The method of measuring the variate. Link to the TMETHODS table.
+</td><td>Number (long)
+</td><td>4
+</td></tr>
+<tr>
+<td>DTYPE
+</td><td>The type of the data recorded for the variate. It can be numeric, character or text
+<p>(N,C,T)	
+</p>
+</td><td>Char
+</td><td>1
+</td></tr></table>
+<a name="FACTOR_Table" id="FACTOR_Table"></a><h4> <span class="mw-headline">FACTOR Table</span></h4>
+<p>The table of factors being applied to the studies.
+</p>
+<table border="1" cellpadding="2">
+<tr>
+<th>Field name
+</th><th>Description
+</th><th>Type
+</th><th>Length
+</th></tr>
+<tr>
+<td>LABELID
+</td><td>Unique identifier for a label of a factor.  Link to the LEVELS table
+</td><td>Number (long)
+</td><td>4
+</td></tr>
+<tr>
+<td>FACTORID
+</td><td>A number identifying the factor. Link to the LEVELS and OINDEX tables.
+</td><td>Number (long)
+</td><td>4
+</td></tr>
+<tr>
+<td>FNAME
+</td><td>The name of the factor
+</td><td>Char
+</td><td>50
+</td></tr>
+<tr>
+<td>STUDYID
+</td><td>The study where the factor has been applied. Link to the STUDY table
+</td><td>Number (long)
+</td><td>4
+</td></tr>
+<tr>
+<td>TRAITID
+</td><td>The corresponding Property of the factor. Link to the PROPERTYS table
+</td><td>Number (long)
+</td><td>4
+</td></tr>
+<tr>
+<td>SCALEID
+</td><td>The corresponding scale used for the factor. Link to the SCALES table
+</td><td>Number (long)
+</td><td>4
+</td></tr>
+<tr>
+<td>TMETHID
+</td><td>The method of measuring the factor. Link to the TMETHODS table
+</td><td>Number (long)
+</td><td>4
+</td></tr>
+<tr>
+<td>LTYPE
+</td><td>The data type of the levels of the factor. It can be number, character or text (N,C,T)
+</td><td>Char
+</td><td>1
+</td></tr></table>
+<a name="LEVEL__Tables" id="LEVEL__Tables"></a><h4> <span class="mw-headline"> LEVEL  Tables</span></h4>
+<p>Stores the different levels of  a factor.
+</p>
+<table border="1" cellpadding="2">
+<tr>
+<th>Field name
+</th><th>Description
+</th><th>Type
+</th><th>Length
+</th></tr>
+<tr>
+<td>LABELID
+</td><td>The label of the  level.  Link to the FACTOR table
+</td><td>Number (long)
+</td><td>4
+</td></tr>
+<tr>
+<td>FACTORID
+</td><td>The factor wherein the level is one of its classifications  Link to the FACTOR and
+<p>OINDEX tables	
+</p>
+</td><td>Number (long)
+</td><td>4
+</td></tr>
+<tr>
+<td>LEVELNO
+</td><td>The identification number of the level. Link to the OINDEX table
+</td><td>Number (long)
+</td><td>4
+</td></tr>
+<tr>
+<td>LVALUE
+</td><td>The value of the factor level.
+</td><td>
+<ul><li> Char	
+</li><li> Double
+</li><li> Text
+</li></ul>
+</td><td>
+<ul><li> 255
+</li><li> 4
+</li><li> Memo
+</li></ul>
+</td></tr></table>
+<a name="EFFECT_Table" id="EFFECT_Table"></a><h4> <span class="mw-headline">EFFECT Table</span></h4>
+<p>Stores the factor combinations which define effects and representations.
+</p>
+<table border="1" cellpadding="2">
+<tr>
+<th>Field name
+</th><th>Description
+</th><th>Type
+</th><th>Length
+</th></tr>
+<tr>
+<td>EFFECTID
+</td><td>The identification number for each EFFECT
+</td><td>Number (long)
+</td><td>4
+</td></tr>
+<tr>
+<td>FACTORID
+</td><td>The factor which is one of those that index the observation units in this effect.
+<p>Links to the FACTOR table. 	
+</p>
+</td><td>Number (long)
+</td><td>4
+</td></tr>
+<tr>
+<td>REPRESNO
+</td><td>Indicates the factors involved in each representation of the current effect.
+</td><td>Number (long)
+</td><td>4
+</td></tr></table>
+<a name="OINDEX_Table" id="OINDEX_Table"></a><h4> <span class="mw-headline">OINDEX Table</span></h4>
+<p>Stores the combination of factor levels which defines an observation unit.
+</p>
+<table border="1" cellpadding="2">
+<tr>
+<th>Field name
+</th><th>Description
+</th><th>Type
+</th><th>Length
+</th></tr>
+<tr>
+<td>OUNITID
+</td><td>The identification number of an observation number. Link to the OBSUNIT table
+</td><td>Number (long)
+</td><td>4
+</td></tr>
+<tr>
+<td>FACTORID
+</td><td>The factor which is one of those that characterize the observation unit. Link to the
+<p>FACTOR table and LEVELS table	
+</p>
+</td><td>Number (long)
+</td><td>4
+</td></tr>
+<tr>
+<td>LEVELNO
+</td><td>Level of the specified factor. Link to the LEVEL table
+</td><td>Number (long)
+</td><td>4
+</td></tr>
+<tr>
+<td>REPRESNO
+</td><td>Representation of the same data by a different combination of factors and levels.
+</td><td>Number (single)
+</td><td>2
+</td></tr></table>
+<a name="DATA_Tables_.28DATA_N.2C__DATA_C.2C__DATA_T.29" id="DATA_Tables_.28DATA_N.2C__DATA_C.2C__DATA_T.29"></a><h4> <span class="mw-headline">DATA Tables (DATA_N,  DATA_C,  DATA_T) </span></h4>
+<p>Stores the observed, measured and derived data values.
+</p>
+<table border="1" cellpadding="2">
+<tr>
+<th>Field name
+</th><th>Description
+</th><th>Type
+</th><th>Length
+</th></tr>
+<tr>
+<td>OUNITID
+</td><td>The observation unit where the datum is measured. Link to the OBSUNIT table
+</td><td>Number (long)
+</td><td>4
+</td></tr>
+<tr>
+<td>VARIATID
+</td><td>The variate which describes the datum. Link to the VARIATE  table
+</td><td>Number (long)
+</td><td>4
+</td></tr>
+<tr>
+<td>DVALUE
+</td><td>The data value
+</td><td>
+<ul><li>Number(double)
+</li><li>Char 
+</li><li>Text	
+</li></ul>
+</td><td>
+<ul><li>4
+</li><li>255
+</li><li>Memo
+</li></ul>
+</td></tr></table>
+<a name="DMSATTR_Table" id="DMSATTR_Table"></a><h4> <span class="mw-headline">DMSATTR Table</span></h4>
+<p>The definition table of attributes which describe the other DMS entities.
+</p>
+<table border="1" cellpadding="2">
+<tr>
+<th>Field name
+</th><th>Description
+</th><th>Type
+</th><th>Length
+</th></tr>
+<tr>
+<td>DMSATID
+</td><td>Unique identifier for a DMS attribute.
+</td><td>Number (long)
+</td><td>4
+</td></tr>
+<tr>
+<td>DMSATYPE
+</td><td>The type of the data attribute. Link to the DUDFLDS table.
+</td><td>Number (long)
+</td><td>4
+</td></tr>
+<tr>
+<td>DMSATAB
+</td><td>The name of the DMS table where the attribute applies. Link to the DUDFLDS table
+</td><td>Char
+</td><td>10
+</td></tr>
+<tr>
+<td>DMSATREC
+</td><td>The record id in the specified DMS table.
+</td><td>Number (long)
+</td><td>4
+</td></tr>
+<tr>
+<td>DMSATVAL
+</td><td>The value of the attribute.
+</td><td>Text
+</td><td>Memo
+</td></tr></table>
+<p><br />
+</p>
+<a name="DATATTR_Table." id="DATATTR_Table."></a><h4> <span class="mw-headline">DATATTR Table.</span></h4>
+<p>The definition table of attributes which describe the DMS entity DATA.
+</p>
+<table border="1" cellpadding="2">
+<tr>
+<th>Field name
+</th><th>Description
+</th><th>Type
+</th><th>Length
+</th></tr>
+<tr>
+<td>DATTRID
+</td><td>Unique identifier for a DATA attribute.
+</td><td>Number (long)
+</td><td>4
+</td></tr>
+<tr>
+<td>DATYPE
+</td><td>The type of the data attribute. Link to the DUDFLDS table.
+</td><td>Number (long)
+</td><td>4
+</td></tr>
+<tr>
+<td>DATABLE
+</td><td>The data table (DN, DC, DT)
+</td><td>Char
+</td><td>2
+</td></tr>
+<tr>
+<td>OUNITID
+</td><td>The observation unit id in the data table.
+</td><td>Number (long)
+</td><td>4
+</td></tr>
+<tr>
+<td>VARIATID
+</td><td>The variate id in the data table.
+</td><td>Number (long)
+</td><td>4
+</td></tr>
+<tr>
+<td>DATVAL
+</td><td>The value of the attribute.
+</td><td>Text
+</td><td>Memo
+</td></tr></table>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 21/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+<div class="printfooter">
+Retrieved from "<a href="http://localhost../../../../articles/t/d/m/TDM_Data_Management_System_5.4_960c.html">http://localhost../../../../articles/t/d/m/TDM_Data_Management_System_5.4_960c.html</a>"</div>
+						<!-- end content -->
+						<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<div class="pBody">
+			<ul>
+	
+				 <li id="ca-nstab-main" class="selected"><a href="../../../../articles/t/d/m/TDM_Data_Management_System_5.4_960c.html" title="View the content page [c]" accesskey="c">Page</a></li>
+				 <li id="ca-talk" class="new"><a href="../../../../articles/t/d/m/Talk%7ETDM_Data_Management_System_5.4_9883.html" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				 <li id="ca-viewsource"><a href="../../../../articles/t/d/m/TDM_Data_Management_System_5.4_960c.html" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				 <li id="ca-history"><a href="../../../../articles/t/d/m/TDM_Data_Management_System_5.4_960c.html" title="Past versions of this page [h]" accesskey="h">History</a></li>			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="../../../../articles/u/s/e/Special%7EUserLogin_94cd.html" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(../../../../misc/icis-wiki3.png);" href="../../../../index.html" title="Visit the main page [z]" accesskey="z"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class='generated-sidebar portlet' id='p-navigation'>
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="../../../../index.html" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
+				<li id="n-portal"><a href="../../../../articles/c/o/m/ICISWiki%7ECommunity_Portal_7449.html" title="About the project, what you can do, where to find things">Community portal</a></li>
+				<li id="n-recentchanges"><a href="../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+				<li id="n-help"><a href="../../../../articles/c/o/n/Help%7EContents_22de.html" title="The place to find out">Help</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="../../../../articles/s/e/a/Special%7ESearch_a8e5.html" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" title="Search ICISWiki [f]" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="../../../../articles/w/h/a/Special%7EWhatLinksHere_TDM_Data_Management_System_5.4_214b.html" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="../../../../articles/r/e/c/Special%7ERecentChangesLinked_TDM_Data_Management_System_5.4_c0e4.html" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+<li id="t-specialpages"><a href="../../../../articles/s/p/e/Special%7ESpecialPages_f12b.html" title="List of all special pages [q]" accesskey="q">Special pages</a></li>
+				<li id="t-print"><a href="../../../../articles/t/d/m/TDM_Data_Management_System_5.4_960c.html" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>				<li id="t-permalink"><a href="../../../../articles/t/d/m/TDM_Data_Management_System_5.4_960c.html" title="Permanent link to this version of the page">Permanent link</a></li>			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="../../../../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" /></a></div>
+				<div id="f-copyrightico"><a href="../../../../../COPYING.html"><img src="/icis/skins/common/images/gnu-fdl.png" alt='GNU Free Documentation License 1.2' /></a></div>
+			<ul id="f-list">
+					<li id="credits">This page was last modified 02:42, 13 August 2007 by <a href="../../../../articles/a/p/o/User%7EAportugal_745d.html" title="User:Aportugal">Arllet Portugal</a>. </li>
+					<li id="copyright">Content is available under <a href="../../../../../COPYING.html" class="external " title="../../../../../COPYING.html">GNU Free Documentation License 1.2</a>.</li>
+					<li id="privacy"><a href="../../../../articles/p/r/i/ICISWiki%7EPrivacy_policy_0cbf.html" title="ICISWiki:Privacy policy">Privacy policy</a></li>
+					<li id="about"><a href="../../../../articles/a/b/o/ICISWiki%7EAbout_53aa.html" title="ICISWiki:About">About ICISWiki</a></li>
+					<li id="disclaimer"><a href="../../../../articles/g/e/n/ICISWiki%7EGeneral_disclaimer_9129.html" title="ICISWiki:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+</div>
+
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served in 169.582 secs. --></body></html>

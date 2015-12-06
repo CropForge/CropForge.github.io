@@ -1,0 +1,268 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta name="generator" content="MediaWiki 1.14.0" />
+		<meta name="keywords" content="Loading of DArT Data into ICIS,DArT Bulk Loading" />
+		<link rel="shortcut icon" href="../../../../misc/favicon.ico" />
+		<link rel="search" type="application/opensearchdescription+xml" href="../../../../../opensearch_desc.php" title="ICISWiki (en)" />
+		<link title="Creative Commons" type="application/rdf+xml" href="../../../../articles/l/o/a/Loading_of_DArT_Data_into_ICIS_0db4.html" rel="alternate meta" />
+		<link rel="copyright" href="../../../../../COPYING.html" />
+		<link rel="alternate" type="application/rss+xml" title="ICISWiki RSS Feed" href="http://localhost../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" />
+		<link rel="alternate" type="application/atom+xml" title="ICISWiki Atom Feed" href="http://localhost../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" />
+		<title>Loading of DArT Data into ICIS - ICISWiki</title>
+		<link rel="stylesheet" href="../../../../skins/common/shared.css?195" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../../../../skins/common/commonPrint.css?195" type="text/css" media="print" />
+		<link rel="stylesheet" href="../../../../skins/monobook/main.css?195" type="text/css" media="screen" />
+		<!--[if lt IE 5.5000]><link rel="stylesheet" href="../../../../skins/monobook/IE50Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 5.5000]><link rel="stylesheet" href="../../../../skins/monobook/IE55Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 6]><link rel="stylesheet" href="../../../../skins/monobook/IE60Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 7]><link rel="stylesheet" href="../../../../skins/monobook/IE70Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7ECommon.css?195" type="text/css" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7EPrint.css?195" type="text/css" media="print" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7EMonobook.css?195" type="text/css" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/gen.css?195" type="text/css" />
+		<!--[if lt IE 7]><script type="text/javascript" src="../../../../skins/common/IEFixes.js?195"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+
+		<script type= "text/javascript">/*<![CDATA[*/
+		var skin = "monobook";
+		var stylepath = "../../../../skins";
+		var wgArticlePath = "../../../../$1";
+		var wgScriptPath = "../../../../..";
+		var wgScript = "/icis/index.php";
+		var wgVariantArticlePath = false;
+		var wgActionPaths = {};
+		var wgServer = "http://localhost";
+		var wgCanonicalNamespace = "";
+		var wgCanonicalSpecialPageName = false;
+		var wgNamespaceNumber = 0;
+		var wgPageName = "Loading_of_DArT_Data_into_ICIS";
+		var wgTitle = "Loading of DArT Data into ICIS";
+		var wgAction = "view";
+		var wgArticleId = "2108";
+		var wgIsArticle = true;
+		var wgUserName = null;
+		var wgUserGroups = null;
+		var wgUserLanguage = "en";
+		var wgContentLanguage = "en";
+		var wgBreakFrames = false;
+		var wgCurRevisionId = "12260";
+		var wgVersion = "1.14.0";
+		var wgEnableAPI = true;
+		var wgEnableWriteAPI = true;
+		var wgSeparatorTransformTable = ["", ""];
+		var wgDigitTransformTable = ["", ""];
+		var wgRestrictionEdit = [];
+		var wgRestrictionMove = [];
+		/*]]>*/</script>
+
+		<script type="text/javascript" src="../../../../skins/common/wikibits.js?195"><!-- wikibits js --></script>
+		<!-- Head Scripts -->
+		<script type="text/javascript" src="../../../../raw/gen.js"><!-- site js --></script>
+	</head>
+<body class="mediawiki ltr ns-0 ns-subject page-Loading_of_DArT_Data_into_ICIS skin-monobook">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 id="firstHeading" class="firstHeading">Loading of DArT Data into ICIS</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From ICISWiki</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>			<!-- start content -->
+			<table id="toc" class="toc" summary="Contents"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1"><a href="#Definitions"><span class="tocnumber">2</span> <span class="toctext">Definitions</span></a></li>
+<li class="toclevel-1"><a href="#Sample_DArT_data"><span class="tocnumber">3</span> <span class="toctext">Sample DArT data</span></a>
+<ul>
+<li class="toclevel-2"><a href="#Dataset_Description"><span class="tocnumber">3.1</span> <span class="toctext">Dataset Description</span></a></li>
+<li class="toclevel-2"><a href="#Storing_Data_in_DMS_and_GEMS"><span class="tocnumber">3.2</span> <span class="toctext">Storing Data in DMS and GEMS</span></a>
+<ul>
+<li class="toclevel-3"><a href="#Data_stored_in_DMS"><span class="tocnumber">3.2.1</span> <span class="toctext">Data stored in DMS</span></a></li>
+<li class="toclevel-3"><a href="#Data_stored_in_GEMS"><span class="tocnumber">3.2.2</span> <span class="toctext">Data stored in GEMS</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#Loading_of_DArT_Data_using_ICIS_Workbook"><span class="tocnumber">4</span> <span class="toctext">Loading of DArT Data using ICIS Workbook</span></a>
+<ul>
+<li class="toclevel-2"><a href="#Workbook_Template_for_DArT_Data"><span class="tocnumber">4.1</span> <span class="toctext">Workbook Template for DArT Data</span></a>
+<ul>
+<li class="toclevel-3"><a href="#DArT_Datasheet"><span class="tocnumber">4.1.1</span> <span class="toctext">DArT Datasheet</span></a></li>
+<li class="toclevel-3"><a href="#Description_Sheet"><span class="tocnumber">4.1.2</span> <span class="toctext">Description Sheet</span></a></li>
+<li class="toclevel-3"><a href="#Observation_Sheet"><span class="tocnumber">4.1.3</span> <span class="toctext">Observation Sheet</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#Loading_of_Large_DArT_datasets"><span class="tocnumber">5</span> <span class="toctext">Loading of Large DArT datasets</span></a></li>
+<li class="toclevel-1"><a href="#Loading_Summary.2FDerived_Data"><span class="tocnumber">6</span> <span class="toctext">Loading Summary/Derived Data</span></a></li>
+</ul>
+</td></tr></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </script>
+<a name="Introduction" id="Introduction"></a><h2> <span class="mw-headline">Introduction</span></h2>
+<a name="Definitions" id="Definitions"></a><h2> <span class="mw-headline">Definitions</span></h2>
+<p><b>DArT(Diversity Array technology)</b>  is a generic and cost-effective genotyping technology. It was invented by Dr <a href="http://www.diversityarrays.com/peoplekilian.html" class="external text" title="http://www.diversityarrays.com/peoplekilian.html" rel="nofollow">Andrzej Kilian</a> , to overcome some of the limitations of other molecular marker technologies such as RFLP, AFLP and SSR<sup><a href="http://www.diversityarrays.com/," class="external text" title="http://www.diversityarrays.com/," rel="nofollow">1</a></sup>
+</p><p><b>P</b> is a cluster variance as a percentage of the total variance of the relative hybridisation intensity of a clone. 
+</p><p><b>PIC</b> is the Polymorphism Information Content of a marker for the set of samples typed.
+</p><p><b>Call Rate</b> is the percentage of the calls of a clone that are missing.
+</p><p><b>Discordance</b> 
+</p><p><b>Hamming Distance</b>
+</p>
+<a name="Sample_DArT_data" id="Sample_DArT_data"></a><h2> <span class="mw-headline">Sample DArT data</span></h2>
+<p><a href="../../../../articles/d/a/r/File%7EDArT_sampleData.JPG_6896.html" class="image" title="image:DArT_sampleData.JPG"><img alt="image:DArT_sampleData.JPG" src="../../../../images/1/1b/DArT_sampleData.JPG" width="640" height="520" border="0" /></a>
+</p>
+<a name="Dataset_Description" id="Dataset_Description"></a><h3> <span class="mw-headline">Dataset Description</span></h3>
+<p><b>Row Headings</b>
+</p>
+<ul><li><i><b>Rows 1-3</b></i> are input data to track the samples<br />
+</li><li><i><b>Row 1</b></i> is human-readable translation of the barcode affixed to the plate with DNA samples upon arrival<br />
+</li><li><i><b>Rows 2 and 3</b></i> are the column (letter) and row (number) of the 96 wells plate that the sample was pipetted from.<br />
+</li><li><i><b>Row 4</b></i>  has the output headings<br />
+</li></ul>
+<p><br />
+<b>Column Headings</b>
+</p>
+<ul><li><i><b>DArT marker</b></i> name where w signifies wheat, P signifies PstI and t signifies TaqI, specifying the library the clone came from,followed by a numeric marker number.<br />
+</li><li><i><b>DArT clone ID</b></i> (numeric)<br />
+</li><li><i><b>DArT clone name</b></i>  <br />
+</li><li><i><b>chromosome name</b></i> to which the marker has been mapped.Chromosome name is only available for those species for which some genetic maps have been constructed. There will be multiple chromosome assignments for a limited fraction of markers that map to more than a single locus.<br /> 
+</li><li><i><b>P</b></i>, measuring the quality of the DArT signal for that particular sample <br /> 
+</li><li><i><b>CallRate</b></i> <br />
+</li><li><i><b>PIC</b></i> <br />
+</li><li><i><b>samples</b></i> which are either known varieties or breeder's lines.<br />
+</li></ul>
+<p><br />  
+<b>Results</b>
+</p>
+<ul><li><b>0</b> marker not present in sample<br />
+</li><li><b>1</b> marker is present in sample<br />
+</li><li><b>x</b> missing data <br />
+</li></ul>
+<p><br />
+</p>
+<a name="Storing_Data_in_DMS_and_GEMS" id="Storing_Data_in_DMS_and_GEMS"></a><h3> <span class="mw-headline">Storing Data in DMS and GEMS</span></h3>
+<a name="Data_stored_in_DMS" id="Data_stored_in_DMS"></a><h4> <span class="mw-headline">Data stored in DMS</span></h4>
+<p><b>STUDY, FACTOR and TRAIT tables</b>
+</p><p>Loading the sample DArT Data Set into DMS tables will result to the figure below. Each Marker is assigned a Marker ID which is retrieved from the GEMS database. The Marker ID is stored as Factor in the Factor table while MarkerName, CloneID, CloneName are stored as labels of the MarkerID Factor. The MarkerID Factor has the trait "Polymorphism Detector".  
+</p><p><a href="../../../../articles/d/a/r/File%7EDArT_data_in_DMS_6a99.html" class="image" title="image:DArT_data_in_DMS"><img alt="image:DArT_data_in_DMS" src="../../../../images/0/09/DArT_data_in_DMS" width="640" height="311" border="0" /></a>
+</p><p><br />
+<b>VARIATE, DATA and OINDEX TABLES</b>
+</p><p>Allele or Molecular Variant is also assigned with IDs (ALLELE ID) and is stored as variates of the Marker ID factor in the VARIATES table.
+</p><p><a href="../../../../articles/d/a/r/File%7EDArT_data_DMS_Variates.JPG_c59e.html" class="image" title="image:DArT_data_DMS_Variates.JPG"><img alt="image:DArT_data_DMS_Variates.JPG" src="../../../../images/a/ab/DArT_data_DMS_Variates.JPG" width="640" height="329" border="0" /></a>
+</p>
+<a name="Data_stored_in_GEMS" id="Data_stored_in_GEMS"></a><h4> <span class="mw-headline">Data stored in GEMS</span></h4>
+<p>The MarkerNames from DArT data are stored in the <i>gnval</i> field of the <b>gems_names</b> table. A unique ID (<i>gnid</i>) in the gems_names table is assigned to the MarkerName. It is connected to the <b>gems_marker_detector</b> table thru <i>gobjid</i> if the <i>gobjtype</i> field has the value "MARKER_DETECTOR". The gems_marker_detector is connected to <b>gems_pd</b> table thru the <i>mdid</i> field.  The pdid field defines the combination of marker_detector and condition/protocol used for the marker_detector.  For markers with more than one protocol, multiple pdids are generated.
+</p><p>Unique IDs are assigned to Allele/Molecular Variant of each Marker and is stored in the gems_names table as <i>gobjid</i> with <i>gobjtype</i> equal to "MV" and is also stored in the gems_mv table as <i>mvid</i>. The <b>gems_mv</b> table contains the information on the Molecular Variant and is connected to the <b>gems_marker_detector </b> table
+</p><p><a href="../../../../articles/d/a/r/File%7EDArT_data_in_GEMS_3079.html" class="image" title="image:DArT_data_in_GEMS"><img alt="image:DArT_data_in_GEMS" src="../../../../images/d/d0/DArT_data_in_GEMS" width="608" height="474" border="0" /></a>
+</p>
+<a name="Loading_of_DArT_Data_using_ICIS_Workbook" id="Loading_of_DArT_Data_using_ICIS_Workbook"></a><h2> <span class="mw-headline">Loading of DArT Data using ICIS Workbook</span></h2>
+<a name="Workbook_Template_for_DArT_Data" id="Workbook_Template_for_DArT_Data"></a><h3> <span class="mw-headline">Workbook Template for DArT Data</span></h3>
+<p><a href="../../../../images/e/e2/DArT_Temp.xls" class="internal" title="DArT Temp.xls">Workbook Template for DArT Data</a>
+</p>
+<a name="DArT_Datasheet" id="DArT_Datasheet"></a><h4> <span class="mw-headline">DArT Datasheet</span></h4>
+<p>The Datasheet below is currently the format that is being delivered to clients. Some DArT formats may include other columns such as <b>discordance</b> and <i>chromosome</i>.  This Datasheet is transformed in the Observation format.
+</p><p><a href="../../../../articles/d/a/r/File%7EDArT_Datasheet.JPG_5f87.html" class="image" title="Image:DArT Datasheet.JPG"><img alt="Image:DArT Datasheet.JPG" src="../../../../images/e/eb/DArT_Datasheet.JPG" width="640" height="490" border="0" /></a>
+</p>
+<a name="Description_Sheet" id="Description_Sheet"></a><h4> <span class="mw-headline">Description Sheet</span></h4>
+<p>In the Description Sheet, dart clone,PD(Polymorphism Detector), MD(Marker Detector),entry and GID(or samples) are treated as factors. While cloneid, clonename and marker are treated as Labels of the factor markerid.  MV, MVNAME and MV STATE are treated as variates.  Information about the Study/experiment is also stored in the Description Sheet.
+</p><p><a href="../../../../articles/d/a/r/File%7EDArT_description_sheet2.JPG_e015.html" class="image" title="Image:DArT description sheet2.JPG"><img alt="Image:DArT description sheet2.JPG" src="../../../../images/1/14/DArT_description_sheet2.JPG" width="640" height="430" border="0" /></a>
+</p>
+<a name="Observation_Sheet" id="Observation_Sheet"></a><h4> <span class="mw-headline">Observation Sheet</span></h4>
+<p>The Observation Sheet is created from the Datasheet using a new tool in Workbook for importing Genotype Data. The Observation Sheet is a serialized format of the Datasheet.
+</p><p><a href="../../../../articles/g/e/m/File%7EGEMS_import_Genotype.JPG_a527.html" class="image" title="image:GEMS_import_Genotype.JPG"><img alt="image:GEMS_import_Genotype.JPG" src="../../../../images/f/ff/GEMS_import_Genotype.JPG" width="195" height="119" border="0" /></a>
+</p><p>The MD(Marker) and MV(Allele) IDs are retrieved from the GEMS database using the <b>Get Marker ID</b> and <b>Get Allele ID</b> tool of the ICIS Workbook. If the Marker or Allele is not yet in the Database, it will be added to the database and a new markerid/alleleid will be assigned to that marker/allele.
+</p><p><a href="../../../../articles/d/a/r/File%7EDArT_observation_sheet2.JPG_3730.html" class="image" title="Image:DArT observation sheet2.JPG"><img alt="Image:DArT observation sheet2.JPG" src="../../../../images/6/62/DArT_observation_sheet2.JPG" width="773" height="469" border="0" /></a>
+</p>
+<a name="Loading_of_Large_DArT_datasets" id="Loading_of_Large_DArT_datasets"></a><h2> <span class="mw-headline"><a href="../../../../articles/d/a/r/DArT_Bulk_Loading_3240.html" title="DArT Bulk Loading">Loading of Large DArT datasets </a></span></h2>
+<a name="Loading_Summary.2FDerived_Data" id="Loading_Summary.2FDerived_Data"></a><h2> <span class="mw-headline">Loading Summary/Derived Data </span></h2>
+<p>Derived or Summary data such as PIC, Call Rate and P values are stored as a separate workbook with the same study name. A separate description sheet and Observation sheet will be used to load this data into ICIS.
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 31/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+<div class="printfooter">
+Retrieved from "<a href="http://localhost../../../../articles/l/o/a/Loading_of_DArT_Data_into_ICIS_0db4.html">http://localhost../../../../articles/l/o/a/Loading_of_DArT_Data_into_ICIS_0db4.html</a>"</div>
+						<!-- end content -->
+						<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<div class="pBody">
+			<ul>
+	
+				 <li id="ca-nstab-main" class="selected"><a href="../../../../articles/l/o/a/Loading_of_DArT_Data_into_ICIS_0db4.html" title="View the content page [c]" accesskey="c">Page</a></li>
+				 <li id="ca-talk" class="new"><a href="../../../../articles/l/o/a/Talk%7ELoading_of_DArT_Data_into_ICIS_ae81.html" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				 <li id="ca-viewsource"><a href="../../../../articles/l/o/a/Loading_of_DArT_Data_into_ICIS_0db4.html" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				 <li id="ca-history"><a href="../../../../articles/l/o/a/Loading_of_DArT_Data_into_ICIS_0db4.html" title="Past versions of this page [h]" accesskey="h">History</a></li>			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="../../../../articles/u/s/e/Special%7EUserLogin_94cd.html" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(../../../../misc/icis-wiki3.png);" href="../../../../index.html" title="Visit the main page [z]" accesskey="z"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class='generated-sidebar portlet' id='p-navigation'>
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="../../../../index.html" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
+				<li id="n-portal"><a href="../../../../articles/c/o/m/ICISWiki%7ECommunity_Portal_7449.html" title="About the project, what you can do, where to find things">Community portal</a></li>
+				<li id="n-recentchanges"><a href="../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+				<li id="n-help"><a href="../../../../articles/c/o/n/Help%7EContents_22de.html" title="The place to find out">Help</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="../../../../articles/s/e/a/Special%7ESearch_a8e5.html" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" title="Search ICISWiki [f]" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="../../../../articles/w/h/a/Special%7EWhatLinksHere_Loading_of_DArT_Data_into_ICIS_f084.html" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="../../../../articles/r/e/c/Special%7ERecentChangesLinked_Loading_of_DArT_Data_into_ICIS_ab7f.html" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+<li id="t-specialpages"><a href="../../../../articles/s/p/e/Special%7ESpecialPages_f12b.html" title="List of all special pages [q]" accesskey="q">Special pages</a></li>
+				<li id="t-print"><a href="../../../../articles/l/o/a/Loading_of_DArT_Data_into_ICIS_0db4.html" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>				<li id="t-permalink"><a href="../../../../articles/l/o/a/Loading_of_DArT_Data_into_ICIS_0db4.html" title="Permanent link to this version of the page">Permanent link</a></li>			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="../../../../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" /></a></div>
+				<div id="f-copyrightico"><a href="../../../../../COPYING.html"><img src="/icis/skins/common/images/gnu-fdl.png" alt='GNU Free Documentation License 1.2' /></a></div>
+			<ul id="f-list">
+					<li id="credits">This page was last modified 06:19, 8 April 2008 by <a href="../../../../articles/r/v/a/User%7ERvalerio_c9de.html" title="User:Rvalerio">Rowena Valerio</a>. Based on work by <a href="../../../../articles/i/c/i/User%7EICISSysop_2cf4.html" class="new" title="User:ICISSysop (page does not exist)">ICIS Sysop</a>.</li>
+					<li id="copyright">Content is available under <a href="../../../../../COPYING.html" class="external " title="../../../../../COPYING.html">GNU Free Documentation License 1.2</a>.</li>
+					<li id="privacy"><a href="../../../../articles/p/r/i/ICISWiki%7EPrivacy_policy_0cbf.html" title="ICISWiki:Privacy policy">Privacy policy</a></li>
+					<li id="about"><a href="../../../../articles/a/b/o/ICISWiki%7EAbout_53aa.html" title="ICISWiki:About">About ICISWiki</a></li>
+					<li id="disclaimer"><a href="../../../../articles/g/e/n/ICISWiki%7EGeneral_disclaimer_9129.html" title="ICISWiki:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+</div>
+
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served in 89.083 secs. --></body></html>

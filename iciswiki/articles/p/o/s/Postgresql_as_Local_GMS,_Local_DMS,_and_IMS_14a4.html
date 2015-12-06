@@ -1,0 +1,783 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta name="generator" content="MediaWiki 1.14.0" />
+		<meta name="keywords" content="Postgresql as Local GMS, Local DMS, and IMS,,Database backends" />
+		<link rel="shortcut icon" href="../../../../misc/favicon.ico" />
+		<link rel="search" type="application/opensearchdescription+xml" href="../../../../../opensearch_desc.php" title="ICISWiki (en)" />
+		<link title="Creative Commons" type="application/rdf+xml" href="../../../../articles/p/o/s/Postgresql_as_Local_GMS,_Local_DMS,_and_IMS_14a4.html" rel="alternate meta" />
+		<link rel="copyright" href="../../../../../COPYING.html" />
+		<link rel="alternate" type="application/rss+xml" title="ICISWiki RSS Feed" href="http://localhost../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" />
+		<link rel="alternate" type="application/atom+xml" title="ICISWiki Atom Feed" href="http://localhost../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" />
+		<title>Postgresql as Local GMS, Local DMS, and IMS - ICISWiki</title>
+		<link rel="stylesheet" href="../../../../skins/common/shared.css?195" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../../../../skins/common/commonPrint.css?195" type="text/css" media="print" />
+		<link rel="stylesheet" href="../../../../skins/monobook/main.css?195" type="text/css" media="screen" />
+		<!--[if lt IE 5.5000]><link rel="stylesheet" href="../../../../skins/monobook/IE50Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 5.5000]><link rel="stylesheet" href="../../../../skins/monobook/IE55Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 6]><link rel="stylesheet" href="../../../../skins/monobook/IE60Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 7]><link rel="stylesheet" href="../../../../skins/monobook/IE70Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7ECommon.css?195" type="text/css" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7EPrint.css?195" type="text/css" media="print" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7EMonobook.css?195" type="text/css" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/gen.css?195" type="text/css" />
+		<!--[if lt IE 7]><script type="text/javascript" src="../../../../skins/common/IEFixes.js?195"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+
+		<script type= "text/javascript">/*<![CDATA[*/
+		var skin = "monobook";
+		var stylepath = "../../../../skins";
+		var wgArticlePath = "../../../../$1";
+		var wgScriptPath = "../../../../..";
+		var wgScript = "/icis/index.php";
+		var wgVariantArticlePath = false;
+		var wgActionPaths = {};
+		var wgServer = "http://localhost";
+		var wgCanonicalNamespace = "";
+		var wgCanonicalSpecialPageName = false;
+		var wgNamespaceNumber = 0;
+		var wgPageName = "Postgresql_as_Local_GMS,_Local_DMS,_and_IMS";
+		var wgTitle = "Postgresql as Local GMS, Local DMS, and IMS";
+		var wgAction = "view";
+		var wgArticleId = "3244";
+		var wgIsArticle = true;
+		var wgUserName = null;
+		var wgUserGroups = null;
+		var wgUserLanguage = "en";
+		var wgContentLanguage = "en";
+		var wgBreakFrames = false;
+		var wgCurRevisionId = "11703";
+		var wgVersion = "1.14.0";
+		var wgEnableAPI = true;
+		var wgEnableWriteAPI = true;
+		var wgSeparatorTransformTable = ["", ""];
+		var wgDigitTransformTable = ["", ""];
+		var wgRestrictionEdit = [];
+		var wgRestrictionMove = [];
+		/*]]>*/</script>
+
+		<script type="text/javascript" src="../../../../skins/common/wikibits.js?195"><!-- wikibits js --></script>
+		<!-- Head Scripts -->
+		<script type="text/javascript" src="../../../../raw/gen.js"><!-- site js --></script>
+	</head>
+<body class="mediawiki ltr ns-0 ns-subject page-Postgresql_as_Local_GMS_Local_DMS_and_IMS skin-monobook">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 id="firstHeading" class="firstHeading">Postgresql as Local GMS, Local DMS, and IMS</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From ICISWiki</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>			<!-- start content -->
+			<p><a href="../../../../articles/d/a/t/Database_backends.html" title="Database backends"> Database Backends</a> &gt; Postgresql as Local GMS, Local DMS, and IMS
+</p>
+<table id="toc" class="toc" summary="Contents"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1"><a href="#Setup"><span class="tocnumber">1</span> <span class="toctext">Setup</span></a></li>
+<li class="toclevel-1"><a href="#Installation_Diagnostic_Tool"><span class="tocnumber">2</span> <span class="toctext">Installation Diagnostic Tool</span></a>
+<ul>
+<li class="toclevel-2"><a href="#Configuration_Test"><span class="tocnumber">2.1</span> <span class="toctext">Configuration Test</span></a></li>
+<li class="toclevel-2"><a href="#Database_Test"><span class="tocnumber">2.2</span> <span class="toctext">Database Test</span></a></li>
+<li class="toclevel-2"><a href="#DLL_Test_.28minimal.29"><span class="tocnumber">2.3</span> <span class="toctext">DLL Test (minimal)</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#SetGen"><span class="tocnumber">3</span> <span class="toctext">SetGen</span></a>
+<ul>
+<li class="toclevel-2"><a href="#HB_List"><span class="tocnumber">3.1</span> <span class="toctext">HB List</span></a>
+<ul>
+<li class="toclevel-3"><a href="#Create_list"><span class="tocnumber">3.1.1</span> <span class="toctext">Create list</span></a></li>
+<li class="toclevel-3"><a href="#Fill_with..."><span class="tocnumber">3.1.2</span> <span class="toctext">Fill with...</span></a></li>
+<li class="toclevel-3"><a href="#Save_the_list"><span class="tocnumber">3.1.3</span> <span class="toctext">Save the list</span></a></li>
+<li class="toclevel-3"><a href="#Export_as_XLS_Excel_File"><span class="tocnumber">3.1.4</span> <span class="toctext">Export as XLS Excel File</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2"><a href="#F1_List"><span class="tocnumber">3.2</span> <span class="toctext">F1 List</span></a>
+<ul>
+<li class="toclevel-3"><a href="#Create_list_2"><span class="tocnumber">3.2.1</span> <span class="toctext">Create list</span></a></li>
+<li class="toclevel-3"><a href="#Generate_crosses"><span class="tocnumber">3.2.2</span> <span class="toctext">Generate crosses</span></a></li>
+<li class="toclevel-3"><a href="#Fill_with..._2"><span class="tocnumber">3.2.3</span> <span class="toctext">Fill with...</span></a></li>
+<li class="toclevel-3"><a href="#Save_the_list_2"><span class="tocnumber">3.2.4</span> <span class="toctext">Save the list</span></a></li>
+<li class="toclevel-3"><a href="#Export_as_XLS_Excel_File_2"><span class="tocnumber">3.2.5</span> <span class="toctext">Export as XLS Excel File</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2"><a href="#F2_Nursery"><span class="tocnumber">3.3</span> <span class="toctext">F2 Nursery</span></a>
+<ul>
+<li class="toclevel-3"><a href="#Create_list_3"><span class="tocnumber">3.3.1</span> <span class="toctext">Create list</span></a></li>
+<li class="toclevel-3"><a href="#Derive_lines"><span class="tocnumber">3.3.2</span> <span class="toctext">Derive lines</span></a></li>
+<li class="toclevel-3"><a href="#Save_the_list_3"><span class="tocnumber">3.3.3</span> <span class="toctext">Save the list</span></a></li>
+<li class="toclevel-3"><a href="#Export_as_XLS_Excel_File_3"><span class="tocnumber">3.3.4</span> <span class="toctext">Export as XLS Excel File</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#Workbook"><span class="tocnumber">4</span> <span class="toctext">Workbook</span></a>
+<ul>
+<li class="toclevel-2"><a href="#Creating_a_Workbook_file_from_a_germplasm_list"><span class="tocnumber">4.1</span> <span class="toctext">Creating a Workbook file from a germplasm list</span></a>
+<ul>
+<li class="toclevel-3"><a href="#Add-ins_--.3E_Import_SetGen_List"><span class="tocnumber">4.1.1</span> <span class="toctext">Add-ins --&gt; Import SetGen List</span></a></li>
+<li class="toclevel-3"><a href="#Setup_Description_Sheet"><span class="tocnumber">4.1.2</span> <span class="toctext">Setup Description Sheet</span></a>
+<ul>
+<li class="toclevel-4"><a href="#Provide_basic_info_for_study_and_setup_the_variables"><span class="tocnumber">4.1.2.1</span> <span class="toctext">Provide basic info for study and setup the variables</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3"><a href="#Setup_Observation_Sheet"><span class="tocnumber">4.1.3</span> <span class="toctext">Setup Observation Sheet</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2"><a href="#Load_study_data"><span class="tocnumber">4.2</span> <span class="toctext">Load study data</span></a></li>
+<li class="toclevel-2"><a href="#Retrieve_factors_.26_variates_of_study"><span class="tocnumber">4.3</span> <span class="toctext">Retrieve factors &amp; variates of study</span></a></li>
+<li class="toclevel-2"><a href="#Retrieve_study_data"><span class="tocnumber">4.4</span> <span class="toctext">Retrieve study data</span></a>
+<ul>
+<li class="toclevel-3"><a href="#Case_1:_Previously_loaded_study_.28MS_Access_as_local_at_time_of_loading.29"><span class="tocnumber">4.4.1</span> <span class="toctext">Case 1: Previously loaded study (MS Access as local at time of loading)</span></a></li>
+<li class="toclevel-3"><a href="#Case_2:_Newly_loaded_study_.28PostgreSQL_as_local_at_time_of_loading.29"><span class="tocnumber">4.4.2</span> <span class="toctext">Case 2: Newly loaded study (PostgreSQL as local at time of loading)</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#DMS_Retriever"><span class="tocnumber">5</span> <span class="toctext">DMS Retriever</span></a>
+<ul>
+<li class="toclevel-2"><a href="#Training-RTV.mdb"><span class="tocnumber">5.1</span> <span class="toctext">Training-RTV.mdb</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#InTrack"><span class="tocnumber">6</span> <span class="toctext">InTrack</span></a>
+<ul>
+<li class="toclevel-2"><a href="#Reserving_of_seed_stock_for_HB_List"><span class="tocnumber">6.1</span> <span class="toctext">Reserving of seed stock for HB List</span></a>
+<ul>
+<li class="toclevel-3"><a href="#View_inventory_information"><span class="tocnumber">6.1.1</span> <span class="toctext">View inventory information</span></a></li>
+<li class="toclevel-3"><a href="#Reserving_seeds"><span class="tocnumber">6.1.2</span> <span class="toctext">Reserving seeds</span></a>
+<ul>
+<li class="toclevel-4"><a href="#Mark_seeds_to_reserve"><span class="tocnumber">6.1.2.1</span> <span class="toctext">Mark seeds to reserve</span></a></li>
+<li class="toclevel-4"><a href="#Transaction_window_-_Reserve"><span class="tocnumber">6.1.2.2</span> <span class="toctext">Transaction window - Reserve</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-2"><a href="#Depositing_of_Seed_Stock_for_F5_List"><span class="tocnumber">6.2</span> <span class="toctext">Depositing of Seed Stock for F5 List</span></a>
+<ul>
+<li class="toclevel-3"><a href="#Create_lot_location_for_the_F5_list"><span class="tocnumber">6.2.1</span> <span class="toctext">Create lot location for the F5 list</span></a>
+<ul>
+<li class="toclevel-4"><a href="#Select_list"><span class="tocnumber">6.2.1.1</span> <span class="toctext">Select list</span></a></li>
+<li class="toclevel-4"><a href="#Specify_lot_location"><span class="tocnumber">6.2.1.2</span> <span class="toctext">Specify lot location</span></a></li>
+<li class="toclevel-4"><a href="#Specify_inventory_units.2C_comments"><span class="tocnumber">6.2.1.3</span> <span class="toctext">Specify inventory units, comments</span></a></li>
+<li class="toclevel-4"><a href="#Save_lot_information"><span class="tocnumber">6.2.1.4</span> <span class="toctext">Save lot information</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3"><a href="#Deposit_seed_stock_for_the_F5_list"><span class="tocnumber">6.2.2</span> <span class="toctext">Deposit seed stock for the F5 list</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#Summary_of_Testing"><span class="tocnumber">7</span> <span class="toctext">Summary of Testing</span></a></li>
+</ul>
+</td></tr></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </script>
+<a name="Setup" id="Setup"></a><h2> <span class="mw-headline"> Setup </span></h2>
+<p>Local GMS,Local DMS and IMS in <b>Postgresql</b> (v8.0; all three are in one database). Central DBs are in MS Access.
+</p><p>ICIS Schema version: 5.4 (Crop: Rice)
+</p><p><b>Testing procedure based on TDM Breeders' Training Course materials (v5.4)</b>
+</p><p><br />
+</p><p><br />
+ODBC Driver setup for "LOCAL-IRIS-TRAINING-PG-WIN-LOC" (local IRIS training PostgreSQL database on local machine):
+<a href="../../../../articles/p/g/l/File%7EPglocal_odbcsetup.JPG_492c.html" class="image" title="Image: Pglocal odbcsetup.JPG"><img alt="Image: Pglocal odbcsetup.JPG" src="../../../../images/f/fe/Pglocal_odbcsetup.JPG" width="464" height="263" border="0" /></a>
+</p><p><br />
+Portion of the ICIS configuration file (.INI) used in the test:
+</p><p><a href="../../../../articles/p/g/l/File%7EPglocal_inifile.JPG_3783.html" class="image" title="Image: Pglocal inifile.JPG"><img alt="Image: Pglocal inifile.JPG" src="../../../../images/5/5d/Pglocal_inifile.JPG" width="397" height="909" border="0" /></a>
+</p><p><br />
+</p>
+<a name="Installation_Diagnostic_Tool" id="Installation_Diagnostic_Tool"></a><h2> <span class="mw-headline"> Installation Diagnostic Tool </span></h2>
+<p>Application version: 5.4.2.8
+</p>
+<a name="Configuration_Test" id="Configuration_Test"></a><h3> <span class="mw-headline"> Configuration Test </span></h3>
+<p>(Test ODBC connection)
+</p><p><font color="blue">Result: OK.</font>
+</p><p><a href="../../../../articles/p/g/l/File%7EPglocal_diagnosticconfigtest.JPG_40bf.html" class="image" title="Pglocal diagnosticconfigtest.JPG"><img alt="" src="../../../../images/thumb/c/ca/Pglocal_diagnosticconfigtest.JPG/650px-Pglocal_diagnosticconfigtest.JPG" width="650" height="483" border="0" /></a>
+</p><p><br />
+</p>
+<a name="Database_Test" id="Database_Test"></a><h3> <span class="mw-headline"> Database Test </span></h3>
+<p><font color="blue">Result: OK.</font>
+</p><p><a href="../../../../articles/p/g/l/File%7EPglocal_diagnosticDBtest.JPG_8b98.html" class="image" title="Image: Pglocal diagnosticDBtest.JPG"><img alt="Image: Pglocal diagnosticDBtest.JPG" src="../../../../images/2/2c/Pglocal_diagnosticDBtest.JPG" width="480" height="491" border="0" /></a>
+</p>
+<a name="DLL_Test_.28minimal.29" id="DLL_Test_.28minimal.29"></a><h3> <span class="mw-headline"> DLL Test (minimal) </span></h3>
+<p><font color="blue"> Result: OK.</font>
+</p><p><a href="../../../../articles/p/g/l/File%7EPglocal_diagnosticdlltest.JPG_4040.html" class="image" title="Image: Pglocal_diagnosticdlltest.JPG"><img alt="Image: Pglocal_diagnosticdlltest.JPG" src="../../../../images/e/eb/Pglocal_diagnosticdlltest.JPG" width="502" height="494" border="0" /></a>
+</p>
+<a name="SetGen" id="SetGen"></a><h2> <span class="mw-headline"> SetGen </span></h2>
+<p>Application version: 5.4.2.0
+</p><p><br /> 
+</p><p><br />
+</p>
+<a name="HB_List" id="HB_List"></a><h3> <span class="mw-headline"> HB List </span></h3>
+<a name="Create_list" id="Create_list"></a><h4> <span class="mw-headline"> Create list </span></h4>
+<p><font color="blue">Result&nbsp;: OK.</font>
+</p><p><a href="../../../../articles/p/g/l/File%7EPglocal_createsetgenlist.JPG_b1b3.html" class="image" title="Pglocal createsetgenlist.JPG"><img alt="" src="../../../../images/thumb/9/91/Pglocal_createsetgenlist.JPG/500px-Pglocal_createsetgenlist.JPG" width="500" height="375" border="0" /></a>
+</p><p><br />
+</p>
+<a name="Fill_with..." id="Fill_with..."></a><h4> <span class="mw-headline"> Fill with... </span></h4>
+<p><font color="blue">Result&nbsp;: OK.</font>
+</p><p><a href="../../../../articles/p/g/l/File%7EPglocal_fillwithsequence.JPG_3242.html" class="image" title="Pglocal fillwithsequence.JPG"><img alt="" src="../../../../images/thumb/2/2e/Pglocal_fillwithsequence.JPG/500px-Pglocal_fillwithsequence.JPG" width="500" height="396" border="0" /></a>
+</p><p><br />
+Naming Convention form pops up:
+</p><p><a href="../../../../articles/p/g/l/File%7EPglocal_namingconvention.JPG_9229.html" class="image" title="Image: Pglocal_namingconvention.JPG"><img alt="Image: Pglocal_namingconvention.JPG" src="../../../../images/f/ff/Pglocal_namingconvention.JPG" width="288" height="151" border="0" /></a>
+</p><p><br />
+"Entry Code" column is renamed to "Sequence number"; column values are successfully filled up:
+</p><p><a href="../../../../articles/p/g/l/File%7EPglocal_fillwithissuccessful.JPG_50af.html" class="image" title="Image: Pglocal_fillwithissuccessful.JPG"><img alt="Image: Pglocal_fillwithissuccessful.JPG" src="../../../../images/9/93/Pglocal_fillwithissuccessful.JPG" width="761" height="188" border="0" /></a>
+</p><p><br />
+</p><p><br />
+</p>
+<a name="Save_the_list" id="Save_the_list"></a><h4> <span class="mw-headline"> Save the list </span></h4>
+<p><font color="blue">Result: OK.</font>
+</p><p><br />
+</p>
+<a name="Export_as_XLS_Excel_File" id="Export_as_XLS_Excel_File"></a><h4> <span class="mw-headline"> Export as XLS Excel File </span></h4>
+<p><font color="blue">Result: OK.</font>
+</p><p><br />
+</p><p>List --&gt; Export as --&gt; XLS Excel File:
+</p><p><a href="../../../../articles/p/g/l/File%7EPglocal_setgen_exportasexcel.JPG_f52e.html" class="image" title="Pglocal setgen exportasexcel.JPG"><img alt="" src="../../../../images/thumb/8/8c/Pglocal_setgen_exportasexcel.JPG/500px-Pglocal_setgen_exportasexcel.JPG" width="500" height="226" border="0" /></a>
+</p><p><br />
+Resulting Excel file:
+</p><p><a href="../../../../articles/p/g/l/File%7EPglocal_setgen_exportasexcelsuccess.JPG_b9c6.html" class="image" title="Pglocal setgen exportasexcelsuccess.JPG"><img alt="" src="../../../../images/thumb/d/d0/Pglocal_setgen_exportasexcelsuccess.JPG/500px-Pglocal_setgen_exportasexcelsuccess.JPG" width="500" height="190" border="0" /></a>
+</p>
+<a name="F1_List" id="F1_List"></a><h3> <span class="mw-headline"> F1 List </span></h3>
+<a name="Create_list_2" id="Create_list_2"></a><h4> <span class="mw-headline"> Create list </span></h4>
+<p>Listname: U04DSF1_TEST
+</p><p><font color="blue">Result: OK. </font>
+</p><p><br />
+</p>
+<a name="Generate_crosses" id="Generate_crosses"></a><h4> <span class="mw-headline"> Generate crosses </span></h4>
+<ul><li> Click "+" button
+</li><li> Use list <b>U03WDHB_TEST</b>
+</li><li> Select Cross Name as name type; specify crossing location
+</li><li> Use naming convention: "IR" as prefix, "90599" as start no.
+</li></ul>
+<p><font color="blue">Result: OK.</font>
+</p><p><br />
+<a href="../../../../articles/p/g/l/File%7EPglocal_f1list_generatecross.JPG_2c42.html" class="image" title="Pglocal f1list generatecross.JPG"><img alt="" src="../../../../images/thumb/9/91/Pglocal_f1list_generatecross.JPG/600px-Pglocal_f1list_generatecross.JPG" width="600" height="147" border="0" /></a>
+</p><p><br />
+</p><p><br />
+</p>
+<a name="Fill_with..._2" id="Fill_with..._2"></a><h4> <span class="mw-headline"> Fill with... </span></h4>
+<ul><li> Right click on "Entry code" column
+</li><li> Select "Fill with Sequence"
+</li><li> Set "P" as the Prefix, "1" as the Start No, leave the end constant blank; check (Include Leading Zeros) and set numeric field width to 3 
+</li></ul>
+<p><font color="blue">Result: OK.</font>
+</p><p><br />
+<a href="../../../../articles/p/g/l/File%7EPglocal_f1list_fillwithsequence.JPG_ead0.html" class="image" title="Pglocal f1list fillwithsequence.JPG"><img alt="" src="../../../../images/thumb/b/bf/Pglocal_f1list_fillwithsequence.JPG/600px-Pglocal_f1list_fillwithsequence.JPG" width="600" height="181" border="0" /></a>
+</p><p><br />
+</p><p><br />
+</p>
+<a name="Save_the_list_2" id="Save_the_list_2"></a><h4> <span class="mw-headline"> Save the list </span></h4>
+<p><font color="blue">Result: OK.</font>
+</p><p><br />
+</p>
+<a name="Export_as_XLS_Excel_File_2" id="Export_as_XLS_Excel_File_2"></a><h4> <span class="mw-headline"> Export as XLS Excel File </span></h4>
+<p><font color="blue">Result: OK.</font>
+</p>
+<a name="F2_Nursery" id="F2_Nursery"></a><h3> <span class="mw-headline"> F2 Nursery </span></h3>
+<p><a href="../../../../articles/p/g/l/File%7EPglocal_f2_advanceonegeneration.JPG_8d51.html" class="image" title="Pglocal f2 advanceonegeneration.JPG"><img alt="" src="../../../../images/thumb/b/bf/Pglocal_f2_advanceonegeneration.JPG/800px-Pglocal_f2_advanceonegeneration.JPG" width="800" height="574" border="0" /></a>
+</p><p><br />
+</p>
+<a name="Create_list_3" id="Create_list_3"></a><h4> <span class="mw-headline"> Create list </span></h4>
+<ul><li> Open the F1 list (select U04DSF1_TEST) in the Browse Window 
+</li><li> Select List&gt;New&gt;List from the List menu. 
+</li><li> Enter the list name: U04WSF2_TEST
+</li><li> Enter the title: Upland F2 nursery for 2004 Wet Season (TEST)
+</li><li> Select list type: F2
+</li></ul>
+<p><font color="blue">Result: OK. </font>
+</p><p><br />
+</p>
+<a name="Derive_lines" id="Derive_lines"></a><h4> <span class="mw-headline"> Derive lines </span></h4>
+<ul><li> Tag all lines in F1 list
+</li><li> Click Derive lines button ("-").
+</li><li> Select "207 Random Bulk" as the method
+</li><li> Select "Derivative Name" as the name type
+</li><li> Source section: check "List name" and "Entry code" checkboxes
+</li><li> Complete date and locations section.
+</li><li> Click OK to all.
+</li><li> An information window displays notifying the user that a germplasm with the same name was found.
+</li><li> Select "Add another germplasm with this name" to add the same germplasm name but generate a different GID to the list.
+</li><li> Click "Ok to All".
+</li></ul>
+<p><font color="blue">Result: OK. </font>
+</p>
+<a name="Save_the_list_3" id="Save_the_list_3"></a><h4> <span class="mw-headline"> Save the list </span></h4>
+<p><font color="blue">Result: OK. </font>
+</p><p><br />
+</p>
+<a name="Export_as_XLS_Excel_File_3" id="Export_as_XLS_Excel_File_3"></a><h4> <span class="mw-headline"> Export as XLS Excel File </span></h4>
+<p><font color="blue">Result: OK. </font>
+</p><p><br />
+</p>
+<a name="Workbook" id="Workbook"></a><h2> <span class="mw-headline"> Workbook </span></h2>
+<p>Application version: 5.4.2.0
+</p><p><br />
+</p>
+<a name="Creating_a_Workbook_file_from_a_germplasm_list" id="Creating_a_Workbook_file_from_a_germplasm_list"></a><h3> <span class="mw-headline"> Creating a Workbook file from a germplasm list </span></h3>
+<a name="Add-ins_--.3E_Import_SetGen_List" id="Add-ins_--.3E_Import_SetGen_List"></a><h4> <span class="mw-headline"> Add-ins --&gt; Import SetGen List </span></h4>
+<ul><li> Select study <b>U03WSHB_TEST</b>
+</li></ul>
+<p><font color="blue">Result: OK</font>
+</p><p><a href="../../../../articles/p/g/l/File%7EPglocal_wb_importsetgenlist.JPG_b98e.html" class="image" title="Pglocal wb importsetgenlist.JPG"><img alt="" src="../../../../images/thumb/0/0d/Pglocal_wb_importsetgenlist.JPG/400px-Pglocal_wb_importsetgenlist.JPG" width="400" height="446" border="0" /></a>
+</p><p><br />
+</p>
+<a name="Setup_Description_Sheet" id="Setup_Description_Sheet"></a><h4> <span class="mw-headline"> Setup Description Sheet </span></h4>
+<a name="Provide_basic_info_for_study_and_setup_the_variables" id="Provide_basic_info_for_study_and_setup_the_variables"></a><h5> <span class="mw-headline"> Provide basic info for study and setup the variables </span></h5>
+<ul><li> Specify start date
+</li><li> Specify end date
+</li><li> Specify study type: E (for experiment)
+</li><li> Add 5 rows under "Variate" section: PLTHT, GRNYLD, FLW, PACP, SEEDSEL. 
+</li><li> Define the ontology for the newly-added variates: click <b>Setup &gt; Variable section &gt; Express setup</b>
+<ul><li> On the Variable Express setup form, select "Property first"
+</li></ul>
+</li><li> "Use" menu:
+<ul><li> Click on PLTHT cell
+</li><li> Click <b>Use &gt; Existing</b>
+</li><li> Click on SEEDSEL cell
+</li><li> Click <b>Use &gt; Existing</b>
+</li></ul>
+</li><li> "Custom Setup" menu
+<ul><li> Click on "FACTOR" section
+</li><li> Click <b>Setup &gt; Variable Section &gt; Custom Setup</b>
+</li><li> "Define Variables" form pops up
+<ul><li> Select "FACTOR" on the dropdown list at the upper left corner of the form
+</li><li> In the listbox immediately below, select "CROSS".
+</li><li> Change the scale of CROSS from "SES Code Variety Group" to <b>"Parents"</b>
+</li></ul>
+</li></ul>
+</li></ul>
+<p><a href="../../../../articles/p/g/l/File%7EPglocal_wb_changescale.JPG_caab.html" class="image" title="Pglocal wb changescale.JPG"><img alt="" src="../../../../images/thumb/1/19/Pglocal_wb_changescale.JPG/400px-Pglocal_wb_changescale.JPG" width="400" height="338" border="0" /></a>
+</p><p>(Do the same for VARIATE section; make specific adjustments)
+</p><p><font color="blue">Result: OK </font>
+</p>
+<a name="Setup_Observation_Sheet" id="Setup_Observation_Sheet"></a><h4> <span class="mw-headline"> Setup Observation Sheet </span></h4>
+<p><a href="../../../../articles/p/g/l/File%7EPglocal_wb_setupobservationsheetmenu.JPG_2085.html" class="image" title="Pglocal wb setupobservationsheetmenu.JPG"><img alt="" src="../../../../images/thumb/4/48/Pglocal_wb_setupobservationsheetmenu.JPG/500px-Pglocal_wb_setupobservationsheetmenu.JPG" width="500" height="291" border="0" /></a>
+</p>
+<ul><li> Adjust observation sheet based on description sheet contents
+<ul><li> Click <b>Setup &gt; Observation Sheet</b>
+</li><li> Observation sheet matches variables defined in description sheet
+</li></ul>
+</li><li> Adjust description sheet based on observation sheet contents (if changes were made)
+<ul><li> Delete ENTRYID column
+</li><li> Place the column GRNYLD before PLTHGT
+</li><li> Click "Setup &gt; Description Sheet"
+</li><li> Specify the first variate through a dialog interface
+</li></ul>
+</li><li> Fill in the data for the variates
+</li></ul>
+<p><font color="blue">Result: OK.</font>
+</p><p><br />
+</p><p><br />
+</p>
+<a name="Load_study_data" id="Load_study_data"></a><h3> <span class="mw-headline"> Load study data </span></h3>
+<ul><li> Click <b>Study &gt; Load</b>
+</li><li> Data Validation mode:
+<ul><li> In the training exercise, the LABELs are missing and PARENTS scale does not exist
+</li><li> Erroneous cells are highlighted
+</li><li> Fix the errors
+</li></ul>
+</li><li> Try to load the study again (click <b>Study &gt; Load</b>)
+</li></ul>
+<p><font color="blue">Result: <font color="red">Error message</font>. Initially an error message window pops up,but the operation <b>proceeds successfully</b> after clicking "OK"</font>
+</p><p><a href="../../../../articles/p/g/l/File%7EPglocal_wb_errormsg_beforeloadstudy.JPG_5099.html" class="image" title="Image: Pglocal wb errormsg beforeloadstudy.JPG"><img alt="Image: Pglocal wb errormsg beforeloadstudy.JPG" src="../../../../images/e/e7/Pglocal_wb_errormsg_beforeloadstudy.JPG" width="468" height="510" border="0" /></a>
+</p><p><a href="../../../../articles/p/g/l/File%7EPglocal_wb_studyloadedsuccessfully.JPG_dd54.html" class="image" title="Pglocal wb studyloadedsuccessfully.JPG"><img alt="" src="../../../../images/thumb/2/21/Pglocal_wb_studyloadedsuccessfully.JPG/700px-Pglocal_wb_studyloadedsuccessfully.JPG" width="700" height="450" border="0" /></a>
+</p><p><font color="green"> (This newly loaded study is assigned with <b>STUDYID = -6</b>. Study successfully loaded in 1 min.)</font>
+</p><p><br />
+Check the underlying database if the study was indeed loaded... RESULT = OK.
+<a href="../../../../articles/p/g/l/File%7EPglocal_wb_verifystudyload.JPG_e923.html" class="image" title="Pglocal wb verifystudyload.JPG"><img alt="" src="../../../../images/thumb/1/16/Pglocal_wb_verifystudyload.JPG/700px-Pglocal_wb_verifystudyload.JPG" width="700" height="525" border="0" /></a>
+</p>
+<a name="Retrieve_factors_.26_variates_of_study" id="Retrieve_factors_.26_variates_of_study"></a><h3> <span class="mw-headline"> Retrieve factors &amp; variates of study </span></h3>
+<ul><li> Click <b>Study &gt; Retrieve &gt; Factors &amp; Variates</b>
+</li><li> Select study <b>U03WSHB_TEST</b> (the study we loaded in the previous section; this study is in the local database)
+</li></ul>
+<p><font color="blue">Result: OK.</font>
+</p><p><a href="../../../../articles/p/g/l/File%7EPglocal_wb_factorvariateretrievalsuccessful.JPG_9382.html" class="image" title="Pglocal wb factorvariateretrievalsuccessful.JPG"><img alt="" src="../../../../images/thumb/9/98/Pglocal_wb_factorvariateretrievalsuccessful.JPG/600px-Pglocal_wb_factorvariateretrievalsuccessful.JPG" width="600" height="405" border="0" /></a>
+</p><p><br />
+</p><p><br />
+</p>
+<a name="Retrieve_study_data" id="Retrieve_study_data"></a><h3> <span class="mw-headline"> Retrieve study data </span></h3>
+<a name="Case_1:_Previously_loaded_study_.28MS_Access_as_local_at_time_of_loading.29" id="Case_1:_Previously_loaded_study_.28MS_Access_as_local_at_time_of_loading.29"></a><h4> <span class="mw-headline"> Case 1: Previously loaded study (MS Access as local at time of loading)</span></h4>
+<ul><li> IRIS local database [Training.MDB (with existing studies)] converted to PostgreSQL
+</li><li> Click <b>Study &gt; Retrieve &gt; Dataset</b>
+</li><li> Select study <b>UWS02AYT</b>
+</li></ul>
+<p><font color="blue">Result: <font color="red">Error message</font>.  Initially an error message window pops up (if during FIRST "Retrieve dataset" operation),but the operation proceeds after clicking "OK". Workbook says that "The study was successfully retrieved in 7 seconds". </font>
+</p><p><a href="../../../../articles/p/g/l/File%7EPglocal_wb_errormsg_getounitdata_retrieveoldstudy.JPG_a634.html" class="image" title="Pglocal wb errormsg getounitdata retrieveoldstudy.JPG"><img alt="" src="../../../../images/thumb/f/fa/Pglocal_wb_errormsg_getounitdata_retrieveoldstudy.JPG/300px-Pglocal_wb_errormsg_getounitdata_retrieveoldstudy.JPG" width="300" height="127" border="0" /></a>
+</p><p><br />
+<a href="../../../../articles/p/g/l/File%7EPglocal_wb_retrieveoldstudy.JPG_caee.html" class="image" title="Pglocal wb retrieveoldstudy.JPG"><img alt="" src="../../../../images/thumb/f/fd/Pglocal_wb_retrieveoldstudy.JPG/700px-Pglocal_wb_retrieveoldstudy.JPG" width="700" height="433" border="0" /></a>
+</p><p><br />
+<a href="../../../../articles/p/g/l/File%7EPglocal_wb_retrieveoldstudy_msg.JPG_1149.html" class="image" title="Image:Pglocal_wb_retrieveoldstudy_msg.JPG"><img alt="Image:Pglocal_wb_retrieveoldstudy_msg.JPG" src="../../../../images/1/16/Pglocal_wb_retrieveoldstudy_msg.JPG" width="318" height="146" border="0" /></a>
+</p>
+<a name="Case_2:_Newly_loaded_study_.28PostgreSQL_as_local_at_time_of_loading.29" id="Case_2:_Newly_loaded_study_.28PostgreSQL_as_local_at_time_of_loading.29"></a><h4> <span class="mw-headline"> Case 2: Newly loaded study (PostgreSQL as local at time of loading) </span></h4>
+<p><a href="../../../../articles/p/g/l/File%7EPglocal_wb_retrievelocalstudy.JPG_7af2.html" class="image" title="Pglocal wb retrievelocalstudy.JPG"><img alt="" src="../../../../images/thumb/a/a4/Pglocal_wb_retrievelocalstudy.JPG/400px-Pglocal_wb_retrievelocalstudy.JPG" width="400" height="336" border="0" /></a>
+</p>
+<ul><li> Click <b>Study &gt; Retrieve &gt; Dataset</b>
+</li><li> Select study <b>U03WSHB_TEST</b> (the study we loaded in the previous section; this study is in the local database)
+</li></ul>
+<p><font color="blue">Result: </font> <font color="red">Error message</font>.  ("UNION types double precision and character varying cannot be matched")
+<font color="blue">Initially an error message window pops up (if during FIRST "Retrieve dataset" operation),but the operation proceeds after clicking "OK". Workbook says that "The study was successfully retrieved in 41 seconds". <b>HOWEVER...</b>
+</font>
+</p><p><a href="../../../../articles/p/g/l/File%7EPglocal_wb_errormsg_beforeloadstudy.JPG_5099.html" class="image" title="Pglocal wb errormsg beforeloadstudy.JPG"><img alt="" src="../../../../images/thumb/e/e7/Pglocal_wb_errormsg_beforeloadstudy.JPG/400px-Pglocal_wb_errormsg_beforeloadstudy.JPG" width="400" height="436" border="0" /></a>
+</p><p><a href="../../../../articles/p/g/l/File%7EPglocal_wb_studysuccessfullyretrieved.JPG_d41f.html" class="image" title="Pglocal wb studysuccessfullyretrieved.JPG"><img alt="" src="../../../../images/thumb/b/b6/Pglocal_wb_studysuccessfullyretrieved.JPG/600px-Pglocal_wb_studysuccessfullyretrieved.JPG" width="600" height="348" border="0" /></a>
+</p><p><br />
+</p><p><font color="blue">
+...if we look at the data for the retrieved variates...
+</p><p></font>
+<a href="../../../../articles/p/g/l/File%7EPglocal_wb_verifydatasetretrieval.jpg_c435.html" class="image" title="Pglocal wb verifydatasetretrieval.jpg"><img alt="" src="../../../../images/thumb/1/16/Pglocal_wb_verifydatasetretrieval.jpg/700px-Pglocal_wb_verifydatasetretrieval.jpg" width="700" height="525" border="0" /></a>
+</p>
+<a name="DMS_Retriever" id="DMS_Retriever"></a><h2> <span class="mw-headline"> DMS Retriever </span></h2>
+<a name="Training-RTV.mdb" id="Training-RTV.mdb"></a><h3> <span class="mw-headline"> Training-RTV.mdb </span></h3>
+<p>Version: Unknown
+</p>
+<ul><li> The form below is first screen that is seen. Click "Study Browse":
+</li></ul>
+<p><a href="../../../../articles/p/g/l/File%7EPglocal_rtv_studybrowse.JPG_b608.html" class="image" title="Pglocal rtv studybrowse.JPG"><img alt="" src="../../../../images/thumb/f/f2/Pglocal_rtv_studybrowse.JPG/400px-Pglocal_rtv_studybrowse.JPG" width="400" height="326" border="0" /></a>
+</p><p><br />
+</p>
+<ul><li> Select the study we loaded:
+</li></ul>
+<p><a href="../../../../articles/p/g/l/File%7EPglocal_rtv_selectstudy.JPG_df8f.html" class="image" title="Image: Pglocal_rtv_selectstudy.JPG"><img alt="Image: Pglocal_rtv_selectstudy.JPG" src="../../../../images/d/de/Pglocal_rtv_selectstudy.JPG" width="576" height="444" border="0" /></a>
+</p><p><br />
+</p>
+<ul><li> Click "View Effect". Then
+</li></ul>
+<p><a href="../../../../articles/p/g/l/File%7EPglocal_rtv_vieweffect.JPG_eef0.html" class="image" title="Pglocal_rtv_vieweffect.JPG"><img alt="Pglocal_rtv_vieweffect.JPG" src="../../../../images/6/6f/Pglocal_rtv_vieweffect.JPG" width="573" height="444" border="0" /></a>
+</p><p><br />
+<font color="blue"><b>Result: OK. Retrieval successful!</b> </font>
+<a href="../../../../articles/p/g/l/File%7EPglocal_rtv_retrieveeffectsuccess.JPG_5fe3.html" class="image" title="Image: Pglocal_rtv_retrieveeffectsuccess.JPG"><img alt="Image: Pglocal_rtv_retrieveeffectsuccess.JPG" src="../../../../images/0/0c/Pglocal_rtv_retrieveeffectsuccess.JPG" width="1108" height="181" border="0" /></a>
+</p><p><br />
+</p>
+<a name="InTrack" id="InTrack"></a><h2> <span class="mw-headline"> InTrack </span></h2>
+<p>Application version: 5.4.2.1
+</p><p><br />
+</p>
+<a name="Reserving_of_seed_stock_for_HB_List" id="Reserving_of_seed_stock_for_HB_List"></a><h3> <span class="mw-headline"> Reserving of seed stock for HB List </span></h3>
+<a name="View_inventory_information" id="View_inventory_information"></a><h4> <span class="mw-headline"> View inventory information </span></h4>
+<ul><li> Start Setgen from Launcher, double-click on U03WSHB from the List Selector. 
+</li><li> Tag all items in the edit window to view inventory.
+</li><li> Right-click on the white space and select &lt;View Inventory&gt; on the pop-up menu.
+</li></ul>
+<p><font color="blue">Result: OK. </font>
+</p><p><a href="../../../../articles/p/g/l/File%7EPglocal_setgen_viewinventory.JPG_db20.html" class="image" title="Pglocal setgen viewinventory.JPG"><img alt="" src="../../../../images/thumb/a/ad/Pglocal_setgen_viewinventory.JPG/400px-Pglocal_setgen_viewinventory.JPG" width="400" height="574" border="0" /></a>
+</p>
+<a name="Reserving_seeds" id="Reserving_seeds"></a><h4> <span class="mw-headline"> Reserving seeds </span></h4>
+<a name="Mark_seeds_to_reserve" id="Mark_seeds_to_reserve"></a><h5> <span class="mw-headline"> Mark seeds to reserve </span></h5>
+<ul><li> Tag all the items in the inventory details section of the Inventory Tracker window 
+</li><li> Right-click on the white space and select &lt;Reserve&gt; on the pop-up menu. The Transaction window will display on the screen.
+</li></ul>
+<p><font color="blue">Result: OK.</font>
+</p><p><a href="../../../../articles/p/g/l/File%7EPglocal_intrack_reserve.JPG_81e5.html" class="image" title="Pglocal intrack reserve.JPG"><img alt="" src="../../../../images/thumb/9/96/Pglocal_intrack_reserve.JPG/500px-Pglocal_intrack_reserve.JPG" width="500" height="481" border="0" /></a>
+</p>
+<a name="Transaction_window_-_Reserve" id="Transaction_window_-_Reserve"></a><h5> <span class="mw-headline"> Transaction window - Reserve </span></h5>
+<ul><li> Encode on the space provided for each item the number of units to reserve, fill in commitment date of the reservation and any comment on the reservation being made.
+</li></ul>
+<p><font color="blue">Result: OK.</font>
+</p><p><a href="../../../../articles/p/g/l/File%7EPglocal_intrack_reservewindow.JPG_a269.html" class="image" title="Pglocal intrack reservewindow.JPG"><img alt="" src="../../../../images/thumb/1/14/Pglocal_intrack_reservewindow.JPG/500px-Pglocal_intrack_reservewindow.JPG" width="500" height="363" border="0" /></a>
+</p><p><br />
+Changes are reflected in the underlying PostgreSQL database:
+</p><p><a href="../../../../articles/p/g/l/File%7EPglocal_intrack_newtransactionsrecorded.JPG_6879.html" class="image" title="Pglocal intrack newtransactionsrecorded.JPG"><img alt="" src="../../../../images/thumb/e/e3/Pglocal_intrack_newtransactionsrecorded.JPG/600px-Pglocal_intrack_newtransactionsrecorded.JPG" width="600" height="369" border="0" /></a>
+</p>
+<a name="Depositing_of_Seed_Stock_for_F5_List" id="Depositing_of_Seed_Stock_for_F5_List"></a><h3> <span class="mw-headline"> Depositing of Seed Stock for F5 List </span></h3>
+<a name="Create_lot_location_for_the_F5_list" id="Create_lot_location_for_the_F5_list"></a><h4> <span class="mw-headline"> Create lot location for the F5 list </span></h4>
+<a name="Select_list" id="Select_list"></a><h5> <span class="mw-headline"> Select list </span></h5>
+<ul><li> Double-click list U03WSF5A
+</li><li> Right-click on the inventory details section of the Inventory Tracker window 
+</li><li> Select &lt;Add Lot&gt; from the pop-up menu
+</li></ul>
+<p><font color="blue">Result: OK. Message window pops up: "Please fill up List/GID/lot location/lot units" </font> 
+</p>
+<a name="Specify_lot_location" id="Specify_lot_location"></a><h5> <span class="mw-headline"> Specify lot location </span></h5>
+<ul><li> Click button with elipses "..."
+<ul><li> Select &lt;Short Term&gt; on the Collection drop-down list
+</li><li> Select &lt;ST, Tray No. 998&gt; on the Tray drop-down list
+</li><li> Click on the &lt;OK&gt; button to close the window and update the location field on the inventory details section.
+</li></ul>
+</li></ul>
+<p><font color="blue">Result: OK.</font>
+</p><p><a href="../../../../articles/p/g/l/File%7EPglocal_intrack_addlotlocation.JPG_7eba.html" class="image" title="Pglocal intrack addlotlocation.JPG"><img alt="" src="../../../../images/thumb/e/ea/Pglocal_intrack_addlotlocation.JPG/600px-Pglocal_intrack_addlotlocation.JPG" width="600" height="574" border="0" /></a>
+</p><p><br />
+</p>
+<a name="Specify_inventory_units.2C_comments" id="Specify_inventory_units.2C_comments"></a><h5> <span class="mw-headline"> Specify inventory units, comments </span></h5>
+<ul><li> Select &lt;Packet&gt; on the Inventory Units drop-down list.
+</li><li> On the Comments field, type “lot created for Postgres test”
+</li></ul>
+<p><font color="blue">Result: OK.</font>
+</p><p><br />
+</p>
+<a name="Save_lot_information" id="Save_lot_information"></a><h5> <span class="mw-headline"> Save lot information </span></h5>
+<ul><li> Click on the &lt;Save&gt; button on the toolbar to update the database.
+</li></ul>
+<p><font color="blue"> Result: OK</font>
+</p><p><a href="../../../../articles/p/g/l/File%7EPglocal_intrack_savesuccessful.JPG_7f9e.html" class="image" title="Pglocal intrack savesuccessful.JPG"><img alt="" src="../../../../images/thumb/a/a1/Pglocal_intrack_savesuccessful.JPG/600px-Pglocal_intrack_savesuccessful.JPG" width="600" height="478" border="0" /></a>
+</p>
+<a name="Deposit_seed_stock_for_the_F5_list" id="Deposit_seed_stock_for_the_F5_list"></a><h4> <span class="mw-headline"> Deposit seed stock for the F5 list </span></h4>
+<ul><li> Tag all the items in the Inventory Details section.
+</li><li> Right-click on the white space and select &lt;Deposit&gt; on the pop-up menu. 
+</li><li> The Transaction window (Deposit) displays on the screen.
+</li><li> Encode the number of units to deposit, commitment date of the deposit and any comment on the deposit being made.
+</li><li> Click on &lt;Ok&gt; to save changes.
+</li></ul>
+<p><font color="blue">Result: OK.</font>
+</p><p><a href="../../../../articles/p/g/l/File%7EPglocal_intrack_depositsuccessful.JPG_f4a1.html" class="image" title="Pglocal intrack depositsuccessful.JPG"><img alt="" src="../../../../images/thumb/0/06/Pglocal_intrack_depositsuccessful.JPG/600px-Pglocal_intrack_depositsuccessful.JPG" width="600" height="338" border="0" /></a>
+</p><p><br />
+</p>
+<a name="Summary_of_Testing" id="Summary_of_Testing"></a><h2> <span class="mw-headline"> Summary of Testing </span></h2>
+<table border="0" cellpadding="2" style="background:#d0d0d0" width="95%">
+
+<tr>
+<th width="25%" align="left"> ICIS Application
+</th><td> Process/function
+</td><td>
+</td><td> Result
+</td><td> Remarks
+</td></tr>
+<tr>
+<td style="background:#ffffff" valign="top" rowspan="3"> <b>Installation Diagnostic Tool</b> v5.4.2.8
+</td><td style="background:#ffffff" colspan="2"> <a href="#Configuration_Test" title=""> Check ODBC Connection (Configuration Test)</a>
+</td><td style="background:#ffffff"> <font color="green">OK</font>
+</td><td style="background:#ffffff">
+</td></tr>
+<tr>
+<td style="background:#ffffff" colspan="2"> <a href="#Database_Test" title=""> Check database structure (Database Test) </a>
+</td><td style="background:#ffffff"> <font color="green">OK</font>
+</td><td style="background:#ffffff">
+</td></tr>
+<tr>
+<td style="background:#ffffff" colspan="2"> <a href="#DLL_Test_.28minimal.29" title=""> Check some DLL functions (DLL Test (minimal))</a>
+</td><td style="background:#ffffff"> <font color="green">OK</font>
+</td><td style="background:#ffffff">
+</td></tr>
+<tr>
+<td style="background:#ffffff" valign="top" rowspan="13"> <b>SetGen</b> v5.4.2.0
+</td><td style="background:#ffffff" rowspan="4"> HB List
+</td><td style="background:#ffffff"> <a href="#Create_list" title=""> Create list</a>
+</td><td style="background:#ffffff"> <font color="green">OK</font>
+</td><td style="background:#ffffff">
+</td></tr>
+<tr>
+<td style="background:#ffffff"> <a href="#Fill_with..." title=""> Fill with...</a>
+</td><td style="background:#ffffff"> <font color="green">OK</font>
+</td><td style="background:#ffffff">
+</td></tr>
+<tr>
+<td style="background:#ffffff"> <a href="#Save_the_list" title=""> Save list</a>
+</td><td style="background:#ffffff"> <font color="green">OK</font>
+</td><td style="background:#ffffff">
+</td></tr>
+<tr>
+<td style="background:#ffffff"> <a href="#Export_as_XLS_Excel_File" title=""> Export as XLS Excel file</a>
+</td><td style="background:#ffffff"> <font color="green">OK</font>
+</td><td style="background:#ffffff">
+</td></tr>
+<tr>
+<td style="background:#ffffff" rowspan="5"> F1 List
+</td><td style="background:#ffffff"> <a href="#Create_list_2" title=""> Create list</a>
+</td><td style="background:#ffffff"> <font color="green">OK</font>
+</td><td style="background:#ffffff">
+</td></tr>
+<tr>
+<td style="background:#ffffff"> <a href="#Generate_crosses" title=""> Generate crosses</a>
+</td><td style="background:#ffffff"> <font color="green">OK</font>
+</td><td style="background:#ffffff">
+</td></tr>
+<tr>
+<td style="background:#ffffff"> <a href="#Fill_with..._2" title=""> Fill with...</a>
+</td><td style="background:#ffffff"> <font color="green">OK</font>
+</td><td style="background:#ffffff">
+</td></tr>
+<tr>
+<td style="background:#ffffff"> <a href="#Save_the_list_2" title=""> Save list</a>
+</td><td style="background:#ffffff"> <font color="green">OK</font>
+</td><td style="background:#ffffff">
+</td></tr>
+<tr>
+<td style="background:#ffffff"> <a href="#Export_as_XLS_Excel_File_2" title=""> Export as XLS Excel file</a>
+</td><td style="background:#ffffff"> <font color="green">OK</font>
+</td><td style="background:#ffffff">
+</td></tr>
+<tr>
+<td style="background:#ffffff" rowspan="4"> F2 Nursery
+</td><td style="background:#ffffff"> <a href="#Create_list_3" title=""> Create list</a>
+</td><td style="background:#ffffff"> <font color="green">OK</font>
+</td><td style="background:#ffffff">
+</td></tr>
+<tr>
+<td style="background:#ffffff"> <a href="#Derive_lines" title=""> Derive lines (advance a line one generation)</a>
+</td><td style="background:#ffffff"> <font color="green">OK</font>
+</td><td style="background:#ffffff">
+</td></tr>
+<tr>
+<td style="background:#ffffff"> <a href="#Save_the_list_3" title=""> Save list</a>
+</td><td style="background:#ffffff"> <font color="green">OK</font>
+</td><td style="background:#ffffff">
+</td></tr>
+<tr>
+<td style="background:#ffffff"> <a href="#Export_as_XLS_Excel_File_3" title=""> Export as XLS Excel file</a>
+</td><td style="background:#ffffff"> <font color="green">OK</font>
+</td><td style="background:#ffffff">
+</td></tr>
+<tr>
+<td style="background:#ffffff" valign="top" rowspan="7"> <b>Workbook</b> v5.4.2.0
+</td><td style="background:#ffffff" rowspan="3"> Create a Workbook file from a germplasm list
+</td><td style="background:#ffffff"> <a href="#Add-ins_--.3E_Import_SetGen_List" title=""> Add-ins --&gt; Import SetGen list</a>
+</td><td style="background:#ffffff"> <font color="green">OK</font>
+</td><td style="background:#ffffff">
+</td></tr>
+<tr>
+<td style="background:#ffffff"> <a href="#Setup_Description_Sheet" title=""> Setup Description Sheet</a>
+</td><td style="background:#ffffff"> <font color="green">OK</font>
+</td><td style="background:#ffffff">
+</td></tr>
+<tr>
+<td style="background:#ffffff"> <a href="#Setup_Observation_Sheet" title=""> Setup Observation Sheet</a>
+</td><td style="background:#ffffff"> <font color="green">OK</font>
+</td><td style="background:#ffffff">
+</td></tr>
+<tr>
+<td style="background:#ffffff" colspan="2"> <a href="#Load_study_data" title=""> Load study data</a>
+</td><td style="background:#ffffff"> <font color="red">Error message</font>
+</td><td style="background:#ffffff"> Initially, an <a href="http://cropwiki.irri.org/icis/index.php/Image:Pglocal_wb_errormsg_beforeloadstudy.JPG" class="external text" title="http://cropwiki.irri.org/icis/index.php/Image:Pglocal_wb_errormsg_beforeloadstudy.JPG" rel="nofollow">error message window</a> pops up,but the operation proceeds successfully after clicking "OK"
+</td></tr>
+<tr>
+<td style="background:#ffffff" colspan="2"> <a href="#Retrieve_factors_.26_variates_of_study" title=""> Retrieve factors &amp; variates of study</a>
+</td><td style="background:#ffffff"> <font color="green">OK</font>
+</td><td style="background:#ffffff">
+</td></tr>
+<tr>
+<td style="background:#ffffff" rowspan="2"> Retrieve study data
+</td><td style="background:#ffffff"> <a href="#Case_1:_Previously_loaded_study_.28MS_Access_as_local_at_time_of_loading.29" title=""> <b>Case 1:</b> Previously loaded study (MS Access as local at time of loading)</a>
+</td><td style="background:#ffffff"> <font color="red">Error message</font>
+</td><td style="background:#ffffff"> Initially, an error message window pops up: "UNION types double precision and character varying cannot be matched". <font color="blue">Note: An error message only appears when during the FIRST retrieval of a study dataset. If a study is already open, and you retrieve another study dataset, the error message does not pop up anymore.</font>
+</td></tr>
+<tr>
+<td style="background:#ffffff"> <a href="#Case_2:_Newly_loaded_study_.28PostgreSQL_as_local_at_time_of_loading.29" title=""> <b>Case 2:</b> Newly loaded study (PostgreSQL as local at time of loading)</a>
+</td><td style="background:#ffffff"> <font color="red">Error message</font>
+</td><td style="background:#ffffff">
+<ul><li> <font color="blue">Same error message behavior as Case 1.</font>
+</li><li> Workbook says "The study was successfully retrieved." 
+</li><li> All entries in the study are retrieved, however, truncation in the data (under Variate section) was observed. 
+</li><li> Data under Factor section are correct.
+</li><li> All data (Factors and Variates) in the database are correct. 
+</li><li> <b>Recommendation:</b> Revisit application source code and/or ICIS32.DLL
+</li></ul>
+</td></tr>
+<tr>
+<td style="background:#ffffff" valign="top" rowspan="4"> <b>InTrack</b> v5.4.2.1
+</td><td style="background:#ffffff" rowspan="2"> Reserving of seed stock for HB List
+</td><td style="background:#ffffff"> <a href="#View_inventory_information" title=""> View inventory (launch from SetGen)</a>
+</td><td style="background:#ffffff"> <font color="green">OK</font>
+</td><td style="background:#ffffff">
+</td></tr>
+<tr>
+<td style="background:#ffffff"> <a href="#Reserving_seeds" title="">Reserve seeds</a>
+</td><td style="background:#ffffff"> <font color="green">OK</font>
+</td><td style="background:#ffffff">
+</td></tr>
+<tr>
+<td style="background:#ffffff" rowspan="2"> Depositing of Seed Stock for F5 List
+</td><td style="background:#ffffff"> <a href="#Create_lot_location_for_the_F5_list" title=""> Create lot location for F5 list</a>
+</td><td style="background:#ffffff"> <font color="green">OK</font>
+</td><td style="background:#ffffff">
+</td></tr>
+<tr>
+<td style="background:#ffffff"> <a href="#Deposit_seed_stock_for_the_F5_list" title=""> Deposit seed stock</a>
+</td><td style="background:#ffffff"> <font color="green">OK</font>
+</td><td style="background:#ffffff">
+</td></tr>
+
+<tr>
+<td style="background:#ffffff" valign="top"> <b>DMS Retriever</b>
+</td><td style="background:#ffffff"> Training-RTV.mdb (version uknown)
+</td><td style="background:#ffffff"> Browse study
+</td><td style="background:#ffffff"> <font color="green">OK</font>
+</td><td style="background:#ffffff"> Further investigation &amp; testing required
+</td></tr>
+</table>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 118/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+<div class="printfooter">
+Retrieved from "<a href="http://localhost../../../../articles/p/o/s/Postgresql_as_Local_GMS,_Local_DMS,_and_IMS_14a4.html">http://localhost../../../../articles/p/o/s/Postgresql_as_Local_GMS,_Local_DMS,_and_IMS_14a4.html</a>"</div>
+						<!-- end content -->
+						<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<div class="pBody">
+			<ul>
+	
+				 <li id="ca-nstab-main" class="selected"><a href="../../../../articles/p/o/s/Postgresql_as_Local_GMS,_Local_DMS,_and_IMS_14a4.html" title="View the content page [c]" accesskey="c">Page</a></li>
+				 <li id="ca-talk" class="new"><a href="../../../../articles/p/o/s/Talk%7EPostgresql_as_Local_GMS,_Local_DMS,_and_IMS_912e.html" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				 <li id="ca-viewsource"><a href="../../../../articles/p/o/s/Postgresql_as_Local_GMS,_Local_DMS,_and_IMS_14a4.html" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				 <li id="ca-history"><a href="../../../../articles/p/o/s/Postgresql_as_Local_GMS,_Local_DMS,_and_IMS_14a4.html" title="Past versions of this page [h]" accesskey="h">History</a></li>			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="../../../../articles/u/s/e/Special%7EUserLogin_94cd.html" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(../../../../misc/icis-wiki3.png);" href="../../../../index.html" title="Visit the main page [z]" accesskey="z"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class='generated-sidebar portlet' id='p-navigation'>
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="../../../../index.html" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
+				<li id="n-portal"><a href="../../../../articles/c/o/m/ICISWiki%7ECommunity_Portal_7449.html" title="About the project, what you can do, where to find things">Community portal</a></li>
+				<li id="n-recentchanges"><a href="../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+				<li id="n-help"><a href="../../../../articles/c/o/n/Help%7EContents_22de.html" title="The place to find out">Help</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="../../../../articles/s/e/a/Special%7ESearch_a8e5.html" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" title="Search ICISWiki [f]" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="../../../../articles/w/h/a/Special%7EWhatLinksHere_Postgresql_as_Local_GMS,_Local_DMS,_and_IMS_0e29.html" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="../../../../articles/r/e/c/Special%7ERecentChangesLinked_Postgresql_as_Local_GMS,_Local_DMS,_and_IMS_184d.html" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+<li id="t-specialpages"><a href="../../../../articles/s/p/e/Special%7ESpecialPages_f12b.html" title="List of all special pages [q]" accesskey="q">Special pages</a></li>
+				<li id="t-print"><a href="../../../../articles/p/o/s/Postgresql_as_Local_GMS,_Local_DMS,_and_IMS_14a4.html" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>				<li id="t-permalink"><a href="../../../../articles/p/o/s/Postgresql_as_Local_GMS,_Local_DMS,_and_IMS_14a4.html" title="Permanent link to this version of the page">Permanent link</a></li>			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="../../../../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" /></a></div>
+				<div id="f-copyrightico"><a href="../../../../../COPYING.html"><img src="/icis/skins/common/images/gnu-fdl.png" alt='GNU Free Documentation License 1.2' /></a></div>
+			<ul id="f-list">
+					<li id="credits">This page was last modified 14:29, 10 March 2008 by <a href="../../../../articles/m/h/a/User%7EMhabito_276f.html" title="User:Mhabito">Maria Corina de Luna Habito</a>. </li>
+					<li id="copyright">Content is available under <a href="../../../../../COPYING.html" class="external " title="../../../../../COPYING.html">GNU Free Documentation License 1.2</a>.</li>
+					<li id="privacy"><a href="../../../../articles/p/r/i/ICISWiki%7EPrivacy_policy_0cbf.html" title="ICISWiki:Privacy policy">Privacy policy</a></li>
+					<li id="about"><a href="../../../../articles/a/b/o/ICISWiki%7EAbout_53aa.html" title="ICISWiki:About">About ICISWiki</a></li>
+					<li id="disclaimer"><a href="../../../../articles/g/e/n/ICISWiki%7EGeneral_disclaimer_9129.html" title="ICISWiki:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+</div>
+
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served in 270.733 secs. --></body></html>

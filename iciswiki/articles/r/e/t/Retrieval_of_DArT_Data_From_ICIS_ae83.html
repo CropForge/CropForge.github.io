@@ -1,0 +1,843 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta name="generator" content="MediaWiki 1.14.0" />
+		<meta name="keywords" content="Retrieval of DArT Data From ICIS" />
+		<link rel="shortcut icon" href="../../../../misc/favicon.ico" />
+		<link rel="search" type="application/opensearchdescription+xml" href="../../../../../opensearch_desc.php" title="ICISWiki (en)" />
+		<link title="Creative Commons" type="application/rdf+xml" href="../../../../articles/r/e/t/Retrieval_of_DArT_Data_From_ICIS_ae83.html" rel="alternate meta" />
+		<link rel="copyright" href="../../../../../COPYING.html" />
+		<link rel="alternate" type="application/rss+xml" title="ICISWiki RSS Feed" href="http://localhost../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" />
+		<link rel="alternate" type="application/atom+xml" title="ICISWiki Atom Feed" href="http://localhost../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" />
+		<title>Retrieval of DArT Data From ICIS - ICISWiki</title>
+		<link rel="stylesheet" href="../../../../skins/common/shared.css?195" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../../../../skins/common/commonPrint.css?195" type="text/css" media="print" />
+		<link rel="stylesheet" href="../../../../skins/monobook/main.css?195" type="text/css" media="screen" />
+		<!--[if lt IE 5.5000]><link rel="stylesheet" href="../../../../skins/monobook/IE50Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 5.5000]><link rel="stylesheet" href="../../../../skins/monobook/IE55Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 6]><link rel="stylesheet" href="../../../../skins/monobook/IE60Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 7]><link rel="stylesheet" href="../../../../skins/monobook/IE70Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7ECommon.css?195" type="text/css" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7EPrint.css?195" type="text/css" media="print" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7EMonobook.css?195" type="text/css" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/gen.css?195" type="text/css" />
+		<!--[if lt IE 7]><script type="text/javascript" src="../../../../skins/common/IEFixes.js?195"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+
+		<script type= "text/javascript">/*<![CDATA[*/
+		var skin = "monobook";
+		var stylepath = "../../../../skins";
+		var wgArticlePath = "../../../../$1";
+		var wgScriptPath = "../../../../..";
+		var wgScript = "/icis/index.php";
+		var wgVariantArticlePath = false;
+		var wgActionPaths = {};
+		var wgServer = "http://localhost";
+		var wgCanonicalNamespace = "";
+		var wgCanonicalSpecialPageName = false;
+		var wgNamespaceNumber = 0;
+		var wgPageName = "Retrieval_of_DArT_Data_From_ICIS";
+		var wgTitle = "Retrieval of DArT Data From ICIS";
+		var wgAction = "view";
+		var wgArticleId = "2329";
+		var wgIsArticle = true;
+		var wgUserName = null;
+		var wgUserGroups = null;
+		var wgUserLanguage = "en";
+		var wgContentLanguage = "en";
+		var wgBreakFrames = false;
+		var wgCurRevisionId = "9711";
+		var wgVersion = "1.14.0";
+		var wgEnableAPI = true;
+		var wgEnableWriteAPI = true;
+		var wgSeparatorTransformTable = ["", ""];
+		var wgDigitTransformTable = ["", ""];
+		var wgRestrictionEdit = [];
+		var wgRestrictionMove = [];
+		/*]]>*/</script>
+
+		<script type="text/javascript" src="../../../../skins/common/wikibits.js?195"><!-- wikibits js --></script>
+		<!-- Head Scripts -->
+		<script type="text/javascript" src="../../../../raw/gen.js"><!-- site js --></script>
+	</head>
+<body class="mediawiki ltr ns-0 ns-subject page-Retrieval_of_DArT_Data_From_ICIS skin-monobook">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 id="firstHeading" class="firstHeading">Retrieval of DArT Data From ICIS</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From ICISWiki</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>			<!-- start content -->
+			<table id="toc" class="toc" summary="Contents"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1"><a href="#PostgreSQL"><span class="tocnumber">1</span> <span class="toctext">PostgreSQL</span></a>
+<ul>
+<li class="toclevel-2"><a href="#Steps_in_Retrieving_genotype_and_phenotype_study"><span class="tocnumber">1.1</span> <span class="toctext">Steps in Retrieving genotype and phenotype study</span></a></li>
+<li class="toclevel-2"><a href="#PostgreSQL_Functions.2FStored_Procedures"><span class="tocnumber">1.2</span> <span class="toctext">PostgreSQL Functions/Stored Procedures</span></a>
+<ul>
+<li class="toclevel-3"><a href="#get_dataset_.28studyname.2C_tablename.29"><span class="tocnumber">1.2.1</span> <span class="toctext">get_dataset (studyname, tablename)</span></a></li>
+<li class="toclevel-3"><a href="#create_array_dataset_.28tablename.2Cstudyname.29"><span class="tocnumber">1.2.2</span> <span class="toctext">create_array_dataset (tablename,studyname)</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#MySQL"><span class="tocnumber">2</span> <span class="toctext">MySQL</span></a>
+<ul>
+<li class="toclevel-2"><a href="#create_allele_string.28.29"><span class="tocnumber">2.1</span> <span class="toctext">create_allele_string()</span></a></li>
+<li class="toclevel-2"><a href="#create_table.60.28IN_var_ntable_VARCHAR.2825.29.2CIN_var_sname1_VARCHAR.2825.29.2C_IN__var_sname2_VARCHAR.2825.29_.29"><span class="tocnumber">2.2</span> <span class="toctext">create_table`(IN var_ntable VARCHAR(25),IN var_sname1 VARCHAR(25), IN  var_sname2 VARCHAR(25) )</span></a></li>
+<li class="toclevel-2"><a href="#get_dataset.28IN_var_studyid_INT.2C_IN_ntable_VARCHAR.2825.29.29"><span class="tocnumber">2.3</span> <span class="toctext">get_dataset(IN var_studyid INT, IN ntable VARCHAR(25))</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#Java"><span class="tocnumber">3</span> <span class="toctext">Java</span></a></li>
+</ul>
+</td></tr></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </script>
+<a name="PostgreSQL" id="PostgreSQL"></a><h2> <span class="mw-headline"> PostgreSQL </span></h2>
+<a name="Steps_in_Retrieving_genotype_and_phenotype_study" id="Steps_in_Retrieving_genotype_and_phenotype_study"></a><h3> <span class="mw-headline"> Steps in Retrieving genotype and phenotype study </span></h3>
+<ol><li> Retrieve the Genotype Study <br /> SELECT get_dataset ('DArT_Genotype', 'genotype'); 
+</li><li> Create an array implementation of the Genotype Study <br /> SELECT create_dataset_array ('genotype', genoarray')
+</li><li> Retrieve the Phenotype Study <br /> SELECT get_dataset ('UWS0F2','phenodata')
+</li><li> Join the phenotype and Genotype Study <br />SELECT * INTO phenogeno FROM genoarray, phenodata where genoarray.gid = phenodata."GID"
+</li></ol>
+<a name="PostgreSQL_Functions.2FStored_Procedures" id="PostgreSQL_Functions.2FStored_Procedures"></a><h3> <span class="mw-headline"> PostgreSQL Functions/Stored Procedures </span></h3>
+<p>Below are the codes for the procedures used in retrieving the phenotypic and genotypic data
+</p>
+<a name="get_dataset_.28studyname.2C_tablename.29" id="get_dataset_.28studyname.2C_tablename.29"></a><h4> <span class="mw-headline"> get_dataset (studyname, tablename)</span></h4>
+<p>This query calls the get_dataset function. 
+</p>
+<pre>-- Function: get_dataset(text, text)
+
+-- DROP FUNCTION get_dataset(text, text);
+CREATE OR REPLACE FUNCTION get_dataset(text, text)
+RETURNS int4 AS
+$BODY$
+DECLARE
+       ntable ALIAS FOR $1;
+       var_sname ALIAS FOR $2;
+       n INT;
+       var_studyid INT;
+       rec RECORD;
+       vrec RECORD;
+       rec2 RECORD;
+       rec_factor RECORD;
+       rec_var RECORD;
+BEGIN
+       SELECT studyid INTO var_studyid FROM study where sname = var_sname;
+       SELECT factorid INTO n FROM factor 
+              INNER JOIN  study on study.studyid = factor.studyid 
+              WHERE study.studyid = var_studyid and factor.scaleid = 134;
+       execute 'CREATE TABLE ' ||quote_ident(ntable) ||'( ounitid INT )';
+       --ADD columns for factor names
+       FOR rec in 
+       execute 'SELECT distinct factor.factorid,factor.fname, factor.labelid,  factor.ltype
+               FROM factor 
+               LEFT JOIN study on factor.studyid = study.studyid
+               WHERE study.studyid = '||var_studyid ||'  
+               and factor.factorid&nbsp;!= (SELECT factorid FROM factor inner join study on 
+                        study.studyid = factor.studyid
+                        WHERE study.studyid = '||var_studyid||' and factor.labelid ='||n||')'
+               LOOP
+               IF rec.ltype  = 'N' THEN
+                      execute 'ALTER TABLE ' ||quote_ident(ntable) ||
+                      ' ADD COLUMN `' || quote_ident(rec.fname) || '` DOUBLE PRECISION';
+               ELSE
+                      execute 'ALTER TABLE ' ||quote_ident(ntable) ||
+                      ' ADD COLUMN `' || quote_ident(rec.fname) || '` VARCHAR';
+               END IF;
+       END LOOP;
+       --ADD columns for the variate names
+       FOR vrec in 
+       execute 'SELECT distinct variate.variatid,variate.vname, variate.dtype
+                FROM variate
+                LEFT JOIN study on variate.studyid = study.studyid
+                WHERE study.studyid = '||var_studyid
+                LOOP
+                     IF vrec.dtype  = 'N' THEN
+                        execute 'ALTER TABLE ' ||quote_ident(ntable) ||
+                        ' ADD COLUMN `' || quote_ident vrec.vname) || '` DOUBLE PRECISION';
+                     ELSE
+                        execute 'ALTER TABLE ' ||quote_ident(ntable) ||
+                                ' ADD COLUMN `' || quote_ident(vrec.vname) || '` VARCHAR';
+                     END IF;
+                 END LOOP;
+       -- Populate table by ounitid except the global ounitid of the study
+       FOR rec2 in 
+       EXECUTE 'SELECT distinct ounitid from oindex 
+                LEFT JOIN factor ON factor.factorid = oindex.factorid
+                LEFT JOIN  study on study.studyid = factor.studyid 
+                WHERE study.studyid = '|| var_studyid || ' and 
+                      factor.labelid&nbsp;!= '||n
+                LOOP
+                    execute 'INSERT INTO ' || quote_ident(ntable)|| 
+                    ' (ounitid) VALUES ('||rec2.ounitid||')';
+               END LOOP;
+  
+       --*EXECUTE 'ALTER TABLE' || quote_ident(ntable)|| 
+         ' ADD CONSTRAINT p_key PRIMARY KEY (ounitid)';
+      --GET ALL FACTOR values
+         OR rec_factor IN
+               execute 'SELECT distinct factor.factorid,factor.fname, 
+                               factor.labelid, factor.ltype
+               FROM factor 
+               LEFT JOIN study on factor.studyid = study.studyid
+               WHERE study.studyid = '||var_studyid ||' and factor.factorid&nbsp;!= '||n
+               LOOP
+                   IF rec_factor.ltype  = 'N' THEN
+                     EXECUTE 'UPDATE '||quote_ident(ntable)||' 
+                              SET ' || quote_ident(rec_factor.fname) || ' = x.lvalue 
+                              FROM(
+                                   (SELECT d.lvalue, oindex.ounitid 
+                                       FROM oindex 
+                                       INNER JOIN
+                                      (SELECT study.studyid, factor.factorid,factor.fname,
+                                             level_n.labelid,level_n.levelno,level_n.lvalue
+                                       FROM level_n
+                                       INNER JOIN factor
+                                               ON factor.labelid = level_n.labelid
+                                               INNER JOIN study 
+                                               ON study.studyid = factor.studyid
+                                               WHERE study.studyid = '|| var_studyid || '
+                                               order by levelno
+                                       ) as d on d.levelno = oindex.levelno
+                                       WHERE 
+                                               d.fname = '||quote_literal(rec_factor.fname) ||' 
+                                               and d.labelid = '||rec_factor.labelid ||'
+                                               and oindex.factorid = '||rec_factor.factorid ||')
+                                               ) as x
+                               WHERE
+                               '||quote_ident(ntable) ||'.ounitid = x.ounitid ';
+                ELSE
+                      EXECUTE 'UPDATE '||quote_ident(ntable)||' SET ' 
+                              || quote_ident(rec_factor.fname) || ' = x.lvalue 
+                               FROM(
+                                   (SELECT d.lvalue, oindex.ounitid 
+                                        FROM oindex 
+                                        INNER JOIN
+                                        (SELECT study.studyid, factor.factorid,factor.fname,
+                                         level_c.labelid,level_c.levelno,level_c.lvalue
+                                         FROM level_c
+                                               INNER JOIN factor
+                                               ON factor.labelid = level_c.labelid
+                                               INNER JOIN study 
+                                               ON study.studyid = factor.studyid
+                                         WHERE study.studyid = '|| var_studyid || 
+                                               'order by levelno ) as d
+                                                on d.levelno = oindex.levelno
+                                WHERE 
+                                     d.fname = `'||quote_literal(rec_factor.fname) ||'` and 
+                                     d.labelid = '||rec_factor.labelid ||'
+                                     and oindex.factorid = '||rec_factor.factorid ||')
+                                     ) as x
+                                WHERE 
+                                    '||quote_ident(ntable) ||'.ounitid = x.ounitid ';
+                END IF;
+         END LOOP;
+       --- GET ALL VARIATES
+       FOR rec_var IN
+           execute 'SELECT distinct variate.variatid,variate.vname, variate.dtype
+               FROM variate 
+               LEFT JOIN study on variate.studyid = study.studyid 
+               WHERE study.studyid = '||var_studyid 
+               LOOP
+               IF rec_var.dtype  = 'N' THEN
+                      EXECUTE 'UPDATE '||quote_ident(ntable)||
+                              ' SET `' || quote_ident(rec_var.vname) || '` = x.dvalue 
+                              FROM(
+                                   SELECT dvalue, ounitid FROM data_n 
+                                   WHERE data_n.variatid = '||rec_var.variatid||
+                                   ') as x 
+                              WHERE '||quote_ident(ntable)||'.ounitid = x.ounitid ';
+               ELSE
+                      EXECUTE 'UPDATE '||quote_ident(ntable)||
+                              'SET `' || quote_ident(rec_var.vname) || '` = x.dvalue 
+                              FROM(
+                                   SELECT dvalue, ounitid from data_c WHERE data_c.variatid 
+                                   '||rec_var.variatid||') as x
+                              WHERE '||quote_ident(ntable)||'.ounitid = x.ounitid ';
+               END IF;
+END LOOP;
+RETURN n; 
+END;
+$BODY$ 
+LANGUAGE 'plpgsql' VOLATILE STRICT;
+ALTER FUNCTION get_dataset(text, text) OWNER TO postgres;
+</pre>
+<a name="create_array_dataset_.28tablename.2Cstudyname.29" id="create_array_dataset_.28tablename.2Cstudyname.29"></a><h4> <span class="mw-headline"> create_array_dataset (tablename,studyname) </span></h4>
+<p>This procedure creates an array representation of the genotyping dataset.
+</p>
+<pre>-- Function: create_array_dataset(text,text)
+-- DROP FUNCTION create_array_dataset(text,text);
+
+CREATE OR REPLACE FUNCTION create_array_dataset(text,text)
+RETURNS void AS
+$BODY$
+DECLARE 
+       var_sname ALIAS FOR $1;
+       var_tablename ALIAS FRO $2;
+       var_studyid INT;
+       var_gid INT;
+       var_mdid INT;
+       rec_gid RECORD;
+       rec_data RECORD;
+BEGIN
+       FOR rec_gid IN
+       SELECT DISTINCT "GID" as gid from genodata
+       LOOP
+           FOR rec_data IN
+           SELECT distinct ounitid, "MARKER" as mdid, "ALLELE" as alleleid 
+           FROM genodata WHERE genodata."GID" = rec_gid.gid
+           LOOP
+               IF (SELECT m FROM geno_array WHERE gid = rec_gid.gid) IS NULL THEN
+                   UPDATE geno_array SET m = (
+                                              ARRAY[[(SELECT "MARKER" FROM genodata 
+                                                           where ounitid = rec_data.ounitid),
+                                                     (SELECT "ALLELE" FROM genodata 
+                                                           where ounitid = rec_data.ounitid)]])
+                                      WHERE geno_array.gid  = rec_gid.gid; 
+                ELSE
+                  UPDATE geno_array SET m = (
+                                             SELECT array_cat(
+                                                   (select m from geno_array where gid = rec_gid.gid),
+                                                   (ARRAY[[(SELECT "MARKER" FROM genodata 
+                                                                WHERE ounitid = rec_data.ounitid),
+                                                            SELECT "ALLELE" FROM genodata 
+                                                                WHERE ounitid = rec_data.ounitid)]]
+                                                            )
+                                                    )
+                                              )
+                                       WHERE geno_array.gid  = rec_gid.gid;
+                 END IF;
+            END LOOP;
+       END LOOP;
+       --select distinct marker from level_n table
+END;
+$BODY$
+LANGUAGE 'plpgsql' VOLATILE;
+</pre>
+<a name="MySQL" id="MySQL"></a><h2> <span class="mw-headline"> MySQL </span></h2>
+<p>The Following is the MySQL script equivalent to the PostgreSQL script create_dataset_array.  
+</p>
+<a name="create_allele_string.28.29" id="create_allele_string.28.29"></a><h3> <span class="mw-headline"> create_allele_string() </span></h3>
+<pre>DELIMITER $$;
+DROP PROCEDURE IF EXISTS `genotyping_scripts`.`create_allele_string`$$
+CREATE PROCEDURE `create_allele_string`()
+BEGIN
+       DECLARE done1 BOOL default FALSE;
+       DECLARE var_gid INT;
+       DECLARE new_gid INT;
+       DEClARE var_marker INT;
+       DECLARE var_allele INT;
+       DECLARE m1 TEXT&nbsp;;
+       DECLARE m_cursor CURSOR FOR
+               SELECT DISTINCT marker FROM gm_table ORDER BY marker;
+       DECLARE  CONTINUE HANDLER FOR   SQLSTATE '02000'  SET done1 = TRUE;
+       INSERT INTO geno_string (gid) SELECT DISTINCT gid FROM geno_table ORDER by gid;
+       OPEN m_cursor;
+            loop1: LOOP
+                       FETCH m_cursor INTO var_marker;
+                       IF done1 THEN 
+                               CLOSE m_cursor;
+                               LEAVE loop1;
+                       END IF;
+                   UPDATE geno_string 
+                   INNER JOIN (select gid as g, max(allele) AS a 
+                               FROM gm_table where marker = var_marker GROUP BY g
+                               ) AS x
+                   SET m = IF (m IS NULL,x.a,concat(geno_string.m,'|',x.a))
+                   WHERE x.g = geno_string.gid;
+            END LOOP;
+END$$
+DELIMITER&nbsp;;$$
+</pre>
+<a name="create_table.60.28IN_var_ntable_VARCHAR.2825.29.2CIN_var_sname1_VARCHAR.2825.29.2C_IN__var_sname2_VARCHAR.2825.29_.29" id="create_table.60.28IN_var_ntable_VARCHAR.2825.29.2CIN_var_sname1_VARCHAR.2825.29.2C_IN__var_sname2_VARCHAR.2825.29_.29"></a><h3> <span class="mw-headline"> create_table`(IN var_ntable VARCHAR(25),IN var_sname1 VARCHAR(25), IN  var_sname2 VARCHAR(25) )</span></h3>
+<p>Create_table routine combines all markers and gids used in two genotyping studies and stores it in a table (geno_table).
+</p>
+<pre>DELIMITER $$;
+DROP PROCEDURE IF EXISTS `genotype-myisam`.`create_table`$$
+CREATE PROCEDURE `create_table`(IN var_ntable VARCHAR(25),IN var_sname1 VARCHAR(25), IN  var_sname2 VARCHAR(25) )
+BEGIN
+       DECLARE var_studyid1 INT; 
+       DECLARE var_studyid2 INT;
+       DECLARE var_gfac1 INT;
+       DECLARE var_gfac2 INT;
+       DECLARE var_mfac1 INT;
+       DECLARE var_mfac2 INT;
+       DECLARE var_varid1 INT;
+       DECLARE var_varid2 INT;
+       DECLARE var_mscaleid INT DEFAULT -16&nbsp;;
+       DECLARE var_gscaleid INT DEFAULT 91&nbsp;;
+       DECLARE var_vscaleid INT DEFAULt -19;
+       DECLARE var_ounitid INT;
+       DECLARE m1 TEXT;
+-- GET the study ids for the two Studies
+       SELECT studyid INTO var_studyid1 FROM study WHERE study.sname = var_sname1;
+       SELECT studyid INTO var_studyid2 FROM study WHERE study.sname = var_sname2;
+-- GET the marker factorids
+       SELECT factorid INTO var_mfac1 FROM factor
+               WHERE factor.studyid = var_studyid1
+               AND factor.scaleid = var_mscaleid;
+       SELECT factorid INTO var_mfac2 FROM factor
+               WHERE factor.studyid = var_studyid2
+               AND factor.scaleid = var_mscaleid;
+-- GET the gid factorids
+       SELECT factorid INTO var_gfac1 FROM factor 
+               WHERE studyid = var_studyid1
+               AND factor.scaleid = var_gscaleid;
+       SELECT factorid INTO var_gfac2 FROM factor 
+               WHERE studyid = var_studyid2
+               AND factor.scaleid = var_gscaleid;
+-- GET the variate IDs
+      SELECT variatid INTO var_varid1 FROM variate
+               WHERE studyid = var_studyid1
+               AND variate.vname = 'ALLELEID'
+               AND variate.scaleid = var_vscaleid;
+      SELECT variatid INTO var_varid2 FROM variate
+               WHERE studyid = var_studyid2
+               AND variate.vname = 'ALLELEID'
+               AND variate.scaleid = var_vscaleid;
+       CREATE TABLE gid_marker1
+       (
+       glevel INT,
+       gid INT,
+       mlevel INT,
+       marker INT
+       )&nbsp;;
+       CREATE TABLE gid_marker2
+       (
+       glevel INT,
+       gid INT,
+       mlevel INT,
+       marker INT
+       )&nbsp;;
+       CREATE TABLE gid_marker
+       (
+       glevel INT,
+       gid INT,
+       mlevel INT,
+       marker INT
+       )&nbsp;;
+       INSERT INTO gid_marker1 (glevel,gid,mlevel,marker)
+       SELECT x.levelno AS glevel, x.gid , y.levelno AS mlevel, y.marker 
+       FROM 
+       (
+        select distinct level_n.levelno,level_n.lvalue as gid FROM study 
+                       INNER JOIN factor ON study.studyid = factor.studyid
+                       INNER JOIN level_n ON level_n.factorid = factor.factorid
+                       AND (study.studyid = var_studyid1)
+                       AND (factor.scaleid =  var_gscaleid) 
+                       AND level_n.labelid = factor.labelid
+                       ORDER BY gid
+       )AS x,
+       (
+       SELECT DISTINCT level_n.levelno,level_n.lvalue AS marker FROM study 
+                       INNER JOIN factor ON study.studyid = factor.studyid
+                       INNER JOIN level_n ON level_n.factorid = factor.factorid
+                       AND study.studyid = var_studyid1
+                       AND factor.scaleid = var_mscaleid 
+                       AND level_n.labelid = factor.labelid
+                       ORDER BY marker
+       ) AS y;
+       INSERT INTO gid_marker2
+       SELECT   x.levelno AS glevel, x.gid , y.levelno AS mlevel, y.marker 
+       FROM
+       -- GET distinct GID levels
+       (SELECT DISTINCT level_n.levelno,level_n.lvalue as gid FROM study 
+                       INNER JOIN factor ON study.studyid = factor.studyid
+                       INNER JOIN level_n ON level_n.factorid = factor.factorid
+                       AND (study.studyid= var_studyid2)
+                       AND (factor.scaleid = var_gscaleid) 
+                       AND level_n.labelid = factor.labelid
+                       ORDER BY gid
+       ) AS x,
+       (SELECT DISTINCT level_n.levelno,level_n.lvalue as marker FROM study 
+                       INNER JOIN factor ON study.studyid = factor.studyid
+                       INNER JOIN level_n ON level_n.factorid = factor.factorid
+                       AND study.studyid= var_studyid2
+                       AND factor.scaleid = var_mscaleid
+                       AND level_n.labelid = factor.labelid
+                       ORDER BY marker
+       ) AS y;
+       INSERT INTO gid_marker
+       SELECT DISTINCT x.glevel,x.gid,y.mlevel, y.marker 
+       FROM 
+       (
+        SELECT DISTINCT gid,glevel FROM  gid_marker1 
+        WHERE gid NOT IN (SELECT DISTINCT gid FROM gid_marker2)
+       ) AS x,
+       (
+        SELECT distinct marker, mlevel FROM gid_marker2
+       ) AS y;
+       -- GET GIDS in study2 NOT in study1 and pair it with the markers in study1
+       INSERT INTO gid_marker 
+       SELECT DISTINCT x.glevel,x.gid,y.mlevel, y.marker 
+       FROM 
+       (
+       SELECT DISTINCT gid,glevel FROM  gid_marker2
+       WHERE gid NOT IN (SELECT distinct gid from gid_marker1)
+       ) AS x,
+       (
+        SELECT distinct marker, mlevel FROM gid_marker1
+       ) AS y;
+       INSERT INTO gid_marker select * FROM gid_marker1;
+       INSERT INTO gid_marker select * FROM gid_marker2;
+       DROP TABLE gid_marker1;
+       DROP TABle gid_marker2;
+       CREATE TABLE exist_table
+      (
+       ounitid INT,
+       m INT,
+       g INT,
+       allele INT
+       )&nbsp;;
+      INSERT INTO exist_table (ounitid,m,g,allele)
+      SELECT DISTINCT mtable.ounitid,  mtable.levelno AS m, gtable.levelno AS g,mtable.allele 
+        FROM 
+        (SELECT data_n.ounitid, factorid, levelno,dvalue AS allele  FROM oindex,data_n 
+               WHERE data_n.ounitid = oindex.ounitid 
+               AND (data_n.variatid = var_varid1 or data_n.variatid = var_varid2)
+               AND (factorid = var_mfac1 or factorid = var_mfac2)
+        ) AS mtable 
+        LEFT OUTER JOIN
+        (SELECT ounitid, factorid, levelno  FROM oindex  
+               WHERE (factorid = var_gfac1 or factorid = var_gfac2)
+        ) AS gtable 	
+        ON gtable.ounitid = mtable.ounitid;	
+        -- CREATE geno_table
+        CREATE TABLE geno_table 
+        (
+        glevel INT, 
+        gid INT, 
+        mlevel INT,
+        marker INT,
+        ounitid INT, 
+        allele INT
+        );
+        INSERT INTO geno_table  (glevel,gid, mlevel,marker, ounitid, allele)
+        SELECT glevel,gid, mlevel,marker, ounitid, allele
+        FROM gid_marker 
+        LEFT OUTER JOIN exist_table 
+        ON exist_table.g  = gid_marker.glevel AND exist_table.m = gid_marker.mlevel;
+        -- UPDATE NULL ALLELES into 0;
+        UPDATE geno_table SET allele = 0 WHERE ounitid IS NULL;
+END$$
+DELIMITER&nbsp;;$$
+</pre>
+<a name="get_dataset.28IN_var_studyid_INT.2C_IN_ntable_VARCHAR.2825.29.29" id="get_dataset.28IN_var_studyid_INT.2C_IN_ntable_VARCHAR.2825.29.29"></a><h3> <span class="mw-headline"> get_dataset(IN var_studyid INT, IN ntable VARCHAR(25))</span></h3>
+<p>This routine is the MySQL equivalent of the PostgreSQL get_dataset procedure.
+</p>
+<pre>DELIMITER $$;
+DROP PROCEDURE IF EXISTS `genotyping_scripts`.`get_dataset`$$
+CREATE PROCEDURE `get_dataset`(IN var_studyid INT, IN ntable VARCHAR(25))
+BEGIN
+       DECLARE done1 BOOL default FALSE;
+       DECLARE var_fname VARCHAR(25);
+       DECLARE var_labelid INT;
+       DECLARE var_ltype CHAR;	
+       DECLARE var_vname VARCHAR(50);
+       DECLARE var_factorid INT;
+       DECLARE var_variatid INT;
+       DECLARE var_dtype INT;
+       DECLARE var_slabelid INT;
+       DECLARE factor_cursor CURSOR  FOR 
+               SELECT distinct factor.factorid,factor.fname, factor.labelid,  factor.ltype
+               FROM factor 
+               LEFT JOIN study on factor.studyid = study.studyid 
+               WHERE study.studyid = var_studyid  
+                     and factor.factorid&nbsp;!= (SELECT factorid FROM factor 
+                                             INNER JOIN study ON study.studyid = factor.studyid 
+                                             WHERE study.studyid = var_studyid 
+                                             AND factor.scaleid =134);
+      DECLARE variate_cursor CURSOR FOR
+              SELECT distinct variate.variatid,variate.vname, variate.dtype
+              FROM variate
+              LEFT JOIN study on variate.studyid = study.studyid 
+              WHERE study.studyid = var_studyid;
+      DECLARE  CONTINUE HANDLER FOR   SQLSTATE '02000'  SET done1 = TRUE;
+      -- SELECT studyid INTO var_studyid FROM study where sname = var_sname;
+      -- SELECT factorid INTO n FROM factor INNER JOIN  study on study.studyid = factor.studyid 
+      -- 			WHERE study.studyid = var_studyid and factor.scaleid = 134;
+      SELECT factorid INTO var_slabelid FROM factor 
+             INNER JOIN study ON study.studyid = factor.studyid 
+             WHERE study.studyid = var_studyid AND factor.scaleid =134;
+     SET @q1 = concat('CREATE TABLE ', ntable,' (ounitid INT )');
+     PREPARE stmnt1 FROM @q1;
+     EXECUTE stmnt1;
+     DEALLOCATE PREPARE stmnt1;
+     -- ADD columns for factor names
+     OPEN factor_cursor;
+             factor_loop: LOOP
+             FETCH factor_cursor INTO var_factorid,var_fname, var_labelid, var_ltype;
+                       IF done1 THEN
+                               CLOSE factor_cursor;
+                               LEAVE factor_loop;
+                       END IF; 
+                       IF var_ltype  = 'N' THEN
+                       SET @q2 = concat('ALTER TABLE ', ntable , ' ADD COLUMN ',var_fname, ' INT');
+                               PREPARE stmnt FROM @q2;
+                               EXECUTE stmnt;
+                               DEALLOCATE PREPARE stmnt;
+                       ELSE
+                       SET @q2 = concat('ALTER TABLE ', ntable ,' ADD COLUMN ',var_fname, ' VARCHAR(25)');
+                               PREPARE stmnt FROM @q2;
+                               EXECUTE stmnt;
+                               DEALLOCATE PREPARE stmnt;
+                       END IF;
+             END LOOP;
+       -- ADD columns for the variate names
+       SET done1 = FALSE;
+       OPEN variate_cursor;
+            variate_loop: LOOP
+                       FETCH variate_cursor INTO var_variatid,var_vname, var_dtype;
+                       IF done1 THEN
+                               CLOSE variate_cursor;
+                               LEAVE variate_loop;
+                       END IF;	
+                       IF var_dtype  = 'N' THEN
+                               SET @q2 = concat('ALTER TABLE ',ntable,' ADD COLUMN ',var_vname, ' INT');
+                               PREPARE stmnt FROM @q2;
+                               EXECUTE stmnt;
+                               DEALLOCATE PREPARE stmnt;
+                       ELSE
+                              SET @q2 = concat('ALTER TABLE ',ntable,' ADD COLUMN ',var_vname, 
+                                               ' VARCHAR(25)');
+                               PREPARE stmnt FROM @q2;
+                               EXECUTE stmnt;
+                               DEALLOCATE PREPARE stmnt;
+                       END IF;
+              END LOOP;
+      -- Insert OUNITIDs into the new table
+      SET @q2 = concat('INSERT INTO ', ntable , '(ounitid)  
+                        SELECT distinct ounitid from oindex 
+                       LEFT JOIN factor ON factor.factorid = oindex.factorid
+                       LEFT JOIN  study ON study.studyid = factor.studyid 
+                       WHERE study.studyid = ', var_studyid,' 
+                       AND factor.labelid&nbsp;!= ', var_slabelid);
+       PREPARE stmnt FROM @q2;
+       EXECUTE stmnt;
+       DEALLOCATE PREPARE stmnt;
+       -- GET ALL FACTOR values
+       SET done1 = FALSE;
+       OPEN factor_cursor;
+              fval_loop: LOOP
+                       FETCH factor_cursor INTO var_factorid,var_fname, var_labelid, var_ltype;
+                       IF done1 THEN
+                               CLOSE factor_cursor;
+                               LEAVE fval_loop;
+                       END IF;
+                       IF var_ltype  = 'C' THEN
+                       SET @q2 = concat('UPDATE ', ntable, 'INNER JOIN 
+                                       (SELECT study.studyid, factor.factorid,factor.fname,     
+                                       level_c.labelid,level_c.levelno,level_c.lvalue, oindex.ounitid
+                                       FROM oindex
+                                       INNER JOIN level_c ON level_c.levelno = oindex.levelno 
+                                       INNER JOIN factor ON factor.labelid = level_c.labelid
+                                       INNER JOIN study ON study.studyid = factor.studyid
+                                       WHERE study.studyid = ',var_studyid,
+                                       ' AND factor.fname = \<i>, var_fname, </i>
+                                       '\' AND level_c.labelid = ' ,var_labelid,
+                                       ' AND  oindex.factorid = ' ,var_factorid,
+                                       ' AND level_c.levelno = oindex.levelno
+                                       ORDER BY levelno
+                                       ) as d
+                               SET ',ntable,'.',var_fname,' = d.lvalue 
+                               WHERE ', ntable,'.ounitid = d.ounitid');
+                       PREPARE stmnt FROM @q2;
+                       EXECUTE stmnt;
+                       DEALLOCATE PREPARE stmnt;
+                  ELSE
+                       SET @q2 = concat('UPDATE ', ntable ,' INNER JOIN 
+                                       (SELECT study.studyid, factor.factorid,factor.fname, 
+                                       level_n.labelid,level_n.levelno,level_n.lvalue, oindex.ounitid
+                                       FROM oindex
+                                       INNER JOIN level_n ON level_n.levelno = oindex.levelno 
+                                       INNER JOIN factor ON factor.labelid = level_n.labelid
+                                       INNER JOIN study ON study.studyid = factor.studyid
+                                       WHERE study.studyid = ',var_studyid ,
+                                       ' AND factor.fname = \<i>, var_fname , </i>
+                                       '\' AND level_n.labelid = ' , var_labelid ,
+                                       ' AND  oindex.factorid = ' , var_factorid ,
+                                       ' AND level_n.levelno = oindex.levelno
+                                       order by levelno
+                                       ) as d
+                               SET ',ntable,'.',var_fname,' = d.lvalue 
+                               WHERE ', ntable,'.ounitid = d.ounitid');
+               PREPARE stmnt FROM @q2;
+               EXECUTE stmnt;
+               DEALLOCATE PREPARE stmnt;
+               END IF;
+       END LOOP;
+       -- GET ALL VARIATES
+       SET done1 = FALSE; 
+       OPEN variate_cursor;
+               var_loop: LOOP
+                       FETCH variate_cursor INTO var_variatid,var_vname, var_dtype;
+                       IF done1 THEN
+                               CLOSE variate_cursor;
+                               LEAVE var_loop;
+                       END IF;
+                       IF var_dtype  = 'N' THEN
+                               SET @q2 = concat( 'UPDATE ', ntable ,' INNER JOIN
+                                                              (SELECT dvalue, ounitid FROM data_n 
+                                                               WHERE data_n.variatid = \<i>,var_vname,'\'</i>
+                                                               ) as x 
+                                                  SET ',var_vname,' = x.dvalue
+                                                  WHERE', ntable,'.ounitid = x.ounitid ');
+                               PREPARE stmnt FROM @q2;
+                               EXECUTE stmnt;
+                               DEALLOCATE PREPARE stmnt;
+                       ELSE
+                               SET @q2 = concat( 'UPDATE ', ntable ,' INNER JOIN 
+                                                               (SELECT dvalue, ounitid FROM data_c 
+                                                                WHERE data_n.variatid = \<i>,var_vname,'\'</i>
+                                                               ) as x 
+                                                 SET ',var_vname,' = x.dvalue
+                                     WHERE', ntable,'.ounitid = x.ounitid ');
+                               PREPARE stmnt FROM @q2;
+                               EXECUTE stmnt;
+                               DEALLOCATE PREPARE stmnt;
+                      END IF;
+            END LOOP;
+END$$
+DELIMITER&nbsp;;$$
+</pre>
+<a name="Java" id="Java"></a><h2> <span class="mw-headline"> Java </span></h2>
+<p>This is a simple java program for retrieving the dataset from the PostgreSQL database. The program connects to the database via JDBC.
+</p>
+<pre>import java.sql.*;
+import java.util.Arrays;
+import java.lang.*;
+public class LoadPostgresDriver {
+       public static void main(String[] args) {
+               double arr[];
+               Array x;
+               int i;
+               String str;
+               String dbURL = "jdbc:postgresql://localhost/databasename";
+               try{
+                       Class c = Class.forName("org.postgresql.Driver");
+                       System.out.println("Loaded "+c);
+                       System.out.println("Getting Connection");
+                       Connection conn = DriverManager.getConnection(dbURL,"username","password");
+                       SQLWarning warn = conn.getWarnings();
+                           while (warn!=null){
+                               System.out.println("SQLState&nbsp;: "+ warn.getSQLState());
+                               warn = warn.getNextWarning();
+                           }
+                       Statement  stmnt = conn.createStatement();
+                       ResultSet rs = stmnt.executeQuery(" select * from genotype");
+                       ResultSetMetaData rsmd = rs.getMetaData();
+                       while (rs.next()){
+                               str = rs.getString("gid");
+                               System.out.println(str +"\t");
+                               x = rs.getArray(2);
+                               arr = (double []) x.getArray();
+                               for (i=0; i &lt; arr.length; i++)
+                                  {
+                                   System.out.print(arr[i]+ " \t" );
+                                  }
+                               for (i = 2;i&lt;=rsmd.getColumnCount();i++)
+                                  {
+                                  System.out.print(rs.getString(i)+"\t");
+                                  }
+                               System.out.println();
+                               }
+                       rs.close();
+                       stmnt.close();
+                       conn.close();
+               }catch(ClassNotFoundException ex){
+                       System.out.println("can't load driver " + ex);
+               }catch(SQLException e){
+                       System.out.println("Database access failed " + e);
+               }
+         }
+   }
+</pre>
+<!-- 
+NewPP limit report
+Preprocessor node count: 15/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+<div class="printfooter">
+Retrieved from "<a href="http://localhost../../../../articles/r/e/t/Retrieval_of_DArT_Data_From_ICIS_ae83.html">http://localhost../../../../articles/r/e/t/Retrieval_of_DArT_Data_From_ICIS_ae83.html</a>"</div>
+						<!-- end content -->
+						<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<div class="pBody">
+			<ul>
+	
+				 <li id="ca-nstab-main" class="selected"><a href="../../../../articles/r/e/t/Retrieval_of_DArT_Data_From_ICIS_ae83.html" title="View the content page [c]" accesskey="c">Page</a></li>
+				 <li id="ca-talk" class="new"><a href="../../../../articles/r/e/t/Talk%7ERetrieval_of_DArT_Data_From_ICIS_2d4e.html" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				 <li id="ca-viewsource"><a href="../../../../articles/r/e/t/Retrieval_of_DArT_Data_From_ICIS_ae83.html" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				 <li id="ca-history"><a href="../../../../articles/r/e/t/Retrieval_of_DArT_Data_From_ICIS_ae83.html" title="Past versions of this page [h]" accesskey="h">History</a></li>			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="../../../../articles/u/s/e/Special%7EUserLogin_94cd.html" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(../../../../misc/icis-wiki3.png);" href="../../../../index.html" title="Visit the main page [z]" accesskey="z"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class='generated-sidebar portlet' id='p-navigation'>
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="../../../../index.html" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
+				<li id="n-portal"><a href="../../../../articles/c/o/m/ICISWiki%7ECommunity_Portal_7449.html" title="About the project, what you can do, where to find things">Community portal</a></li>
+				<li id="n-recentchanges"><a href="../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+				<li id="n-help"><a href="../../../../articles/c/o/n/Help%7EContents_22de.html" title="The place to find out">Help</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="../../../../articles/s/e/a/Special%7ESearch_a8e5.html" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" title="Search ICISWiki [f]" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="../../../../articles/w/h/a/Special%7EWhatLinksHere_Retrieval_of_DArT_Data_From_ICIS_95ce.html" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="../../../../articles/r/e/c/Special%7ERecentChangesLinked_Retrieval_of_DArT_Data_From_ICIS_57a6.html" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+<li id="t-specialpages"><a href="../../../../articles/s/p/e/Special%7ESpecialPages_f12b.html" title="List of all special pages [q]" accesskey="q">Special pages</a></li>
+				<li id="t-print"><a href="../../../../articles/r/e/t/Retrieval_of_DArT_Data_From_ICIS_ae83.html" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>				<li id="t-permalink"><a href="../../../../articles/r/e/t/Retrieval_of_DArT_Data_From_ICIS_ae83.html" title="Permanent link to this version of the page">Permanent link</a></li>			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="../../../../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" /></a></div>
+				<div id="f-copyrightico"><a href="../../../../../COPYING.html"><img src="/icis/skins/common/images/gnu-fdl.png" alt='GNU Free Documentation License 1.2' /></a></div>
+			<ul id="f-list">
+					<li id="credits">This page was last modified 01:18, 28 January 2008 by <a href="../../../../articles/r/v/a/User%7ERvalerio_c9de.html" title="User:Rvalerio">Rowena Valerio</a>. Based on work by <a href="../../../../articles/m/h/a/User%7EMhabito_276f.html" title="User:Mhabito">Maria Corina de Luna Habito</a>,&#32;<a href="../../../../articles/z/d/u/User%7EZdummy476_a902.html" class="new" title="User:Zdummy476 (page does not exist)">zzDummy User</a>,&#32;<a href="../../../../articles/t/m/e/User%7ETmetz_c741.html" title="User:Tmetz">Thomas Metz</a>,&#32;<a href="../../../../articles/z/d/u/User%7EZdummy219_9808.html" class="new" title="User:Zdummy219 (page does not exist)">zzDummy User</a>,&#32;<a href="../../../../articles/m/j/m/User%7EMjmendoza_9803.html" title="User:Mjmendoza">Jon Mendoza</a>&#32;and&#32;<a href="../../../../articles/z/z/d/User%7EZZdummy124_82c9.html" class="new" title="User:ZZdummy124 (page does not exist)">zzDummy User</a>.</li>
+					<li id="copyright">Content is available under <a href="../../../../../COPYING.html" class="external " title="../../../../../COPYING.html">GNU Free Documentation License 1.2</a>.</li>
+					<li id="privacy"><a href="../../../../articles/p/r/i/ICISWiki%7EPrivacy_policy_0cbf.html" title="ICISWiki:Privacy policy">Privacy policy</a></li>
+					<li id="about"><a href="../../../../articles/a/b/o/ICISWiki%7EAbout_53aa.html" title="ICISWiki:About">About ICISWiki</a></li>
+					<li id="disclaimer"><a href="../../../../articles/g/e/n/ICISWiki%7EGeneral_disclaimer_9129.html" title="ICISWiki:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+</div>
+
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served in 121.709 secs. --></body></html>

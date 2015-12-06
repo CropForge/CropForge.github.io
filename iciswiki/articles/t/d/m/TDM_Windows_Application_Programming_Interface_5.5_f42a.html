@@ -1,0 +1,696 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta name="generator" content="MediaWiki 1.14.0" />
+		<meta name="keywords" content="TDM Windows Application Programming Interface 5.5,TDM Windows Application Programming Interface 5.4" />
+		<link rel="shortcut icon" href="../../../../misc/favicon.ico" />
+		<link rel="search" type="application/opensearchdescription+xml" href="../../../../../opensearch_desc.php" title="ICISWiki (en)" />
+		<link title="Creative Commons" type="application/rdf+xml" href="../../../../articles/t/d/m/TDM_Windows_Application_Programming_Interface_5.5_f42a.html" rel="alternate meta" />
+		<link rel="copyright" href="../../../../../COPYING.html" />
+		<link rel="alternate" type="application/rss+xml" title="ICISWiki RSS Feed" href="http://localhost../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" />
+		<link rel="alternate" type="application/atom+xml" title="ICISWiki Atom Feed" href="http://localhost../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" />
+		<title>TDM Windows Application Programming Interface 5.5 - ICISWiki</title>
+		<link rel="stylesheet" href="../../../../skins/common/shared.css?195" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../../../../skins/common/commonPrint.css?195" type="text/css" media="print" />
+		<link rel="stylesheet" href="../../../../skins/monobook/main.css?195" type="text/css" media="screen" />
+		<!--[if lt IE 5.5000]><link rel="stylesheet" href="../../../../skins/monobook/IE50Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 5.5000]><link rel="stylesheet" href="../../../../skins/monobook/IE55Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 6]><link rel="stylesheet" href="../../../../skins/monobook/IE60Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 7]><link rel="stylesheet" href="../../../../skins/monobook/IE70Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7ECommon.css?195" type="text/css" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7EPrint.css?195" type="text/css" media="print" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7EMonobook.css?195" type="text/css" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/gen.css?195" type="text/css" />
+		<!--[if lt IE 7]><script type="text/javascript" src="../../../../skins/common/IEFixes.js?195"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+
+		<script type= "text/javascript">/*<![CDATA[*/
+		var skin = "monobook";
+		var stylepath = "../../../../skins";
+		var wgArticlePath = "../../../../$1";
+		var wgScriptPath = "../../../../..";
+		var wgScript = "/icis/index.php";
+		var wgVariantArticlePath = false;
+		var wgActionPaths = {};
+		var wgServer = "http://localhost";
+		var wgCanonicalNamespace = "";
+		var wgCanonicalSpecialPageName = false;
+		var wgNamespaceNumber = 0;
+		var wgPageName = "TDM_Windows_Application_Programming_Interface_5.5";
+		var wgTitle = "TDM Windows Application Programming Interface 5.5";
+		var wgAction = "view";
+		var wgArticleId = "3071";
+		var wgIsArticle = true;
+		var wgUserName = null;
+		var wgUserGroups = null;
+		var wgUserLanguage = "en";
+		var wgContentLanguage = "en";
+		var wgBreakFrames = false;
+		var wgCurRevisionId = "13265";
+		var wgVersion = "1.14.0";
+		var wgEnableAPI = true;
+		var wgEnableWriteAPI = true;
+		var wgSeparatorTransformTable = ["", ""];
+		var wgDigitTransformTable = ["", ""];
+		var wgRestrictionEdit = [];
+		var wgRestrictionMove = [];
+		/*]]>*/</script>
+
+		<script type="text/javascript" src="../../../../skins/common/wikibits.js?195"><!-- wikibits js --></script>
+		<!-- Head Scripts -->
+		<script type="text/javascript" src="../../../../raw/gen.js"><!-- site js --></script>
+	</head>
+<body class="mediawiki ltr ns-0 ns-subject page-TDM_Windows_Application_Programming_Interface_5_5 skin-monobook">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 id="firstHeading" class="firstHeading">TDM Windows Application Programming Interface 5.5</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From ICISWiki</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>			<!-- start content -->
+			<table id="toc" class="toc" summary="Contents"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1"><a href="#ICIS32_DLL_5.5"><span class="tocnumber">1</span> <span class="toctext">ICIS32 DLL 5.5</span></a>
+<ul>
+<li class="toclevel-2"><a href="#Modifications"><span class="tocnumber">1.1</span> <span class="toctext">Modifications</span></a></li>
+<li class="toclevel-2"><a href="#.5BDLL_SETTINGS.5D_section_of_the_ICIS.INI"><span class="tocnumber">1.2</span> <span class="toctext">[DLL SETTINGS] section of the ICIS.INI</span></a></li>
+<li class="toclevel-2"><a href="#New_Return_Value_by_DLL_function"><span class="tocnumber">1.3</span> <span class="toctext">New Return Value by DLL function</span></a></li>
+<li class="toclevel-2"><a href="#New_Functions"><span class="tocnumber">1.4</span> <span class="toctext">New Functions</span></a>
+<ul>
+<li class="toclevel-3"><a href="#GMS_hasCIDSID"><span class="tocnumber">1.4.1</span> <span class="toctext">GMS_hasCIDSID</span></a></li>
+<li class="toclevel-3"><a href="#GMS_addUDField"><span class="tocnumber">1.4.2</span> <span class="toctext">GMS_addUDField</span></a></li>
+<li class="toclevel-3"><a href="#GMS_deleteProgenitorID"><span class="tocnumber">1.4.3</span> <span class="toctext">GMS_deleteProgenitorID</span></a></li>
+<li class="toclevel-3"><a href="#GMS_deleteOneProgenitor"><span class="tocnumber">1.4.4</span> <span class="toctext">GMS_deleteOneProgenitor</span></a></li>
+<li class="toclevel-3"><a href="#GMS_getNextSequence"><span class="tocnumber">1.4.5</span> <span class="toctext">GMS_getNextSequence</span></a></li>
+<li class="toclevel-3"><a href="#GMS_getNextName"><span class="tocnumber">1.4.6</span> <span class="toctext">GMS_getNextName</span></a></li>
+<li class="toclevel-3"><a href="#DMS_deleteDataset"><span class="tocnumber">1.4.7</span> <span class="toctext">DMS_deleteDataset</span></a></li>
+<li class="toclevel-3"><a href="#DMS_setRepresName"><span class="tocnumber">1.4.8</span> <span class="toctext">DMS_setRepresName</span></a></li>
+<li class="toclevel-3"><a href="#DMS_getRepresName"><span class="tocnumber">1.4.9</span> <span class="toctext">DMS_getRepresName</span></a></li>
+<li class="toclevel-3"><a href="#DMS_setEffectName"><span class="tocnumber">1.4.10</span> <span class="toctext">DMS_setEffectName</span></a></li>
+<li class="toclevel-3"><a href="#SUP_addPerson"><span class="tocnumber">1.4.11</span> <span class="toctext">SUP_addPerson</span></a></li>
+<li class="toclevel-3"><a href="#SUP_addInstitute"><span class="tocnumber">1.4.12</span> <span class="toctext">SUP_addInstitute</span></a></li>
+<li class="toclevel-3"><a href="#SUP_getPerson"><span class="tocnumber">1.4.13</span> <span class="toctext">SUP_getPerson</span></a></li>
+<li class="toclevel-3"><a href="#SUP_getInstittutePrnt"><span class="tocnumber">1.4.14</span> <span class="toctext">SUP_getInstittutePrnt</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2"><a href="#Modified_Functions"><span class="tocnumber">1.5</span> <span class="toctext">Modified Functions</span></a>
+<ul>
+<li class="toclevel-3"><a href="#GMS_findAttribute"><span class="tocnumber">1.5.1</span> <span class="toctext">GMS_findAttribute</span></a></li>
+<li class="toclevel-3"><a href="#GMS_listName"><span class="tocnumber">1.5.2</span> <span class="toctext">GMS_listName</span></a></li>
+<li class="toclevel-3"><a href="#GMS_getGermplasm2"><span class="tocnumber">1.5.3</span> <span class="toctext">GMS_getGermplasm2</span></a></li>
+<li class="toclevel-3"><a href="#All_GMS_add_functions"><span class="tocnumber">1.5.4</span> <span class="toctext">All GMS_add functions</span></a></li>
+<li class="toclevel-3"><a href="#getConsData"><span class="tocnumber">1.5.5</span> <span class="toctext">getConsData</span></a></li>
+<li class="toclevel-3"><a href="#getOunitData"><span class="tocnumber">1.5.6</span> <span class="toctext">getOunitData</span></a></li>
+<li class="toclevel-3"><a href="#getPFLevel"><span class="tocnumber">1.5.7</span> <span class="toctext">getPFLevel</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#ICIS32.DLL_5.4"><span class="tocnumber">2</span> <span class="toctext">ICIS32.DLL 5.4</span></a></li>
+</ul>
+</td></tr></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </script>
+<a name="ICIS32_DLL_5.5" id="ICIS32_DLL_5.5"></a><h2> <span class="mw-headline"> ICIS32 DLL 5.5 </span></h2>
+<a name="Modifications" id="Modifications"></a><h4> <span class="mw-headline"> Modifications </span></h4>
+<ul><li> All functions that get the next available primary key are modified. The next ID is now always retrieved from the database. 
+</li><li> For SQLSTATE = 23000 (Unique Constraint Violation when a record is being added), no error message is shown. The add functions will continually call the getNextID and execute the INSERT statement until it succeeds or the 100 attempts are reached. It is assumed that only the primary keys (GID, NID etc) has the unique constraint or else the statements that trap the error is not anymore applicable.
+</li><li> The above changes are done for multi-access of the database. The ICIS.INI should have AUTOCOMMIT=YES in [SETGEN] section for multiple accesses of the database by several users.
+</li></ul>
+<a name=".5BDLL_SETTINGS.5D_section_of_the_ICIS.INI" id=".5BDLL_SETTINGS.5D_section_of_the_ICIS.INI"></a><h4> <span class="mw-headline"> [DLL SETTINGS] section of the ICIS.INI </span></h4>
+<ul><li> SHOW_PREFID - not mandatory; set to YES if the prefered ID (NSTAT=8) needs to be shown with the Preferred Name; 
+</li></ul>
+<p>SHOW_PREFID=YES
+</p>
+<a name="New_Return_Value_by_DLL_function" id="New_Return_Value_by_DLL_function"></a><h3> <span class="mw-headline"> New Return Value by DLL function </span></h3>
+<dl><dd>GMS_UNIQUE_CONSTRAINT = -12  //unique constraint violation
+</dd><dd>GMS_INVALID_DATA=-11,
+</dd></dl>
+<a name="New_Functions" id="New_Functions"></a><h3> <span class="mw-headline"> New Functions </span></h3>
+<a name="GMS_hasCIDSID" id="GMS_hasCIDSID"></a><h4> <span class="mw-headline">GMS_hasCIDSID</span></h4>
+<dl><dd>GMS_hasCIDSID will determine if there are SID and CID fields in the GERMPLSM table. It will return GMS_SUCCESS (1) if those fields are present, otherwise it will return GMS_NO_DATA (0)
+</dd></dl>
+<dl><dd><b>Syntax</b>
+</dd><dd>long <b>GMS_hasCIDSID </b> No arguments, No returns
+</dd></dl>
+<dl><dd><b>Returns</b>
+</dd></dl>
+<p>GMS_SUCCESS, GMS_NO_DATA
+</p>
+<a name="GMS_addUDField" id="GMS_addUDField"></a><h4> <span class="mw-headline">GMS_addUDField</span></h4>
+<p>GMS_addUDField adds one record to the local UDFLDS table.
+</p>
+<dl><dd><b>Syntax</b>
+</dd></dl>
+<p>long <b>GMS_addUDField</b> (<i>data,szDesc, nszDesc</i>)
+</p>
+<dl><dd><b>Arguments</b>
+</dd></dl>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td><b>Argument</b>
+</td><td><b>Type</b>
+</td><td><b>Use</b>
+</td><td><b>Description</b>
+</td></tr>
+<tr>
+<td><i>data</i>
+</td><td>GMS_UDField *
+</td><td>Input/output
+</td><td>Address of a GMS_UDField structure
+</td></tr>
+<tr>
+<td><i>szDesc</i>
+</td><td>char *
+</td><td>Input
+</td><td>Description of the user defined field
+</td></tr>
+<tr>
+<td><i>nszDesc</i>
+</td><td>long *
+</td><td>Input
+</td><td>length of the description string
+</td></tr>
+</table>
+<dl><dd><b>Returns</b>
+</dd></dl>
+<p>GMS_SUCCESS, GMS_ERROR
+</p>
+<a name="GMS_deleteProgenitorID" id="GMS_deleteProgenitorID"></a><h4> <span class="mw-headline">GMS_deleteProgenitorID</span></h4>
+<p>GMS_deleteProgenitorID deletes the progenitors of a germplasm in the PROGENITORS table of the local GMS database. 
+</p>
+<dl><dd><b>Syntax</b>
+</dd></dl>
+<p>long <b>GMS_deleteProgenitorID</b>(gid)
+</p>
+<dl><dd><b>Arguments</b>
+</dd></dl>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td align="center"><b>Argument</b>
+</td><td align="center"><b>Type</b>
+</td><td align="center"><b>Use</b>
+</td><td align="center"><b>Description</b>
+</td></tr>
+<tr>
+<td align="justify"><i>gid</i>
+</td><td>long
+</td><td>input
+</td><td align="justify">GID of germplasm for which progenitors have to be deleted
+</td></tr>
+</table>
+<dl><dd><b>Returns</b>
+</dd></dl>
+<p>GMS_SUCCESS, GMS_ERROR
+</p>
+<dl><dd><b>Comments</b>
+</dd></dl>
+<p>This function deletes all progenitors of a germplasm from the local database. If <i>gid </i>is positive the function returns GMS_ERROR<i>.</i> Only user with access right greater than 30 is allowed to delete the progenitors. 
+</p><p><br />
+</p>
+<a name="GMS_deleteOneProgenitor" id="GMS_deleteOneProgenitor"></a><h4> <span class="mw-headline">GMS_deleteOneProgenitor</span></h4>
+<p>GMS_deleteOneProgenitor deletes a progenitor of a germplasm in the PROGENITORS table of the local GMS database. 
+</p>
+<dl><dd><b>Syntax</b>
+</dd></dl>
+<p>long <b>GMS_deleteOneProgenitor</b>(gid, pid)
+</p>
+<dl><dd><b>Arguments</b>
+</dd></dl>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td align="center"><b>Argument</b>
+</td><td align="center"><b>Type</b>
+</td><td align="center"><b>Use</b>
+</td><td align="center"><b>Description</b>
+</td></tr>
+<tr>
+<td align="justify"><i>gid</i>
+</td><td>long
+</td><td>input
+</td><td align="justify">GID of germplasm for which progenitors have to be deleted
+</td></tr>
+<tr>
+<td align="justify"><i>pid</i>
+</td><td>long
+</td><td>input
+</td><td align="justify">the progenitor's GID
+</td></tr>
+</table>
+<dl><dd><b>Returns</b>
+</dd></dl>
+<p>GMS_SUCCESS, GMS_ERROR
+</p>
+<dl><dd><b>Comments</b>
+</dd></dl>
+<p>This function deletes only one progenitor of a germplasm from the local database. If <i>gid </i>is positive the function returns GMS_ERROR<i>.</i> The function only allows user with access right greater than 30 to delete a progenitor.
+</p><p><br />
+</p>
+<a name="GMS_getNextSequence" id="GMS_getNextSequence"></a><h4> <span class="mw-headline">GMS_getNextSequence</span></h4>
+<p>GMS_getNextSequence function gets the next sequence number of name type with the specified prefix.
+</p>
+<dl><dd><b>Syntax</b>
+</dd></dl>
+<p>long <b>GMS_getNextSequence</b>(ntype, szPrefix, nextSequence)
+</p>
+<dl><dd><b>Arguments</b>
+</dd></dl>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td align="center"><b>Argument</b>
+</td><td align="center"><b>Type</b>
+</td><td align="center"><b>Use</b>
+</td><td align="center"><b>Description</b>
+</td></tr>
+<tr>
+<td align="justify"><i>ntype</i>
+</td><td>long
+</td><td>input
+</td><td align="justify">the name type (which is the corresponding FLDNO from the UDFLDS table)
+</td></tr>
+<tr>
+<td align="justify"><i>szPrefix</i>
+</td><td>char *
+</td><td>input
+</td><td align="justify">Addess of null terminated string which contains the prefix term
+</td></tr>
+<tr>
+<td align="justify"><i>nextSequence</i>
+</td><td>long
+</td><td>output
+</td><td align="justify">the next number in the sequence
+</td></tr>
+</table>
+<dl><dd><b>Returns</b>
+</dd></dl>
+<p>GMS_SUCCESS, GMS_NO_DATA, GMS_ERROR
+</p>
+<a name="GMS_getNextName" id="GMS_getNextName"></a><h4> <span class="mw-headline">GMS_getNextName</span></h4>
+<p>GMS_getNextName function provides the next name of a name type having the specified prefix.
+</p>
+<dl><dd><b>Syntax</b>
+</dd></dl>
+<p>long <b>GMS_getNextName</b>(ntype, szPrefix, szNextName)
+</p>
+<dl><dd><b>Arguments</b>
+</dd></dl>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td align="center"><b>Argument</b>
+</td><td align="center"><b>Type</b>
+</td><td align="center"><b>Use</b>
+</td><td align="center"><b>Description</b>
+</td></tr>
+<tr>
+<td align="justify"><i>ntype</i>
+</td><td>long
+</td><td>input
+</td><td align="justify">the name type (which is the corresponding FLDNO from the UDFLDS table)
+</td></tr>
+<tr>
+<td align="justify"><i>szPrefix</i>
+</td><td>char *
+</td><td>input
+</td><td align="justify">Addess of null terminated string which contains the prefix term
+</td></tr>
+<tr>
+<td align="justify"><i>szNextName</i>
+</td><td>char *
+</td><td>output
+</td><td align="justify">Address of NULL terminated string to place the next name.
+</td></tr>
+</table>
+<dl><dd><b>Returns</b>
+</dd></dl>
+<p>GMS_SUCCESS, GMS_NO_DATA, GMS_ERROR
+</p>
+<a name="DMS_deleteDataset" id="DMS_deleteDataset"></a><h4> <span class="mw-headline">DMS_deleteDataset</span></h4>
+<p>DMS_deleteDataset deletes a dataset of a study. The dataset corresponds to a representation of observations. The records in the OINDEX, EFFECT, VEFFECT, DATA_C and DATA_N of the specified representation are deleted.  But the information about the factors, levels and variates are not affected.  
+</p>
+<dl><dd><b>Syntax</b>
+</dd></dl>
+<p>long <b>GMS_deleteDataset</b>(<i>represno</i>)
+</p>
+<dl><dd><b>Arguments</b>
+</dd></dl>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td align="center"><b>Argument</b>
+</td><td align="center"><b>Type</b>
+</td><td align="center"><b>Use</b>
+</td><td align="center"><b>Description</b>
+</td></tr>
+<tr>
+<td><i>represno</i>
+</td><td>Long
+</td><td>input
+</td><td align="justify"> the representation number of the dataset
+</td></tr>
+</table>
+<dl><dd><b>Returns</b>
+</dd></dl>
+<p>GMS_SUCCESS, GMS_ERROR
+</p>
+<a name="DMS_setRepresName" id="DMS_setRepresName"></a><h4> <span class="mw-headline">DMS_setRepresName</span></h4>
+<p>DMS_setRepresName changes the name of a dataset or representation in a study stored in the local database 
+</p>
+<dl><dd><b>Syntax</b>
+</dd></dl>
+<p>long <b>DMS_setRepresName</b>(<i>represNo,szName</i>)
+</p>
+<dl><dd><b>Arguments</b>
+</dd></dl>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td align="center"><b>Argument</b>
+</td><td align="center"><b>Type</b>
+</td><td align="center"><b>Use</b>
+</td><td align="center"><b>Description</b>
+</td></tr>
+<tr>
+<td>represNo
+</td><td>long
+</td><td>input
+</td><td align="justify">the representation number of the dataset.
+</td></tr>
+<tr>
+<td>szName
+</td><td>Char *
+</td><td>input
+</td><td>Address of NULL terminated string to place the name. It's size should not exceed 150.
+</td></tr>
+</table>
+<dl><dd><b>Returns</b>
+</dd></dl>
+<p>GMS_SUCCESS, GMS_ERROR
+</p><p><br />
+</p>
+<a name="DMS_getRepresName" id="DMS_getRepresName"></a><h4> <span class="mw-headline">DMS_getRepresName</span></h4>
+<p>DMS_getRepresName retrieves the name of a dataset or representation 
+</p>
+<dl><dd><b>Syntax</b>
+</dd></dl>
+<p>long <b>DMS_getRepresName</b>(<i>represNo,szName</i>)
+</p>
+<dl><dd><b>Arguments</b>
+</dd></dl>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td align="center"><b>Argument</b>
+</td><td align="center"><b>Type</b>
+</td><td align="center"><b>Use</b>
+</td><td align="center"><b>Description</b>
+</td></tr>
+<tr>
+<td>represNo
+</td><td>long
+</td><td>input
+</td><td align="justify">the representation number of the dataset.
+</td></tr>
+<tr>
+<td>szName
+</td><td>Char *
+</td><td>input
+</td><td>Address of NULL terminated string to place the name. It's size should not exceed 150.
+</td></tr>
+</table>
+<dl><dd><b>Returns</b>
+</dd></dl>
+<p>GMS_SUCCESS, GMS_ERROR
+</p>
+<a name="DMS_setEffectName" id="DMS_setEffectName"></a><h4> <span class="mw-headline">DMS_setEffectName</span></h4>
+<p>DMS_setEffectName changes the name of an effect of a study stored in the local database 
+</p>
+<dl><dd><b>Syntax</b>
+</dd></dl>
+<p>long <b>DMS_setEffectName</b>(<i>effectID,szName</i>)
+</p>
+<dl><dd><b>Arguments</b>
+</dd></dl>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td align="center"><b>Argument</b>
+</td><td align="center"><b>Type</b>
+</td><td align="center"><b>Use</b>
+</td><td align="center"><b>Description</b>
+</td></tr>
+<tr>
+<td>effectID
+</td><td>long
+</td><td>input
+</td><td align="justify">the id of an effect to which the name should be set
+</td></tr>
+<tr>
+<td>szName
+</td><td>Char *
+</td><td>input
+</td><td>Address of NULL terminated string to place the name. It's size should not exceed 150.
+</td></tr>
+</table>
+<dl><dd><b>Returns</b>
+</dd></dl>
+<p>DMS_SUCCESS, DMS_ERROR
+</p><p><br />
+</p><p><br />
+</p>
+<a name="SUP_addPerson" id="SUP_addPerson"></a><h4> <span class="mw-headline">SUP_addPerson</span></h4>
+<p>SUP_addPerson adds record of a person, collaborator or scientist to the local PERSONS table.
+</p>
+<dl><dd><b>Syntax</b>
+</dd></dl>
+<p>long <b>SUP_addPerson</b> (<i>data</i>)
+</p>
+<dl><dd><b>Arguments</b>
+</dd></dl>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td><b>Argument</b>
+</td><td><b>Type</b>
+</td><td><b>Use</b>
+</td><td><b>Description</b>
+</td></tr>
+<tr>
+<td><i>data</i>
+</td><td>SUP_PERSONS *
+</td><td>Input
+</td><td>Address of a SUP_PERSONS structure
+</td></tr></table>
+<dl><dd><b>Returns</b>
+</dd></dl>
+<p>GMS_SUCCESS, GMS_ERROR
+</p><p><br />
+</p>
+<a name="SUP_addInstitute" id="SUP_addInstitute"></a><h4> <span class="mw-headline">SUP_addInstitute</span></h4>
+<p>SUP_addInstitute adds record of an institute to the local INSTITUT table.
+</p>
+<dl><dd><b>Syntax</b>
+</dd></dl>
+<p>long <b>SUP_addInstitute</b> (<i>data</i>)
+</p>
+<dl><dd><b>Arguments</b>
+</dd></dl>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td><b>Argument</b>
+</td><td><b>Type</b>
+</td><td><b>Use</b>
+</td><td><b>Description</b>
+</td></tr>
+<tr>
+<td><i>data</i>
+</td><td>SUP_INSTITUTE *
+</td><td>Input
+</td><td>Address of a SUP_INSTITUTE structure
+</td></tr></table>
+<dl><dd><b>Returns</b>
+</dd></dl>
+<p>GMS_SUCCESS, GMS_ERROR
+</p><p><br />
+</p>
+<a name="SUP_getPerson" id="SUP_getPerson"></a><h4> <span class="mw-headline">SUP_getPerson</span></h4>
+<p>SUP_getPerson retrieves details of a person from the PERSONS table. The first argument of SUP_getPerson is a pointer to a SUP_PERSONS structure.  If the PERSONID element is not zero when the function is called then the details for the corresponding PERSONID are retrieved.  If it is zero then the function returns details for the first record if <i>fOpt </i>= FIND_FIRST or for the next available  record if <i>fOpt </i>= FIND_NEXT.  Any call which fails to find a person information returns DMS_NO_DATA.
+</p>
+<dl><dd><b>Syntax</b>
+</dd></dl>
+<p>long <b>SUP_getPerson</b>(data, fOpt)
+</p>
+<dl><dd><b>Arguments</b>
+</dd></dl>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td align="center"><b>Argument</b>
+</td><td align="center"><b>Type</b>
+</td><td align="center"><b>Use</b>
+</td><td align="center"><b>Description</b>
+</td></tr>
+<tr>
+<td>data
+</td><td>SUP_PERSONS*
+</td><td>input/<br />output
+</td><td>Address of a SUP_PERSONS structure to contain persons details
+</td></tr>
+<tr>
+<td>fOpt
+</td><td>Long
+</td><td>input
+</td><td>Either FIND_FIRST  or FIND_NEXT
+</td></tr>
+</table>
+<dl><dd><b>Returns</b>
+</dd></dl>
+<p>DMS_SUCCESS, DMS_ERROR, DMS_NO_DATA
+</p>
+<dl><dd><b>Comments</b>
+</dd></dl>
+<p>If the function is called and there was a problem accessing the database, the function will return DMS_ERROR.
+</p>
+<a name="SUP_getInstittutePrnt" id="SUP_getInstittutePrnt"></a><h4> <span class="mw-headline">SUP_getInstittutePrnt</span></h4>
+<p>SUP_getInstitutePrnt retrieves details of an institute from the INSTITUT table. It can retrieve institutes under a specific parent institute (PINSID) or all institutes in the table.  The first argument of SUP_getInstitutePrnt is a pointer to a SUP_INSTITUTE structure.  If the PINSID element is not zero when the function is called then, it retrieves details of the institutes under that parent institute.  If PINSID = 0, it retrieves all institutes. If <i>fOpt </i>= FIND_FIRST (0), the function returns details for the first record. If <i>fOpt </i>= FIND_NEXT,  the next available record is returned .  Any call which fails to find a institute information returns DMS_NO_DATA.
+</p>
+<dl><dd><b>Syntax</b>
+</dd></dl>
+<p>long <b>SUP_getInstitutePrnt</b>(data, fOpt)
+</p>
+<dl><dd><b>Arguments</b>
+</dd></dl>
+<table border="2" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td align="center"><b>Argument</b>
+</td><td align="center"><b>Type</b>
+</td><td align="center"><b>Use</b>
+</td><td align="center"><b>Description</b>
+</td></tr>
+<tr>
+<td>data
+</td><td>SUP_INSTITTUTE*
+</td><td>input/<br />output
+</td><td>Address of a SUP_INSTITUTE structure to contain institute details
+</td></tr>
+<tr>
+<td>fOpt
+</td><td>Long
+</td><td>input
+</td><td>Either FIND_FIRST  or FIND_NEXT
+</td></tr>
+</table>
+<dl><dd><b>Returns</b>
+</dd></dl>
+<p>DMS_SUCCESS, DMS_ERROR, DMS_NO_DATA
+</p>
+<dl><dd><b>Comments</b>
+</dd></dl>
+<p>If the function is called and there was a problem accessing the database, the function will return DMS_ERROR.
+</p>
+<a name="Modified_Functions" id="Modified_Functions"></a><h3> <span class="mw-headline"> Modified Functions </span></h3>
+<a name="GMS_findAttribute" id="GMS_findAttribute"></a><h4> <span class="mw-headline">GMS_findAttribute</span></h4>
+<p>- recognizes wild card characters
+</p>
+<a name="GMS_listName" id="GMS_listName"></a><h4> <span class="mw-headline">GMS_listName</span></h4>
+<p>- It looks for PreferredID (NSTAT=8)  if there is no Preferred Name (NSTAT=1).
+</p>
+<a name="GMS_getGermplasm2" id="GMS_getGermplasm2"></a><h4> <span class="mw-headline">GMS_getGermplasm2</span></h4>
+<p>- It looks for PreferredID (NSTAT=8)  if there is no Preferred Name (NSTAT=1).
+- It includes the PreferredID with the Preferred Name if SHOW_PREFID=YES in the INI Key
+</p>
+<a name="All_GMS_add_functions" id="All_GMS_add_functions"></a><h4> <span class="mw-headline">All GMS_add functions </span></h4>
+<p>- Reiterates adding the record until there is no Unique Constraint Error or it reaches 100 iteration.
+</p>
+<a name="getConsData" id="getConsData"></a><h4> <span class="mw-headline">getConsData </span></h4>
+<dl><dd>-SQL for mySQL/PostGres was corrected
+</dd></dl>
+<a name="getOunitData" id="getOunitData"></a><h4> <span class="mw-headline">getOunitData </span></h4>
+<dl><dd>-SQL for mySQL/PostGres was corrected
+</dd></dl>
+<a name="getPFLevel" id="getPFLevel"></a><h4> <span class="mw-headline">getPFLevel </span></h4>
+<dl><dd>-SQL for mySQL/PostGres was corrected
+</dd></dl>
+<a name="ICIS32.DLL_5.4" id="ICIS32.DLL_5.4"></a><h2> <span class="mw-headline"> <a href="../../../../articles/t/d/m/TDM_Windows_Application_Programming_Interface_5.4_258d.html" title="TDM Windows Application Programming Interface 5.4"> ICIS32.DLL 5.4</a> </span></h2>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 61/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+<div class="printfooter">
+Retrieved from "<a href="http://localhost../../../../articles/t/d/m/TDM_Windows_Application_Programming_Interface_5.5_f42a.html">http://localhost../../../../articles/t/d/m/TDM_Windows_Application_Programming_Interface_5.5_f42a.html</a>"</div>
+						<!-- end content -->
+						<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<div class="pBody">
+			<ul>
+	
+				 <li id="ca-nstab-main" class="selected"><a href="../../../../articles/t/d/m/TDM_Windows_Application_Programming_Interface_5.5_f42a.html" title="View the content page [c]" accesskey="c">Page</a></li>
+				 <li id="ca-talk" class="new"><a href="../../../../articles/t/d/m/Talk%7ETDM_Windows_Application_Programming_Interface_5.5_ef20.html" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				 <li id="ca-viewsource"><a href="../../../../articles/t/d/m/TDM_Windows_Application_Programming_Interface_5.5_f42a.html" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				 <li id="ca-history"><a href="../../../../articles/t/d/m/TDM_Windows_Application_Programming_Interface_5.5_f42a.html" title="Past versions of this page [h]" accesskey="h">History</a></li>			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="../../../../articles/u/s/e/Special%7EUserLogin_94cd.html" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(../../../../misc/icis-wiki3.png);" href="../../../../index.html" title="Visit the main page [z]" accesskey="z"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class='generated-sidebar portlet' id='p-navigation'>
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="../../../../index.html" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
+				<li id="n-portal"><a href="../../../../articles/c/o/m/ICISWiki%7ECommunity_Portal_7449.html" title="About the project, what you can do, where to find things">Community portal</a></li>
+				<li id="n-recentchanges"><a href="../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+				<li id="n-help"><a href="../../../../articles/c/o/n/Help%7EContents_22de.html" title="The place to find out">Help</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="../../../../articles/s/e/a/Special%7ESearch_a8e5.html" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" title="Search ICISWiki [f]" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="../../../../articles/w/h/a/Special%7EWhatLinksHere_TDM_Windows_Application_Programming_Interface_5.5_06c5.html" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="../../../../articles/r/e/c/Special%7ERecentChangesLinked_TDM_Windows_Application_Programming_Interface_5.5_3cd2.html" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+<li id="t-specialpages"><a href="../../../../articles/s/p/e/Special%7ESpecialPages_f12b.html" title="List of all special pages [q]" accesskey="q">Special pages</a></li>
+				<li id="t-print"><a href="../../../../articles/t/d/m/TDM_Windows_Application_Programming_Interface_5.5_f42a.html" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>				<li id="t-permalink"><a href="../../../../articles/t/d/m/TDM_Windows_Application_Programming_Interface_5.5_f42a.html" title="Permanent link to this version of the page">Permanent link</a></li>			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="../../../../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" /></a></div>
+				<div id="f-copyrightico"><a href="../../../../../COPYING.html"><img src="/icis/skins/common/images/gnu-fdl.png" alt='GNU Free Documentation License 1.2' /></a></div>
+			<ul id="f-list">
+					<li id="credits">This page was last modified 07:08, 14 July 2008 by <a href="../../../../articles/a/p/o/User%7EAportugal_745d.html" title="User:Aportugal">Arllet Portugal</a>. </li>
+					<li id="copyright">Content is available under <a href="../../../../../COPYING.html" class="external " title="../../../../../COPYING.html">GNU Free Documentation License 1.2</a>.</li>
+					<li id="privacy"><a href="../../../../articles/p/r/i/ICISWiki%7EPrivacy_policy_0cbf.html" title="ICISWiki:Privacy policy">Privacy policy</a></li>
+					<li id="about"><a href="../../../../articles/a/b/o/ICISWiki%7EAbout_53aa.html" title="ICISWiki:About">About ICISWiki</a></li>
+					<li id="disclaimer"><a href="../../../../articles/g/e/n/ICISWiki%7EGeneral_disclaimer_9129.html" title="ICISWiki:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+</div>
+
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served in 236.622 secs. --></body></html>

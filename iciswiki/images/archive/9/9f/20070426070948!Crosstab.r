@@ -1,0 +1,110 @@
+###############################################################################################
+### This code is to produce lower diagonal matrix for data accross studies.
+### Matrix diagonal consists of number of entry within study, while lower matrix
+### contain number of entry that the same for each pair of study.
+### Data are obtained from cross-tabulation query in Access - study (eg. ESWYT)as column,
+### entry as rows and entry label as value (eg. genotype ID or ESWYT by occurrences).
+### The output is saved into csv file.
+### Warning: the number of entry is calculated by matching each value within column.
+### Therefore, if there were entry label that duplicated, the calculation will return
+### less value than expected. If there are two same entry that want to be treated
+### differently, please code them differently.
+### data = from Access query (format: GID/LID as rows and ESWYT as columns)
+### file = path and file name where output will be saved (eg."C:/DATA/GID.csv"
+### col  = the first column number where the data stored
+##############################################################################################
+
+cross.all<-function(data,file,col)
+{
+  n<-ncol(data)
+	x<-subset(data,select=c(col:n))   ## subset data and remove extra column
+	heading<-row.names(t(x))          ## create heading
+  y<-matrix(data=NA,ncol(x),ncol(x))  ## create matrix for output
+  row.names(y)<-heading               ## assign row names to output matrix
+  z<-t(y)                             ## transpose matrix
+  row.names(z)<-heading               ## assign row names to the transpose matrix
+  for (i in 1:ncol(x))                ## calculation
+  { for (j in 1:ncol(x))
+		if(i>=j)
+    z[i,j]<-nlevels(as.factor(match(na.exclude(x[,i]),na.exclude(x[,j]))))
+  }
+  write.table(z,file)                ## save output into a file
+}
+
+
+####################################################################################################
+### This code is to produce lower diagonal matrix for data for each studies.
+### Matrix diagonal consists of number of entry for attribute within study,
+### while lower matrix contain number of entry that the same for each pair of
+### attribute within study.
+### Data are obtained from cross-tabulation query in Access - attribute (eg. traits)as column,
+### studies (eg. ESWYT list)as rows and entry label(eg. ESWYT by occurrences)as value.
+### The output is saved into csv file.
+### data  = from Access query (format: names as rows and traits as column)
+### label = from Access query consist of unique names for studies or studies by attribute
+### file  = file name where output will be saved
+### clab  = column number where labels/names are stored
+### cdat  = column number where data started
+####################################################################################################
+
+cross.each<-function(data,label,file,clab,cdat)
+{	
+	z=subset(data,select=c(cdat:ncol(data)))  ## subset data to remove extra column
+	heading=row.names(t(z))                   ## create column names for output
+	lab<-as.vector(c("Label",heading))        ## create label
+	write.table(t(lab),file,row.names=F,col.names=F,quote=F) ## write label into output file
+	for (k in 1:nrow(label))
+  {
+	 x<-subset(data,data[,clab]==label[k,1], select=c(cdat:ncol(data))) ## subset data based on label
+	 rnames<-subset(label,label[,1]==label[k,1])    ## create data for output extra column
+	 n<-matrix(data=NA,ncol(x),1)
+	 n[1:ncol(x),1]<-as.vector(rnames[1,1])         ## create vector consist of label names
+   y<-matrix(data=NA,ncol(x),ncol(x))             ## create output matrix
+	 row.names(y)<-heading                          ## assign row.names to output matrix
+   z<-t(y)                                        ## transpose matrix
+   for (i in 1:ncol(x))                           ## calculation
+   { for (j in 1:ncol(x))
+	   if (i>=j)
+	   z[i,j]<-nlevels(as.factor(match(na.exclude(x[,i]),na.exclude(x[,j]))))
+	   kl<-cbind(n,z)                               ## combine matrix and vector name
+	 }
+	write.table(kl,file,append=T,row.names=F,col.names=F,quote=F) ## write output to file
+	}
+}
+
+#################################################################################################
+### This code is to produce table that showed relationship between several
+### terms that revered to the same thing (for example: genotype and entry,
+### location and occurrence).
+### This code will calculate the number of entry within each term for each study.
+### If the relationship between terms are 1 to 1, it is expected to have the same
+### count of entry for the terms.
+### The output will be saved as csv file
+### All data are obtain from Access query.
+### dat1 = data contain entry for term 1
+### dat2 = data contains entry for term 2
+### dat3 = data contains entry for term 3
+### dat4 = data contains entry for term 4
+### file = path and file name for output
+### col = column number where the data started for each data
+### cnames = column names that will be used as output column names (eg. c("ESWYT,
+### "Genotype","Entry","Location","Occurrence"))
+##################################################################################################
+
+occ.tab<-function(dat1,dat2,dat3,dat4, file,col,cnames)  
+{
+	write.table(t(cnames),file,row.names=F,col.names=F,quote=F) ## write column names to output file
+	x1<-subset(dat1,select=c(col:ncol(dat1)))     ## select column contain data
+	x2<-subset(dat2,select=c(col:ncol(dat2)))
+	x3<-subset(dat3,select=c(col:ncol(dat3)))
+	x4<-subset(dat4,select=c(col:ncol(dat4)))
+  y<-matrix(data=NA,ncol(x1),4)                ## create output matrix
+	row.names(y)=row.names(t(x1))                ## assign row names to output matrix
+    for (i in 1:ncol(x))
+    { y[i,1]<-nlevels(as.factor(match(na.exclude(x1[,i]),na.exclude(x1[,i]))))
+		  y[i,2]<-nlevels(as.factor(match(na.exclude(x2[,i]),na.exclude(x2[,i]))))
+		  y[i,3]<-nlevels(as.factor(match(na.exclude(x3[,i]),na.exclude(x3[,i]))))
+		  y[i,4]<-nlevels(as.factor(match(na.exclude(x4[,i]),na.exclude(x4[,i]))))
+    }
+  write.table(y,file,row.names=T,col.names=F,quote=F,append=T) ## write output to file
+}

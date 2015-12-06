@@ -1,0 +1,769 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta name="generator" content="MediaWiki 1.14.0" />
+		<meta name="keywords" content="Database benchmarking" />
+		<link rel="shortcut icon" href="../../../../misc/favicon.ico" />
+		<link rel="search" type="application/opensearchdescription+xml" href="../../../../../opensearch_desc.php" title="ICISWiki (en)" />
+		<link title="Creative Commons" type="application/rdf+xml" href="../../../../articles/d/a/t/Database_benchmarking.html" rel="alternate meta" />
+		<link rel="copyright" href="../../../../../COPYING.html" />
+		<link rel="alternate" type="application/rss+xml" title="ICISWiki RSS Feed" href="http://localhost../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" />
+		<link rel="alternate" type="application/atom+xml" title="ICISWiki Atom Feed" href="http://localhost../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" />
+		<title>Database benchmarking - ICISWiki</title>
+		<link rel="stylesheet" href="../../../../skins/common/shared.css?195" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../../../../skins/common/commonPrint.css?195" type="text/css" media="print" />
+		<link rel="stylesheet" href="../../../../skins/monobook/main.css?195" type="text/css" media="screen" />
+		<!--[if lt IE 5.5000]><link rel="stylesheet" href="../../../../skins/monobook/IE50Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 5.5000]><link rel="stylesheet" href="../../../../skins/monobook/IE55Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 6]><link rel="stylesheet" href="../../../../skins/monobook/IE60Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 7]><link rel="stylesheet" href="../../../../skins/monobook/IE70Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7ECommon.css?195" type="text/css" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7EPrint.css?195" type="text/css" media="print" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7EMonobook.css?195" type="text/css" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/gen.css?195" type="text/css" />
+		<!--[if lt IE 7]><script type="text/javascript" src="../../../../skins/common/IEFixes.js?195"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+
+		<script type= "text/javascript">/*<![CDATA[*/
+		var skin = "monobook";
+		var stylepath = "../../../../skins";
+		var wgArticlePath = "../../../../$1";
+		var wgScriptPath = "../../../../..";
+		var wgScript = "/icis/index.php";
+		var wgVariantArticlePath = false;
+		var wgActionPaths = {};
+		var wgServer = "http://localhost";
+		var wgCanonicalNamespace = "";
+		var wgCanonicalSpecialPageName = false;
+		var wgNamespaceNumber = 0;
+		var wgPageName = "Database_benchmarking";
+		var wgTitle = "Database benchmarking";
+		var wgAction = "view";
+		var wgArticleId = "3683";
+		var wgIsArticle = true;
+		var wgUserName = null;
+		var wgUserGroups = null;
+		var wgUserLanguage = "en";
+		var wgContentLanguage = "en";
+		var wgBreakFrames = false;
+		var wgCurRevisionId = "14260";
+		var wgVersion = "1.14.0";
+		var wgEnableAPI = true;
+		var wgEnableWriteAPI = true;
+		var wgSeparatorTransformTable = ["", ""];
+		var wgDigitTransformTable = ["", ""];
+		var wgRestrictionEdit = [];
+		var wgRestrictionMove = [];
+		/*]]>*/</script>
+
+		<script type="text/javascript" src="../../../../skins/common/wikibits.js?195"><!-- wikibits js --></script>
+		<!-- Head Scripts -->
+		<script type="text/javascript" src="../../../../raw/gen.js"><!-- site js --></script>
+	</head>
+<body class="mediawiki ltr ns-0 ns-subject page-Database_benchmarking skin-monobook">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 id="firstHeading" class="firstHeading">Database benchmarking</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From ICISWiki</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>			<!-- start content -->
+			<table id="toc" class="toc" summary="Contents"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1"><a href="#ICIS_WEB_.28new_generation.29"><span class="tocnumber">1</span> <span class="toctext">ICIS WEB (new generation)</span></a>
+<ul>
+<li class="toclevel-2"><a href="#Rice"><span class="tocnumber">1.1</span> <span class="toctext">Rice</span></a>
+<ul>
+<li class="toclevel-3"><a href="#Frequently_used_SQLs:"><span class="tocnumber">1.1.1</span> <span class="toctext">Frequently used SQLs:</span></a></li>
+<li class="toclevel-3"><a href="#Slow-performing_SQLs:"><span class="tocnumber">1.1.2</span> <span class="toctext">Slow-performing SQLs:</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#CROPFINDER"><span class="tocnumber">2</span> <span class="toctext">CROPFINDER</span></a>
+<ul>
+<li class="toclevel-2"><a href="#Maize"><span class="tocnumber">2.1</span> <span class="toctext">Maize</span></a></li>
+<li class="toclevel-2"><a href="#Wheat"><span class="tocnumber">2.2</span> <span class="toctext">Wheat</span></a>
+<ul>
+<li class="toclevel-3"><a href="#Query_optimization_.23_1"><span class="tocnumber">2.2.1</span> <span class="toctext">Query optimization # 1</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</td></tr></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </script>
+<a name="ICIS_WEB_.28new_generation.29" id="ICIS_WEB_.28new_generation.29"></a><h2> <span class="mw-headline"> ICIS WEB (new generation) </span></h2>
+<a name="Rice" id="Rice"></a><h3> <span class="mw-headline"> Rice </span></h3>
+<a name="Frequently_used_SQLs:" id="Frequently_used_SQLs:"></a><h4> <span class="mw-headline"><font color="blue">Frequently used SQLs:</font></span></h4>
+<p>Note: koios.generationcp.org has shown improved performance during the September 2 testing
+</p>
+<table border="0" cellpadding="2" style="background:#d0d0d0" width="95%">
+
+<tr>
+<th width="15%" align="left"> Use case
+</th><th width="30%" align="left"> SQL
+</th><td> Number of records
+</td><td> Test date
+</td><td> <font color="purple">MySQL</font>-<font color="green">MyISAM</font> (koios.
+<p>generationcp.
+org) 
+</p>
+</td><td> <font color="purple">MySQL</font>-<font color="green">MyISAM</font> <font color="red">(ASTI server)</font>
+</td><td> <font color="purple">MySQL</font>-InnoDB <font color="red">(ASTI server)</font>
+</td><td> <font color="blue">PostgreSQL</font> <font color="red">(ASTI server)</font>
+</td><td> <font color="red">ASTI IP used</font>
+</td></tr>
+<tr>
+<td style="background:#ffffff" valign="top" rowspan="2"> Get StudyEffects By Study ID
+</td><td style="background:#ffffff" rowspan="2"> SELECT DISTINCT e.effectid, s.sname, s.studyid FROM study s, effect e, factor f WHERE  s.studyId = 586 and s.studyId = f.studyId and e.factorid = f.factorid
+</td><td style="background:#ffffff" rowspan="2"> 7
+</td><td style="background:#ffffff"> Aug 21, 2008
+</td><td style="background:#ffffff"> 0.77 sec
+</td><td style="background:#ffffff"> 0.25 sec
+</td><td style="background:#ffffff"> 0.25 sec
+</td><td style="background:#ffffff"> 0.27 sec
+</td><td style="background:#ffffff"> (internal only)
+</td></tr>
+<tr>
+<td style="background:#E0E6FF" valign="top"> September 2, 2008
+</td><td style="background:#E0E6FF"> 0.25 sec
+</td><td style="background:#E0E6FF"> 0.25 sec
+</td><td style="background:#E0E6FF"> 0.25 sec
+</td><td style="background:#E0E6FF"> 0.50 sec
+</td><td style="background:#E0E6FF"> (external)
+</td></tr>
+<tr>
+<td style="background:#ffffff" rowspan="2"> Get StudyEffects By Study Name using LIKE
+</td><td style="background:#ffffff" rowspan="2"> SELECT DISTINCT e.effectid, s.sname, s.studyid FROM study s, effect e, factor f WHERE  s.sname like 'GCP_%' and s.studyId = f.studyId and e.factorid = f.factorid
+</td><td style="background:#ffffff" rowspan="2"> 10
+</td><td style="background:#ffffff"> Aug 21, 2008
+</td><td style="background:#ffffff"> 0.25 sec
+</td><td style="background:#ffffff"> 0.25 sec
+</td><td style="background:#ffffff"> 0.25 sec
+</td><td style="background:#ffffff"> 0.27 sec
+</td><td style="background:#ffffff"> (internal only)
+</td></tr>
+<tr>
+<td style="background:#E0E6FF" valign="top"> September 2, 2008
+</td><td style="background:#E0E6FF"> 0.25 sec
+</td><td style="background:#E0E6FF"> 0.25 sec
+</td><td style="background:#E0E6FF"> 0.27 sec
+</td><td style="background:#E0E6FF"> 0.25 sec
+</td><td style="background:#E0E6FF"> (external)
+</td></tr>
+<tr>
+<td style="background:#ffffff" valign="top" rowspan="2"> Get StudyEffects By Study ID
+</td><td style="background:#ffffff" rowspan="2"> SELECT DISTINCT e.effectid, s.sname, s.studyid FROM study s, effect e, factor f WHERE  s.studyId = 586 and s.studyId = f.studyId and e.factorid = f.factorid
+</td><td style="background:#ffffff" rowspan="2"> 7
+</td><td style="background:#ffffff"> Aug 21, 2008
+</td><td style="background:#ffffff"> 0.77 sec
+</td><td style="background:#ffffff"> 0.25 sec
+</td><td style="background:#ffffff"> 0.25 sec
+</td><td style="background:#ffffff"> 0.27 sec
+</td><td style="background:#ffffff"> (internal only)
+</td></tr>
+<tr>
+<td style="background:#E0E6FF" valign="top"> September 2, 2008
+</td><td style="background:#E0E6FF"> 0.27 sec
+</td><td style="background:#E0E6FF"> 0.25 sec
+</td><td style="background:#E0E6FF"> 0.25 sec
+</td><td style="background:#E0E6FF"> 0.25 sec
+</td><td style="background:#E0E6FF"> (external)
+</td></tr>
+<tr>
+<td style="background:#ffffff" rowspan="2"> Get Study Observation Units By EffectId AND LevelNo
+</td><td style="background:#ffffff" rowspan="2">SELECT DISTINCT ou.ounitid FROM oindex ou, effect e WHERE  e.effectid=1532 and ou.levelno=225503 and e.factorid=ou.factorid and e.represno=ou.represno
+</td><td style="background:#ffffff" rowspan="2"> 1
+</td><td style="background:#ffffff"> Aug 21, 2008
+</td><td style="background:#ffffff"> 0.25 sec
+</td><td style="background:#ffffff"> 0.27 sec
+</td><td style="background:#ffffff"> 0.27 sec
+</td><td style="background:#ffffff"> 0.25 sec
+</td><td style="background:#ffffff"> (internal only)
+</td></tr>
+<tr>
+<td style="background:#E0E6FF" valign="top"> September 2, 2008
+</td><td style="background:#E0E6FF"> 0.25 sec
+</td><td style="background:#E0E6FF"> 0.25 sec
+</td><td style="background:#E0E6FF"> 0.25 sec
+</td><td style="background:#E0E6FF"> 0.50 sec
+</td><td style="background:#E0E6FF"> (external)
+</td></tr>
+<tr>
+<td style="background:#ffffff" rowspan="2"> Get Values by Factor ID
+</td><td style="background:#ffffff" rowspan="2"> <b><font color="purple">MySQL:</font></b>
+<p>SELECT f.factorid, f.labelid, f.fname, CAST(ln.lvalue AS CHAR), ln.levelno, f.ltype FROM factor f, level_n ln WHERE f.labelid = ln.labelid AND f.labelid = 6874 UNION SELECT f.factorid, f.labelid, f.fname,lc.lvalue, lc.levelno, f.ltype FROM factor f, level_c lc WHERE f.labelid = lc.labelid AND f.labelid = 6874
+</p><p><b><font color="blue">PostgreSQL:</font></b>
+</p><p>SELECT f.factorid, f.labelid, f.fname, CAST(ln.lvalue AS TEXT), ln.levelno, f.ltype FROM factor f, level_n ln WHERE f.labelid = ln.labelid AND f.labelid = 6874 UNION SELECT f.factorid, f.labelid, f.fname,lc.lvalue, lc.levelno, f.ltype FROM factor f, level_c lc WHERE f.labelid = lc.labelid AND f.labelid = 6874
+</p>
+</td><td style="background:#ffffff" rowspan="2"> 2668
+</td><td style="background:#ffffff"> Aug 21, 2008
+</td><td style="background:#ffffff"> 0.27 sec
+</td><td style="background:#ffffff"> 0.25 sec
+</td><td style="background:#ffffff"> 0.25 sec
+</td><td style="background:#ffffff">  0.75 sec
+</td><td style="background:#ffffff"> (internal only)
+</td></tr>
+<tr>
+<td style="background:#E0E6FF" valign="top"> September 2, 2008
+</td><td style="background:#E0E6FF"> 0.25 sec
+</td><td style="background:#E0E6FF"> 0.25 sec
+</td><td style="background:#E0E6FF"> 0.25 sec
+</td><td style="background:#E0E6FF"> 0.27 sec
+</td><td style="background:#E0E6FF"> (external)
+</td></tr>
+<tr>
+<td style="background:#ffffff" rowspan="2"> Get Values by Variate ID
+</td><td style="background:#ffffff" rowspan="2"> <b><font color="purple">MySQL:</font></b>
+<p>SELECT v.variatid, v.vname, CAST(dn.dvalue AS CHAR), v.dtype FROM variate v, data_n dn WHERE v.variatid = dn.variatid AND v.variatid = 3 UNION SELECT v.variatid, v.vname, dc.dvalue, v.dtype FROM variate v, data_c dc WHERE v.variatid = dc.variatid AND v.variatid = 3
+</p><p><b><font color="blue">PostgreSQL:</font></b>
+SELECT v.variatid, v.vname, CAST(dn.dvalue AS TEXT), v.dtype FROM variate v, data_n dn WHERE v.variatid = dn.variatid AND v.variatid = 3 UNION SELECT v.variatid, v.vname, dc.dvalue, v.dtype FROM variate v, data_c dc WHERE v.variatid = dc.variatid AND v.variatid = 3
+</p>
+</td><td style="background:#ffffff" rowspan="2"> 62
+</td><td style="background:#ffffff"> Aug 21, 2008
+</td><td style="background:#ffffff"> 0.52 sec
+</td><td style="background:#ffffff"> 0.25 sec
+</td><td style="background:#ffffff"> 0.27 sec
+</td><td style="background:#ffffff"> 0.27 sec
+</td><td style="background:#ffffff">  (internal only)
+</td></tr>
+<tr>
+<td style="background:#E0E6FF" valign="top"> September 2, 2008
+</td><td style="background:#E0E6FF"> 0.25 sec
+</td><td style="background:#E0E6FF"> 0.25 sec
+</td><td style="background:#E0E6FF"> 0.25 sec
+</td><td style="background:#E0E6FF"> 0.27 sec
+</td><td style="background:#E0E6FF"> (external)
+</td></tr>
+<tr>
+<td style="background:#ffffff" rowspan="2"> Get TabularData By Row LevelNo, Column LevelNo and Variate ID
+</td><td style="background:#ffffff" rowspan="2">
+<p>SELECT z.ounitid, z.levelrow, x.levelcolumn, z.dvalue FROM (SELECT o.ounitid, o.levelno AS levelrow, d.dvalue FROM oindex o, data_n d WHERE o.ounitid = d.ounitid AND levelno IN (294677, 294678) AND d.variatid = 28514 ) AS z, (SELECT ounitid, levelno AS levelcolumn FROM oindex WHERE levelno IN (294985, 294986)) AS x WHERE z.ounitid=x.ounitid
+</p>
+</td><td style="background:#ffffff" rowspan="2"> 4
+</td><td style="background:#ffffff"> Aug 21, 2008
+</td><td style="background:#ffffff"> 0.25 sec
+</td><td style="background:#ffffff"> 0.25 sec
+</td><td style="background:#ffffff"> 0.25 sec
+</td><td style="background:#ffffff"> 0.25 sec
+</td><td style="background:#ffffff">  (internal only)
+</td></tr>
+<tr>
+<td style="background:#E0E6FF" valign="top"> September 2, 2008
+</td><td style="background:#E0E6FF"> 0.50 sec
+</td><td style="background:#E0E6FF"> 0.25 sec
+</td><td style="background:#E0E6FF"> 0.25 sec
+</td><td style="background:#E0E6FF"> 0.50 sec
+</td><td style="background:#E0E6FF">  (external)
+</td></tr>
+
+<tr>
+<td style="background:#ffffff"> INNER JOIN germplsm and names tables
+</td><td style="background:#ffffff"> select * from germplsm as g inner join names as n on g.gid = n.gid
+</td><td style="background:#ffffff">
+</td><td style="background:#ffffff"> September 2, 2008
+</td><td style="background:#ffffff"> 42.27 sec
+</td><td style="background:#ffffff"> 33.00 sec
+</td><td style="background:#ffffff"> 7.50 sec
+</td><td style="background:#ffffff"> 14.02 sec
+</td><td style="background:#ffffff"> (external)
+</td></tr>
+
+</table>
+<a name="Slow-performing_SQLs:" id="Slow-performing_SQLs:"></a><h4> <span class="mw-headline"><font color="blue">Slow-performing SQLs:</font></span></h4>
+<p>Note: koios.generationcp.org has shown improved performance during the September 2 testing
+</p>
+<table border="0" cellpadding="2" style="background:#d0d0d0" width="95%">
+
+<tr>
+<th width="15%" align="left"> Use case
+</th><th width="40%" align="left"> SQL
+</th><td> Number of records
+</td><td> Test date
+</td><td> <font color="purple">MySQL</font>-<font color="green">MyISAM</font> (koios.generationcp)
+</td><td> <font color="purple">MySQL</font>-<font color="green">MyISAM</font> <font color="red">(ASTI server)</font>
+</td><td> <font color="purple">MySQL</font>-InnoDB <font color="red">(ASTI server)</font>
+</td><td> <font color="blue">PostgreSQL</font> <font color="red">(ASTI server)</font>
+</td><td> <font color="red">ASTI IP used</font>
+</td></tr>
+<tr>
+<td style="background:#ffffff" valign="top" rowspan="2"> Get Detected Variants By StudyID
+</td><td style="background:#ffffff" rowspan="2"> SELECT DISTINCT gmv.mvid, gnames1.gnval as allele, gmv.mdid, gnames2.gnval as marker
+<p>FROM gems_mv gmv, gems_names gnames1, gems_names gnames2, variate v INNER JOIN data_n dn ON v.variatid = dn.variatid 
+WHERE gnames1.gobjtype='gems_mv' AND gnames2.gobjtype='gems_marker_detector' AND gnames1.gobjid=gmv.mvid AND gnames2.gobjid=gmv.mdid AND dn.dvalue=gmv.mvid AND v.scaleid=503 AND v.studyId = 638			
+</p>
+</td><td style="background:#ffffff" rowspan="2"> 107
+</td><td style="background:#ffffff"> August 21, 2008
+</td><td style="background:#ffffff"> 60.30 sec
+</td><td style="background:#ffffff"> 14.50 sec
+</td><td style="background:#ffffff"> 25.28 sec
+</td><td style="background:#ffffff"> 0.52 sec
+</td><td style="background:#ffffff"> (internal only)
+</td></tr>
+<tr>
+<td style="background:#E0E6FF" valign="top"> September 2, 2008
+</td><td style="background:#E0E6FF"> 0.75 sec
+</td><td style="background:#E0E6FF"> 0.77 sec
+</td><td style="background:#E0E6FF"> 0.52 sec
+</td><td style="background:#E0E6FF"> 0.50 sec
+</td><td style="background:#E0E6FF"> (external)
+</td></tr>
+<tr>
+<td style="background:#ffffff" rowspan="2"> Get DetectedVariants By StudyName
+</td><td style="background:#ffffff" rowspan="2">
+<p>SELECT DISTINCT gmv.mvid, gnames1.gnval as allele, gmv.mdid, gnames2.gnval as marker 
+FROM gems_mv gmv, gems_names gnames1, gems_names gnames2, (SELECT v.variatid, v.scaleid, y.sname FROM study y INNER JOIN variate v ON y.studyid = v.studyid WHERE y.stype = 'G') AS s INNER JOIN data_n dn ON s.variatid = dn.variatid 
+WHERE gnames1.gobjtype='gems_mv' AND gnames2.gobjtype='gems_marker_detector' AND gnames1.gobjid=gmv.mvid AND gnames2.gobjid=gmv.mdid AND dn.dvalue=gmv.mvid AND s.scaleid=503 AND s.sname = 'GCP_WARDA'
+</p>
+</td><td style="background:#ffffff" rowspan="2"> 107
+</td><td style="background:#ffffff"> August 21, 2008
+</td><td style="background:#ffffff"> 56.27 sec
+</td><td style="background:#ffffff"> 15.30 sec
+</td><td style="background:#ffffff"> 26.31 sec
+</td><td style="background:#ffffff"> 0.50 sec
+</td><td style="background:#ffffff"> (internal only)
+</td></tr>
+<tr>
+<td style="background:#E0E6FF" valign="top"> September 2, 2008
+</td><td style="background:#E0E6FF"> 0.75 sec
+</td><td style="background:#E0E6FF"> 0.75 sec
+</td><td style="background:#E0E6FF"> 0.52 sec
+</td><td style="background:#E0E6FF"> 0.53 sec
+</td><td style="background:#E0E6FF"> (external)
+</td></tr>
+
+<tr>
+<td style="background:#ffffff" rowspan="2"> Get DetectedVariants By StudyName using “LIKE” Operator
+</td><td style="background:#ffffff" rowspan="2"> SELECT DISTINCT gmv.mvid, gnames1.gnval as allele, gmv.mdid, gnames2.gnval as marker
+<p>FROM gems_mv gmv, gems_names gnames1, gems_names gnames2, (SELECT v.variatid, v.scaleid, y.sname FROM study y INNER JOIN variate v ON y.studyid = v.studyid WHERE y.stype = 'G') AS s INNER JOIN data_n dn ON s.variatid = dn.variatid 
+WHERE gnames1.gobjtype='gems_mv' AND gnames2.gobjtype='gems_marker_detector' AND gnames1.gobjid=gmv.mvid AND gnames2.gobjid=gmv.mdid AND dn.dvalue=gmv.mvid AND s.scaleid=503 AND s.sname like 'GCP_WARDA%'
+</p>
+</td><td style="background:#ffffff" rowspan="2"> 107
+</td><td style="background:#ffffff"> August 21, 2008
+</td><td style="background:#ffffff"> 64.41 sec
+</td><td style="background:#ffffff"> 15.52 sec
+</td><td style="background:#ffffff"> 26.03 sec
+</td><td style="background:#ffffff"> 0.50 sec
+</td><td style="background:#ffffff"> (internal only)
+</td></tr>
+<tr>
+<td style="background:#E0E6FF" valign="top"> September 2, 2008
+</td><td style="background:#E0E6FF"> 0.52 sec
+</td><td style="background:#E0E6FF"> 0.78 sec
+</td><td style="background:#E0E6FF"> 0.50 sec
+</td><td style="background:#E0E6FF"> 0.50 sec
+</td><td style="background:#E0E6FF"> (external)
+</td></tr>
+
+<tr>
+<td style="background:#ffffff" rowspan="2"> Get Detected Variants By Germplasm ID
+</td><td style="background:#ffffff" rowspan="2">
+<p>SELECT DISTINCT gmv.mvid, gnames1.gnval as allele, gmv.mdid, gnames2.gnval as marker
+FROM gems_mv gmv, study s, gems_names gnames1, gems_names gnames2, variate v INNER JOIN data_n dn ON v.variatid = dn.variatid, (factor f1 INNER JOIN level_n ln ON f1.labelid = ln.labelid) INNER JOIN oindex ou1 ON ln.levelno = ou1.levelno
+WHERE gnames1.gobjtype='gems_mv' AND gnames2.gobjtype='gems_marker_detector' AND gnames1.gobjid=gmv.mvid AND gnames2.gobjid=gmv.mdid AND dn.dvalue=gmv.mvid AND v.studyid = s.studyid AND s.stype = 'G' AND ou1.ounitid = dn.ounitid AND f1.scaleid=91 AND v.scaleid=503 AND ln.lvalue = -4620
+</p>
+</td><td style="background:#ffffff" rowspan="2"> 50
+</td><td style="background:#ffffff"> August 21, 2008
+</td><td style="background:#ffffff"> 0.75 sec
+</td><td style="background:#ffffff"> 0.25 sec
+</td><td style="background:#ffffff"> 0.25 sec
+</td><td style="background:#ffffff"> 0.75 sec
+</td><td style="background:#ffffff"> (internal only)
+</td></tr>
+<tr>
+<td style="background:#E0E6FF" valign="top"> September 2, 2008
+</td><td style="background:#E0E6FF"> 0.27 sec
+</td><td style="background:#E0E6FF"> 0.25 sec
+</td><td style="background:#E0E6FF"> 0.25 sec
+</td><td style="background:#E0E6FF"> 1.03 sec
+</td><td style="background:#E0E6FF"> (external)
+</td></tr>
+
+<tr>
+<td style="background:#ffffff" rowspan="2"> Get Detected Variants By Germplasm Name
+</td><td style="background:#ffffff" rowspan="2">
+<p>SELECT DISTINCT gmv.mvid, gnames1.gnval as allele, gmv.mdid, gnames2.gnval as marker 
+FROM gems_mv gmv, study s, gems_names gnames1, gems_names gnames2, variate v INNER JOIN data_n dn ON v.variatid = dn.variatid, ((factor f1 INNER JOIN level_n ln ON f1.labelid = ln.labelid) INNER JOIN oindex ou1 ON ln.levelno = ou1.levelno) INNER JOIN ((oindex ou2 INNER JOIN level_c lc ON ou2.levelno = lc.levelno) INNER JOIN factor f2 ON lc.labelid = f2.labelid) ON ou1.ounitid = ou2.ounitid 
+WHERE gnames1.gobjtype='gems_mv' AND gnames2.gobjtype='gems_marker_detector' AND gnames1.gobjid=gmv.mvid AND gnames2.gobjid=gmv.mdid AND dn.dvalue=gmv.mvid AND v.studyid = s.studyid AND s.stype = 'G' AND ou2.ounitid = dn.ounitid AND (((f2.scaleid)=92) AND ((f1.scaleid)=91)) AND v.scaleid=503 AND lc.lvalue = 'ZS004'
+</p>
+</td><td style="background:#ffffff" rowspan="2"> 50
+</td><td style="background:#ffffff"> August 21, 2008
+</td><td style="background:#ffffff"> 81.78 sec
+</td><td style="background:#ffffff"> 33.39 sec
+</td><td style="background:#ffffff"> 1.25 sec
+</td><td style="background:#ffffff"> 1.50 sec
+</td><td style="background:#ffffff"> (internal only)
+</td></tr>
+<tr>
+<td style="background:#E0E6FF" valign="top"> September 2, 2008
+</td><td style="background:#E0E6FF"> 0.52 sec
+</td><td style="background:#E0E6FF"> 0.25 sec
+</td><td style="background:#E0E6FF"> 0.27 sec
+</td><td style="background:#E0E6FF"> 2.25 sec
+</td><td style="background:#E0E6FF"> (external)
+</td></tr>
+
+<tr>
+<td style="background:#ffffff" rowspan="2"> Get Detected Variants By Germplasm Name Using “LIKE” Operator
+</td><td style="background:#ffffff" rowspan="2">
+<p>SELECT DISTINCT gmv.mvid, gnames1.gnval as allele, gmv.mdid, gnames2.gnval as marker 
+FROM gems_mv gmv, study s, gems_names gnames1, gems_names gnames2, variate v INNER JOIN data_n dn ON v.variatid = dn.variatid, ((factor f1 INNER JOIN level_n ln ON f1.labelid = ln.labelid) INNER JOIN oindex ou1 ON ln.levelno = ou1.levelno) INNER JOIN ((oindex ou2 INNER JOIN level_c lc ON ou2.levelno = lc.levelno) INNER JOIN factor f2 ON lc.labelid = f2.labelid) ON ou1.ounitid = ou2.ounitid 
+WHERE gnames1.gobjtype='gems_mv' AND gnames2.gobjtype='gems_marker_detector' AND gnames1.gobjid=gmv.mvid AND gnames2.gobjid=gmv.mdid AND dn.dvalue=gmv.mvid AND v.studyid = s.studyid AND s.stype = 'G' AND ou2.ounitid = dn.ounitid AND (((f2.scaleid)=92) AND ((f1.scaleid)=91)) AND v.scaleid=503 AND lc.lvalue like 'ZS004%'
+</p>
+</td><td style="background:#ffffff" rowspan="2"> 50
+</td><td style="background:#ffffff"> August 21, 2008
+</td><td style="background:#ffffff"> 66.78 sec
+</td><td style="background:#ffffff"> 33.06 sec
+</td><td style="background:#ffffff"> 1.02 sec
+</td><td style="background:#ffffff"> 1.00 sec
+</td><td style="background:#ffffff"> (internal only)
+</td></tr>
+<tr>
+<td style="background:#E0E6FF" valign="top"> September 2, 2008
+</td><td style="background:#E0E6FF"> 0.27 sec
+</td><td style="background:#E0E6FF"> 0.27 sec
+</td><td style="background:#E0E6FF"> 0.25 sec
+</td><td style="background:#E0E6FF"> 1.01 sec
+</td><td style="background:#E0E6FF"> (external)
+</td></tr>
+
+</table>
+<a name="CROPFINDER" id="CROPFINDER"></a><h2> <span class="mw-headline"> CROPFINDER </span></h2>
+<a name="Maize" id="Maize"></a><h3> <span class="mw-headline"> Maize </span></h3>
+<table border="0" cellpadding="2" style="background:#d0d0d0" width="95%">
+
+<tr>
+<td> Query
+</td><th width="50%" align="left"> SQL
+</th><td> Number of records
+</td><td> Test date
+</td><td> <font color="purple">MySQL</font>-<font color="green">MyISAM</font> (koios.generationcp.org)
+</td><td> <font color="purple">MySQL</font>-<font color="green">MyISAM</font> <font color="red">(ASTI server)</font>
+</td><td> <font color="purple">MySQL</font>-InnoDB <font color="red">(ASTI server)</font>
+</td></tr>
+<tr>
+<td style="background:#ffffff" rowspan="2"> A.
+</td><td style="background:#ffffff" valign="top" rowspan="2">
+<p>select distinct study.sname, 
+data_n_anthesisdate_days.dvalue as anthesisdate_days, 
+factors.gid, 
+data_n_grainyieldkg_kg.dvalue as grainyieldkg_kg,
+data_n_plantheight_cm.dvalue as plantheight_cm, 
+factors.management, 
+factors.collaborator, 
+factors.maizeid,
+factors.nameofexperiment, 
+factors.year, 
+factors.locationid, 
+factors.breedingprogram,
+factors.pedigree, 
+factors.experimentid
+from data_n data_n_anthesisdate_days
+inner join data_n data_n_grainyieldkg_kg on data_n_anthesisdate_days.ounitid  = data_n_grainyieldkg_kg.ounitid and data_n_grainyieldkg_kg.variatid in (select distinct variatid from variate where traitid = 1014 and scaleid = 1014)  and data_n_grainyieldkg_kg.dvalue &gt;= 6000
+inner join data_n data_n_plantheight_cm on data_n_anthesisdate_days.ounitid  = data_n_plantheight_cm.ounitid and data_n_plantheight_cm.variatid in (select distinct variatid from variate where traitid = 1008 and scaleid = 1008) and data_n_plantheight_cm.dvalue &lt;= 180
+inner join factors on factors.ounitid = data_n_anthesisdate_days.ounitid
+inner join study on study.studyid= factors.studyid
+where factors.breedingprogram  like  'cimmyt-zimbabwe' and data_n_grainyieldkg_kg.dvalue &gt;= 6000 and data_n_plantheight_cm.dvalue &lt;= 180  and data_n_anthesisdate_days.variatid in (select distinct variatid from variate where traitid = 1001 and scaleid = 1001)
+</p>
+</td><td style="background:#ffffff" rowspan="2"> 4227
+</td><td style="background:#ffffff"> August 29, 2008
+</td><td style="background:#ffffff"> 7.28 sec
+</td><td style="background:#ffffff"> 16.30 sec
+</td><td style="background:#ffffff"> 8.50 sec
+</td></tr>
+<tr>
+<td style="background:#E0E6FF"> September 2, 2008
+</td><td style="background:#E0E6FF"> 7.52 sec
+</td><td style="background:#E0E6FF"> 16.75 sec
+</td><td style="background:#E0E6FF"> 8.75 sec
+</td></tr>
+<tr>
+<td style="background:#ffffff" rowspan="2"> B. (column <b>factors.`entry number`</b> included in query)
+</td><td style="background:#ffffff" valign="top" rowspan="2">
+<p>select distinct study.sname, 
+data_n_anthesisdate_days.dvalue as anthesisdate_days, 
+factors.gid, 
+data_n_grainyieldkg_kg.dvalue as grainyieldkg_kg,
+data_n_plantheight_cm.dvalue as plantheight_cm, 
+factors.management, 
+factors.collaborator, 
+factors.maizeid,
+factors.nameofexperiment, 
+<font color="blue"><b>factors.`entry number`,</b></font>
+factors.year, 
+factors.locationid, 
+factors.breedingprogram,
+factors.pedigree, 
+factors.experimentid
+from data_n data_n_anthesisdate_days
+inner join data_n data_n_grainyieldkg_kg on data_n_anthesisdate_days.ounitid  = data_n_grainyieldkg_kg.ounitid and data_n_grainyieldkg_kg.variatid in (select distinct variatid from variate where traitid = 1014 and scaleid = 1014)  and data_n_grainyieldkg_kg.dvalue &gt;= 6000
+inner join data_n data_n_plantheight_cm on data_n_anthesisdate_days.ounitid  = data_n_plantheight_cm.ounitid and data_n_plantheight_cm.variatid in (select distinct variatid from variate where traitid = 1008 and scaleid = 1008) and data_n_plantheight_cm.dvalue &lt;= 180
+inner join factors on factors.ounitid = data_n_anthesisdate_days.ounitid
+inner join study on study.studyid= factors.studyid
+where factors.breedingprogram  like  'cimmyt-zimbabwe' and data_n_grainyieldkg_kg.dvalue &gt;= 6000 and data_n_plantheight_cm.dvalue &lt;= 180  and data_n_anthesisdate_days.variatid in (select distinct variatid from variate where traitid = 1001 and scaleid = 1001)
+</p>
+</td><td style="background:#ffffff" rowspan="2"> 4227
+</td><td style="background:#ffffff"> September 4, 2008
+</td><td style="background:#ffffff">
+</td><td style="background:#ffffff"> 8.27 sec
+</td><td style="background:#ffffff"> 8.30 sec
+</td></tr>
+<tr>
+<td style="background:#E0E6FF">
+</td><td style="background:#E0E6FF">
+</td><td style="background:#E0E6FF">
+</td><td style="background:#E0E6FF">
+</td></tr>
+
+</table>
+<a name="Wheat" id="Wheat"></a><h3> <span class="mw-headline"> Wheat </span></h3>
+<a name="Query_optimization_.23_1" id="Query_optimization_.23_1"></a><h4> <span class="mw-headline"> Query optimization # 1</span></h4>
+<p>Best slowest times highlighted in yellow
+</p>
+<table border="0" cellpadding="2" style="background:#d0d0d0" width="95%">
+
+<tr>
+<td> Query
+</td><th width="50%" align="left"> SQL
+</th><td> Number of records
+</td><td> Test date
+</td><td> <font color="purple">MySQL</font>-<font color="green">MyISAM</font> (koios.generationcp.org)
+</td><td> <font color="purple">MySQL</font>-<font color="green">MyISAM</font> <font color="red">(ASTI server)</font>
+</td></tr>
+<tr>
+<td style="background:#E5E4D7">A. <i>(filter by studyid)</i>
+</td><td style="background:#E5E4D7"> Select distinct `data_n_GRAIN_YIELD_t/ha`.dvalue as `GRAIN_YIELD_t/ha`,
+<p>`data_n_PLANT_HEIGHT_cm`.dvalue as `PLANT_HEIGHT_cm`,
+`factors`.`TID` as `TID`,
+`factors`.`CROSS NAME` as `CROSS NAME`,
+`factors`.`GID` as `GID`,
+`factors`.`SELECTION HISTORY` as `SELECTION HISTORY`,
+`study`.`SNAME` as `SNAME`
+FROM data_n `data_n_GRAIN_YIELD_t/ha`  
+inner join data_n `data_n_PLANT_HEIGHT_cm` ON `data_n_GRAIN_YIELD_t/ha`.ounitid  = `data_n_PLANT_HEIGHT_cm`.ounitid 
+and `data_n_PLANT_HEIGHT_cm`.variatid in (select distinct variatid from variate where traitid = 1151 and scaleid = 20195)  
+and `data_n_PLANT_HEIGHT_cm`.`dvalue` &lt;= 150   
+inner join factors on factors.ounitid= `data_n_GRAIN_YIELD_t/ha`.ounitid   
+inner join study on factors.studyid = study.studyid
+WHERE `data_n_GRAIN_YIELD_t/ha`.`dvalue` &gt; 5 AND `data_n_PLANT_HEIGHT_cm`.`dvalue` &lt;= 150 
+and `data_n_GRAIN_YIELD_t/ha`.variatid in (select distinct variatid from variate where traitid = 1144 and scaleid = 20651)
+<font color="blue">
+and factors.studyid in (6,1)</font>
+</p>
+</td><td style="background:#E5E4D7"> 17
+</td><td style="background:#E5E4D7"> September 2, 2008
+</td><td style="background:#E5E4D7"> 0.25 sec
+</td><td style="background:#E5E4D7"> 0.27 sec
+</td></tr>
+<tr>
+<td style="background:#ffffff"> B.<i> (A with no filter).</i>
+</td><td style="background:#ffffff"> Select distinct `data_n_GRAIN_YIELD_t/ha`.dvalue as `GRAIN_YIELD_t/ha`,
+<p>`data_n_PLANT_HEIGHT_cm`.dvalue as `PLANT_HEIGHT_cm`,
+`factors`.`TID` as `TID`,
+`factors`.`CROSS NAME` as `CROSS NAME`,
+`factors`.`GID` as `GID`,
+`factors`.`SELECTION HISTORY` as `SELECTION HISTORY`,
+`study`.`SNAME` as `SNAME`
+FROM data_n `data_n_GRAIN_YIELD_t/ha`  
+inner join data_n `data_n_PLANT_HEIGHT_cm` ON `data_n_GRAIN_YIELD_t/ha`.ounitid  = `data_n_PLANT_HEIGHT_cm`.ounitid 
+and `data_n_PLANT_HEIGHT_cm`.variatid in (select distinct variatid from variate where traitid = 1151 and scaleid = 20195)  
+and `data_n_PLANT_HEIGHT_cm`.`dvalue` &lt;= 150   
+inner join factors on factors.ounitid= `data_n_GRAIN_YIELD_t/ha`.ounitid   
+inner join study on factors.studyid = study.studyid
+WHERE `data_n_GRAIN_YIELD_t/ha`.`dvalue` &gt; 5 AND `data_n_PLANT_HEIGHT_cm`.`dvalue` &lt;= 150 
+and `data_n_GRAIN_YIELD_t/ha`.variatid in (select distinct variatid from variate where traitid = 1144 and scaleid = 20651)
+</p>
+</td><td style="background:#ffffff"> 332,127
+</td><td style="background:#ffffff"> September 4, 2008
+</td><td style="background:#ffffff"> 234.25 sec (~4 mins)
+</td><td style="background:#FFFFff"> 140.34 sec (~2 mins)
+</td></tr>
+<tr>
+<td style="background:#ffffff"> C.  <i>(B rewritten; put conditions under WHERE clause).</i>
+</td><td style="background:#ffffff"> Select distinct `data_n_GRAIN_YIELD_t/ha`.dvalue as `GRAIN_YIELD_t/ha`,
+<p>`data_n_PLANT_HEIGHT_cm`.dvalue as `PLANT_HEIGHT_cm`,
+`factors`.`TID` as `TID`,
+`factors`.`CROSS NAME` as `CROSS NAME`,
+`factors`.`GID` as `GID`,
+`factors`.`SELECTION HISTORY` as `SELECTION HISTORY`,
+`study`.`SNAME` as `SNAME`
+FROM data_n `data_n_GRAIN_YIELD_t/ha` inner join data_n `data_n_PLANT_HEIGHT_cm` ON `data_n_GRAIN_YIELD_t/ha`.ounitid  = `data_n_PLANT_HEIGHT_cm`.ounitid 
+inner join factors on factors.ounitid= `data_n_GRAIN_YIELD_t/ha`.ounitid   
+inner join study on factors.studyid = study.studyid
+WHERE `data_n_GRAIN_YIELD_t/ha`.variatid in (select distinct variatid from variate where traitid = 1144 and scaleid = 20651)
+and `data_n_GRAIN_YIELD_t/ha`.`dvalue` &gt; 5 
+and `data_n_PLANT_HEIGHT_cm`.variatid in (select distinct variatid from variate where traitid = 1151 and scaleid = 20195)  
+AND `data_n_PLANT_HEIGHT_cm`.`dvalue` &lt;= 150 
+</p>
+</td><td style="background:#ffffff"> 332,127
+</td><td style="background:#ffffff"> September 4, 2008
+</td><td style="background:#ffffff"> 304.52 sec (~5 mins)
+</td><td style="background:#FFFFff"> 294.50 sec (~5 mins)
+</td></tr>
+<tr>
+<td style="background:#ffffff"> D. <i> (C rewritten; no WHERE clause).</i>
+</td><td style="background:#ffffff"> Select distinct `data_n_GRAIN_YIELD_t/ha`.dvalue as `GRAIN_YIELD_t/ha`,
+<p>`data_n_PLANT_HEIGHT_cm`.dvalue as `PLANT_HEIGHT_cm`,
+`factors`.`TID` as `TID`,
+`factors`.`CROSS NAME` as `CROSS NAME`,
+`factors`.`GID` as `GID`,
+`factors`.`SELECTION HISTORY` as `SELECTION HISTORY`,
+`study`.`SNAME` as `SNAME`
+FROM data_n `data_n_GRAIN_YIELD_t/ha` 
+inner join data_n `data_n_PLANT_HEIGHT_cm` ON `data_n_GRAIN_YIELD_t/ha`.ounitid  = `data_n_PLANT_HEIGHT_cm`.ounitid 
+and `data_n_GRAIN_YIELD_t/ha`.variatid in (select distinct variatid from variate where traitid = 1144 and scaleid = 20651)
+and `data_n_GRAIN_YIELD_t/ha`.`dvalue` &gt; 5 
+and `data_n_PLANT_HEIGHT_cm`.variatid in (select distinct variatid from variate where traitid = 1151 and scaleid = 20195)  
+AND `data_n_PLANT_HEIGHT_cm`.`dvalue` &lt;= 150 
+inner join factors on factors.ounitid= `data_n_GRAIN_YIELD_t/ha`.ounitid   
+inner join study on factors.studyid = study.studyid
+</p>
+</td><td style="background:#ffffff"> 332,127
+</td><td style="background:#ffffff"> September 4, 2008
+</td><td style="background:#ffffff"> 254.88 sec (~4 mins)
+</td><td style="background:#FFFFff"> 159.50 sec (~3 mins)
+</td></tr>
+<tr>
+<td style="background:#ffffff"> E. <i>(D rewritten; "IN" clause within inner join, "&gt;,&lt;=" within WHERE clause).</i>
+</td><td style="background:#ffffff"> Select <font color="blue">distinct</font> `data_n_GRAIN_YIELD_t/ha`.dvalue as `GRAIN_YIELD_t/ha`,
+<p>`data_n_PLANT_HEIGHT_cm`.dvalue as `PLANT_HEIGHT_cm`,
+`factors`.`TID` as `TID`,
+`factors`.`CROSS NAME` as `CROSS NAME`,
+`factors`.`GID` as `GID`,
+`factors`.`SELECTION HISTORY` as `SELECTION HISTORY`,
+`study`.`SNAME` as `SNAME`
+FROM data_n `data_n_GRAIN_YIELD_t/ha` inner join data_n `data_n_PLANT_HEIGHT_cm` ON `data_n_GRAIN_YIELD_t/ha`.ounitid  = `data_n_PLANT_HEIGHT_cm`.ounitid 
+and `data_n_GRAIN_YIELD_t/ha`.variatid in (select distinct variatid from variate where traitid = 1144 and scaleid = 20651) 
+and `data_n_PLANT_HEIGHT_cm`.variatid in (select distinct variatid from variate where traitid = 1151 and scaleid = 20195)  
+inner join factors on factors.ounitid= `data_n_GRAIN_YIELD_t/ha`.ounitid   
+inner join study on factors.studyid = study.studyid
+WHERE `data_n_GRAIN_YIELD_t/ha`.`dvalue` &gt; 5 
+AND `data_n_PLANT_HEIGHT_cm`.`dvalue` &lt;= 150 
+</p>
+</td><td style="background:#ffffff"> 332,127
+</td><td style="background:#ffffff"> September 4, 2008
+</td><td style="background:#ffffcc"> 230.28 sec (~4 mins)
+</td><td style="background:#FFFFcc"> 134.25 sec (~2 mins)
+</td></tr>
+<tr>
+<td style="background:#ffffff"> F. <i> (E rewritten; use GROUP BY instead of DISTINCT).</i>
+</td><td style="background:#ffffff"> Select `data_n_GRAIN_YIELD_t/ha`.dvalue as `GRAIN_YIELD_t/ha`,
+<p>`data_n_PLANT_HEIGHT_cm`.dvalue as `PLANT_HEIGHT_cm`,
+`factors`.`TID` as `TID`,
+`factors`.`CROSS NAME` as `CROSS NAME`,
+`factors`.`GID` as `GID`,
+`factors`.`SELECTION HISTORY` as `SELECTION HISTORY`,
+`study`.`SNAME` as `SNAME`
+FROM data_n `data_n_GRAIN_YIELD_t/ha` inner join data_n `data_n_PLANT_HEIGHT_cm` ON `data_n_GRAIN_YIELD_t/ha`.ounitid  = `data_n_PLANT_HEIGHT_cm`.ounitid 
+and `data_n_GRAIN_YIELD_t/ha`.variatid in (select distinct variatid from variate where traitid = 1144 and scaleid = 20651) 
+and `data_n_PLANT_HEIGHT_cm`.variatid in (select distinct variatid from variate where traitid = 1151 and scaleid = 20195)  
+inner join factors on factors.ounitid= `data_n_GRAIN_YIELD_t/ha`.ounitid   
+inner join study on factors.studyid = study.studyid
+WHERE `data_n_GRAIN_YIELD_t/ha`.`dvalue` &gt; 5 
+AND `data_n_PLANT_HEIGHT_cm`.`dvalue` &lt;= 150 
+<font color="blue">GROUP BY `data_n_GRAIN_YIELD_t/ha`.dvalue,
+`data_n_PLANT_HEIGHT_cm`.dvalue,
+`factors`.`TID`,
+`factors`.`CROSS NAME`,
+`factors`.`GID`,
+`factors`.`SELECTION HISTORY`,
+`study`.`SNAME`</font>
+</p>
+</td><td style="background:#ffffff"> 332,127
+</td><td style="background:#ffffff"> September 4, 2008
+</td><td style="background:#ffffff"> 484.85 sec (~8 mins)
+</td><td style="background:#FFFFff"> 290.00 sec (~5 mins)
+</td></tr>
+
+</table>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 55/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+<div class="printfooter">
+Retrieved from "<a href="http://localhost../../../../articles/d/a/t/Database_benchmarking.html">http://localhost../../../../articles/d/a/t/Database_benchmarking.html</a>"</div>
+						<!-- end content -->
+						<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<div class="pBody">
+			<ul>
+	
+				 <li id="ca-nstab-main" class="selected"><a href="../../../../articles/d/a/t/Database_benchmarking.html" title="View the content page [c]" accesskey="c">Page</a></li>
+				 <li id="ca-talk" class="new"><a href="../../../../articles/d/a/t/Talk%7EDatabase_benchmarking_19b9.html" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				 <li id="ca-viewsource"><a href="../../../../articles/d/a/t/Database_benchmarking.html" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				 <li id="ca-history"><a href="../../../../articles/d/a/t/Database_benchmarking.html" title="Past versions of this page [h]" accesskey="h">History</a></li>			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="../../../../articles/u/s/e/Special%7EUserLogin_94cd.html" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(../../../../misc/icis-wiki3.png);" href="../../../../index.html" title="Visit the main page [z]" accesskey="z"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class='generated-sidebar portlet' id='p-navigation'>
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="../../../../index.html" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
+				<li id="n-portal"><a href="../../../../articles/c/o/m/ICISWiki%7ECommunity_Portal_7449.html" title="About the project, what you can do, where to find things">Community portal</a></li>
+				<li id="n-recentchanges"><a href="../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+				<li id="n-help"><a href="../../../../articles/c/o/n/Help%7EContents_22de.html" title="The place to find out">Help</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="../../../../articles/s/e/a/Special%7ESearch_a8e5.html" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" title="Search ICISWiki [f]" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="../../../../articles/w/h/a/Special%7EWhatLinksHere_Database_benchmarking_50d3.html" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="../../../../articles/r/e/c/Special%7ERecentChangesLinked_Database_benchmarking_e272.html" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+<li id="t-specialpages"><a href="../../../../articles/s/p/e/Special%7ESpecialPages_f12b.html" title="List of all special pages [q]" accesskey="q">Special pages</a></li>
+				<li id="t-print"><a href="../../../../articles/d/a/t/Database_benchmarking.html" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>				<li id="t-permalink"><a href="../../../../articles/d/a/t/Database_benchmarking.html" title="Permanent link to this version of the page">Permanent link</a></li>			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="../../../../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" /></a></div>
+				<div id="f-copyrightico"><a href="../../../../../COPYING.html"><img src="/icis/skins/common/images/gnu-fdl.png" alt='GNU Free Documentation License 1.2' /></a></div>
+			<ul id="f-list">
+					<li id="credits">This page was last modified 10:27, 4 September 2008 by <a href="../../../../articles/m/h/a/User%7EMhabito_276f.html" title="User:Mhabito">Maria Corina de Luna Habito</a>. </li>
+					<li id="copyright">Content is available under <a href="../../../../../COPYING.html" class="external " title="../../../../../COPYING.html">GNU Free Documentation License 1.2</a>.</li>
+					<li id="privacy"><a href="../../../../articles/p/r/i/ICISWiki%7EPrivacy_policy_0cbf.html" title="ICISWiki:Privacy policy">Privacy policy</a></li>
+					<li id="about"><a href="../../../../articles/a/b/o/ICISWiki%7EAbout_53aa.html" title="ICISWiki:About">About ICISWiki</a></li>
+					<li id="disclaimer"><a href="../../../../articles/g/e/n/ICISWiki%7EGeneral_disclaimer_9129.html" title="ICISWiki:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+</div>
+
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served in 338.598 secs. --></body></html>

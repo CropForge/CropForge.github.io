@@ -1,0 +1,620 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta name="generator" content="MediaWiki 1.14.0" />
+		<meta name="keywords" content="DMS Setup" />
+		<link rel="shortcut icon" href="../../../../misc/favicon.ico" />
+		<link rel="search" type="application/opensearchdescription+xml" href="../../../../../opensearch_desc.php" title="ICISWiki (en)" />
+		<link title="Creative Commons" type="application/rdf+xml" href="../../../../articles/d/m/s/DMS_Setup_10b8.html" rel="alternate meta" />
+		<link rel="copyright" href="../../../../../COPYING.html" />
+		<link rel="alternate" type="application/rss+xml" title="ICISWiki RSS Feed" href="http://localhost../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" />
+		<link rel="alternate" type="application/atom+xml" title="ICISWiki Atom Feed" href="http://localhost../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" />
+		<title>DMS Setup - ICISWiki</title>
+		<link rel="stylesheet" href="../../../../skins/common/shared.css?195" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../../../../skins/common/commonPrint.css?195" type="text/css" media="print" />
+		<link rel="stylesheet" href="../../../../skins/monobook/main.css?195" type="text/css" media="screen" />
+		<!--[if lt IE 5.5000]><link rel="stylesheet" href="../../../../skins/monobook/IE50Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 5.5000]><link rel="stylesheet" href="../../../../skins/monobook/IE55Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 6]><link rel="stylesheet" href="../../../../skins/monobook/IE60Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 7]><link rel="stylesheet" href="../../../../skins/monobook/IE70Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7ECommon.css?195" type="text/css" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7EPrint.css?195" type="text/css" media="print" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7EMonobook.css?195" type="text/css" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/gen.css?195" type="text/css" />
+		<!--[if lt IE 7]><script type="text/javascript" src="../../../../skins/common/IEFixes.js?195"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+
+		<script type= "text/javascript">/*<![CDATA[*/
+		var skin = "monobook";
+		var stylepath = "../../../../skins";
+		var wgArticlePath = "../../../../$1";
+		var wgScriptPath = "../../../../..";
+		var wgScript = "/icis/index.php";
+		var wgVariantArticlePath = false;
+		var wgActionPaths = {};
+		var wgServer = "http://localhost";
+		var wgCanonicalNamespace = "";
+		var wgCanonicalSpecialPageName = false;
+		var wgNamespaceNumber = 0;
+		var wgPageName = "DMS_Setup";
+		var wgTitle = "DMS Setup";
+		var wgAction = "view";
+		var wgArticleId = "780";
+		var wgIsArticle = true;
+		var wgUserName = null;
+		var wgUserGroups = null;
+		var wgUserLanguage = "en";
+		var wgContentLanguage = "en";
+		var wgBreakFrames = false;
+		var wgCurRevisionId = "13859";
+		var wgVersion = "1.14.0";
+		var wgEnableAPI = true;
+		var wgEnableWriteAPI = true;
+		var wgSeparatorTransformTable = ["", ""];
+		var wgDigitTransformTable = ["", ""];
+		var wgRestrictionEdit = [];
+		var wgRestrictionMove = [];
+		/*]]>*/</script>
+
+		<script type="text/javascript" src="../../../../skins/common/wikibits.js?195"><!-- wikibits js --></script>
+		<!-- Head Scripts -->
+		<script type="text/javascript" src="../../../../raw/gen.js"><!-- site js --></script>
+	</head>
+<body class="mediawiki ltr ns-0 ns-subject page-DMS_Setup skin-monobook">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 id="firstHeading" class="firstHeading">DMS Setup</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From ICISWiki</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>			<!-- start content -->
+			<table id="toc" class="toc" summary="Contents"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1"><a href="#SETTING_UP_A_DMS_DATABASE"><span class="tocnumber">1</span> <span class="toctext">SETTING UP A DMS DATABASE</span></a>
+<ul>
+<li class="toclevel-2"><a href="#INTRODUCTION"><span class="tocnumber">1.1</span> <span class="toctext">INTRODUCTION</span></a></li>
+<li class="toclevel-2"><a href="#ONTOLOGY_TABLES"><span class="tocnumber">1.2</span> <span class="toctext">ONTOLOGY TABLES</span></a></li>
+<li class="toclevel-2"><a href="#UPLOADING_OF_LOCAL_DMS_TO_CENTRAL"><span class="tocnumber">1.3</span> <span class="toctext">UPLOADING OF LOCAL DMS TO CENTRAL</span></a>
+<ul>
+<li class="toclevel-3"><a href="#MS_ACCESS"><span class="tocnumber">1.3.1</span> <span class="toctext">MS ACCESS</span></a>
+<ul>
+<li class="toclevel-4"><a href="#Local_DMS"><span class="tocnumber">1.3.1.1</span> <span class="toctext">Local DMS</span></a></li>
+<li class="toclevel-4"><a href="#Central_DMS"><span class="tocnumber">1.3.1.2</span> <span class="toctext">Central DMS</span></a></li>
+<li class="toclevel-4"><a href="#Upload_Process_Using_the_MS_Access_Tools"><span class="tocnumber">1.3.1.3</span> <span class="toctext">Upload Process Using the MS Access Tools</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3"><a href="#MySQL"><span class="tocnumber">1.3.2</span> <span class="toctext">MySQL</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2"><a href="#SUBSETTING_A_DMS_DATABASE"><span class="tocnumber">1.4</span> <span class="toctext">SUBSETTING A DMS DATABASE</span></a>
+<ul>
+<li class="toclevel-3"><a href="#MS_ACCESS_2"><span class="tocnumber">1.4.1</span> <span class="toctext">MS ACCESS</span></a></li>
+<li class="toclevel-3"><a href="#MySQL_2"><span class="tocnumber">1.4.2</span> <span class="toctext">MySQL</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2"><a href="#UPDATE_OF_DMS_DATABASE_TO_DIFFERENT_VERSIONS_OF_ICIS"><span class="tocnumber">1.5</span> <span class="toctext">UPDATE OF DMS DATABASE TO DIFFERENT VERSIONS OF ICIS</span></a>
+<ul>
+<li class="toclevel-3"><a href="#Steps_for_updating_the_first_version_of__the_DMS_database_to_the_second_version"><span class="tocnumber">1.5.1</span> <span class="toctext">Steps for updating the first version of  the DMS database to the second version</span></a>
+<ul>
+<li class="toclevel-4"><a href="#Central_DMS_2"><span class="tocnumber">1.5.1.1</span> <span class="toctext">Central DMS</span></a></li>
+<li class="toclevel-4"><a href="#Local_DMS_2"><span class="tocnumber">1.5.1.2</span> <span class="toctext">Local DMS</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3"><a href="#Steps_for_updating_the_third_version_of__ICIS_database_to_the_fourth_version.2A"><span class="tocnumber">1.5.2</span> <span class="toctext">Steps for updating the third version of  ICIS database to the fourth version*</span></a>
+<ul>
+<li class="toclevel-4"><a href="#Central_DMS_3"><span class="tocnumber">1.5.2.1</span> <span class="toctext">Central DMS</span></a></li>
+<li class="toclevel-4"><a href="#Central_GMS"><span class="tocnumber">1.5.2.2</span> <span class="toctext">Central GMS</span></a></li>
+<li class="toclevel-4"><a href="#Local_DMS_3"><span class="tocnumber">1.5.2.3</span> <span class="toctext">Local DMS</span></a></li>
+<li class="toclevel-4"><a href="#Local_GMS"><span class="tocnumber">1.5.2.4</span> <span class="toctext">Local GMS</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3"><a href="#Update_of_the_different_versions_of_ICIS_5"><span class="tocnumber">1.5.3</span> <span class="toctext">Update of the different versions of ICIS 5</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</td></tr></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </script>
+<a name="SETTING_UP_A_DMS_DATABASE" id="SETTING_UP_A_DMS_DATABASE"></a><h1> <span class="mw-headline"> SETTING UP A DMS DATABASE </span></h1>
+<a name="INTRODUCTION" id="INTRODUCTION"></a><h2> <span class="mw-headline">INTRODUCTION</span></h2>
+<p>DMS is the component of ICIS that manages environmental data, germplasm characterization data and evaluation data for genetic resources and crop improvement projects.  It is a data warehouse that accumulates and assembles data from a variety of sources and provides access to them.
+</p>
+<a name="ONTOLOGY_TABLES" id="ONTOLOGY_TABLES"></a><h2> <span class="mw-headline">ONTOLOGY TABLES</span></h2>
+<p>The ontology tables of property (trait), scale and methods are vital tables of the DMS. Though the Workbook application can automatically store the entered Property, Scale and Method in the Description sheet, proper curation  of those tables are necessary.   One important record that should be stored in Trait table is the STUDY property.  Its corresponding scale (NAME) and method should also be stored in the central DMS database. To populate the TRAIT, SCALE and METHOD tables in MS Access, the <a href="http://cropwiki.irri.org/icis/images/b/bd/ICIS-TMS.zip" class="external text" title="http://cropwiki.irri.org/icis/images/b/bd/ICIS-TMS.zip" rel="nofollow">ICIS-TMS</a> application can be used. 
+To use the ICIS-TMS.mdb,
+</p>
+<ol><li>Link the Trait, Scale and Method tables by clicking the Link TMS tables button
+</li><li>Specify the location and file name of the database that contains the tables.
+</li><li>Close the Link TMS form.
+</li><li>Click the ENTRY form button in the Main Switchboard.
+</li><li>Assign a Trait ID, enter the Trait name and abbreviation on the associated text boxes.  Enter 1 if the trait name is the preferred name.
+</li><li>Click the Scale tab and enter the scale and the allowed values if it is a discreet scale.
+</li><li>To add another scale for the same trait, click the ADD SCALE button.  Click the arrow buttons to move to previous and next record.
+</li><li>Click the Method tab and enter the method of trait and its description
+</li><li>To add another method for the same trait, click the ADD METHOD button.  Click the arrow buttons to move between records.
+</li><li>To add another trait, click the ADD Trait button.
+</li></ol>
+<a name="UPLOADING_OF_LOCAL_DMS_TO_CENTRAL" id="UPLOADING_OF_LOCAL_DMS_TO_CENTRAL"></a><h2> <span class="mw-headline">UPLOADING OF LOCAL DMS TO CENTRAL</span></h2>
+<p>The general steps for appending the local data to Central DMS are the following.  See Appendix 2.1 for the detailed SQL statements.
+</p>
+<ol><li>Update the local GIDs to central GIDs using an UPDATE table from local GMS
+</li><li>Create four temporary tables (TmpSTUDY, TmpFACTOR, TmpVARIATE, TmpUNIT) consisting of a field which will hold the negative IDs.
+</li><li>Add another field to the temporary tables that will contain the new positive IDs.   These positive IDs are assigned as  [Max Central ID] + ([Min Local ID in INSTN] – [Negative ID])
+</li><li>Check that the new positive IDs are greater than the maximum IDs in the Central DMS.
+</li><li>Replace negative IDs in the local tables with the new positive IDs obtained from step 2.
+</li><li>Update negative level numbers with their absolute values.
+</li><li>Check that there are no negative IDs in the Local DMS.
+</li><li>Append Local records to the Central.
+</li><li>Delete all appended records from the Local DMS.
+</li><li>Update the Local INSTN table with the minimum negative IDs that have been used.
+</li><li>Update the Central INSTN table with the new maximum positive IDs.
+</li><li>Delete the temporary tables.
+</li></ol>
+<a name="MS_ACCESS" id="MS_ACCESS"></a><h3> <span class="mw-headline"> MS ACCESS </span></h3>
+<p>The following are the specific SQL statements in MS Access
+</p>
+<a name="Local_DMS" id="Local_DMS"></a><h4> <span class="mw-headline">Local DMS</span></h4>
+<ol><li>UPDATE [UPDATE] INNER JOIN (LEVEL_N INNER JOIN FACTOR ON LEVEL_N.LABELID = FACTOR.LABELID) ON UPDATE.LGID = LEVEL_N.LVALUE SET LEVEL_N.LVALUE = [UPDATE].[GID] WHERE (((FACTOR.TRAITID)=251) AND ((FACTOR.SCALEID)=91) AND ((LEVEL_N.LVALUE)&lt;0));
+</li><li>SELECT STUDY.STUDYID INTO zNewSTUDY  FROM STUDY  WHERE (((STUDY.STUDYID)&lt;0));
+</li><li>SELECT FACTOR.LABELID INTO zNewLABEL FROM FACTOR WHERE (((FACTOR.LABELID)&lt;0));
+</li><li>SELECT DISTINCT LEVEL_C.LEVELNO INTO ztmpLEVEL FROM LEVEL_C WHERE (((LEVEL_C.LEVELNO)&lt;0));
+</li><li>INSERT INTO ztmpLEVEL ( LEVELNO )  SELECT DISTINCT LEVEL_N.LEVELNO FROM LEVEL_N WHERE (((LEVEL_N.LEVELNO)&lt;0));
+</li><li>SELECT DISTINCT ztmpLEVEL.LEVELNO INTO zNewLEVEL FROM ztmpLEVEL;
+</li><li>SELECT DISTINCT OINDEX.OUNITID INTO zNewOUNIT FROM OINDEX WHERE (((OINDEX.OUNITID)&lt;0));
+</li><li>SELECT DISTINCT VARIATE.VARIATID INTO zNewVARIATE FROM VARIATE WHERE (((VARIATE.VARIATID)&lt;0));
+</li><li>SELECT DISTINCT TRAIT.TID INTO zNewTRAIT1 FROM TRAIT WHERE (((TRAIT.TID)&lt;0));
+</li><li>SELECT DISTINCT TRAIT.TRAITID INTO zNewTRAIT2 FROM TRAIT WHERE (((TRAIT.TRAITID)&lt;0));
+</li><li>SELECT DISTINCT SCALE.SCALEID INTO zNewSCALE FROM SCALE WHERE (((SCALE.SCALEID)&lt;0));
+</li><li>SELECT DISTINCT TMETHOD.TMETHID INTO zNewTMETHOD FROM TMETHOD WHERE (((TMETHOD.TMETHID)&lt;0));
+</li><li>ALTER TABLE zNewSTUDY ADD COLUMN newStudy Long
+</li><li>ALTER TABLE zNewSTUDY ADD COLUMN  ID  counter
+</li><li>ALTER TABLE zNewLabel ADD COLUMN newLabel Long
+</li><li>ALTER TABLE zNewLabel ADD COLUMN ID Counter
+</li><li>ALTER TABLE zNewLevel add column NewLEVEL Long
+</li><li>ALTER TABLE zNewLevel add column ID Counter
+</li><li>ALTER TABLE zNewOUNIT add column newOunit Long
+</li><li>ALTER TABLE zNewOUNIT add column ID Counter
+</li><li>ALTER TABLE zNewVARIATE add column newVariate Long
+</li><li>ALTER TABLE zNewVARIATE add column id COUNTER
+</li><li>ALTER TABLE zNewTRAIT1 ADD COLUMN newTID Long;
+</li><li>ALTER TABLE zNewTRAIT1 add column id COUNTER;
+</li><li>ALTER TABLE zNewTRAIT2 ADD COLUMN newTRAITID Long;
+</li><li>ALTER TABLE zNewTRAIT2 add column id COUNTER;
+</li><li>ALTER TABLE zNewSCALE ADD COLUMN newSCALEID Long;
+</li><li>ALTER TABLE zNewSCALE add column id COUNTER;
+</li><li>ALTER TABLE zNewTMETHOD ADD COLUMN newTMETHID Long;
+</li><li>ALTER TABLE zNewTMETHOD add column id COUNTER;
+</li><li>UPDATE zNewLABEL SET zNewLABEL.newLabel = [id]+[maxLabelid];<i>maxLabelid – the highest value of field LABELID from the Central DMS</i>
+</li><li>UPDATE zNewSTUDY SET zNewSTUDY.newStudy = [id]+[maxStudy];<i> maxStudy – the highest value of field STUDYID from the Central DMS</i>
+</li><li>UPDATE zNewLEVEL SET zNewLEVEL.NewLEVEL = [id]+[maxLEVELNO];<i>maxLEVELNO – the highest value of field LEVELNO from the Central DMS</i>
+</li><li>UPDATE zNewOUNIT SET zNewOUNIT.newOunit = [id]+[maxOunitID];<i>maxOunitID – the highest value of field OUNITID from the Central DMS</i>
+</li><li>UPDATE zNewVARIATE SET zNewVARIATE.newVariate = [id]+[maxVARIATID];<i>maxVARIATID – the highest value of field VARIATID from the Central DMS</i>
+</li><li>UPDATE zNewTRAIT1 SET zNewTRAIT1.newTID = [id]+[maxTID];<i>maxTID – the highest value of field TID from the Central DMS</i>
+</li><li>UPDATE zNewTRAIT2 SET zNewTRAIT2.newTRAITID = [id]+[maxTRAITID];<i>maxTRAITID – the highest value of field TRAITID from the Central DMS</i>
+</li><li>UPDATE zNewSCALE SET zNewSCALE.newSCALEID = [id]+[maxSCALEID];<i>maxSCALEID – the highest value of field SCALEID from the Central DMS</i>
+</li><li>UPDATE zNewTMETHOD SET zNewTMETHOD.newTMETHID = [id]+[maxTMETHID];<i>maxTMETHID – the highest value of field TMETHID from the Central DMS</i>
+</li><li>UPDATE FACTOR INNER JOIN zNewLABEL ON FACTOR.LABELID = zNewLABEL.LABELID SET FACTOR.LABELID = [zNewLABEL].[newLabel];
+</li><li>UPDATE zNewLABEL INNER JOIN FACTOR ON zNewLABEL.LABELID = FACTOR.FACTORID SET FACTOR.FACTORID = [zNewLABEL].[newLabel];
+</li><li>UPDATE zNewLABEL INNER JOIN LEVEL_C ON zNewLABEL.LABELID = LEVEL_C.LABELID SET LEVEL_C.LABELID = [zNewLABEL].[newLabel];
+</li><li>UPDATE zNewLABEL INNER JOIN LEVEL_C ON zNewLABEL.LABELID = LEVEL_C.FACTORID SET LEVEL_C.FACTORID = [zNewLABEL].[newLabel];
+</li><li>UPDATE LEVEL_C INNER JOIN zNewLEVEL ON LEVEL_C.LEVELNO = zNewLEVEL.LEVELNO SET LEVEL_C.LEVELNO = [zNewLEVEL].[newlevel];
+</li><li>UPDATE zNewLABEL INNER JOIN LEVEL_N ON zNewLABEL.LABELID = LEVEL_N.LABELID SET LEVEL_N.LABELID = [zNewLABEL].[newlabel];
+</li><li>UPDATE zNewLABEL INNER JOIN LEVEL_N ON zNewLABEL.LABELID = LEVEL_N.FACTORID SET LEVEL_N.FACTORID = [zNewLABEL].[newlabel];
+</li><li>UPDATE zNewLEVEL INNER JOIN LEVEL_N ON zNewLEVEL.LEVELNO = LEVEL_N.LEVELNO SET LEVEL_N.LEVELNO = [zNewLEVEL].[newlevel];
+</li><li>UPDATE zNewLABEL INNER JOIN OINDEX ON zNewLABEL.LABELID = OINDEX.FACTORID SET OINDEX.FACTORID = [zNewLABEL].[newLabel];
+</li><li>UPDATE zNewLEVEL INNER JOIN OINDEX ON zNewLEVEL.LEVELNO = OINDEX.LEVELNO SET OINDEX.LEVELNO = [zNewLEVEL].[newlevel];
+</li><li>UPDATE zNewOUNIT INNER JOIN OINDEX ON zNewOUNIT.OUNITID = OINDEX.OUNITID SET OINDEX.OUNITID = [zNewOUNIT].[newounit];
+</li><li>UPDATE VARIATE INNER JOIN zNewVARIATE ON VARIATE.VARIATID = zNewVARIATE.VARIATID SET VARIATE.VARIATID = [zNewVARIATE].[newVariate];
+</li><li>UPDATE zNewVARIATE INNER JOIN DATA_C ON zNewVARIATE.VARIATID = DATA_C.VARIATID SET DATA_C.VARIATID = [zNewVARIATE].[newVariate];
+</li><li>UPDATE zNewOUNIT INNER JOIN DATA_C ON zNewOUNIT.OUNITID = DATA_C.OUNITID SET DATA_C.OUNITID = [zNewOUNIT].[newounit];
+</li><li>UPDATE zNewVARIATE INNER JOIN DATA_N ON zNewVARIATE.VARIATID = DATA_N.VARIATID SET DATA_N.VARIATID = [zNewVARIATE].[newVariate];
+</li><li>UPDATE zNewOUNIT INNER JOIN DATA_N ON zNewOUNIT.OUNITID = DATA_N.OUNITID SET DATA_N.OUNITID = [zNewOUNIT].[newounit];
+</li><li>UPDATE STUDY INNER JOIN zNewSTUDY ON STUDY.STUDYID = zNewSTUDY.STUDYID SET STUDY.STUDYID = [zNewSTUDY].[newstudy];
+</li><li>UPDATE zNewSTUDY INNER JOIN FACTOR ON zNewSTUDY.STUDYID = FACTOR.STUDYID SET FACTOR.STUDYID = [zNewSTUDY].[newSTudy];
+</li><li>UPDATE zNewSTUDY INNER JOIN VARIATE ON zNewSTUDY.STUDYID = VARIATE.STUDYID SET VARIATE.STUDYID = [zNewSTUDY].[newStudy];
+</li><li>UPDATE zNewVARIATE INNER JOIN DMSATTR ON zNewVARIATE.VARIATID = DMSATTR.DMSATREC SET DMSATTR.DMSATREC = [zNewVARIATE].[newVariate] WHERE (((DMSATTR.DMSATAB)="VARIATE"));
+</li><li>UPDATE zNewLABEL INNER JOIN DMSATTR ON zNewLABEL.LABELID = DMSATTR.DMSATREC SET DMSATTR.DMSATREC = [zNewLABEL].[newLabel] WHERE (((DMSATTR.DMSATAB)="FACTOR"));
+</li><li>UPDATE TRAIT INNER JOIN zNewTRAIT1 ON TRAIT.TID = zNewTRAIT1.TID SET TRAIT.TID = [zNewTRAIT1].[newTID];
+</li><li>UPDATE TRAIT INNER JOIN zNewTRAIT2 ON TRAIT.TRAITID = zNewTRAIT2.TRAITID SET TRAIT.TRAITID = [zNewTRAIT2].[newTRAITID];
+</li><li>UPDATE VARIATE INNER JOIN zNewTRAIT2 ON VARIATE.TRAITID = zNewTRAIT2.TRAITID SET VARIATE.TRAITID = [zNewTRAIT2].[newTRAITID];
+</li><li>UPDATE FACTOR INNER JOIN zNewTRAIT2 ON FACTOR.TRAITID = zNewTRAIT2.TRAITID SET FACTOR.TRAITID = [zNewTRAIT2].[newTRAITID];
+</li><li>UPDATE SCALE INNER JOIN zNewTRAIT2 ON SCALE.TRAITID = zNewTRAIT2.TRAITID SET SCALE.TRAITID = [zNewTRAIT2].[newTRAITID];
+</li><li>UPDATE TMETHOD INNER JOIN zNewTRAIT2 ON TMETHOD.TRAITID = zNewTRAIT2.TRAITID SET TMETHOD.TRAITID = [zNewTRAIT2].[newTRAITID];
+</li><li>UPDATE SCALE INNER JOIN zNewSCALE ON SCALE.SCALEID = zNewSCALE.SCALEID SET SCALE.SCALEID = [zNewSCALE].[newSCALEID];
+</li><li>UPDATE FACTOR INNER JOIN zNewSCALE ON FACTOR.SCALEID = zNewSCALE.SCALEID SET FACTOR.SCALEID = [zNewSCALE].[newSCALEID];
+</li><li>UPDATE VARIATE INNER JOIN zNewSCALE ON VARIATE.SCALEID = zNewSCALE.SCALEID SET VARIATE.SCALEID = [zNewSCALE].[newSCALEID];
+</li><li>UPDATE TMETHOD INNER JOIN zNewTMETHOD ON TMETHOD.TMETHID = zNewTMETHOD.TMETHID SET TMETHOD.TMETHID = [zNewTMETHOD].[newTMETHID];
+</li><li>UPDATE VARIATE INNER JOIN zNewTMETHOD ON VARIATE.TMETHID = zNewTMETHOD.TMETHID SET VARIATE.TMETHID = [zNewTMETHOD].[newTMETHID];
+</li><li>UPDATE FACTOR INNER JOIN zNewTMETHOD ON FACTOR.TMETHID = zNewTMETHOD.TMETHID SET FACTOR.TMETHID = [zNewTMETHOD].[newTMETHID];
+</li><li>SELECT DISTINCT DMSATTR.DMSATID INTO zNewDMSATTR FROM DMSATTR WHERE (((DMSATTR.DMSATID)&lt;0));
+</li><li>ALTER TABLE zNewDMSATTR add column NewATTR Long
+</li><li>ALTER TABLE zNewDMSATTR add column id COUNTER
+</li><li>UPDATE zNewDMSATTR SET zNewDMSATTR.NewATTR = [id]+[maxATTRID];<i>maxATTRID – the highest value of field DMSATID from the Central DMS</i>
+</li><li>UPDATE DMSATTR INNER JOIN zNewDMSATTR ON DMSATTR.DMSATID = zNewDMSATTR.DMSATID SET DMSATTR.DMSATID = [zNewDMSATTR].[newAttr];
+</li><li>SELECT DISTINCT EFFECT.EFFECTID INTO zNewEffect FROM EFFECT WHERE (((EFFECT.EFFECTID)&lt;0));
+</li><li>SELECT DISTINCT EFFECT.REPRESNO INTO zNewRepres FROM EFFECT WHERE (((EFFECT.REPRESNO)&lt;0));
+</li><li>ALTER TABLE zNewEffect add column NewEffect  Long
+</li><li>ALTER TABLE zNewRepres add column NewRepres  Long
+</li><li>ALTER TABLE zNewEffect add column ID Counter
+</li><li>ALTER TABLE zNewRepres add column ID Counter
+</li><li>UPDATE zNewEffect SET zNewEffect.NewEffect = [id]+[maxEffectid];<i>maxEffectid – the highest value of field EFFECTID from the Central DMS</i>
+</li><li>UPDATE zNewRepres SET zNewRepres.NewRepres = [id]+[maxRepres];<i>maxRepres – the highest value of field REPRESNO from the Central DMS</i>
+</li><li>UPDATE zNewEffect INNER JOIN EFFECT ON zNewEffect.EFFECTID = EFFECT.EFFECTID SET EFFECT.EFFECTID = [zNewEffect].[NewEffect];
+</li><li>UPDATE zNewRepres INNER JOIN EFFECT ON zNewRepres.REPRESNO = EFFECT.REPRESNO SET EFFECT.REPRESNO = [zNewRepres].[NewRepres];
+</li><li>UPDATE zNewLABEL INNER JOIN EFFECT ON zNewLABEL.LABELID = EFFECT.FACTORID SET EFFECT.FACTORID = [zNewLABEL].[newLabel];
+</li><li>UPDATE zNewRepres INNER JOIN OINDEX ON zNewRepres.REPRESNO = OINDEX.REPRESNO SET OINDEX.REPRESNO = [zNewRepres].[NewRepres];
+</li><li>UPDATE zNewRepres INNER JOIN VEFFECT ON zNewRepres.REPRESNO = VEFFECT.REPRESNO SET VEFFECT.REPRESNO = [zNewRepres].[newrepres];
+</li><li>UPDATE VEFFECT INNER JOIN zNewVARIATE ON VEFFECT.VARIATID = zNewVARIATE.VARIATID SET VEFFECT.VARIATID = [zNewVARIATE].[newVariate];
+</li></ol>
+<p><a href="http://cropwiki.irri.org/icis/images/f/f0/DMS-LocalQry.zip" class="external text" title="http://cropwiki.irri.org/icis/images/f/f0/DMS-LocalQry.zip" rel="nofollow">Download the Database that contains the queries to update the IDs of local tables to positive central IDs</a>
+</p>
+<a name="Central_DMS" id="Central_DMS"></a><h4> <span class="mw-headline">Central DMS </span></h4>
+<p>The following queries determine the maximum key ids in the central DMS which are parameters to the conversion queries in the local DMS database.
+</p>
+<ol><li>SELECT Max(FACTOR.LABELID) AS MaxOfLABELID FROM FACTOR;
+</li><li>SELECT Max(STUDY.STUDYID) AS MaxOfSTUDYID FROM STUDY;
+</li><li>SELECT Max(VARIATE.VARIATID) AS MaxOfVARIATID FROM VARIATE;
+</li><li>SELECT Max(OINDEX.OUNITID) AS MaxOfOUNITID FROM OINDEX;
+</li><li>SELECT Max(LEVEL_C.LEVELNO) AS MaxOfLEVELNO FROM LEVEL_C;
+</li><li>SELECT Max(LEVEL_N.LEVELNO) AS MaxOfLEVELNO FROM LEVEL_N;
+</li><li>SELECT Max(DMSATTR.DMSATID) AS MaxOfDMSATID FROM DMSATTR;
+</li><li>SELECT Max(EFFECT.EFFECTID) AS MaxOfEFFECTID FROM EFFECT;
+</li><li>SELECT Max(EFFECT.REPRESNO) AS MaxOfREPRESNO FROM EFFECT;
+</li></ol>
+<p>After running the conversion queries in the local DMS, link the local DMS to the central with suffix 1 as the table names. The following queries will check if there are key ids in the local database that exists in the central
+</p>
+<ol><li>SELECT OINDEX.OUNITID FROM OINDEX INNER JOIN DATA_C1 ON OINDEX.OUNITID = DATA_C1.OUNITID;
+</li><li>SELECT OINDEX.OUNITID FROM OINDEX INNER JOIN DATA_N1 ON OINDEX.OUNITID = DATA_N1.OUNITID;
+</li><li>SELECT OINDEX.OUNITID FROM OINDEX1 INNER JOIN OINDEX ON OINDEX1.OUNITID = OINDEX.OUNITID;
+</li><li>SELECT FACTOR.LABELID FROM FACTOR INNER JOIN FACTOR1 ON FACTOR.LABELID = FACTOR1.LABELID;
+</li><li>SELECT LEVEL_C.LEVELNO FROM LEVEL_C INNER JOIN LEVEL_C1 ON LEVEL_C.LEVELNO = LEVEL_C1.LEVELNO;
+</li><li>SELECT LEVEL_N.LEVELNO FROM LEVEL_N1 INNER JOIN LEVEL_N ON LEVEL_N1.LEVELNO = LEVEL_N.LEVELNO;
+</li></ol>
+<p>To upload the data in the local DMS to the central, run the following queries in the central DMS .
+</p>
+<ol><li>INSERT INTO STUDY ( StudyID, SNAME, PMKEY, Title, OBJECTIV, STYPE, SDATE, EDATE )SELECT STUDY1.STUDYID, STUDY1.SNAME, STUDY1.PMKEY, STUDY1.TITLE, STUDY1.OBJECTIV, STUDY1.STYPE, STUDY1.SDATE, STUDY1.EDATE FROM STUDY1;
+</li><li>INSERT INTO FACTOR ( LABELID, FactorID, StudyID, FNAME, TraitID, ScaleID, TMETHID, LTYPE ) SELECT FACTOR1.LABELID, FACTOR1.FACTORID, FACTOR1.STUDYID, FACTOR1.FNAME, FACTOR1.TRAITID, FACTOR1.SCALEID, FACTOR1.TMETHID, FACTOR1.LTYPE FROM FACTOR1;
+</li><li>INSERT INTO VARIATE ( VARIATID, StudyID, VNAME, TraitID, ScaleID, TMETHID, DTYPE, VTYPE ) SELECT VARIATE1.VARIATID, VARIATE1.STUDYID, VARIATE1.VNAME, VARIATE1.TRAITID, VARIATE1.SCALEID, VARIATE1.TMETHID, VARIATE1.DTYPE, VARIATE1.VTYPE FROM VARIATE1;
+</li><li>INSERT INTO OINDEX ( OUNITID, FACTORID, LEVELNO, REPRESNO ) SELECT OINDEX1.OUNITID, OINDEX1.FACTORID, OINDEX1.LEVELNO, OINDEX1.REPRESNO FROM OINDEX1;
+</li><li>INSERT INTO LEVEL_N ( LABELID, FactorID, LevelNo, LVALUE ) SELECT LEVEL_N1.LABELID, LEVEL_N1.FACTORID, LEVEL_N1.LEVELNO, LEVEL_N1.LVALUE FROM LEVEL_N1;
+</li><li>INSERT INTO LEVEL_C ( LABELID, FactorID, LevelNo, LVALUE ) SELECT LEVEL_C1.LABELID, LEVEL_C1.FACTORID, LEVEL_C1.LEVELNO, LEVEL_C1.LVALUE FROM LEVEL_C1;
+</li><li>INSERT INTO DATA_N ( OUNITID, VARIATID, DVALUE ) SELECT DATA_N1.OUNITID, DATA_N1.VARIATID, DATA_N1.DVALUE FROM DATA_N1;
+</li><li>INSERT INTO DATA_C ( OUNITID, VARIATID, DVALUE ) SELECT DATA_C1.OUNITID, DATA_C1.VARIATID, DATA_C1.DVALUE FROM DATA_C1;
+</li><li>INSERT INTO DMSATTR ( DMSATID, DMSATYPE, DMSATAB, DMSATREC, DMSATVAL ) SELECT DMSATTR1.DMSATID, DMSATTR1.DMSATYPE, DMSATTR1.DMSATAB, DMSATTR1.DMSATREC, DMSATTR1.DMSATVAL FROM DMSATTR1;
+</li><li>INSERT INTO EFFECT ( REPRESNO, FACTORID, EFFECTID ) SELECT EFFECT1.REPRESNO, EFFECT1.FACTORID, EFFECT1.EFFECTID FROM EFFECT1;
+</li><li>INSERT INTO VEFFECT ( REPRESNO, VARIATID ) SELECT VEFFECT1.REPRESNO, VEFFECT1.VARIATID FROM VEFFECT1;
+</li></ol>
+<p><a href="http://cropwiki.irri.org/icis/images/1/1e/DMS-CentralQry.zip" class="external text" title="http://cropwiki.irri.org/icis/images/1/1e/DMS-CentralQry.zip" rel="nofollow">Download the Database that contains queries to determine maximum IDs and to upload local to central</a>
+</p><p><br />
+</p>
+<a name="Upload_Process_Using_the_MS_Access_Tools" id="Upload_Process_Using_the_MS_Access_Tools"></a><h4> <span class="mw-headline">Upload Process Using the MS Access Tools  </span></h4>
+<p><a href="http://cropwiki.irri.org/icis/images/1/1e/DMS-CentralQry.zip" class="external text" title="http://cropwiki.irri.org/icis/images/1/1e/DMS-CentralQry.zip" rel="nofollow">Download DMS-CentralQry.mdb</a>
+</p><p><a href="http://cropwiki.irri.org/icis/images/f/f0/DMS-LocalQry.zip" class="external text" title="http://cropwiki.irri.org/icis/images/f/f0/DMS-LocalQry.zip" rel="nofollow">Download DMS-LocalQry.mdb</a>
+</p>
+<ol><li>	Open the DMS-CentralQry.mdb, link the central database using the Utility Form
+</li><li>	Run Determine1 – Determine9  queries to know the maximum primary IDs of the different tables
+</li><li>	Open the DMS-LocalQry.mdb, link the local DMS database and its TMS (Trait, Scale and TMethod tables) using the UploadLocal form
+</li><li>	If the GIDs in the Local database are still negative, ask for UPDATE table from the curator of the central GMS. The UPDATE table should contain the local GIDs and their corresponding positive GIDs. Link that table using the Upload Local form
+</li><li>	Run the Reassign00 query
+</li><li>	Run Reassing01 to Reassign80 queries which do the following
+<ol><li>	Creates a temporary table prefix by zNew for each table with primary key
+</li><li>	Adds an autonumber field and the IDs
+</li><li>	Gives new IDs based on the [max central ID] + [assigned autonumber]
+</li><li>Updates the tables based on the new IDs
+</li></ol>
+</li><li>	Go back to DMS-CentralQry.mdb.  Link the local database using the Utility Form.
+</li><li>	Run the Upload01 to Upload20 queries (There is Upload Local macro but it needs to be updated as some queries are missing there. This tool is also accessible from the Utility form)
+<ol><li>	Checks for the new IDs in the local if existing in the central
+</li><li>	If no inconsistency, appends the records from local table to central table
+</li></ol>
+</li><li>	Check the uploaded study by retrieving them using Workbook
+</li><li>	Open the updated central DMS.  Go to the Database property and enter the version number of the database
+</li><li>	Log in the ZUPDATE_AUDIT a short description of the changes done to the database
+</li><li>	Go to the corresponding Communication Project (e.g. IRIS Communication, IWIS Communication etc) in cropforge, log the changes and the version number of the updated central DMS.
+</li></ol>
+<ul><li>Some points to check
+</li></ul>
+<ol><li>	Existence of 0 or negative IDs in the tables
+</li><li>	The added Trait, Scale, Tmethod are not redundant
+</li></ol>
+<a name="MySQL" id="MySQL"></a><h3> <span class="mw-headline"> MySQL</span></h3>
+<p><a href="http://cropwiki.irri.org/icis/index.php/Uploading_Local_DMS" class="external text" title="http://cropwiki.irri.org/icis/index.php/Uploading_Local_DMS" rel="nofollow">Refer to this for details</a>
+</p><p><a href="http://cropwiki.irri.org/icis/images/5/5b/MySQL_checkCentralTMS.sql" class="external text" title="http://cropwiki.irri.org/icis/images/5/5b/MySQL_checkCentralTMS.sql" rel="nofollow">Script to check Central Trait (Property), Scale and Method</a>
+</p><p><a href="http://cropwiki.irri.org/icis/images/9/9a/MySQL_uploadDMSwithQueries.sql" class="external text" title="http://cropwiki.irri.org/icis/images/9/9a/MySQL_uploadDMSwithQueries.sql" rel="nofollow">Script to upload a local DMS to central</a>
+</p>
+<a name="SUBSETTING_A_DMS_DATABASE" id="SUBSETTING_A_DMS_DATABASE"></a><h2> <span class="mw-headline">SUBSETTING A DMS DATABASE</span></h2>
+<a name="MS_ACCESS_2" id="MS_ACCESS_2"></a><h3> <span class="mw-headline"> MS ACCESS </span></h3>
+<p><a href="http://cropwiki.irri.org/icis/images/f/fc/CreateDMSSubset.zip" class="external text" title="http://cropwiki.irri.org/icis/images/f/fc/CreateDMSSubset.zip" rel="nofollow">Download the MS Database with the queries</a>
+</p><p>Notes:
+</p>
+<ul><li>SubsetStudy – is a table of studies to be included in the subset database
+</li><li>Those tables with prefix 1 are for a blank database that will contain the subset data
+</li><li>Those tables with No prefix 1 are from the source database where to get the subset.
+</li></ul>
+<p>1. DATA_C
+</p>
+<pre>INSERT INTO DATA_C1 ( OUNITID, VARIATID, DVALUE )
+SELECT DATA_C.OUNITID, DATA_C.VARIATID, DATA_C.DVALUE
+FROM VARIATE INNER JOIN DATA_C ON VARIATE.VARIATID = DATA_C.VARIATID
+WHERE (((VARIATE.STUDYID) In (select studyid from SubsetStudy)));
+</pre>
+<p>2.  Data_N
+</p>
+<pre>INSERT INTO DATA_N1 ( OUNITID, VARIATID, DVALUE )
+SELECT DATA_N.OUNITID, DATA_N.VARIATID, DATA_N.DVALUE
+FROM VARIATE INNER JOIN DATA_N ON VARIATE.VARIATID = DATA_N.VARIATID
+WHERE (((VARIATE.STUDYID) In (select studyid from SubsetStudy)));
+</pre>
+<p>3. Attribute of Variate
+</p>
+<pre>INSERT INTO DMSATTR1 ( DMSATID, DMSATYPE, DMSATAB, DMSATREC, DMSATVAL )
+SELECT DMSATTR.DMSATID, DMSATTR.DMSATYPE, DMSATTR.DMSATAB, DMSATTR.DMSATREC, DMSATTR.DMSATVAL
+FROM DMSATTR INNER JOIN VARIATE ON DMSATTR.DMSATREC = VARIATE.VARIATID
+WHERE (((DMSATTR.DMSATYPE)=802) AND ((DMSATTR.DMSATAB)="VARIATE") AND ((VARIATE.STUDYID) 
+In (select studyid from  SubsetStudy)));
+</pre>
+<p>4. Variate
+</p>
+<pre>INSERT INTO VARIATE1 ( VARIATID, VNAME, TRAITID, SCALEID, TMETHID, DTYPE, VTYPE, STUDYID )
+SELECT VARIATE.VARIATID, VARIATE.VNAME, VARIATE.TRAITID, VARIATE.SCALEID, VARIATE.TMETHID, VARIATE.DTYPE,  
+VARIATE.VTYPE, VARIATE.STUDYID
+FROM VARIATE
+WHERE (((VARIATE.STUDYID) In (select studyid from SubsetStudy)));
+</pre>
+<p>5. Level_C
+</p>
+<pre>INSERT INTO LEVEL_C1 ( LABELID, FACTORID, LEVELNO, LVALUE )
+SELECT LEVEL_C.LABELID, LEVEL_C.FACTORID, LEVEL_C.LEVELNO, LEVEL_C.LVALUE
+FROM FACTOR INNER JOIN LEVEL_C ON FACTOR.LABELID = LEVEL_C.FACTORID
+WHERE (((FACTOR.STUDYID) In (select studyid from SubsetStudy)));
+</pre>
+<p>6. Level_N table
+</p>
+<pre>INSERT INTO LEVEL_N1 ( LABELID, FACTORID, LEVELNO, LVALUE )
+SELECT LEVEL_N.LABELID, LEVEL_N.FACTORID, LEVEL_N.LEVELNO, LEVEL_N.LVALUE
+FROM FACTOR INNER JOIN LEVEL_N ON FACTOR.LABELID = LEVEL_N.FACTORID
+WHERE (((FACTOR.STUDYID) In (select studyid from SubsetStudy)));
+</pre>
+<p>7. OINDEX table
+</p>
+<pre>INSERT INTO OINDEX1 ( OUNITID, FACTORID, LEVELNO, REPRESNO )
+SELECT OINDEX.OUNITID, OINDEX.FACTORID, OINDEX.LEVELNO, OINDEX.REPRESNO
+FROM FACTOR INNER JOIN OINDEX ON FACTOR.FACTORID = OINDEX.FACTORID
+WHERE (((FACTOR.STUDYID) In (select studyid from SubsetStudy)));
+</pre>
+<p>8.  Effect
+</p>
+<pre>INSERT INTO EFFECT1 ( REPRESNO, FACTORID, EFFECTID )
+SELECT EFFECT.REPRESNO, EFFECT.FACTORID, EFFECT.EFFECTID
+FROM EFFECT INNER JOIN FACTOR ON EFFECT.FACTORID = FACTOR.LABELID
+WHERE (((FACTOR.STUDYID) In (select studyid from SubsetStudy)));
+</pre>
+<p>9. VEffect
+</p>
+<pre>INSERT INTO VEFFECT1 ( REPRESNO, VARIATID )
+SELECT VEFFECT.REPRESNO, VARIATE.VARIATID
+FROM VARIATE INNER JOIN VEFFECT ON VARIATE.VARIATID = VEFFECT.VARIATID
+WHERE (((VARIATE.STUDYID) In (select studyid from SubsetStudy)));
+</pre>
+<p>10.  Attribute of the factor
+</p>
+<pre>INSERT INTO DMSATTR1 ( DMSATID, DMSATYPE, DMSATAB, DMSATREC, DMSATVAL )
+SELECT DMSATTR.DMSATID, DMSATTR.DMSATYPE, DMSATTR.DMSATAB, DMSATTR.DMSATREC, DMSATTR.DMSATVAL
+FROM FACTOR INNER JOIN DMSATTR ON FACTOR.LABELID = DMSATTR.DMSATREC
+WHERE (((DMSATTR.DMSATYPE)=801) AND ((DMSATTR.DMSATAB)="FACTOR") AND ((FACTOR.STUDYID) 
+In (select studyid from SubsetStudy)));
+</pre>
+<p>11. Factor
+</p>
+<pre>INSERT INTO FACTOR1 ( LABELID, FACTORID, STUDYID, FNAME, TRAITID, SCALEID, TMETHID, LTYPE )
+SELECT FACTOR.LABELID, FACTOR.FACTORID, FACTOR.STUDYID, FACTOR.FNAME, FACTOR.TRAITID, FACTOR.SCALEID, 
+FACTOR.TMETHID, FACTOR.LTYPE
+FROM FACTOR
+WHERE (((FACTOR.STUDYID) In (select studyid from SubsetStudy)));
+</pre>
+<p>12. Study
+</p>
+<pre>INSERT INTO STUDY1 ( STUDYID, PMKEY, SNAME, TITLE, OBJECTIV, INVESTID, STYPE, SDATE, EDATE )
+SELECT STUDY.STUDYID, STUDY.PMKEY, STUDY.SNAME, STUDY.TITLE, STUDY.OBJECTIV, STUDY.INVESTID, STUDY.STYPE,  
+STUDY.SDATE, STUDY.EDATE
+FROM STUDY
+WHERE (((STUDY.STUDYID) In (select studyid from SubsetStudy)));
+</pre>
+<a name="MySQL_2" id="MySQL_2"></a><h3> <span class="mw-headline"> MySQL </span></h3>
+<p><a href="http://cropwiki.irri.org/icis/images/f/ff/GetDMSSubset.sql" class="external text" title="http://cropwiki.irri.org/icis/images/f/ff/GetDMSSubset.sql" rel="nofollow">Download script to create the subset</a>
+</p>
+<dl><dd>Use:
+</dd></dl>
+<pre>call getDMSSubset( '&lt;name of database where to put the subset&gt;', '&lt;name of Database where to get the subset&gt;', 
+'&lt;name of the table where the studyids which is needed for subset&gt;');
+</pre>
+<dl><dd>Example:
+</dd></dl>
+<pre>call getDMSSubset( 'subsetDB', 'grc_local_dms', 'substudy');
+</pre>
+<a name="UPDATE_OF_DMS_DATABASE_TO_DIFFERENT_VERSIONS_OF_ICIS" id="UPDATE_OF_DMS_DATABASE_TO_DIFFERENT_VERSIONS_OF_ICIS"></a><h2> <span class="mw-headline">UPDATE OF DMS DATABASE TO DIFFERENT VERSIONS OF ICIS</span></h2>
+<a name="Steps_for_updating_the_first_version_of__the_DMS_database_to_the_second_version" id="Steps_for_updating_the_first_version_of__the_DMS_database_to_the_second_version"></a><h3> <span class="mw-headline">Steps for updating the first version of  the DMS database to the second version</span></h3>
+<p>The first major change of the DMS database from the original schema is the introduction of the concept of LABEL and the global assignment of the LEVELNO.  The GMS database is also modified by renaming the GUID field to GERMUID. The steps to convert the 1st version of DMS to the second version are the following:
+</p>
+<a name="Central_DMS_2" id="Central_DMS_2"></a><h4> <span class="mw-headline">Central DMS</span></h4>
+<ol><li>Change the property of FACTORID from primary key to non-primary.
+</li><li>Add LABELID to the FACTOR, LEVEL_N, LEVEL_C and LEVEL_T tables.
+</li><li>Update LABELID to be equal to the FACTORID.
+</li><li>Rename LEVELNO field as TLEVELNO in LEVEL_N, LEVEL_C and OINDEX tables.
+</li><li>Add a new LEVELNO field in LEVEL_N, LEVEL_C and OINDEX tables with data type Autonumber.  Save the changes.
+</li><li>Change the data type of the newly added LEVELNO to Number (Long).
+</li><li>Get the maximum LEVELNO of LEVEL_N table.  Remember the number.
+</li><li>Update the LEVELNO of LEVEL_C table to be equal to Max(LEVEL_N.LEVELNO) + LEVEL_C.LEVELNO.
+</li><li>Update the LEVELNO of OINDEX table.
+<ol><li>Relate the OINDEX table with LEVEL_N through FACTORID and TLEVELNO.  Update OINDEX.LEVELNO to be equal to LEVEL_N.LEVELNO.
+</li><li>Relate the OINDEX table with LEVEL_C through FACTORID and TLEVELNO.  Update OINDEX.LEVELNO to be equal to LEVEL_C.LEVELNO.
+</li></ol>
+</li></ol>
+<a name="Local_DMS_2" id="Local_DMS_2"></a><h4> <span class="mw-headline">Local DMS</span></h4>
+<ol><li>Change the property of FACTORID from primary key to non-primary.
+</li><li>Add LABELID to the FACTOR, LEVEL_N, LEVEL_C and LEVEL_T tables.
+</li><li>Update LABELID to be equal to the FACTORID.
+</li><li>Rename LEVELNO field as TLEVELNO in LEVEL_N, LEVEL_C and OINDEX tables.
+</li><li>Add a new LEVELNO field in LEVEL_N, LEVEL_C and OINDEX tables with data type Autonumber.  Save the changes.
+</li><li>Change the data type of the newly added LEVELNO to Number (Long).
+</li><li>Update the LEVELNO of LEVEL_N to its negative.
+</li><li>Get the minimum LEVELNO of LEVEL_N table.  Remember the number.
+</li><li>Update the LEVELNO of LEVEL_C table to be equal to Min(LEVEL_N.LEVELNO) - LEVEL_C.LEVELNO.
+</li><li>Update the LEVELNO of OINDEX table.
+<ol><li>Relate the OINDEX table with LEVEL_N through FACTORID and TLEVELNO.  Update OINDEX.LEVELNO to be equal to LEVEL_N.LEVELNO.
+</li><li>Relate the OINDEX table with LEVEL_C through FACTORID and TLEVELNO.  Update OINDEX.LEVELNO to be equal to LEVEL_C.LEVELNO.
+</li></ol>
+</li><li>Remove the TLEVELNO from LEVEL_N,LEVEL_C and OINDEX tables.
+</li></ol>
+<a name="Steps_for_updating_the_third_version_of__ICIS_database_to_the_fourth_version.2A" id="Steps_for_updating_the_third_version_of__ICIS_database_to_the_fourth_version.2A"></a><h3> <span class="mw-headline">Steps for updating the third version of  ICIS database to the fourth version*</span></h3>
+<p>The next major change of the DMS database is the introduction of the concept of EFFECT which is equivalent to the notion of data set.
+</p>
+<a name="Central_DMS_3" id="Central_DMS_3"></a><h4> <span class="mw-headline">Central DMS</span></h4>
+<ol><li>Go to the ICIS\Database\Template\Central folder.
+</li><li>Open the ConvertCentraltoV4 database
+</li><li>Click the button “Select the Central DMS v3” and choose the database to convert.
+</li><li>Run the command  “Change TRAIT Table”.  It will add the fields TID (Long) and TNSTAT (long).
+</li><li> Click the command “Export VEFFECT and EFFECT”. This will add the two new tables to the database #being converted.
+</li><li>Link the tables of the database to convert by clicking the button “Link Tables.”
+</li><li>Run Step 1 of the conversion queries to create a temporary table named tmpRepres.
+</li><li>Run Step 2 to create another temporary table named tmpEffect to contain the effects in each study and the factors defining each effect.
+</li><li>Update the values of the Represno field of tmpEffect by clicking step 3.
+</li><li>Run step 4 to create a temporary table tmpOindex to contain the representation number associated with each observation unit.
+</li><li>Update the representation numbers of the observation units by running step 5.
+</li><li>Run step 6 to populate the EFFECT table.
+</li><li>Populate the VEFFECT table by running step 7 and step 8. 
+</li><li>Click the button “Delete the Linked Central” to remove the links to the converted DMS.
+</li><li>Close the ConvertCentraltoV4 database
+</li></ol>
+<a name="Central_GMS" id="Central_GMS"></a><h4> <span class="mw-headline">Central GMS</span></h4>
+<ol><li>Go to the v3 central GMS database being converted.
+</li><li>Open the GERMPLSM table in Design View.
+</li><li>Rename the field GUID to GERMUID and save the change.
+</li><li>Open the UDFLDS table in Design View.
+</li><li>Add the Scaleid  field with Long Integer as its data type and save the change.
+</li><li>Close the GMS database.
+</li></ol>
+<p><br />
+</p>
+<a name="Local_DMS_3" id="Local_DMS_3"></a><h4> <span class="mw-headline">Local DMS</span></h4>
+<ol><li>Go to the ICIS\Database\Template\Local folder.
+</li><li>Open the ConvertLocaltoV4 database
+</li><li>Click the button “Select the Local DMS v3” and choose the database to convert.
+</li><li>Run the command  “Change TRAIT Table”.  It will add the fields TID (Long) and TNSTAT (long).
+</li><li> Click the command “Export VEFFECT and EFFECT”.
+</li><li>Link the tables of the database to convert by clicking the button “Link Tables.”
+</li><li>Run Step 1 of the conversion queries to create a temporary table named tmpRepres.
+</li><li>Create another table named tmpEffect to contain the effects and factors of each effect by running step 2.
+</li><li>Update the values of Represno field of tmpEffect by clicking step 3.
+</li><li>Run step 4 to create a temporary table tmpOindex to contain the representation number associated with each observation unit.
+</li><li>Update the representation numbers of the observation units by running step 5.
+</li><li>Run step 6 to populate the EFFECT table.
+</li><li>Populate the VEFFECT table by running step 7 and step 8. 
+</li><li>Click the button “Delete the Linked Local” to remove the links to the converted DMS.
+</li><li>Close the ConvertLocaltoV4 database.
+</li></ol>
+<a name="Local_GMS" id="Local_GMS"></a><h4> <span class="mw-headline">Local GMS</span></h4>
+<ol><li>Go to the  local GMS database being converted.
+</li><li>Open the GERMPLSM table in Design View.
+</li><li>Rename the field GUID to GERMUID and save the change.
+</li><li>Open the UDFLDS table in Design View.
+</li><li>Add the Scaleid  field with Long Integer as its data type and save the change.
+</li><li>Open the LISTDATA table in Design View.
+</li><li>Modify the length of ENTRYCD from 11 to 47 and save the change.
+</li><li>Close the GMS database.
+</li></ol>
+<p><br />
+</p>
+<a name="Update_of_the_different_versions_of_ICIS_5" id="Update_of_the_different_versions_of_ICIS_5"></a><h3> <span class="mw-headline"> Update of the different versions of ICIS 5 </span></h3>
+<p>The SQL scripts to update to different versions of ICIS 5 can be found in [<a href="http://cropforge.org/frs/?group_id=5" class="external text" title="http://cropforge.org/frs/?group_id=5" rel="nofollow">| ICIS Schema</a>] of the ICIS Communication project in cropforge.
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 23/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+<div class="printfooter">
+Retrieved from "<a href="http://localhost../../../../articles/d/m/s/DMS_Setup_10b8.html">http://localhost../../../../articles/d/m/s/DMS_Setup_10b8.html</a>"</div>
+						<!-- end content -->
+						<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<div class="pBody">
+			<ul>
+	
+				 <li id="ca-nstab-main" class="selected"><a href="../../../../articles/d/m/s/DMS_Setup_10b8.html" title="View the content page [c]" accesskey="c">Page</a></li>
+				 <li id="ca-talk"><a href="../../../../articles/d/m/s/Talk%7EDMS_Setup_2862.html" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				 <li id="ca-viewsource"><a href="../../../../articles/d/m/s/DMS_Setup_10b8.html" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				 <li id="ca-history"><a href="../../../../articles/d/m/s/DMS_Setup_10b8.html" title="Past versions of this page [h]" accesskey="h">History</a></li>			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="../../../../articles/u/s/e/Special%7EUserLogin_94cd.html" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(../../../../misc/icis-wiki3.png);" href="../../../../index.html" title="Visit the main page [z]" accesskey="z"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class='generated-sidebar portlet' id='p-navigation'>
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="../../../../index.html" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
+				<li id="n-portal"><a href="../../../../articles/c/o/m/ICISWiki%7ECommunity_Portal_7449.html" title="About the project, what you can do, where to find things">Community portal</a></li>
+				<li id="n-recentchanges"><a href="../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+				<li id="n-help"><a href="../../../../articles/c/o/n/Help%7EContents_22de.html" title="The place to find out">Help</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="../../../../articles/s/e/a/Special%7ESearch_a8e5.html" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" title="Search ICISWiki [f]" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="../../../../articles/w/h/a/Special%7EWhatLinksHere_DMS_Setup_479d.html" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="../../../../articles/r/e/c/Special%7ERecentChangesLinked_DMS_Setup_bf3c.html" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+<li id="t-specialpages"><a href="../../../../articles/s/p/e/Special%7ESpecialPages_f12b.html" title="List of all special pages [q]" accesskey="q">Special pages</a></li>
+				<li id="t-print"><a href="../../../../articles/d/m/s/DMS_Setup_10b8.html" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>				<li id="t-permalink"><a href="../../../../articles/d/m/s/DMS_Setup_10b8.html" title="Permanent link to this version of the page">Permanent link</a></li>			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="../../../../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" /></a></div>
+				<div id="f-copyrightico"><a href="../../../../../COPYING.html"><img src="/icis/skins/common/images/gnu-fdl.png" alt='GNU Free Documentation License 1.2' /></a></div>
+			<ul id="f-list">
+					<li id="credits">This page was last modified 09:02, 1 August 2008 by <a href="../../../../articles/a/p/o/User%7EAportugal_745d.html" title="User:Aportugal">Arllet Portugal</a>. Based on work by <a href="../../../../articles/g/m/c/User%7EGmclaren_b845.html" title="User:Gmclaren">Graham McLaren</a>&#32;and&#32;<a href="../../../../articles/s/a/n/User%7ESandraM_bee9.html" class="new" title="User:SandraM (page does not exist)">Sandra Micallef</a>.</li>
+					<li id="copyright">Content is available under <a href="../../../../../COPYING.html" class="external " title="../../../../../COPYING.html">GNU Free Documentation License 1.2</a>.</li>
+					<li id="privacy"><a href="../../../../articles/p/r/i/ICISWiki%7EPrivacy_policy_0cbf.html" title="ICISWiki:Privacy policy">Privacy policy</a></li>
+					<li id="about"><a href="../../../../articles/a/b/o/ICISWiki%7EAbout_53aa.html" title="ICISWiki:About">About ICISWiki</a></li>
+					<li id="disclaimer"><a href="../../../../articles/g/e/n/ICISWiki%7EGeneral_disclaimer_9129.html" title="ICISWiki:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+</div>
+
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served in 12.020 secs. --></body></html>

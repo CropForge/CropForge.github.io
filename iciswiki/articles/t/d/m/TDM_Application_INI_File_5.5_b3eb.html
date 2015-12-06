@@ -1,0 +1,535 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta name="generator" content="MediaWiki 1.14.0" />
+		<meta name="keywords" content="TDM Application INI File 5.5" />
+		<link rel="shortcut icon" href="../../../../misc/favicon.ico" />
+		<link rel="search" type="application/opensearchdescription+xml" href="../../../../../opensearch_desc.php" title="ICISWiki (en)" />
+		<link title="Creative Commons" type="application/rdf+xml" href="../../../../articles/t/d/m/TDM_Application_INI_File_5.5_b3eb.html" rel="alternate meta" />
+		<link rel="copyright" href="../../../../../COPYING.html" />
+		<link rel="alternate" type="application/rss+xml" title="ICISWiki RSS Feed" href="http://localhost../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" />
+		<link rel="alternate" type="application/atom+xml" title="ICISWiki Atom Feed" href="http://localhost../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" />
+		<title>TDM Application INI File 5.5 - ICISWiki</title>
+		<link rel="stylesheet" href="../../../../skins/common/shared.css?195" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../../../../skins/common/commonPrint.css?195" type="text/css" media="print" />
+		<link rel="stylesheet" href="../../../../skins/monobook/main.css?195" type="text/css" media="screen" />
+		<!--[if lt IE 5.5000]><link rel="stylesheet" href="../../../../skins/monobook/IE50Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 5.5000]><link rel="stylesheet" href="../../../../skins/monobook/IE55Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 6]><link rel="stylesheet" href="../../../../skins/monobook/IE60Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 7]><link rel="stylesheet" href="../../../../skins/monobook/IE70Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7ECommon.css?195" type="text/css" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7EPrint.css?195" type="text/css" media="print" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7EMonobook.css?195" type="text/css" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/gen.css?195" type="text/css" />
+		<!--[if lt IE 7]><script type="text/javascript" src="../../../../skins/common/IEFixes.js?195"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+
+		<script type= "text/javascript">/*<![CDATA[*/
+		var skin = "monobook";
+		var stylepath = "../../../../skins";
+		var wgArticlePath = "../../../../$1";
+		var wgScriptPath = "../../../../..";
+		var wgScript = "/icis/index.php";
+		var wgVariantArticlePath = false;
+		var wgActionPaths = {};
+		var wgServer = "http://localhost";
+		var wgCanonicalNamespace = "";
+		var wgCanonicalSpecialPageName = false;
+		var wgNamespaceNumber = 0;
+		var wgPageName = "TDM_Application_INI_File_5.5";
+		var wgTitle = "TDM Application INI File 5.5";
+		var wgAction = "view";
+		var wgArticleId = "3471";
+		var wgIsArticle = true;
+		var wgUserName = null;
+		var wgUserGroups = null;
+		var wgUserLanguage = "en";
+		var wgContentLanguage = "en";
+		var wgBreakFrames = false;
+		var wgCurRevisionId = "15175";
+		var wgVersion = "1.14.0";
+		var wgEnableAPI = true;
+		var wgEnableWriteAPI = true;
+		var wgSeparatorTransformTable = ["", ""];
+		var wgDigitTransformTable = ["", ""];
+		var wgRestrictionEdit = [];
+		var wgRestrictionMove = [];
+		/*]]>*/</script>
+
+		<script type="text/javascript" src="../../../../skins/common/wikibits.js?195"><!-- wikibits js --></script>
+		<!-- Head Scripts -->
+		<script type="text/javascript" src="../../../../raw/gen.js"><!-- site js --></script>
+	</head>
+<body class="mediawiki ltr ns-0 ns-subject page-TDM_Application_INI_File_5_5 skin-monobook">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 id="firstHeading" class="firstHeading">TDM Application INI File 5.5</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From ICISWiki</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>			<!-- start content -->
+			<table id="toc" class="toc" summary="Contents"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1"><a href="#LAUNCHER"><span class="tocnumber">1</span> <span class="toctext">LAUNCHER</span></a></li>
+<li class="toclevel-1"><a href="#DLL_SETTINGS"><span class="tocnumber">2</span> <span class="toctext">DLL SETTINGS</span></a></li>
+<li class="toclevel-1"><a href="#SETGEN"><span class="tocnumber">3</span> <span class="toctext">SETGEN</span></a></li>
+<li class="toclevel-1"><a href="#WORKBOOK"><span class="tocnumber">4</span> <span class="toctext">WORKBOOK</span></a></li>
+<li class="toclevel-1"><a href="#BROWSE"><span class="tocnumber">5</span> <span class="toctext">BROWSE</span></a></li>
+<li class="toclevel-1"><a href="#INTRACK"><span class="tocnumber">6</span> <span class="toctext">INTRACK</span></a></li>
+<li class="toclevel-1"><a href="#RETRIEVER"><span class="tocnumber">7</span> <span class="toctext">RETRIEVER</span></a></li>
+<li class="toclevel-1"><a href="#HELPINI"><span class="tocnumber">8</span> <span class="toctext">HELPINI</span></a></li>
+<li class="toclevel-1"><a href="#GMSSRCH"><span class="tocnumber">9</span> <span class="toctext">GMSSRCH</span></a></li>
+<li class="toclevel-1"><a href="#GEMS_Catalog"><span class="tocnumber">10</span> <span class="toctext">GEMS Catalog</span></a></li>
+</ul>
+</td></tr></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </script>
+<a name="LAUNCHER" id="LAUNCHER"></a><h2> <span class="mw-headline"> LAUNCHER </span></h2>
+<pre>[LAUNCHER]
+#**********************************************************************
+# RUN_BTN - should be equal to Yes to enable the RUN command in the launcher
+# INISECTION_BTN - should be equal to Yes to be able to change the key values of the ICIS ini.
+# EXTRA_MODULE - specify the path and text file that contains additional customized items of the Launcher; optional
+#**********************************************************************
+RUN_BTN=YES
+INISECTION_BTN=YES
+EXTRA_MODULE=D:\ICIS5\EXES\LAUNCHER2.TXT
+</pre>
+<a name="DLL_SETTINGS" id="DLL_SETTINGS"></a><h2> <span class="mw-headline"> DLL SETTINGS </span></h2>
+<pre>[DLL SETTINGS]
+#**********************************************************************
+# LASTDIR - the directory or folder to read by default
+# DEBUG - set to YES to log return values of the DLL functions; otherwise set to NO to turn it off
+# SESSION_ID - specify the session ID of the user; optional
+# SHOW_PREFID - set to YES if the preferred ID is shown side by side with preferred name, otherwise set to NO; optional
+# SECURITY - indicates the level of security; the default value is 1
+#*******************************************************************
+LASTDIR=d:\icis v4
+DEBUG=NO
+SESSION_ID=ADMIN
+SHOW_PREFID=NO
+SECURITY=1
+</pre>
+<a name="SETGEN" id="SETGEN"></a><h2> <span class="mw-headline"> SETGEN </span></h2>
+<pre>#**********************************************************************
+#[SETGEN]
+#CROP - indicates crop (BW- bread Wheat)
+#STANDARDIZE - Flag whether to apply ICIS naming conventions or not
+#DEFCTYID-The Location ID of a country whose locations are initially displayed in the Select a Location window
+#DEFLOCID-The Location ID of a country whose locations
+#DEF_DATE - Default Date Format used in  generating GIDs in batch Mode
+#PNAME_IF_UNKNOWN_GRP -Flag to display '?/?'  [preferred Name] or just '?/?'
+#NO_LISTNAME - If set to YES,the default seed source value is displayed as ‘entry code’; otherwise seed 
+#                                  source is displayed as ‘list name-entry code’.  The default value appears only
+#                                 when an entry is selected from the Browse window.
+#GENERATIVEMETHOD -The generative Method ID of a default method to appear in the Generate Crosses window.
+#DERIVATIVEMETHOD -The derivative Method ID of a default method to appear in the Advance a Line One Generation window.
+#CHECKDERIVATIVE-If this is less than 10, a derivative name is verified for its existence in the GMS.  
+#   If a name exists, a query appears with several options for the user.  
+#   Otherwise, if CHECKDERIVATIVE&gt;=10, no checking is done; a derivative is automatically added to the local GMS, 
+#                         whether or not the name already exists. 
+#SOUNDEX- NameType where Soundex algorithm will be used.
+#AUTOCOMMIT- Flag whether any change in DB will automatically be saved
+#MULT_ENTRYCD - Used in Line One Generation window. If YES each derivative has an entry code value as ‘entry code-plant no.’;
+#                                   otherwise, each derivative has the same entry code value.
+#MULT_SOURCE - Used in Line One Generation window. If YES each derivative has a source code value as source code-plant no.’;
+#                                   otherwise, each derivative has the same source code value.
+#METHODGRP-The group of methods retrieved from the GMS METHODS table and displayed to the user to select from
+#MULT_SAMENTYPE- Flag whether to allow Multiple name types
+#MULT_SAMEATYPE- Flag whether to allow Multiple Attribute types
+#AUTO_GENLSTNAMESCALEID-SCALEID of the  SQL to use in generating ListName
+#AUTO_GENFUNCCODE- Code key for function to call when automatically generating ListName
+#ENABLE_INV-Flag whether to enable IMS or not 
+#AUTOFILLVCOL - If set to YES, the virtual columns are retrieved upon opening of lists in Browse or Edit
+#CHECK_NTYPE - represents the NameType.  This ensures that every GID has this certain NameType upon closing/saving of list.
+#UPD_GRP - values either yes or no; if yes, automatically update group if added from Browse window
+#TEXTLINE - values either yes or no; if yes, this supports Textlines
+#DEL_GERM_WITH_DESCENDANTS - values either yes or no; if yes, if a germplasm is deleted, its descendants are deleted as well
+#DEF_C_NDX - represents the country id from Country.NDX file
+#DEF_L_NDX - represents the location id (for the selected country) from DefLoc.NDX file
+#NRECENTLOC - represents the number of recent locations selected
+#RECENT_LOC1 - value is a key-value pair from DefLoc.NDX file;represents the most recent location selected
+#RECENT_LOC2 - value is a key-value pair from DefLoc.NDX file;represents the 2nd most recent location selected
+#RECENT_LOC3 - value is a key-value pair from DefLoc.NDX file;represents the 3rd most recent location selected
+#RECENT_LOC4 - value is a key-value pair from DefLoc.NDX file;represents the 4th most recent location selected
+#LIST_PANEL_WIDTH - determines the width of the tree or list panel of SetGen's Mainform
+#MTA_PATH - represents a url or directory path for MTA feature
+#MTA_FILE_EXT - represents the extension of MTA file (e.g. .doc or .pdf)
+#CHECKSAME_NVALUES - values either yes or no; a key that checks if there are other germplasms with the same name.
+#SEPARATOR - a string value used in Matrix Form for separating Female-Male info combination in naming Enry Code and Source
+#MAINTENANCEMETHOD=The default maintenance method ID to use in Generate GIDs in Batch Form
+#CHECK_ATYPE=represents the Attribute type. This ensures that every GID has this certain AttributeType(s) upon 
+#           closing/saving of list. If multiple Attributes has to be checked, it is separated by a comma
+#FILE_EXPORT_PATH=Default file location for export files
+#OWNER_ACCESS=If set to NO, all users can have access to the lists even if he/she is not the owner.  Default is YES.
+#DEFAULT_FOLDER_TO_OPEN=The default folder (specified by ID) is opened everytime SetGen is started. 
+#DER_SEPARATOR=Specifies the character to use for generating derivative germplasms.  Default is dash ( - ) character.
+#MGT_SEPARATOR=Specifies the character to use for generating management germplasms.  Default is colon (&nbsp;: ) character.
+#UNDERSCORE_IN_NAMES=Allows the germplasm name to have underscore character.  E.g IR 64_AABB
+#FINAL_LABEL=The value here is used to replace the FINAL label status of lists.  E.g. Public
+#CHECK_NSTAT=Checks the existence of one or more NSTAT (similar to the NYTPE where it is checked when list is saved or  closed).
+#Automatic generation of the next sequence of a name type.  The Prefix and the name type is declared in the INI file as follows:
+#NEXT_SEQUENCE_NAMETYPE=The value is the nametype id found in UDFLDS table
+#NEXT_SEQUENCE_PREFIX=Prefix of the nametype
+#FILL_WITH_CUSTOMIZED_DATA=Represents the INI file to use when a user has SQL statements to run in DMS table.
+#MAN=Added checks bet. proper method-name type combination.
+#        Values (comma separated) specify the name types allowed for Maintenance method
+#GEN=Added checks bet. proper method-name type combination.  
+#        Values (comma separated) specify the name types allowed for Generative method
+#DER=Added checks bet. proper method-name type combination.
+#        Values (comma separated) specify the name types allowed for Derivative method
+#**********************************************************************
+[SETGEN]
+CROP=RICE
+STANDARDIZE=NO
+DEFCTYID=171
+DEFLOCID=-1341
+DEF_DATE=2008-07-16
+PNAME_IF_UNKNOWN_GRP=YES
+NO_LISTNAME=YES
+GENERATIVEMETHOD=101
+DERIVATIVEMETHOD=205
+CHECKDERIVATIVE=1
+AUTOCOMMIT=NO
+MULT_ENTRYCD=YES
+MULT_SOURCE=YES
+METHODGRP=S G
+MULT_SAMENTYPE=YES
+MULT_SAMEATYPE=YES
+AUTO_GENLSTNAMESCALEID=0
+AUTO_GENFUNCCODE=GRC
+ENABLE_INV=NO
+AUTOFILLVCOL=YES
+UPD_GRP=YES
+TEXTLINE=YES
+CHECK_NTYPE=7, 10
+DEL_GERM_WITH_DESCENDANTS=YES
+DEF_SKIN=0
+#MTA_PATH=C:\WORKSPACE\SMTAWeb\smta_files
+#MTA_FILE_EXT=.pdf
+TEXT_SUFFIX=-CANDY
+CHECKSAME_NVALUES=YES
+LIST_PANEL_WIDTH=220
+DEF_C_NDX=186
+DEF_L_NDX=720
+NEXT_SEQUENCE_NAMETYPE=1
+NEXT_SEQUENCE_PREFIX=PI
+CHECK_ATYPE=103,104
+FILE_EXPORT_PATH=D:\ICIS5\exportfiles
+SEPARATOR=-
+DEFAULT_FOLDER_TO_OPEN=-23
+CHECK_NSTAT=8,1
+MTA_PATH=C:\WORKSPACE\SMTAWeb\smta_files
+MTA_FILE_EXT=.pdf
+FILL_WITH_CUSTOMIZED_DATA=D:\ICIS5\customizedData.ini
+UNDERSCORE_IN_NAMES=YES
+FINAL_LABEL=Public
+#
+#Additional INI keys (if not yet used above)
+# 
+MAINTENANCEMETHOD=62
+CHECK_ATYPE= 124,118,108
+OWNER_ACCESS=NO
+DER_SEPARATOR=-
+MGT_SEPARATOR=:
+UNDERSCORE_IN_NAMES=YES
+CHECK_NSTAT=8
+NEXT_SEQUENCE_NAMETYPE=1
+NEXT_SEQUENCE_PREFIX=PI
+MAN= 1,4,6,7,9,10,11,12,13,14,15,16,20,21,22,23,1019
+GEN= 2,3,1027
+DER= 4,5,6,7,12,13,15,16,17,18,19,20,1027
+</pre>
+<a name="WORKBOOK" id="WORKBOOK"></a><h2> <span class="mw-headline"> WORKBOOK </span></h2>
+<pre>[WORKBOOK]
+#**********************************************************************
+#              – This section is used by the ICISworkbook.xla application
+#Workbook      - the path where the ICIS32.DLL is located
+#LastDir       - the default directory used in opening and saving files
+#HELPFILE      - the path where the custom help file can be placed
+#Objective_Alt – the alternative name to the caption “Objective” in the study section
+#TreeView      - =True to display the SetGen tree in the Import from SetGen interface form
+#              -  setting this variable to False improves speed in displaying the form
+#UseSGiniIDs   - =True to use the ontology IDs in this ini file in automatically mapping
+#              -  the SetGen entries with the Workbook columns
+#VarTrait      - defaults to 251, the trait ID for the property “Cultivar”
+#VarScale      - defaults to 92, the scale ID for the scale “Variety Name”
+#VarMethod     - defaults to 17, the method ID for the method “Not Specified”
+#GrpNmTrait    - defaults to 251, the trait ID for the property “Cultivar”
+#GrpNmScale    - the scale ID for the scale “Parents”
+#GrpNmMethod   - defaults to 17, the method ID for the method “Not Specified”
+#EntryTrait    - defaults to 251, the trait ID for the property “Cultivar”
+#EntryScale    - defaults to 103, the scale ID for the scale “Entry Number”
+#EntryMethod   - defaults to 17, the method ID for the method “Not Specified”
+#SourceTrait   - defaults to 251, the trait ID for the property “Cultivar”
+#SourceScale   - defaults to 104, the scale ID for the scale “Name of Seed Source”
+#SourceMethod  - defaults to 17, the method ID for the method “Not Specified”
+#GIDTrait      - defaults to 251, the trait ID for the property “Cultivar”
+#GIDScale      - defaults to 91, the scale ID for the scale “GID”
+#GIDMethod     - defaults to 17, the method ID for the method “Not Specified”
+#EntNoTrait    - defaults to 251, the trait ID for the property “Cultivar”
+#EntNoScale    - defaults to 92, the scale ID for the scale “Arbitrary Number”
+#EntNoMethod   - defaults to 17, the method ID for the method “Not Specified”
+#DMS_STATUS    - =1 to lock the local DMS database during the loading of a study to
+#              -  prevent two or more users from loading a study simultaneously
+#****************************************************************
+Workbook=E:\ICIS5\Exes
+LastDir=E:\ICIS5
+HelpFile=E:\ICIS5\Exes\dmsfiles\help\index.html.lnk
+MapMaker=E:\ICIS5\Exes\Fieldbook
+Objective_Alt=OBJECTIVE
+TreeView=True
+UseSGiniIDs=True
+VarTrait=251
+VarScale=92
+VarMethod=17
+GrpNmTrait=251
+GrpNmScale=346
+GrpNmMethod=17
+EntryTrait=251
+EntryScale=103
+EntryMethod=17
+SourceTrait=251
+SourceScale=104
+SourceMethod=17
+GIDTrait=251
+GIDScale=91
+GIDMethod=17
+EntNoTrait=251
+EntNoScale=147
+EntNoMethod=17
+Overwrite=False
+SMTA=Admin
+EncoderView=False
+SNameCap=True
+SNameLen=50
+ColWidth=15
+WarnStdExist=False
+WarnNewOnto=False
+ValidateScale=False
+ValidateGID=False
+NoBlankLevel=False
+CompareOUnit=False
+WarnTruncNum=False
+ShowCheck=True
+DMS_Status=1
+DMS_Locked=0
+GMS_Specie=Oryza sativa
+DesShtName=Desc
+ObsShtName=Obs
+RecycleBin=True
+</pre>
+<a name="BROWSE" id="BROWSE"></a><h2> <span class="mw-headline"> BROWSE </span></h2>
+<pre>[BROWSE]
+#**************************************************************
+# REFID=x, SET DEFAULT REFERENCE ID TO x, ELSE x=0
+# LOCID=x, SET DEFAULT LOCATION ID TO x, ELSE x=0
+# IOPT=x,  x=1 TO SELECT SINGLE SEARCH HITS (ELSE 0)
+# ISRH=x,  x=1 TO SHOW ONLY GENERATIVE GERMPLASM,
+#          x=2 TO SHOW ONLY DERIVATIVES AND
+#          x=3 TO EXCLUDE ACCESSIONS (ELSE 0)
+# MGAT=x,  x=1 TO SHOW ALL PROGENITORS IN THE MENDLEGRAM (ELSE 0)
+# NAMP=x,  CONTROLS NAME TYPES DISPLAYED IN PEDIGREE TREES
+#          x=0 FOR PREFERRED NAME, 1 FOR ALL NAMES OR 2 FOR ACCESSION NO
+# LDST=x,  x=1 TO DISPLAY DERIVATIVE STEPS IN A TREE, ELSE x=0 
+# NTCX=x,  x=n TO STOP CROSS EXPANSION ON NAME TYPE n, ELSE x=0
+# LIST=x,  x=0 TO CLOSE LIST OR x=n TO OPEN LIST n
+# FCPS=x,  x=1 TO ALWAYS LOOK FOR CROSSES BY PARENTS AS WELL AS NAME, ELSE x=0
+# BTYPE=x, x=1 FOR SELF FERTILIZED CROP WITH FULL INBREEDING ASSUMED FOR ALL 
+#          LINES WITH UNKNOWN SOURCE,
+#          x=2 FOR FOR SELF FERTILIZED CROP WITH F4 ASSUMED FOR LINES
+#          WITH UNKNOWN SOURCE BUT KNOWN PARENTS AND FULL INBREEDING FOR
+#          LINES WITH UNKNOWN SOURCE AND UNKNOWN PARENTS, 
+#          x=0 FOR CROSS POLLINATED CROPS
+# LastDir=x, x=full path of directory for BROWSE.LOG
+#**************************************************************
+IOPT=0
+ISRH=0
+MGAT=0
+NAMP=0
+LDST=0
+NTCX=0
+LIST=0
+REFID=0
+LocID=0
+FCPS=1
+BTYPE=1
+LastDir=
+</pre>
+<a name="INTRACK" id="INTRACK"></a><h2> <span class="mw-headline"> INTRACK </span></h2>
+<pre>[INTRACK]
+#**************************************************************
+# SEEDSTORAGELOCATION - indicates the ltype (locationtype)
+#                       from the locations table of the GMS 
+#                       database to filter the locations used by IMS      
+# 
+# SEEDSTOCKTRAIT - indicates the traitid from the TRAIT table of
+#                  the DMS database to filter the scales used by IMS
+# 
+# LABEL -  indicates the titles of each location level
+#          e.g. LABEL1 =name of organization,
+#               LABEL2 =name of organizational unit
+#               LABEL3 =name of Storage Location (Shelf,room)
+#               LABEL4 =name of storage inside LABEL1(tray) 
+#
+# PREFIX - determines the organizational unit that owns the inventory
+#
+#         e.g.PREFIX=AERO {for aeboric rainfed}
+#
+#        note&nbsp;: 1.length is not less than 2 characters 
+#  
+# DEF_CNTRYID - the default country for the locations when using the IMS database/system
+# SHOWBALANCE - when set to 'YES' displays the available and actual balance
+#               when set to 'NO' hides the available and actual balance 
+# LABEL_LOGO - sets the filepath of the logo to be used when printing box labels
+# LABEL_TITLE - SETS THE DEFAULT header title to be used when printing box labels
+# DEF_LBLTYPE - sets the default label type when printing barcode labels 
+#**************************************************************
+SEEDSTORAGELOCATION=1500
+SEEDSTOCKTRAIT=1500
+LABEL1=Organization
+LABEL2=Unit
+LABEL3=Collection
+LABEL4=Tray
+PREFIX=GR
+DEF_CNTRYID=171
+SHOWBALANCE=YES
+DEF_LBLTYPE=4.5 cm x 3.5 cm labels
+LABEL_TITLE=WHEAT GENETIC RESOURCES CENTER
+LABEL_LOGO=D:\ICIS5\EXES\images\CIMMYT_Logo.bmp
+</pre>
+<a name="RETRIEVER" id="RETRIEVER"></a><h2> <span class="mw-headline"> RETRIEVER </span></h2>
+<pre>[RETRIEVER]
+#**********************************************************************
+#  File - the full path and file name of the ICIS retriever
+#********************************************************************** 
+File=
+</pre>
+<a name="HELPINI" id="HELPINI"></a><h2> <span class="mw-headline"> HELPINI </span></h2>
+<pre>[HELPINI]
+#*******************************************************************
+# IniPath - indicates the directory path where HELP (.INI) file is located
+# IniFileName - indicates the name of the HELP (.INI) file 
+#*******************************************************************
+IniPath=
+IniFileName=
+</pre>
+<a name="GMSSRCH" id="GMSSRCH"></a><h2> <span class="mw-headline"> GMSSRCH </span></h2>
+<pre>[GMSSRCH] 
+#**************************************************************
+# LOCAL_DB_SEARCH - Sets the default sign of the
+#                   GID searched (i.e. YES for negative)      
+# 
+# DEF_CASE_FOR_NAME_SEARCH - indicates the default case for Name
+#                            Search (e.g. UPPER,LOWER,ANY)
+#
+# DEF_TAB - sets the active tabpage at start up:
+#           (i.e. Names/Attributes, Relatives, Neighborhood)
+# ALPHASORT_NAME - sets the default sorting order of the 
+#                  searchname result(i.e. YES - sorted,
+#                                    NO - not sorted)  
+#
+# STUDYSQL - sql statement to use for retrieving DMS data
+#
+#**************************************************************
+LOCAL_DB_SEARCH=
+DEF_CASE_FOR_NAME_SEARCH=
+DEF_TAB=
+ALPHASORT_NAME=
+STUDYSQL=
+</pre>
+<a name="GEMS_Catalog" id="GEMS_Catalog"></a><h2> <span class="mw-headline">GEMS Catalog</span></h2>
+<pre>#**********************************************************************
+#[GEMS Catalog]
+#  File - the full path and file name of the GEMS Catalog application
+[GEMS Catalog]
+File=
+</pre>
+<!-- 
+NewPP limit report
+Preprocessor node count: 11/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+<div class="printfooter">
+Retrieved from "<a href="http://localhost../../../../articles/t/d/m/TDM_Application_INI_File_5.5_b3eb.html">http://localhost../../../../articles/t/d/m/TDM_Application_INI_File_5.5_b3eb.html</a>"</div>
+						<!-- end content -->
+						<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<div class="pBody">
+			<ul>
+	
+				 <li id="ca-nstab-main" class="selected"><a href="../../../../articles/t/d/m/TDM_Application_INI_File_5.5_b3eb.html" title="View the content page [c]" accesskey="c">Page</a></li>
+				 <li id="ca-talk" class="new"><a href="../../../../articles/t/d/m/Talk%7ETDM_Application_INI_File_5.5_0ae9.html" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				 <li id="ca-viewsource"><a href="../../../../articles/t/d/m/TDM_Application_INI_File_5.5_b3eb.html" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				 <li id="ca-history"><a href="../../../../articles/t/d/m/TDM_Application_INI_File_5.5_b3eb.html" title="Past versions of this page [h]" accesskey="h">History</a></li>			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="../../../../articles/u/s/e/Special%7EUserLogin_94cd.html" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(../../../../misc/icis-wiki3.png);" href="../../../../index.html" title="Visit the main page [z]" accesskey="z"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class='generated-sidebar portlet' id='p-navigation'>
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="../../../../index.html" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
+				<li id="n-portal"><a href="../../../../articles/c/o/m/ICISWiki%7ECommunity_Portal_7449.html" title="About the project, what you can do, where to find things">Community portal</a></li>
+				<li id="n-recentchanges"><a href="../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+				<li id="n-help"><a href="../../../../articles/c/o/n/Help%7EContents_22de.html" title="The place to find out">Help</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="../../../../articles/s/e/a/Special%7ESearch_a8e5.html" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" title="Search ICISWiki [f]" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="../../../../articles/w/h/a/Special%7EWhatLinksHere_TDM_Application_INI_File_5.5_1aa3.html" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="../../../../articles/r/e/c/Special%7ERecentChangesLinked_TDM_Application_INI_File_5.5_ba5a.html" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+<li id="t-specialpages"><a href="../../../../articles/s/p/e/Special%7ESpecialPages_f12b.html" title="List of all special pages [q]" accesskey="q">Special pages</a></li>
+				<li id="t-print"><a href="../../../../articles/t/d/m/TDM_Application_INI_File_5.5_b3eb.html" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>				<li id="t-permalink"><a href="../../../../articles/t/d/m/TDM_Application_INI_File_5.5_b3eb.html" title="Permanent link to this version of the page">Permanent link</a></li>			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="../../../../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" /></a></div>
+				<div id="f-copyrightico"><a href="../../../../../COPYING.html"><img src="/icis/skins/common/images/gnu-fdl.png" alt='GNU Free Documentation License 1.2' /></a></div>
+			<ul id="f-list">
+					<li id="credits">This page was last modified 05:33, 26 January 2009 by <a href="../../../../articles/m/h/a/User%7EMhabito_276f.html" title="User:Mhabito">Maria Corina de Luna Habito</a>. Based on work by <a href="../../../../articles/c/p/i/User%7ECpimentel_117e.html" title="User:Cpimentel">Clarissa Pimentel</a>,&#32;<a href="../../../../articles/a/p/o/User%7EAportugal_745d.html" title="User:Aportugal">Arllet Portugal</a>,&#32;<a href="../../../../articles/l/s/i/User%7ELsison_43a8.html" title="User:Lsison">Beth Sison</a>&#32;and&#32;<a href="../../../../articles/g/m/c/User%7EGmclaren_b845.html" title="User:Gmclaren">Graham McLaren</a>.</li>
+					<li id="copyright">Content is available under <a href="../../../../../COPYING.html" class="external " title="../../../../../COPYING.html">GNU Free Documentation License 1.2</a>.</li>
+					<li id="privacy"><a href="../../../../articles/p/r/i/ICISWiki%7EPrivacy_policy_0cbf.html" title="ICISWiki:Privacy policy">Privacy policy</a></li>
+					<li id="about"><a href="../../../../articles/a/b/o/ICISWiki%7EAbout_53aa.html" title="ICISWiki:About">About ICISWiki</a></li>
+					<li id="disclaimer"><a href="../../../../articles/g/e/n/ICISWiki%7EGeneral_disclaimer_9129.html" title="ICISWiki:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+</div>
+
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served in 302.294 secs. --></body></html>

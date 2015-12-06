@@ -1,0 +1,1160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta name="generator" content="MediaWiki 1.14.0" />
+		<meta name="keywords" content="Bulk Loading of Isozyme data using postgreSQL,Loading Isozyme Data by Locus Effect (PostgreSQL),Gems postgreSQL template" />
+		<link rel="shortcut icon" href="../../../../misc/favicon.ico" />
+		<link rel="search" type="application/opensearchdescription+xml" href="../../../../../opensearch_desc.php" title="ICISWiki (en)" />
+		<link title="Creative Commons" type="application/rdf+xml" href="../../../../articles/b/u/l/Bulk_Loading_of_Isozyme_data_using_postgreSQL_fb62.html" rel="alternate meta" />
+		<link rel="copyright" href="../../../../../COPYING.html" />
+		<link rel="alternate" type="application/rss+xml" title="ICISWiki RSS Feed" href="http://localhost../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" />
+		<link rel="alternate" type="application/atom+xml" title="ICISWiki Atom Feed" href="http://localhost../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" />
+		<title>Bulk Loading of Isozyme data using postgreSQL - ICISWiki</title>
+		<link rel="stylesheet" href="../../../../skins/common/shared.css?195" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../../../../skins/common/commonPrint.css?195" type="text/css" media="print" />
+		<link rel="stylesheet" href="../../../../skins/monobook/main.css?195" type="text/css" media="screen" />
+		<!--[if lt IE 5.5000]><link rel="stylesheet" href="../../../../skins/monobook/IE50Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 5.5000]><link rel="stylesheet" href="../../../../skins/monobook/IE55Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 6]><link rel="stylesheet" href="../../../../skins/monobook/IE60Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 7]><link rel="stylesheet" href="../../../../skins/monobook/IE70Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7ECommon.css?195" type="text/css" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7EPrint.css?195" type="text/css" media="print" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7EMonobook.css?195" type="text/css" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/gen.css?195" type="text/css" />
+		<!--[if lt IE 7]><script type="text/javascript" src="../../../../skins/common/IEFixes.js?195"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+
+		<script type= "text/javascript">/*<![CDATA[*/
+		var skin = "monobook";
+		var stylepath = "../../../../skins";
+		var wgArticlePath = "../../../../$1";
+		var wgScriptPath = "../../../../..";
+		var wgScript = "/icis/index.php";
+		var wgVariantArticlePath = false;
+		var wgActionPaths = {};
+		var wgServer = "http://localhost";
+		var wgCanonicalNamespace = "";
+		var wgCanonicalSpecialPageName = false;
+		var wgNamespaceNumber = 0;
+		var wgPageName = "Bulk_Loading_of_Isozyme_data_using_postgreSQL";
+		var wgTitle = "Bulk Loading of Isozyme data using postgreSQL";
+		var wgAction = "view";
+		var wgArticleId = "815";
+		var wgIsArticle = true;
+		var wgUserName = null;
+		var wgUserGroups = null;
+		var wgUserLanguage = "en";
+		var wgContentLanguage = "en";
+		var wgBreakFrames = false;
+		var wgCurRevisionId = "1925";
+		var wgVersion = "1.14.0";
+		var wgEnableAPI = true;
+		var wgEnableWriteAPI = true;
+		var wgSeparatorTransformTable = ["", ""];
+		var wgDigitTransformTable = ["", ""];
+		var wgRestrictionEdit = [];
+		var wgRestrictionMove = [];
+		/*]]>*/</script>
+
+		<script type="text/javascript" src="../../../../skins/common/wikibits.js?195"><!-- wikibits js --></script>
+		<!-- Head Scripts -->
+		<script type="text/javascript" src="../../../../raw/gen.js"><!-- site js --></script>
+	</head>
+<body class="mediawiki ltr ns-0 ns-subject page-Bulk_Loading_of_Isozyme_data_using_postgreSQL skin-monobook">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 id="firstHeading" class="firstHeading">Bulk Loading of Isozyme data using postgreSQL</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From ICISWiki</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>			<!-- start content -->
+			<table id="toc" class="toc" summary="Contents"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1"><a href="#SET_UP_THE_INSTALLATION"><span class="tocnumber">1</span> <span class="toctext">SET UP THE INSTALLATION</span></a></li>
+<li class="toclevel-1"><a href="#DATA_PREPARATION_FOR_LOADING_THE_ALLELE_EFFECT"><span class="tocnumber">2</span> <span class="toctext">DATA PREPARATION FOR LOADING THE ALLELE EFFECT</span></a>
+<ul>
+<li class="toclevel-2"><a href="#create_the_isoser_allele_table"><span class="tocnumber">2.1</span> <span class="toctext">create the isoser_allele table</span></a></li>
+<li class="toclevel-2"><a href="#Populate_the_ISOSER_ALLELE_table"><span class="tocnumber">2.2</span> <span class="toctext">Populate the ISOSER_ALLELE table</span></a></li>
+<li class="toclevel-2"><a href="#Make_sure_all_the_distinct_loci_are_identified_in_the_gems_locname"><span class="tocnumber">2.3</span> <span class="toctext">Make sure all the distinct loci are identified in the gems_locname</span></a></li>
+<li class="toclevel-2"><a href="#Complete_other_gems_information_as_required."><span class="tocnumber">2.4</span> <span class="toctext">Complete other gems information as required.</span></a></li>
+<li class="toclevel-2"><a href="#Update_MVID_and_PDID_in_the_ISOSER_ALLELE_table"><span class="tocnumber">2.5</span> <span class="toctext">Update MVID and PDID in the ISOSER_ALLELE table</span></a></li>
+<li class="toclevel-2"><a href="#Look_for_putative_heterozygotes_and_change_its_frequency_to_0.5."><span class="tocnumber">2.6</span> <span class="toctext">Look for putative heterozygotes and change its frequency to 0.5.</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#SET_UP_THE_STUDY"><span class="tocnumber">3</span> <span class="toctext">SET UP THE STUDY</span></a></li>
+<li class="toclevel-1"><a href="#LOADING_THE_SAMPLE_ALLELE"><span class="tocnumber">4</span> <span class="toctext">LOADING THE SAMPLE ALLELE</span></a>
+<ul>
+<li class="toclevel-2"><a href="#Define_the_allele_factor_.28MVID.29_in_the_FACTOR_table_and_allele_.28MVNAME.29_label"><span class="tocnumber">4.1</span> <span class="toctext">Define the allele factor (MVID) in the FACTOR table and allele (MVNAME) label</span></a></li>
+<li class="toclevel-2"><a href="#Define_the_Sample_by_Allele_effect_in_the_EFFECT_table"><span class="tocnumber">4.2</span> <span class="toctext">Define the Sample by Allele effect in the EFFECT table</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#SET_UP_THE_FACTOR_LEVELS"><span class="tocnumber">5</span> <span class="toctext">SET UP THE FACTOR LEVELS</span></a>
+<ul>
+<li class="toclevel-2"><a href="#Set_up_the_SAMPLENO__factor"><span class="tocnumber">5.1</span> <span class="toctext">Set up the SAMPLENO  factor</span></a></li>
+<li class="toclevel-2"><a href="#Set_up_the_MVID_factor"><span class="tocnumber">5.2</span> <span class="toctext">Set up the MVID factor</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#SET_UP_THE_OBSERVATION_UNITS_FOR_THE_SAMPLE_ALLELE"><span class="tocnumber">6</span> <span class="toctext">SET UP THE OBSERVATION UNITS FOR THE SAMPLE ALLELE</span></a>
+<ul>
+<li class="toclevel-2"><a href="#Update_the_ISOSER_ALLELE"><span class="tocnumber">6.1</span> <span class="toctext">Update the ISOSER_ALLELE</span></a></li>
+<li class="toclevel-2"><a href="#Update_OUNITID_field_in_ISOSER_ALLELE_table"><span class="tocnumber">6.2</span> <span class="toctext">Update OUNITID field in ISOSER_ALLELE table</span></a></li>
+<li class="toclevel-2"><a href="#Append_STUDY.2CSAMPLENO_and_MVID_observation_units_to_the_OINDEX_tables."><span class="tocnumber">6.3</span> <span class="toctext">Append STUDY,SAMPLENO and MVID observation units to the OINDEX tables.</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#ADD_THE_FREQUENCY_IN_THE_DATA_TABLE"><span class="tocnumber">7</span> <span class="toctext">ADD THE FREQUENCY IN THE DATA TABLE</span></a></li>
+<li class="toclevel-1"><a href="#LOADING_THE_SAMPLE_BY_LOCUS_DATA"><span class="tocnumber">8</span> <span class="toctext">LOADING THE SAMPLE BY LOCUS DATA</span></a></li>
+</ul>
+</td></tr></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </script>
+<a name="SET_UP_THE_INSTALLATION" id="SET_UP_THE_INSTALLATION"></a><h2> <span class="mw-headline"> SET UP THE INSTALLATION </span></h2>
+<ul><li> Start with a local GMS+DMS template. A script for building a postgreSQL icislocal database template is at <a href="http://cropforge.irri.org/frs/?group_id=5" class="external free" title="http://cropforge.irri.org/frs/?group_id=5" rel="nofollow">http://cropforge.irri.org/frs/?group_id=5</a> under the Schema sublevel.
+</li><li> Identify the installation in the INSTLN table and local users in the USERS table if necessary 
+</li><li> Import the GEMS tables. <a href="../../../../articles/g/e/m/Gems_postgreSQL_template_c71d.html" class="new" title="Gems postgreSQL template (page does not exist)">Here</a> is the script for building the GEMS database template.
+</li><li> Export the ISO table from MS Access to PostgreSQL. ISO table can be exported in two ways: Using an ODBC connection and exporting the table in ASCII format. It can also be imported using a 3rd party software(downloadable)that can convert MS Access database to PostgreSQL. 
+<ul><li> USING ODBC connection
+<ul><li>Download and install an ODBC driver
+</li><li>Create a System Data Source to the PostgreSQL server
+</li><li>From Microsoft Access, export the ISO table into the newly created SDN
+</li></ul>
+</li><li>ASCII format 
+<ul><li>From Microsoft Access, export the ISO table into text format (can be tab delimited or comma delimited or any user-defined delimiter)
+</li><li>From postgreSQL, create a table with the same definition as the ISO table
+</li></ul>
+</li></ul>
+</li></ul>
+<pre>CREATE TABLE "ISO"
+(order_adj float8 default 0,
+ order_accno float8 default 0,
+ order_merge float8 default 0,
+ supplier varchar(254),
+ date varchar(254),
+ "ORIGIN" int4,
+ ori_country_given varchar(254),
+ ori_country varchar(254),
+ prov_given varchar(254),
+ prov varchar(254),
+ tradtype varchar(254),
+ "GID" int4 default 0,
+ accno_given float8 default 0,
+ accno_guess float8 default 0,
+ accno_all float8 default 0,
+ var_name_given varchar(254),
+ varname varchar(254),
+ prev_name varchar(254),
+ prev_value varchar(254),
+ gm_source varchar(254),
+ accno_other float8 default 0,
+ remarks varchar(254),
+ test_no float8 default 0,
+ test_no_ed float8 default 0,
+ adh1 varchar(254),
+ adh1_0 float8 default 0,
+ adh1_1 float8 default 0,
+ adh1_2 float8 default 0,
+ adh1_3 float8 default 0, 
+ amp1 varchar(254),
+ amp1_0 float8 default 0,
+ amp1_1 float8 default 0,
+ amp1_2 float8 default 0,
+ amp1_3 float8 default 0,
+ amp1_4 float8 default 0,
+ amp1_5 float8 default 0,
+ amp1_6 float8 default 0,
+ amp2 varchar(254),
+ amp2_0 float8 default 0,
+ amp2_1 float8 default 0,
+ amp2_2 float8 default 0,
+ amp2_3 float8 default 0,
+ amp2_4 float8 default 0,
+ amp3 varchar(254),
+ amp3_0 float8 default 0,
+ amp3_1 float8 default 0,
+ amp3_2 float8 default 0,
+ amp3_3 float8 default 0,
+ amp3_4 float8 default 0,
+ amp3_5 float8 default 0,
+ amp3_6 float8 default 0,
+ amp4 varchar(254),
+ amp4_0 float8 default 0,
+ amp4_1 float8 default 0,
+ amp4_2 float8 default 0,
+ amp4_3 float8 default 0,
+ amp4_4 float8 default 0,
+ amp4_5 float8 default 0,
+ cat1 varchar(254),
+ cat1_0 float8 default 0,
+ cat1_1 float8 default 0,
+ cat1_2 float8 default 0,
+ cat1_3 float8 default 0,
+ est1 varchar(254),
+ est1_0 float8 default 0,
+ est1_1 float8 default 0,
+ est1_2 float8 default 0,
+ est2 varchar(254),
+ est2_0 float8 default 0,
+ est2_1 float8 default 0,
+ est2_2 float8 default 0,
+ est5 varchar(254),
+ est5_0 float8 default 0,
+ est5_1 float8 default 0,
+ est5_2 float8 default 0,
+ est9 varchar(254),
+ est9_0 float8 default 0,
+ est9_1 float8 default 0,
+ est9_2 float8 default 0,
+ enp1 varchar(254),
+ enp1_0 float8 default 0,
+ enp1_1 float8 default 0,
+ enp1_2 float8 default 0,
+ got1 varchar(254),
+ got1_1 float8 default 0,
+ got1_2 float8 default 0,
+ got1_3 float8 default 0,
+ got3 varchar(254),
+ got3_1 float8 default 0,
+ got3_2 float8 default 0,
+ got3_3 float8 default 0,
+ icd1 varchar(254),
+ icd1_1 float8 default 0,
+ icd1_2 float8 default 0,
+ icd1_3 float8 default 0,
+ pgd1 varchar(254),
+ pgd1_1 float8 default 0,
+ pgd1_2 float8 default 0,
+ pgd1_3 float8 default 0,
+ pgd2 varchar(254),
+ pgd2_1 float8 default 0,
+ pgd2_2 float8 default 0,
+ pgi1 varchar(254),
+ pgi1_0 float8 default 0,
+ pgi1_1 float8 default 0,
+ pgi1_2 float8 default 0,
+ pgi1_3 float8 default 0,
+ pgi1_4 float8 default 0,
+ pgi2 varchar(254),
+ pgi2_0 float8 default 0,
+ pgi2_1 float8 default 0,
+ pgi2_2 float8 default 0,
+ pgi2_3 float8 default 0,
+ pgi2_4 float8 default 0,
+ pgi2_5 float8 default 0,
+ sdh1 varchar(254),
+ sdh1_1 float8 default 0,
+ sdh1_2 float8 default 0,
+ sdh1_3 float8 default 0,
+ sdh1_4 float8 default 0,
+ sdh1_5 float8 default 0,
+ acp1 varchar(254),
+ acp1_0 float8 default 0,
+ acp1_1 float8 default 0,
+ acp1_2 float8 default 0,
+ acp1_3 float8 default 0,
+ mal1 varchar(254),
+ mal1_1 float8 default 0,
+ mal1_2 float8 default 0,
+ pox5 varchar(254),
+ pox5_1 float8 default 0,
+ pox5_2 float8 default 0,
+ vg_bc varchar(254),
+ vg varchar(254),
+ vg_algo varchar(254))
+</pre>
+<ul><li>insert the data from the ASCII file to the ISO table in PostgreSQL
+</li></ul>
+<pre>copy "ISO" from &lt;filename of the ASCII file&gt;
+</pre>
+<a name="DATA_PREPARATION_FOR_LOADING_THE_ALLELE_EFFECT" id="DATA_PREPARATION_FOR_LOADING_THE_ALLELE_EFFECT"></a><h2> <span class="mw-headline">DATA PREPARATION FOR LOADING THE ALLELE EFFECT </span></h2>
+<a name="create_the_isoser_allele_table" id="create_the_isoser_allele_table"></a><h3> <span class="mw-headline">create the isoser_allele table</span></h3>
+<ul><li>create the table with the following fields:
+</li></ul>
+<table border="1">
+
+<tr>
+<th>FIELD	</th><th>FIELD TYPE
+</th></tr>
+<tr>
+<td>ORDERNO</td><td>serial
+</td></tr>
+<tr>
+<td>OUNITID</td><td>int
+</td></tr>
+<tr>
+<td>SAMPLENO</td><td>int
+</td></tr>
+<tr>
+<td>GID</td><td>	int
+</td></tr>
+<tr>
+<td>SOURCE	</td><td>varchar (255)
+</td></tr>
+<tr>
+<td>ORIGIN</td><td>int
+</td></tr>
+<tr>
+<td>NAME</td><td>	varchar (255)
+</td></tr>
+<tr>
+<td>ALLELE	</td><td>varchar (50)
+</td></tr>
+<tr>
+<td>MVID</td><td>	int
+</td></tr>
+<tr>
+<td>PDID</td><td>	int
+</td></tr>
+<tr>
+<td>FREQ</td><td>	double precision
+</td></tr>
+<tr>
+<td>SNLEVEL</td><td>	int
+</td></tr>
+<tr>
+<td>SNVALUE</td><td>	double precision
+</td></tr>
+<tr>
+<td>MVLEVEL</td><td>	int
+</td></tr>
+<tr>
+<td>MVVALUE</td><td>	double precision
+</td></tr></table>
+<pre>CREATE TABLE isoser_allele (orderno serial,ounitid int ,sampleno double precision,
+gid int,source varchar(255),origin int ,name varchar(255),allele varchar(50),mvid int,
+pdid int ,freq double precision,snlevel int,snvalue double precision,mvlevel int ,
+mvvalue double precision)&nbsp;;
+</pre>
+<a name="Populate_the_ISOSER_ALLELE_table" id="Populate_the_ISOSER_ALLELE_table"></a><h3> <span class="mw-headline">Populate the ISOSER_ALLELE table</span></h3>
+<p>395528 records will be inserted into the isoser_allele table in approx. 5 mins.
+</p>
+<pre>BEGIN;
+INSERT INTO isoser_allele ( sampleno,gid, name,origin, source, allele, freq )
+SELECT temp.order_merge, temp."GID", temp.NAME, temp."ORIGIN", temp.source, 
+temp.ALLELE, temp.freq
+FROM (
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'acp1_0' 
+AS allele, acp1_0 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'acp1_1' 
+AS allele, acp1_1 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'acp1_2' 
+AS allele, acp1_2 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'acp1_3' 
+AS allele, acp1_3 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'adh1_0' 
+AS allele, adh1_0 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'adh1_1' 
+AS allele, adh1_1 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'adh1_2' 
+AS allele, adh1_2 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'adh1_3' 
+AS allele, adh1_3 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'amp1_0' 
+AS allele, amp1_0 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'amp1_1' 
+AS allele, amp1_1 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'amp1_2' 
+AS allele, amp1_2 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'amp1_3' 
+AS allele, amp1_3 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'amp1_4' 
+AS allele, amp1_4 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'amp1_5' 
+AS allele, amp1_5 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'amp1_6'
+AS allele, amp1_6 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'amp2_0'
+AS allele, amp2_0 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'amp2_1'
+AS allele, amp2_1 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'amp2_2'
+AS allele, amp2_2 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'amp2_3'
+AS allele, amp2_3 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'amp2_4'
+AS allele, amp2_4 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'amp3_0'
+AS allele, amp3_0 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'amp3_1'
+AS allele, amp3_1 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'amp3_2'
+AS allele, amp3_2 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'amp3_3'
+AS allele, amp3_3 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'amp3_4'
+AS allele, amp3_4 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'amp3_5'
+AS allele, amp3_5 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'amp3_6'
+AS allele, amp3_6 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'amp4_0'
+AS allele, amp4_0 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'amp4_1'
+AS allele, amp4_1 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'amp4_2'
+AS allele, amp4_2 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'amp4_3'
+AS allele, amp4_3 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'amp4_4'
+AS allele, amp4_4 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'amp4_5'
+AS allele, amp4_5 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'cat1_0'
+AS allele, cat1_0 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'cat1_1'
+AS allele, cat1_1 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'cat1_2'
+AS allele, cat1_2 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'cat1_3'
+AS allele, cat1_3 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'enp1_0'
+AS allele, enp1_0 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'enp1_1'
+AS allele, enp1_1 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'enp1_2'
+AS allele, enp1_2 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'est1_0'
+AS allele, est1_0 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'est1_1'
+AS allele, est1_1 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'est1_2'
+AS allele, est1_2 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'est2_0'
+AS allele, est2_0 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'est2_1'
+AS allele, est2_1 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'est2_2'
+AS allele, est2_2 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'est5_0'
+AS allele, est5_0 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'est5_1'
+AS allele, est5_1 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'est5_2'
+AS allele, est5_2 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'est9_0'
+AS allele, est9_0 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'est9_1'
+AS allele, est9_1 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'est9_2'
+AS allele, est9_2 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'got1_1'
+AS allele, got1_1 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'got1_2'
+AS allele, got1_2 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'got1_3'
+AS allele, got1_3 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'got3_1'
+AS allele, got3_1 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'got3_2'
+AS allele, got3_2 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'got3_3'
+AS allele, got3_3 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'icd1_1'
+AS allele, icd1_1 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'icd1_2'
+AS allele, icd1_2 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'icd1_3'
+AS allele, icd1_3 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'mal1_1'
+AS allele, mal1_1 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'mal1_2'
+AS allele, mal1_2 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'pgd1_1'
+AS allele, pgd1_1 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'pgd1_2'
+AS allele, pgd1_2 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'pgd1_3'
+AS allele, pgd1_3 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'pgd2_1'
+AS allele, pgd2_1 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'pgd2_2'
+AS allele, pgd2_2 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'pgi1_0'
+AS allele, pgi1_0 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'pgi1_1'
+AS allele, pgi1_1 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'pgi1_2'
+AS allele, pgi1_2 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'pgi1_3'
+AS allele, pgi1_3 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'pgi1_4'
+AS allele, pgi1_4 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'pgi2_0'
+AS allele, pgi2_0 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'pgi2_1'
+AS allele, pgi2_1 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'pgi2_2'
+AS allele, pgi2_2 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'pgi2_3'
+AS allele, pgi2_3 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'pgi2_4'
+AS allele, pgi2_4 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'pgi2_5'
+AS allele, pgi2_5 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'pox5_1'
+AS allele, pox5_1 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'pox5_2'
+AS allele, pox5_2 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'sdh1_1'
+AS allele, sdh1_1 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'sdh1_2'
+AS allele, sdh1_2 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'sdh1_3'
+AS allele, sdh1_3 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'sdh1_4'
+AS allele, sdh1_4 AS freq FROM "ISO" UNION ALL
+SELECT order_merge,"GID",varname as name,"ORIGIN",supplier as source, 'sdh1_5'
+AS allele, sdh1_5 AS freq FROM "ISO" ) AS temp
+WHERE (((temp."ORIGIN") Is Not Null) AND ((temp.freq)=1));
+COMMIT;
+</pre>
+<a name="Make_sure_all_the_distinct_loci_are_identified_in_the_gems_locname" id="Make_sure_all_the_distinct_loci_are_identified_in_the_gems_locname"></a><h3> <span class="mw-headline">Make sure all the distinct loci are identified in the gems_locname </span></h3>
+<ul><li>Create iso_mvnames table
+</li></ul>
+<pre>CREATE TABLE iso_mvnames (mvid serial,levelno int ,mvname varchar (50)); 
+</pre>
+<ul><li>Append distinct alleles in the isoser_allele table. Inserts 85 distinct alleles to iso_mvnames table.
+</li></ul>
+<pre>BEGIN;
+INSERT INTO iso_mvnames ( mvname )
+SELECT DISTINCT allele AS expr1
+FROM isoser_allele ORDER BY allele;
+COMMIT;
+</pre>
+<ul><li>Create ISO_LOCUS  table. This table contains the distinct locus.
+</li></ul>
+<pre>CREATE TABLE iso_locus ( locusid serial, lname varchar (255),ltype varchar (50));
+</pre>
+<ul><li>Append  distinct locus  to the ISO_LOCUS table. Appends 22 distinct locus to the table
+</li></ul>
+<pre>INSERT INTO iso_locus ( lname, ltype) 
+SELECT DISTINCT substr(allele,1,instr(allele,'_')-1) AS Expr1, 'allele' AS Expr2 
+FROM isoser_allele;
+</pre>
+<ul><li>Append the locus in ISO_LOCUS table in gems_locus table. Appends distinct locus to the gems_table. It first gets the maximum value of locusid in the gems_locus table (offset). The new record's locusid value is equal to the iso_locus.locusid + the offset value.
+</li></ul>
+<pre>BEGIN;
+INSERT INTO gems_locname ( locusid, lnval ) SELECT newlocus, lname
+FROM(
+     SELECT (SELECT (case  when max(gems_locname.locusid) is  null 
+                     then 0 
+                     else max(gems_locname.locusid)
+                     end )as maxlocus
+FROM gems_locname as Y)+ locusid AS newlocus, lname FROM iso_locus) AS x;
+COMMIT;
+</pre>
+<a name="Complete_other_gems_information_as_required." id="Complete_other_gems_information_as_required."></a><h3> <span class="mw-headline">Complete other gems information as required. </span></h3>
+<p>Populate the tables gems_mvnames, gems_mv, gems_pd and gems_locus tables.
+</p>
+<ul><li>Append MVNAMES from ISO_MVNAMES to gems_mvnames. 85 new allele names will be appended to the gems_mvnames table. 
+</li></ul>
+<pre>BEGIN;
+INSERT INTO gems_mvnames ( mvid, mvnval ) 
+SELECT newmv, mvname
+FROM(
+     SELECT (SELECT (case  when max(gems_mvnames.mvid) is  null 
+                     then 0 
+                     else max(gems_mvnames.mvid)
+                     end )as maxvid
+FROM gems_mvnames as Y)+ mvid AS newmv, mvname FROM iso_mvnames) AS x;
+COMMIT;
+</pre>
+<ul><li>Append 'unobserved' allele names to gems_mvnames table.  Unobserved alleles can also be encoded directly into the gems_mvnames table. In this case, the allele pgi1_3 is considered as 'unobserved' as there is not enought information in the ISO table about this allele.
+</li></ul>
+<pre>INSERT INTO gems_mvnames ( mvid, mvnval ) VALUES (86, 'pgi1_3');
+</pre>
+<ul><li>Append pdid and pdtype to gems_pd tables 
+</li></ul>
+<pre>INSERT INTO gems_pd ( pdid, pdtype ) SELECT locusid, 'isozyme' FROM gems_locname;
+</pre>
+<ul><li>Append MVIDs to gems_mv table. This will insert 86 records.
+</li></ul>
+<pre>BEGIN;
+INSERT INTO gems_mv ( mvid, mvtype, pdid ) 
+SELECT gems_mvnames.mvid, iso_locus.ltype, iso_locus.locusid
+FROM iso_locus, gems_mvnames
+WHERE iso_locus.lname =substr(gems_mvnames.mvnval,1, strpos(gems_mvnames.mvnval,'_')-1);
+COMMIT;
+</pre>
+<ul><li>Append locus to gems_locus table 
+</li></ul>
+<pre>BEGIN;
+INSERT INTO gems_locus ( mvid, locusid, pdid )
+SELECT gems_mvnames.mvid, gems_locname.locusid, gems_mv.pdid
+FROM gems_locname, gems_mv,gems_mvnames 
+WHERE ((gems_mv.mvid = gems_mvnames.mvid) AND (gems_locname.locusid =gems_mv.pdid)AND
+(gems_locname.lnval=substr(gems_mvnames.mvnval,1, strpos(gems_mvnames.mvnval,'_')-1)));	
+COMMIT;
+</pre>
+<a name="Update_MVID_and_PDID_in_the_ISOSER_ALLELE_table" id="Update_MVID_and_PDID_in_the_ISOSER_ALLELE_table"></a><h3> <span class="mw-headline">Update MVID and PDID in the ISOSER_ALLELE table</span></h3>
+<ul><li>Update MVID field in the ISOSER_ALLELE table
+</li></ul>
+<pre>BEGIN;
+UPDATE isoser_allele
+SET mvid = gems_mvnames.mvid from gems_mvnames
+WHERE gems_mvnames.mvnval=isoser_allele.allele;
+COMMIT;
+</pre>
+<ul><li>Update the PDID field in the ISOSER_ALLELE table
+</li></ul>
+<pre>BEGIN;
+UPDATE  isoser_allele
+SET pdid = gems_mv.pdid from gems_mv
+WHERE gems_mv.mvid = isoser_allele.mvid&nbsp;;
+COMMIT;
+</pre>
+<a name="Look_for_putative_heterozygotes_and_change_its_frequency_to_0.5." id="Look_for_putative_heterozygotes_and_change_its_frequency_to_0.5."></a><h3> <span class="mw-headline">Look for putative heterozygotes and change its frequency to 0.5. </span></h3>
+<pre>BEGIN;
+UPDATE isoser_allele 
+SET freq = 0.5 from (SELECT b.sampleno AS sampleno, b.pdid, Count(b.sampleno) AS sncount
+                     FROM isoser_allele AS b GROUP BY b.sampleno, b.pdid 
+                     HAVING (((Count(b.sampleno))&gt;1)))as c 
+WHERE c.sampleno = isoser_allele.sampleno AND c.sncount =2 and c.pdid = isoser_allele.pdid;
+COMMIT;
+</pre>
+<a name="SET_UP_THE_STUDY" id="SET_UP_THE_STUDY"></a><h2> <span class="mw-headline">SET UP THE STUDY</span></h2>
+<p>It is assumed that the tables STUDY, FACTOR,LEVEL_C, EFFECT and OINDEX are empty.
+</p>
+<ul><li>Set up the study in the study table
+</li></ul>
+<table border="1" cellpadding="2">
+<tr>
+<th> STUDYID
+</th><th> SNAME
+</th><th> PMKEY
+</th><th> TITLE
+</th><th> OBJECTIV
+</th><th> INVESTID
+</th><th> STYPE
+</th><th> SDATE
+</th><th> EDATE
+</th></tr>
+<tr>
+<td align="center"> -1
+</td><td align="center"> ISOZYME04
+</td><td align="center"> 0
+</td><td align="center"> ISOZYME04
+</td><td align="center"> -
+</td><td align="center"> 0
+</td><td align="center"> E
+</td><td align="center"> 0
+</td><td align="center"> 0
+</td></tr></table>
+<pre>INSERT INTO study ( studyid, sname, pmkey, title, objectiv, investid, stype,
+sdate,edate) VALUES (-1, 'isozyme04', 0, 'isozyme04', '-', 0, 'E', 0, 0);
+</pre>
+<ul><li>Define the study factor in the FACTOR table (look up the appropriate TRAITID SCALEID and TMETHID in the central TRAIT , SCALE and TMETHOD tables) LTYPE is C for character since the study name is used as the study level. 
+</li></ul>
+<table border="1" cellpadding="2">
+<tr>
+<th> LABELID
+</th><th> FACTORID
+</th><th> FNAME
+</th><th> STUDYID
+</th><th> TRAITID
+</th><th> SCALEID
+</th><th> TMETHID
+</th><th> LTYPE
+</th></tr>
+<tr>
+<td align="center"> -1
+</td><td align="center"> -1
+</td><td align="center"> STUDY
+</td><td align="center"> -1
+</td><td align="center"> 201
+</td><td align="center"> 134
+</td><td align="center"> 123
+</td><td align="center"> C
+</td></tr></table>
+<pre>INSERT INTO factor ( labelid, factorid, fname, studyid, traitid, scaleid,
+     tmethid,ltype )VALUES (-1 , -1, 'STUDY' , -1 , 201 , 134 , 123, 'C');
+</pre>
+<ul><li>Define the study level in the LEVEL_C table. 
+</li></ul>
+<table border="1" cellpadding="2">
+<tr>
+<th> LABELID
+</th><th> FACTORID
+</th><th> LEVELNO
+</th><th> LVALUE
+</th></tr>
+<tr>
+<td align="center"> -1
+</td><td align="center"> -1
+</td><td align="center"> -1
+</td><td align="center"> ISOZYME04
+</td></tr></table>
+<pre>INSERT INTO LEVEL_C ( labelid, factorid, levelno, lvalue )
+             VALUES (-1 , -1 , -1 , 'ISOZYME04');
+</pre>
+<ul><li>Define the study effect in the EFFECT table. 
+</li></ul>
+<table border="1" cellpadding="2">
+<tr>
+<th> REPRESNO
+</th><th> FACTORID
+</th><th> EFFECTID
+</th></tr>
+<tr>
+<td align="center"> -1
+</td><td align="center"> -1
+</td><td align="center"> -1
+</td></tr></table>
+<pre>INSERT INTO effect ( represno, factorid, effectid ) 
+            VALUES (-1 , -1, -1);
+</pre>
+<ul><li>Define the observation units for the study effect in the OINDEX table. There is only one since the factor study has only one level and effect -1 is only indexed by the study factor.
+</li></ul>
+<pre>INSERT INTO oindex ( ounitid, factorid, levelno, represno ) 
+            VALUES (-1, -1, -1, -1);
+</pre>
+<p>There are no variates measured at the study level, and there are no labels of the Study factor so we are finished with defining the study.
+</p>
+<a name="LOADING_THE_SAMPLE_ALLELE" id="LOADING_THE_SAMPLE_ALLELE"></a><h2> <span class="mw-headline">LOADING THE SAMPLE ALLELE</span></h2>
+<ul><li>VARIATE table is also assumed to be empty. Define the FREQ variate in the VARIATE table. look up the TRAITID, SCALEID and TMETHID in the central tables or assign new ones with negative IDs in the local TRAIT, SCALE and TMETHOD tables. 
+</li></ul>
+<table border="1" cellpadding="2">
+<tr>
+<th> VARIATID
+</th><th> VNAME
+</th><th> STUDYID
+</th><th> VTYPE
+</th><th> TRAITID
+</th><th> SCALEID
+</th><th> TMETHID
+</th><th> DTYPE
+</th></tr>
+<tr>
+<td align="center"> -1
+</td><td align="center"> FREQ
+</td><td align="center"> -1
+</td><td align="center"> MV
+</td><td align="center"> 501
+</td><td align="center"> 508
+</td><td align="center"> 508
+</td><td align="center"> N
+</td></tr></table>
+<pre>INSERT INTO variate ( variatid, vname, studyid, vtype, traitid, scaleid, tmethid,
+dtype )VALUES (-1, 'FREQ', -1, 'MV', 501, 508, 508, 'N');
+</pre>
+<ul><li>Define the Sample No factor in the factor table and add GID as a label. (Note SampleNo:GID is Many:one) and the factor must have unique levels so Sample No is the factor. 
+</li></ul>
+<table border="1" cellpadding="2">
+<tr>
+<th> LABELID
+</th><th> FACTORID
+</th><th> FNAME
+</th><th> STUDYID
+</th><th> TRAITID
+</th><th> SCALEID
+</th><th> TMETHID
+</th><th> LTYPE
+</th></tr>
+<tr>
+<td align="center"> -3
+</td><td align="center"> -2
+</td><td align="center"> GID
+</td><td align="center"> -1
+</td><td align="center"> 251
+</td><td align="center"> 91
+</td><td align="center"> 17
+</td><td align="center"> N
+</td></tr>
+<tr>
+<td align="center"> -2
+</td><td align="center"> -2
+</td><td align="center"> SAMPLENO
+</td><td align="center"> -1
+</td><td align="center"> 212
+</td><td align="center"> 219
+</td><td align="center"> 17
+</td><td align="center"> N
+</td></tr>
+<tr>
+<td align="center"> -4
+</td><td align="center"> -2
+</td><td align="center"> NAME
+</td><td align="center"> -1
+</td><td align="center"> 251
+</td><td align="center"> 92
+</td><td align="center"> 17
+</td><td align="center"> C
+</td></tr>
+<tr>
+<td align="center"> -5
+</td><td align="center"> -2
+</td><td align="center"> ORIGIN
+</td><td align="center"> -1
+</td><td align="center"> 215
+</td><td align="center"> 95
+</td><td align="center"> 17
+</td><td align="center"> N
+</td></tr>
+<tr>
+<td align="center"> -6
+</td><td align="center"> -2
+</td><td align="center"> SOURCE
+</td><td align="center"> -1
+</td><td align="center"> 251
+</td><td align="center"> 104
+</td><td align="center"> 17
+</td><td align="center"> C
+</td></tr></table>
+<p>SAMPLENO-- 
+</p>
+<pre>INSERT INTO factor ( labelid, factorid, fname, studyid, traitid, scaleid, tmethid,
+ltype ) VALUES (-2, -2, 'SAMPLENO' , -1, 212, 219, 17, 'N');
+</pre>
+<p>GID--	
+</p>
+<pre>INSERT INTO factor ( labelid, factorid, fname, studyid, traitid, scaleid, tmethid, ltype )   
+VALUES (-3, -2, 'GID' , -1, 251, 91, 17, 'N');
+</pre>
+<p>NAME--
+</p>
+<pre>INSERT INTO factor ( labelid, factorid, fname, studyid, traitid, scaleid, tmethid, ltype ) 
+</pre>
+<p>	VALUES (-4, -2, 'NAME' , -1, 251, 92, 17, 'C');
+ORIGIN--
+</p>
+<pre>INSERT INTO factor ( labelid, factorid, fname, studyid, traitid, scaleid, tmethid, ltype ) 
+ 		VALUES (-5, -2, 'ORIGIN' , -1, 215, 95, 17, 'N');
+</pre>
+<p>SOURCE
+</p>
+<pre>INSERT INTO factor ( labelid, factorid, fname, studyid, traitid, scaleid, tmethid, ltype ) 
+       	VALUES (-6, -2, 'SOURCE' , -1, 251, 104, 17, 'C');
+</pre>
+<a name="Define_the_allele_factor_.28MVID.29_in_the_FACTOR_table_and_allele_.28MVNAME.29_label" id="Define_the_allele_factor_.28MVID.29_in_the_FACTOR_table_and_allele_.28MVNAME.29_label"></a><h3> <span class="mw-headline">Define the allele factor (MVID) in the FACTOR table and allele (MVNAME) label</span></h3>
+<ul><li> Define the allele factor (MVID) in the FACTOR table
+</li></ul>
+<table border="1" cellpadding="2">
+<tr>
+<th> LABELID
+</th><th> FACTORID
+</th><th> FNAME
+</th><th> STUDYID
+</th><th> TRAITID
+</th><th> SCALEID
+</th><th> TMETHID
+</th><th> LTYPE
+</th></tr>
+<tr>
+<td align="center"> -7
+</td><td align="center"> -7
+</td><td align="center"> MVID
+</td><td align="center"> -1
+</td><td align="center"> 501
+</td><td align="center"> 503
+</td><td align="center"> 17
+</td><td align="center"> N
+</td></tr>
+<tr>
+<td align="center"> -8
+</td><td align="center"> -7
+</td><td align="center"> ALLELE
+</td><td align="center"> -1
+</td><td align="center"> 501
+</td><td align="center"> 520
+</td><td align="center"> 17
+</td><td align="center"> C
+</td></tr></table>
+<pre>INSERT INTO factor ( labelid, factorid, fname, studyid, traitid, scaleid, tmethid, ltype ) 
+       	VALUES (-7, -7, 'MVID' , -1, 501, 503, 17, 'N');
+</pre>
+<p>MVNAME (ALLELE)	
+</p>
+<pre>INSERT INTO factor ( labelid, factorid, fname, studyid, traitid, scaleid, tmethid, ltype ) 
+              VALUES (-8, -7, 'ALLELE' , -1, 501, 520, 17, 'C');
+</pre>
+<a name="Define_the_Sample_by_Allele_effect_in_the_EFFECT_table" id="Define_the_Sample_by_Allele_effect_in_the_EFFECT_table"></a><h3> <span class="mw-headline">Define the Sample by Allele effect in the EFFECT table</span></h3>
+<ul><li>Define the Sample by Allele effect in the EFFECT table.
+</li></ul>
+<table border="1" cellpadding="2">
+<tr>
+<th> REPRESNO
+</th><th> FACTORID
+</th><th> EFFECTID
+</th></tr>
+<tr>
+<td align="center"> -2
+</td><td align="center"> -1
+</td><td align="center"> -2
+</td></tr>
+<tr>
+<td align="center"> -2
+</td><td align="center"> -2
+</td><td align="center"> -2
+</td></tr>
+<tr>
+<td align="center"> -2
+</td><td align="center"> -7
+</td><td align="center"> -2
+</td></tr></table>
+<p>STUDY
+</p>
+<pre>INSERT INTO effect ( represno, factorid, effectid ) VALUES (-2, -1, -2);
+</pre>
+<p>SAMPLENO
+</p>
+<pre>INSERT INTO effect ( represno, factorid, effectid ) VALUES (-2, -2, -2);
+</pre>
+<p>MVID
+</p>
+<pre>INSERT INTO effect ( represno, factorid, effectid ) VALUES (-2, -7, -2);
+</pre>
+<a name="SET_UP_THE_FACTOR_LEVELS" id="SET_UP_THE_FACTOR_LEVELS"></a><h2> <span class="mw-headline">SET UP THE FACTOR LEVELS</span></h2>
+<a name="Set_up_the_SAMPLENO__factor" id="Set_up_the_SAMPLENO__factor"></a><h3> <span class="mw-headline">Set up the SAMPLENO  factor</span></h3>
+<ul><li>Create isoser_alabels table with the following fields
+</li></ul>
+<pre>CREATE TABLE ISO_alabels (ORDERNO serial,levelno int ,sampleno  double precision,
+gid int , origin int , source varchar(255),NAME varchar (255));
+</pre>
+<ul><li> Populate the isoser_alabels from the ISO table
+</li></ul>
+<pre>BEGIN;
+INSERT INTO ISO_alabels ( sampleno, gid, origin, source,name )
+SELECT order_merge, "GID", "ORIGIN", supplier, varname 
+FROM "ISO";
+COMMIT;
+</pre>
+<ul><li>Get the minimum of LEVELNO in LEVEL_C and LEVEL_N tables AND Update LEVELNO in iso_alabels
+</li></ul>
+<pre>BEGIN;
+UPDATE ISO_alabels 
+SET levelno =	(SELECT Min(mina) AS minlevel 
+                FROM (SELECT min(levelno) AS mina FROM level_n 
+                UNION 
+                SELECT min(levelno) AS mina FROM level_c ) AS c) - orderno;
+COMMIT;
+</pre>
+<ul><li>Append labels SAMPLENO, GID and ORIGIN in the  LEVEL_N table and labels NAME and SOURCE to level_c table. Data in SAMPLENO, GID and ORIGIN are of Numeric data type while NAME and SOURCE is of Character data type.
+</li></ul>
+<p>Append SAMPLENO  label to LEVEL_N  table
+</p>
+<pre>BEGIN;
+INSERT INTO level_n ( labelid, factorid, levelno, lvalue )
+SELECT -2 AS labelid, -2 AS factorid,levelno,sampleno
+FROM iso_alabels;
+COMMIT;
+</pre>
+<p>Append GID  label to LEVEL_N  table 
+</p>
+<pre>BEGIN;
+INSERT INTO level_n ( labelid, factorid, levelno, lvalue )
+SELECT -3 AS labelid, -2 AS factorid,levelno, gid
+FROM iso_alabels;
+COMMIT;
+</pre>
+<p>Append ORIGIN  label to LEVEL_N  table 
+</p>
+<pre>BEGIN;
+INSERT INTO level_n ( labelid, factorid, levelno, lvalue )
+SELECT -5 AS labelid, -2 AS factorid,levelno,origin
+FROM iso_alabels;
+COMMIT;
+</pre>
+<p>Append NAME label to LEVEL_C  table 
+</p>
+<pre>INSERT INTO level_c ( labelid, factorid, levelno, lvalue )
+SELECT -4 AS labelid, -2 AS factorid,levelno, 
+        case when name is null then  ' ' else name end
+FROM iso_alabels;
+COMMIT;
+</pre>
+<p>Append SOURCE label to LEVEL_C  table 
+</p>
+<pre>BEGIN;
+INSERT INTO level_c ( labelid, factorid, levelno, lvalue )
+SELECT -6 AS labelid, -2 AS factorid,levelno,
+       case when source is null then  ' ' else source end
+FROM iso_alabels;
+COMMIT;
+</pre>
+<a name="Set_up_the_MVID_factor" id="Set_up_the_MVID_factor"></a><h3> <span class="mw-headline">Set up the MVID factor </span></h3>
+<ul><li>Update the LEVELNO in the ISO_MVNAMES (contains the labels for MVID factor) table
+</li></ul>
+<pre>BEGIN;
+UPDATE iso_mvnames
+SET levelno = (SELECT Min(mina) AS minlevel 
+               FROM (SELECT min(levelno) AS mina FROM level_n 
+               UNION 
+               SELECT min(levelno) AS mina FROM level_c ) AS c) - mvid;
+COMMIT;
+</pre>
+<ul><li>Append MVID factor to LEVEL_N table
+</li></ul>
+<pre>BEGIN;
+INSERT INTO level_n( labelid, factorid, levelno, lvalue ) 
+SELECT -7 AS Expr1, -7 AS Expr2, iso_mvnames.levelno, iso_mvnames.mvid FROM iso_mvnames&nbsp;;
+COMMIT;
+</pre>
+<ul><li>Append ALLELE label to LEVEL_C table
+</li></ul>
+<pre>BEGIN;
+INSERT INTO level_c( labelid, factorid, levelno, lvalue ) 
+SELECT -8 AS Expr1, -7 AS Expr2, iso_mvnames.levelno, iso_mvnames.mvname FROM iso_mvnames;	
+COMMIT;
+</pre>
+<a name="SET_UP_THE_OBSERVATION_UNITS_FOR_THE_SAMPLE_ALLELE" id="SET_UP_THE_OBSERVATION_UNITS_FOR_THE_SAMPLE_ALLELE"></a><h2> <span class="mw-headline">SET UP THE OBSERVATION UNITS FOR THE SAMPLE ALLELE</span></h2>
+<a name="Update_the_ISOSER_ALLELE" id="Update_the_ISOSER_ALLELE"></a><h3> <span class="mw-headline"> Update the ISOSER_ALLELE </span></h3>
+<ul><li>Update MVLEVEL field in the ISOSER_ALLELE table
+</li></ul>
+<pre>BEGIN;
+UPDATE isoser_allele
+SET mvlevel = level_n.levelno from level_n
+WHERE (isoser_allele.mvid = level_n.lvalue)  AND  (level_n.labelid=-7)&nbsp;;			
+COMMIT;
+</pre>
+<ul><li>Update SNLEVEL in ISOSER_ALLELE  
+</li></ul>
+<pre>BEGIN;  
+UPDATE isoser_allele
+SET snlevel = level_n.levelno FROM level_n
+WHERE ((isoser_allele.sampleno = level_n.lvalue ) AND (level_n.labelid=-2));
+COMMIT;
+</pre>
+<ul><li>Update MVVALUE field in the ISOSER_ALLELE table. Values in this column should be equal to MVID 
+</li></ul>
+<pre>BEGIN;
+UPDATE isoser_allele
+SET mvvalue = level_n.lvalue FROM level_n
+WHERE (level_n.labelid=-7) AND (isoser_allele.mvid = level_n.lvalue);
+COMMIT;
+</pre>
+<ul><li>Update SNVALUE field in the ISOSER_ALLELE table. Values in this column should be equal to SAMPLENO
+</li></ul>
+<pre>BEGIN;
+UPDATE isoser_allele  
+SET snvalue = level_n.lvalue FROM level_n
+WHERE (level_n.labelid=-2) AND (isoser_allele.sampleno = level_n.lvalue)&nbsp;;
+COMMIT;
+</pre>
+<a name="Update_OUNITID_field_in_ISOSER_ALLELE_table" id="Update_OUNITID_field_in_ISOSER_ALLELE_table"></a><h3> <span class="mw-headline">Update OUNITID field in ISOSER_ALLELE table</span></h3>
+<ul><li>Get the minimum of OUNITID  from the OINDEX table and update OUNITID field in the ISOSER_ALLELE table
+</li></ul>
+<pre>BEGIN;
+INSERT INTO oindex ( ounitid, factorid, levelno, represno ) 
+SELECT isoser_allele.ounitid, -1 AS Expr3, -1 AS Expr2, -2 AS Expr1 
+FROM isoser_allele&nbsp;;	
+COMMIT;
+</pre>
+<a name="Append_STUDY.2CSAMPLENO_and_MVID_observation_units_to_the_OINDEX_tables." id="Append_STUDY.2CSAMPLENO_and_MVID_observation_units_to_the_OINDEX_tables."></a><h3> <span class="mw-headline">Append STUDY,SAMPLENO and MVID observation units to the OINDEX tables.</span></h3>
+<ul><li>Append  observation units for the study factor
+</li></ul>
+<pre>BEGIN;
+INSERT INTO oindex ( ounitid, factorid, levelno, represno ) 
+SELECT isoser_allele.ounitid, -1 AS Expr3, -1 AS Expr2, -2 AS Expr1 
+FROM isoser_allele&nbsp;;	
+COMMIT;
+</pre>
+<ul><li>Append  observation units for the SAMPLENO factor 
+</li></ul>
+<pre>BEGIN
+INSERT INTO oindex ( ounitid, factorid, levelno, represno ) 
+SELECT isoser_allele.ounitid, -2 AS Expr3, isoser_allele.snlevel, -2 AS Expr1 
+FROM isoser_allele;
+COMMIT;
+</pre>
+<ul><li>Append  observation units for the MVID factor
+</li></ul>
+<pre>INSERT INTO oindex ( ounitid, factorid, levelno, represno ) 
+SELECT isoser_allele.ounitid, -7 AS Expr2, isoser_allele.mvlevel, -2 AS Expr1 
+FROM isoser_allele;
+COMMIT;
+</pre>
+<a name="ADD_THE_FREQUENCY_IN_THE_DATA_TABLE" id="ADD_THE_FREQUENCY_IN_THE_DATA_TABLE"></a><h2> <span class="mw-headline">ADD THE FREQUENCY IN THE DATA TABLE</span></h2>
+<pre>BEGIN;
+INSERT INTO data_n ( ounitid, dvalue, variatid ) 
+SELECT isoser_allele.ounitid, isoser_allele.freq, -1 AS Expr1 
+FROM isoser_allele&nbsp;;
+COMMIT;
+</pre>
+<a name="LOADING_THE_SAMPLE_BY_LOCUS_DATA" id="LOADING_THE_SAMPLE_BY_LOCUS_DATA"></a><h2> <span class="mw-headline"> <a href="../../../../articles/l/o/a/Loading_Isozyme_Data_by_Locus_Effect_(PostgreSQL)_4b65.html" title="Loading Isozyme Data by Locus Effect (PostgreSQL)">LOADING THE SAMPLE BY LOCUS DATA </a></span></h2>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 22/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+<div class="printfooter">
+Retrieved from "<a href="http://localhost../../../../articles/b/u/l/Bulk_Loading_of_Isozyme_data_using_postgreSQL_fb62.html">http://localhost../../../../articles/b/u/l/Bulk_Loading_of_Isozyme_data_using_postgreSQL_fb62.html</a>"</div>
+						<!-- end content -->
+						<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<div class="pBody">
+			<ul>
+	
+				 <li id="ca-nstab-main" class="selected"><a href="../../../../articles/b/u/l/Bulk_Loading_of_Isozyme_data_using_postgreSQL_fb62.html" title="View the content page [c]" accesskey="c">Page</a></li>
+				 <li id="ca-talk" class="new"><a href="../../../../articles/b/u/l/Talk%7EBulk_Loading_of_Isozyme_data_using_postgreSQL_e237.html" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				 <li id="ca-viewsource"><a href="../../../../articles/b/u/l/Bulk_Loading_of_Isozyme_data_using_postgreSQL_fb62.html" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				 <li id="ca-history"><a href="../../../../articles/b/u/l/Bulk_Loading_of_Isozyme_data_using_postgreSQL_fb62.html" title="Past versions of this page [h]" accesskey="h">History</a></li>			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="../../../../articles/u/s/e/Special%7EUserLogin_94cd.html" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(../../../../misc/icis-wiki3.png);" href="../../../../index.html" title="Visit the main page [z]" accesskey="z"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class='generated-sidebar portlet' id='p-navigation'>
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="../../../../index.html" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
+				<li id="n-portal"><a href="../../../../articles/c/o/m/ICISWiki%7ECommunity_Portal_7449.html" title="About the project, what you can do, where to find things">Community portal</a></li>
+				<li id="n-recentchanges"><a href="../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+				<li id="n-help"><a href="../../../../articles/c/o/n/Help%7EContents_22de.html" title="The place to find out">Help</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="../../../../articles/s/e/a/Special%7ESearch_a8e5.html" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" title="Search ICISWiki [f]" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="../../../../articles/w/h/a/Special%7EWhatLinksHere_Bulk_Loading_of_Isozyme_data_using_postgreSQL_1f48.html" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="../../../../articles/r/e/c/Special%7ERecentChangesLinked_Bulk_Loading_of_Isozyme_data_using_postgreSQL_20f2.html" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+<li id="t-specialpages"><a href="../../../../articles/s/p/e/Special%7ESpecialPages_f12b.html" title="List of all special pages [q]" accesskey="q">Special pages</a></li>
+				<li id="t-print"><a href="../../../../articles/b/u/l/Bulk_Loading_of_Isozyme_data_using_postgreSQL_fb62.html" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>				<li id="t-permalink"><a href="../../../../articles/b/u/l/Bulk_Loading_of_Isozyme_data_using_postgreSQL_fb62.html" title="Permanent link to this version of the page">Permanent link</a></li>			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="../../../../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" /></a></div>
+				<div id="f-copyrightico"><a href="../../../../../COPYING.html"><img src="/icis/skins/common/images/gnu-fdl.png" alt='GNU Free Documentation License 1.2' /></a></div>
+			<ul id="f-list">
+					<li id="credits">This page was last modified 01:09, 12 September 2005 by <a href="../../../../articles/r/v/a/User%7ERvalerio_c9de.html" title="User:Rvalerio">Rowena Valerio</a>. </li>
+					<li id="copyright">Content is available under <a href="../../../../../COPYING.html" class="external " title="../../../../../COPYING.html">GNU Free Documentation License 1.2</a>.</li>
+					<li id="privacy"><a href="../../../../articles/p/r/i/ICISWiki%7EPrivacy_policy_0cbf.html" title="ICISWiki:Privacy policy">Privacy policy</a></li>
+					<li id="about"><a href="../../../../articles/a/b/o/ICISWiki%7EAbout_53aa.html" title="ICISWiki:About">About ICISWiki</a></li>
+					<li id="disclaimer"><a href="../../../../articles/g/e/n/ICISWiki%7EGeneral_disclaimer_9129.html" title="ICISWiki:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+</div>
+
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served in 15.974 secs. --></body></html>

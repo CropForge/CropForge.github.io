@@ -1,0 +1,336 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta name="generator" content="MediaWiki 1.14.0" />
+		<meta name="keywords" content="Duplicate Names Search" />
+		<link rel="shortcut icon" href="../../../../misc/favicon.ico" />
+		<link rel="search" type="application/opensearchdescription+xml" href="../../../../../opensearch_desc.php" title="ICISWiki (en)" />
+		<link title="Creative Commons" type="application/rdf+xml" href="../../../../articles/d/u/p/Duplicate_Names_Search_7245.html" rel="alternate meta" />
+		<link rel="copyright" href="../../../../../COPYING.html" />
+		<link rel="alternate" type="application/rss+xml" title="ICISWiki RSS Feed" href="http://localhost../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" />
+		<link rel="alternate" type="application/atom+xml" title="ICISWiki Atom Feed" href="http://localhost../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" />
+		<title>Duplicate Names Search - ICISWiki</title>
+		<link rel="stylesheet" href="../../../../skins/common/shared.css?195" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../../../../skins/common/commonPrint.css?195" type="text/css" media="print" />
+		<link rel="stylesheet" href="../../../../skins/monobook/main.css?195" type="text/css" media="screen" />
+		<!--[if lt IE 5.5000]><link rel="stylesheet" href="../../../../skins/monobook/IE50Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 5.5000]><link rel="stylesheet" href="../../../../skins/monobook/IE55Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 6]><link rel="stylesheet" href="../../../../skins/monobook/IE60Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 7]><link rel="stylesheet" href="../../../../skins/monobook/IE70Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7ECommon.css?195" type="text/css" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7EPrint.css?195" type="text/css" media="print" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7EMonobook.css?195" type="text/css" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/gen.css?195" type="text/css" />
+		<!--[if lt IE 7]><script type="text/javascript" src="../../../../skins/common/IEFixes.js?195"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+
+		<script type= "text/javascript">/*<![CDATA[*/
+		var skin = "monobook";
+		var stylepath = "../../../../skins";
+		var wgArticlePath = "../../../../$1";
+		var wgScriptPath = "../../../../..";
+		var wgScript = "/icis/index.php";
+		var wgVariantArticlePath = false;
+		var wgActionPaths = {};
+		var wgServer = "http://localhost";
+		var wgCanonicalNamespace = "";
+		var wgCanonicalSpecialPageName = false;
+		var wgNamespaceNumber = 0;
+		var wgPageName = "Duplicate_Names_Search";
+		var wgTitle = "Duplicate Names Search";
+		var wgAction = "view";
+		var wgArticleId = "3046";
+		var wgIsArticle = true;
+		var wgUserName = null;
+		var wgUserGroups = null;
+		var wgUserLanguage = "en";
+		var wgContentLanguage = "en";
+		var wgBreakFrames = false;
+		var wgCurRevisionId = "12767";
+		var wgVersion = "1.14.0";
+		var wgEnableAPI = true;
+		var wgEnableWriteAPI = true;
+		var wgSeparatorTransformTable = ["", ""];
+		var wgDigitTransformTable = ["", ""];
+		var wgRestrictionEdit = [];
+		var wgRestrictionMove = [];
+		/*]]>*/</script>
+
+		<script type="text/javascript" src="../../../../skins/common/wikibits.js?195"><!-- wikibits js --></script>
+		<!-- Head Scripts -->
+		<script type="text/javascript" src="../../../../raw/gen.js"><!-- site js --></script>
+	</head>
+<body class="mediawiki ltr ns-0 ns-subject page-Duplicate_Names_Search skin-monobook">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 id="firstHeading" class="firstHeading">Duplicate Names Search</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From ICISWiki</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>			<!-- start content -->
+			<p>(Reference: <b>"How to Strike a Match".</b> Original article by Simon White. Available at <a href="http://www.devarticles.com/c/a/Development-Cycles/How-to-Strike-a-Match/" class="external free" title="http://www.devarticles.com/c/a/Development-Cycles/How-to-Strike-a-Match/" rel="nofollow">http://www.devarticles.com/c/a/Development-Cycles/How-to-Strike-a-Match/</a>)
+</p><p><br />
+</p>
+<a name="Existing_string_similarity_algorithms" id="Existing_string_similarity_algorithms"></a><h2> <span class="mw-headline"> Existing string similarity algorithms </span></h2>
+<p>The <b>Soundex Algorithm</b> is an equivalence algorithm, so simply states whether or not two strings are similar. However, it would not recognise any similarity between ‘FRANCE’ and ‘REPUBLIC OF FRANCE’, as they start with different letters. 
+</p><p><br />
+The <b>Edit Distance algorithm</b> would acknowledge some similarity between the two strings, but would rate ‘FRANCE’ and ‘QUEBEC’ (with a distance of 6) to be more similar than ‘FRANCE’ and ‘REPUBLIC OF FRANCE’ (which have a distance of 12). 
+</p><p><br />
+The <b>Longest Common Substring</b> would give ‘FRANCE’ and ‘REPUBLIC OF FRANCE’ quite a good rating of similarity (a common substring of length 6). However, it is disappointing that according to this metric, the string ‘FRENCH REPUBLIC’ is equally similar to the two strings ‘REPUBLIC OF FRANCE’ and ‘REPUBLIC OF CUBA’.
+</p><p><br />
+</p>
+<a name="A_new_string_similarity_metric" id="A_new_string_similarity_metric"></a><h2> <span class="mw-headline"> A new string similarity metric </span></h2>
+<p><b>REQUIREMENTS:</b>
+</p>
+<ul><li> Rewards both common substrings and a common ordering of those substrings.
+</li><li> Consider not only the single longest common substring, but other common substrings too.
+</li></ul>
+<p><b>SOLUTION:</b> Find out how many adjacent character pairs are contained in both strings.
+</p><p><br />
+Excerpt from article:
+</p><p>The intention is that by considering adjacent characters, I take account not only of the characters, but also of the character ordering in the original string, since each character pair contains a little information about the original ordering. 
+</p><p>Let me explain the algorithm by comparing the two strings ‘France’ and ‘French’. First, I map them both to their upper case characters (making the algorithm insensitive to case differences), then split them up into their character pairs:
+</p>
+<pre> FRANCE: {FR, RA, AN, NC, CE}
+ FRENCH: {FR, RE, EN, NC, CH}
+</pre>
+<p>Then I work out which character pairs are in both strings. In this case, the intersection is {FR, NC}. Now, I would like to express my finding as a numeric metric that reflects the size of the intersection relative to the sizes of the original strings. If pairs(x) is the function that generates the pairs of adjacent letters in a string, then my numeric metric of similarity is:
+</p><p><a href="../../../../articles/n/e/w/File%7ENewmetric_formula.jpg_01b8.html" class="image" title="Image: Newmetric_formula.jpg"><img alt="Image: Newmetric_formula.jpg" src="../../../../images/f/f0/Newmetric_formula.jpg" width="296" height="53" border="0" /></a>
+</p><p>The similarity between two strings s1 and s2 is twice the number of character pairs that are common to both strings divided by the sum of the number of character pairs in the two strings. (The vertical bars in the formula mean ‘size of’.) Note that the formula rates completely dissimilar strings with a similarity value of 0, since the size of the letter-pair intersection in the numerator of the fraction will be zero. On the other hand, if you compare a (non-empty) string to itself, then the similarity is 1. For our comparison of ‘FRANCE’ and ‘FRENCH’, the metric is computed as follows: 
+</p><p><a href="../../../../articles/n/e/w/File%7ENewmetric_formula_example.jpg_28ea.html" class="image" title="Image: Newmetric_formula_example.jpg"><img alt="Image: Newmetric_formula_example.jpg" src="../../../../images/f/ff/Newmetric_formula_example.jpg" width="405" height="155" border="0" /></a>
+</p><p>The values of the metric always lie between 0 and 1.
+</p>
+<a name="Implementation_in_Delphi_programming_language" id="Implementation_in_Delphi_programming_language"></a><h2> <span class="mw-headline"> Implementation in Delphi programming language </span></h2>
+<pre>function TfrmMain.LetterPairs(s: string): TStrings;
+//==============================================================================
+//  The basis of the algorithm is the method that computes the pairs of characters
+// contained in the input string. This method creates a LIST OF STRINGS to contain
+// its result. It then iterates through the input string, to extract character
+// pairs and store them in the stringlist. Finally, the stringlist is returned.
+//
+// REFERENCE: <a href="http://www.devarticles.com/c/a/Development-Cycles/How-to-Strike-a-Match/3/" class="external free" title="http://www.devarticles.com/c/a/Development-Cycles/How-to-Strike-a-Match/3/" rel="nofollow">http://www.devarticles.com/c/a/Development-Cycles/How-to-Strike-a-Match/3/</a>
+// ("How to strike a match"; contributed by Simon White)
+//
+// Original JAVA implementation by Simon White; translated to Delphi by Corina Habito
+//
+//==============================================================================
+var
+ i, iNumPairs: integer;
+ tsPairs: TStrings;
+begin
+ tsPairs&nbsp;:= TStringlist.Create;
+ tsPairs.Clear;
+ iNumPairs&nbsp;:= Length(trim(s)) - 1;
+ for i&nbsp;:= 1 to iNumPairs do begin
+   tsPairs.Add(copy(s,i,2));
+ end;
+ Result&nbsp;:= tsPairs;
+end;
+</pre>
+<p><br />
+</p>
+<pre>function TfrmMain.GetWordLetterPairs(const s:string;slist:tstringlist);
+//==============================================================================
+// This method uses the ParseDelimited method to split the input string into
+// separate words, or tokens. It then iterates through each of the words,
+// computing the character pairs for each word. The character pairs are added to
+// a stringList, which is returned from the method. An stringlist is used,
+// because we do not know in advance how many character pairs will be returned.
+// (At this point, the program doesn’t know how much white space the input string contains.)
+//
+//
+// REFERENCE: <a href="http://www.devarticles.com/c/a/Development-Cycles/How-to-Strike-a-Match/4/" class="external free" title="http://www.devarticles.com/c/a/Development-Cycles/How-to-Strike-a-Match/4/" rel="nofollow">http://www.devarticles.com/c/a/Development-Cycles/How-to-Strike-a-Match/4/</a>
+// ("How to strike a match"; contributed by Simon White)
+//
+// Original JAVA implementation by Simon White
+//   - Translated to Delphi by Corina Habito. December 6 2007.
+//   - Modified May 5 2008. Thanks to John Wild (www.searchers.com) for comments.
+//==============================================================================
+ var
+     tsWords&nbsp;: TStrings;
+     w,i    &nbsp;: Integer;
+  begin
+     tsWords &nbsp;:= TStringlist.Create;
+     try
+        ParseDelimited(tsWords,trim(s),' ');
+        for w&nbsp;:= 0 to tsWords.count - 1 do
+           for i&nbsp;:= 1 to (Length(trim(tsWords[w]))-1)  do
+              slist.Add(copy(tsWords[w],i,2));
+     finally
+        freeandnil(tsWords);
+     end;
+  end;
+</pre>
+<p><br />
+</p>
+<pre>  procedure TfrmMain.ParseDelimited(const sl&nbsp;: TStrings; const value&nbsp;: string; const delimiter&nbsp;: string);
+//==============================================================================
+//  Tokenize the string and put words into a stringlist
+//==============================================================================
+var
+  dx&nbsp;: integer;
+  ns&nbsp;: string;
+  txt&nbsp;: string;
+  delta&nbsp;: integer;
+begin
+  delta&nbsp;:= Length(delimiter)&nbsp;;
+  txt&nbsp;:= value + delimiter;
+  sl.BeginUpdate;
+  sl.Clear;
+  try
+    while Length(txt) &gt; 0 do
+    begin
+      dx&nbsp;:= Pos(delimiter, txt)&nbsp;;
+      ns&nbsp;:= Copy(txt,0,dx-1)&nbsp;;
+      sl.Add(ns)&nbsp;;
+      txt&nbsp;:= Copy(txt,dx+delta,MaxInt)&nbsp;;
+    end;
+  finally
+    sl.EndUpdate;
+  end;
+end;
+</pre>
+<pre>function TfrmMain.CompareLetterStrings(sFirst,sSecond: string): Double;
+//==============================================================================
+// Computes the character pairs from the words of each of the two input strings,
+//   then iterates through the stringLists to find the size of the intersection.
+//   Note that whenever a match is found, that character pair is removed from the
+//   second array list to prevent us from matching against the same character pair
+//  multiple times. (Otherwise, ‘GGGGG’ would score a perfect match against ‘GG’.)
+//
+// REFERENCE: <a href="http://www.devarticles.com/c/a/Development-Cycles/How-to-Strike-a-Match/4/" class="external free" title="http://www.devarticles.com/c/a/Development-Cycles/How-to-Strike-a-Match/4/" rel="nofollow">http://www.devarticles.com/c/a/Development-Cycles/How-to-Strike-a-Match/4/</a>
+// ("How to strike a match"; contributed by Simon White)
+//
+// Original JAVA implementation by Simon White
+//   - Translated to Delphi by Corina Habito. December 6 2007.
+//   - Modified May 5 2008. Thanks to John Wild (www.searchers.com) for comments.
+//==============================================================================
+var
+  tsAllPairs,
+  tsPairs,
+  tsP1,tsP2     &nbsp;: tstrings;
+  tsPairs1,
+  tsPairs2      &nbsp;: TStringlist;
+  iIntersection,
+  iUnion,i,j    &nbsp;: integer;
+  sPair1,sPair2 &nbsp;: String;
+begin
+  tsPairs1  &nbsp;:= TStringlist.create;
+  tsPairs2  &nbsp;:= TStringlist.create;
+  try
+     iIntersection&nbsp;:= 0;
+     GetWordLetterPairs(Uppercase(sFirst),tsPairs1);
+     GetWordLetterPairs(Uppercase(sSecond),tsPairs2);
+     iUnion&nbsp;:= tsPairs1.Count + tsPairs2.Count;
+     for i&nbsp;:= 0 to tsPairs1.Count - 1 do
+     begin
+        sPair1&nbsp;:= tsPairs1[i];
+        for j&nbsp;:= 0 to tsPairs2.Count - 1 do
+        begin
+           sPair2&nbsp;:= tsPairs2[j];
+           if sPair1 = sPair2 then
+           begin
+              iIntersection&nbsp;:= iIntersection + 1;
+              tsPairs2.Delete(j);
+              Break;
+           end;
+        end;
+     end;
+     Result&nbsp;:= 2.0*iIntersection/iUnion;
+  finally
+     // tidy up
+     freeandnil(tsPairs1);
+     freeandnil(tsPairs2);
+  end;
+end;
+</pre>
+<!-- 
+NewPP limit report
+Preprocessor node count: 4/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+<div class="printfooter">
+Retrieved from "<a href="http://localhost../../../../articles/d/u/p/Duplicate_Names_Search_7245.html">http://localhost../../../../articles/d/u/p/Duplicate_Names_Search_7245.html</a>"</div>
+						<!-- end content -->
+						<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<div class="pBody">
+			<ul>
+	
+				 <li id="ca-nstab-main" class="selected"><a href="../../../../articles/d/u/p/Duplicate_Names_Search_7245.html" title="View the content page [c]" accesskey="c">Page</a></li>
+				 <li id="ca-talk" class="new"><a href="../../../../articles/d/u/p/Talk%7EDuplicate_Names_Search_6031.html" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				 <li id="ca-viewsource"><a href="../../../../articles/d/u/p/Duplicate_Names_Search_7245.html" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				 <li id="ca-history"><a href="../../../../articles/d/u/p/Duplicate_Names_Search_7245.html" title="Past versions of this page [h]" accesskey="h">History</a></li>			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="../../../../articles/u/s/e/Special%7EUserLogin_94cd.html" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(../../../../misc/icis-wiki3.png);" href="../../../../index.html" title="Visit the main page [z]" accesskey="z"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class='generated-sidebar portlet' id='p-navigation'>
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="../../../../index.html" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
+				<li id="n-portal"><a href="../../../../articles/c/o/m/ICISWiki%7ECommunity_Portal_7449.html" title="About the project, what you can do, where to find things">Community portal</a></li>
+				<li id="n-recentchanges"><a href="../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+				<li id="n-help"><a href="../../../../articles/c/o/n/Help%7EContents_22de.html" title="The place to find out">Help</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="../../../../articles/s/e/a/Special%7ESearch_a8e5.html" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" title="Search ICISWiki [f]" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="../../../../articles/w/h/a/Special%7EWhatLinksHere_Duplicate_Names_Search_8d52.html" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="../../../../articles/r/e/c/Special%7ERecentChangesLinked_Duplicate_Names_Search_278f.html" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+<li id="t-specialpages"><a href="../../../../articles/s/p/e/Special%7ESpecialPages_f12b.html" title="List of all special pages [q]" accesskey="q">Special pages</a></li>
+				<li id="t-print"><a href="../../../../articles/d/u/p/Duplicate_Names_Search_7245.html" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>				<li id="t-permalink"><a href="../../../../articles/d/u/p/Duplicate_Names_Search_7245.html" title="Permanent link to this version of the page">Permanent link</a></li>			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="../../../../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" /></a></div>
+				<div id="f-copyrightico"><a href="../../../../../COPYING.html"><img src="/icis/skins/common/images/gnu-fdl.png" alt='GNU Free Documentation License 1.2' /></a></div>
+			<ul id="f-list">
+					<li id="credits">This page was last modified 02:01, 5 May 2008 by <a href="../../../../articles/m/h/a/User%7EMhabito_276f.html" title="User:Mhabito">Maria Corina de Luna Habito</a>. Based on work by <a href="../../../../articles/s/f/r/User%7ESfrade_e1c2.html" title="User:Sfrade">Sebastien Frade</a>.</li>
+					<li id="copyright">Content is available under <a href="../../../../../COPYING.html" class="external " title="../../../../../COPYING.html">GNU Free Documentation License 1.2</a>.</li>
+					<li id="privacy"><a href="../../../../articles/p/r/i/ICISWiki%7EPrivacy_policy_0cbf.html" title="ICISWiki:Privacy policy">Privacy policy</a></li>
+					<li id="about"><a href="../../../../articles/a/b/o/ICISWiki%7EAbout_53aa.html" title="ICISWiki:About">About ICISWiki</a></li>
+					<li id="disclaimer"><a href="../../../../articles/g/e/n/ICISWiki%7EGeneral_disclaimer_9129.html" title="ICISWiki:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+</div>
+
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served in 232.031 secs. --></body></html>

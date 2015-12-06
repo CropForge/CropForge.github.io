@@ -1,0 +1,549 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta name="generator" content="MediaWiki 1.14.0" />
+		<meta name="keywords" content="IMS Setup" />
+		<link rel="shortcut icon" href="../../../../misc/favicon.ico" />
+		<link rel="search" type="application/opensearchdescription+xml" href="../../../../../opensearch_desc.php" title="ICISWiki (en)" />
+		<link title="Creative Commons" type="application/rdf+xml" href="../../../../articles/i/m/s/IMS_Setup_c5be.html" rel="alternate meta" />
+		<link rel="copyright" href="../../../../../COPYING.html" />
+		<link rel="alternate" type="application/rss+xml" title="ICISWiki RSS Feed" href="http://localhost../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" />
+		<link rel="alternate" type="application/atom+xml" title="ICISWiki Atom Feed" href="http://localhost../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" />
+		<title>IMS Setup - ICISWiki</title>
+		<link rel="stylesheet" href="../../../../skins/common/shared.css?195" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../../../../skins/common/commonPrint.css?195" type="text/css" media="print" />
+		<link rel="stylesheet" href="../../../../skins/monobook/main.css?195" type="text/css" media="screen" />
+		<!--[if lt IE 5.5000]><link rel="stylesheet" href="../../../../skins/monobook/IE50Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 5.5000]><link rel="stylesheet" href="../../../../skins/monobook/IE55Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 6]><link rel="stylesheet" href="../../../../skins/monobook/IE60Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 7]><link rel="stylesheet" href="../../../../skins/monobook/IE70Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7ECommon.css?195" type="text/css" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7EPrint.css?195" type="text/css" media="print" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/MediaWiki%7EMonobook.css?195" type="text/css" />
+		<link rel="stylesheet" href="../../../../skins/../../../../raw/gen.css?195" type="text/css" />
+		<!--[if lt IE 7]><script type="text/javascript" src="../../../../skins/common/IEFixes.js?195"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+
+		<script type= "text/javascript">/*<![CDATA[*/
+		var skin = "monobook";
+		var stylepath = "../../../../skins";
+		var wgArticlePath = "../../../../$1";
+		var wgScriptPath = "../../../../..";
+		var wgScript = "/icis/index.php";
+		var wgVariantArticlePath = false;
+		var wgActionPaths = {};
+		var wgServer = "http://localhost";
+		var wgCanonicalNamespace = "";
+		var wgCanonicalSpecialPageName = false;
+		var wgNamespaceNumber = 0;
+		var wgPageName = "IMS_Setup";
+		var wgTitle = "IMS Setup";
+		var wgAction = "view";
+		var wgArticleId = "2088";
+		var wgIsArticle = true;
+		var wgUserName = null;
+		var wgUserGroups = null;
+		var wgUserLanguage = "en";
+		var wgContentLanguage = "en";
+		var wgBreakFrames = false;
+		var wgCurRevisionId = "4390";
+		var wgVersion = "1.14.0";
+		var wgEnableAPI = true;
+		var wgEnableWriteAPI = true;
+		var wgSeparatorTransformTable = ["", ""];
+		var wgDigitTransformTable = ["", ""];
+		var wgRestrictionEdit = [];
+		var wgRestrictionMove = [];
+		/*]]>*/</script>
+
+		<script type="text/javascript" src="../../../../skins/common/wikibits.js?195"><!-- wikibits js --></script>
+		<!-- Head Scripts -->
+		<script type="text/javascript" src="../../../../raw/gen.js"><!-- site js --></script>
+	</head>
+<body class="mediawiki ltr ns-0 ns-subject page-IMS_Setup skin-monobook">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 id="firstHeading" class="firstHeading">IMS Setup</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From ICISWiki</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>			<!-- start content -->
+			<table id="toc" class="toc" summary="Contents"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1"><a href="#SETTING_UP_AN_IMS_DATABASE"><span class="tocnumber">1</span> <span class="toctext">SETTING UP AN IMS DATABASE</span></a>
+<ul>
+<li class="toclevel-2"><a href="#INTRODUCTION"><span class="tocnumber">1.1</span> <span class="toctext">INTRODUCTION</span></a></li>
+<li class="toclevel-2"><a href="#POPULATING_OTHER_ICIS_DATABASES"><span class="tocnumber">1.2</span> <span class="toctext">POPULATING OTHER ICIS DATABASES</span></a>
+<ul>
+<li class="toclevel-3"><a href="#POPULATING_TABLES_IN_THE_GMS"><span class="tocnumber">1.2.1</span> <span class="toctext">POPULATING TABLES IN THE GMS</span></a>
+<ul>
+<li class="toclevel-4"><a href="#The_UDFLDS_table_.28Central.29"><span class="tocnumber">1.2.1.1</span> <span class="toctext">The UDFLDS table (Central)</span></a></li>
+<li class="toclevel-4"><a href="#The_Location_Table_.28Local.29"><span class="tocnumber">1.2.1.2</span> <span class="toctext">The Location Table (Local)</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3"><a href="#POPULATING_TABLES_IN_THE_DMS"><span class="tocnumber">1.2.2</span> <span class="toctext">POPULATING TABLES IN THE DMS</span></a>
+<ul>
+<li class="toclevel-4"><a href="#The_TRAIT_table_.28Central.29"><span class="tocnumber">1.2.2.1</span> <span class="toctext">The TRAIT table (Central)</span></a></li>
+<li class="toclevel-4"><a href="#The_Scale_table_.28Local.29"><span class="tocnumber">1.2.2.2</span> <span class="toctext">The Scale table (Local)</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3"><a href="#POPULATING_THE_IMS_DATABASE"><span class="tocnumber">1.2.3</span> <span class="toctext">POPULATING THE IMS DATABASE</span></a>
+<ul>
+<li class="toclevel-4"><a href="#The_IMS_LOT_table"><span class="tocnumber">1.2.3.1</span> <span class="toctext">The IMS_LOT table</span></a></li>
+<li class="toclevel-4"><a href="#The_IMS_TRANSACTION_table"><span class="tocnumber">1.2.3.2</span> <span class="toctext">The IMS_TRANSACTION table</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</td></tr></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </script>
+<a name="SETTING_UP_AN_IMS_DATABASE" id="SETTING_UP_AN_IMS_DATABASE"></a><h1> <span class="mw-headline"> SETTING UP AN IMS DATABASE </span></h1>
+<p>G.McLaren, L. Sison and A.Portugal
+</p>
+<a name="INTRODUCTION" id="INTRODUCTION"></a><h2> <span class="mw-headline"> INTRODUCTION </span></h2>
+<p>The IMS database manages and controls inventory information on any entity including the breeders’ seed stock and genetic resources. Although there are only two tables in the IMS database, it accesses tables from other ICIS databases. Therefore, some tables need to be populated for the IMS to run correctly.
+</p>
+<a name="POPULATING_OTHER_ICIS_DATABASES" id="POPULATING_OTHER_ICIS_DATABASES"></a><h2> <span class="mw-headline"> POPULATING OTHER ICIS DATABASES </span></h2>
+<p>The first step is to populate the tables in the GMS and DMS referenced by the IMS. 
+</p>
+<a name="POPULATING_TABLES_IN_THE_GMS" id="POPULATING_TABLES_IN_THE_GMS"></a><h3> <span class="mw-headline"> POPULATING TABLES IN THE GMS </span></h3>
+<a name="The_UDFLDS_table_.28Central.29" id="The_UDFLDS_table_.28Central.29"></a><h4> <span class="mw-headline"> The UDFLDS table (Central) </span></h4>
+<p>IMS storage locations should have a special location type to distinguish it from other locations meant for breeding and other purposes.  The location type for IMS should be entered in the UDFLDS table similar to the one in Figure 1.2.1.1 IMS locations should then carry that type. The location type for IMS should also be assigned to the SEEDSTORAGELOCATION key of the IMS section in the INI file.<br /><br />
+<b>Figure 1.2.1.1   Example of location type for IMS</b>
+</p>
+<div class="center"><div class="floatnone"><a href="../../../../articles/u/d/f/File%7EUdflds_for_ims.jpg_6574.html" class="image" title="Udflds for ims.jpg"><img alt="" src="../../../../images/0/0e/Udflds_for_ims.jpg" width="1024" height="153" border="0" /></a></div></div><br /><br />
+<a name="The_Location_Table_.28Local.29" id="The_Location_Table_.28Local.29"></a><h4> <span class="mw-headline"> The Location Table (Local) </span></h4>
+<p>IMS is currently implemented as part of the local ICIS database.  Hence, it is advisable that all its locations are stored in the local LOCATION table.   For the IMS, the seed storage has four levels of hierarchy as shown in Table 1.2.1.2.<br /><br /> 
+<b>Table 1.2.1.2 Details of the Location table for the IMS</b><br /><br />
+</p>
+<table border="1" cellpadding="2">
+<tr>
+<th width="15%"> LEVEL
+</th><th width="20%"> SNL1ID
+</th><th width="20%"> SNL2ID
+</th><th width="20%"> SNL3ID
+</th></tr>
+<tr>
+<td>1
+</td><td>0
+</td><td>0
+</td><td>0
+</td></tr>
+<tr>
+<td>2
+</td><td>LOCID of level1
+</td><td>0
+</td><td>0
+</td></tr>
+<tr>
+<td>3
+</td><td>LOCID of level1
+</td><td>LOCID of level2
+</td><td>0
+</td></tr>
+<tr>
+<td>4
+</td><td>LOCID of level1
+</td><td>LOCID of level2
+</td><td>LOCID of level3
+</td></tr>
+</table>
+<p><br />
+For example: <br /><br />
+</p>
+<table border="1" cellpadding="2">
+<tr>
+<th width="10%"> LEVEL
+</th><th width="20%"> LNAME
+</th><th width="10%"> SNL1ID
+</th><th width="10%"> SNL2ID
+</th><th width="10%"> SNL3ID
+</th><th width="10%"> LOCID *
+</th></tr>
+<tr>
+<td>1
+</td><td>Unfumigated Room
+</td><td>0
+</td><td>0
+</td><td>0
+</td><td> -1
+</td></tr>
+<tr>
+<td>2
+</td><td>Shelf 1
+</td><td> -1
+</td><td>0
+</td><td>0
+</td><td>-2
+</td></tr>
+<tr>
+<td>3
+</td><td>Box
+</td><td>-1
+</td><td>-2
+</td><td>0
+</td><td>-3
+</td></tr>
+<tr>
+<td>4
+</td><td>Plot No 1
+</td><td>-1
+</td><td>-2
+</td><td>-3
+</td><td>-4
+</td></tr>
+</table>
+<p><i>* unique location identifier which is a negative incremental number for the inventory system.</i><br /><br />
+</p><p>(a) From an Excel File
+Some breeding programs manage their stocks in Excel file.  Locations from this file can be generated by creating a macro in Excel. The first column is treated as the second level, the second and third column as the third and fourth levels, respectively. The first 2 letters of the first column is treated as the first level. In this example, UF stands for Unfumigated Room.<br /><br /> 
+</p>
+<table border="1" cellpadding="2">
+<tr>
+<th width="15%"> Shelf_No
+</th><th width="15%"> Box_No
+</th><th width="15%"> Entry
+</th><th width="15%"> Trial_No
+</th></tr>
+<tr>
+<td>UFAB1-1
+</td><td>1
+</td><td>1-8
+</td><td>A04DS-17
+</td></tr>
+<tr>
+<td>UFAB2-1
+</td><td>2
+</td><td>9-16
+</td><td>A04DS-17
+</td></tr>
+<tr>
+<td>UFAB3-1
+</td><td>3
+</td><td>17-24
+</td><td>A04DS-17
+</td></tr>
+<tr>
+<td>UFAB4-1
+</td><td>4
+</td><td>25-31
+</td><td>A04DS-17
+</td></tr>
+</table>
+<p><br /> 
+When the macro is run, the results would be as follows:<br /><br />
+</p>
+<table border="1" cellpadding="2">
+<tr>
+<th width="20%"> Shelf_No
+</th><th width="20%"> Box_No
+</th><th width="20%"> Entry
+</th><th width="40%"> New_Location_Name
+</th></tr>
+<tr>
+<td>UFAB1-1
+</td><td>1
+</td><td>1
+</td><td>Shelf UFAB1-1, Box 1, Trial Box 1
+</td></tr>
+<tr>
+<td>UFAB1-1
+</td><td>1
+</td><td>2
+</td><td>Shelf UFAB1-1, Box 1, Trial Box 2
+</td></tr>
+<tr>
+<td>UFAB1-1
+</td><td>1
+</td><td>3
+</td><td>Shelf UFAB1-1, Box 1, Trial Box 3
+</td></tr>
+<tr>
+<td>UFAB1-1
+</td><td>1
+</td><td>4
+</td><td>Shelf UFAB1-1, Box 1, Trial Box 4
+</td></tr>
+<tr>
+<td>UFAB1-1
+</td><td>1
+</td><td>5
+</td><td>Shelf UFAB1-1, Box 1, Trial Box 5
+</td></tr>
+<tr>
+<td>UFAB1-1
+</td><td>1
+</td><td>6
+</td><td>Shelf UFAB1-1, Box 1, Trial Box 6
+</td></tr>
+<tr>
+<td>UFAB1-1
+</td><td>1
+</td><td>7
+</td><td>Shelf UFAB1-1, Box 1, Trial Box 7
+</td></tr>
+<tr>
+<td>UFAB1-1
+</td><td>1
+</td><td>8
+</td><td>Shelf UFAB1-1, Box 1, Trial Box 8
+</td></tr>
+<tr>
+<td>UFAB2-1
+</td><td>2
+</td><td>9
+</td><td>Shelf UFAB2-1, Box 2, Trial Box 9
+</td></tr>
+<tr>
+<td>UFAB2-1
+</td><td>2
+</td><td>10
+</td><td>Shelf UFAB2-1, Box 2, Trial Box 10
+</td></tr>
+<tr>
+<td>UFAB2-1
+</td><td>2
+</td><td>11
+</td><td>Shelf UFAB2-1, Box 2, Trial Box 11
+</td></tr>
+<tr>
+<td>UFAB2-1
+</td><td>2
+</td><td>12
+</td><td>Shelf UFAB2-1, Box 2, Trial Box 12
+</td></tr>
+<tr>
+<td>UFAB2-1
+</td><td>2
+</td><td>13
+</td><td>Shelf UFAB2-1, Box 2, Trial Box 13
+</td></tr>
+<tr>
+<td>UFAB2-1
+</td><td>2
+</td><td>14
+</td><td>Shelf UFAB2-1, Box 2, Trial Box 14
+</td></tr>
+<tr>
+<td>UFAB2-1
+</td><td>2
+</td><td>15
+</td><td>Shelf UFAB2-1, Box 2, Trial Box 15
+</td></tr>
+<tr>
+<td>UFAB2-1
+</td><td>2
+</td><td>16
+</td><td>Shelf UFAB2-1, Box 2, Trial Box 16
+</td></tr>
+<tr>
+<td>UFAB3-1
+</td><td>3
+</td><td>17
+</td><td>Shelf UFAB3-1, Box 3, Trial Box 17
+</td></tr>
+<tr>
+<td>UFAB3-1
+</td><td>3
+</td><td>18
+</td><td>Shelf UFAB3-1, Box 3, Trial Box 18
+</td></tr>
+<tr>
+<td>UFAB3-1
+</td><td>3
+</td><td>19
+</td><td>Shelf UFAB3-1, Box 3, Trial Box 19
+</td></tr>
+<tr>
+<td>UFAB3-1
+</td><td>3
+</td><td>20
+</td><td>Shelf UFAB3-1, Box 3, Trial Box 20
+</td></tr>
+<tr>
+<td>UFAB3-1
+</td><td>3
+</td><td>21
+</td><td>Shelf UFAB3-1, Box 3, Trial Box 21
+</td></tr>
+<tr>
+<td>UFAB3-1
+</td><td>3
+</td><td>22
+</td><td>Shelf UFAB3-1, Box 3, Trial Box 22
+</td></tr>
+<tr>
+<td>UFAB3-1
+</td><td>3
+</td><td>23
+</td><td>Shelf UFAB3-1, Box 3, Trial Box 23
+</td></tr>
+<tr>
+<td>UFAB3-1
+</td><td>3
+</td><td>24
+</td><td>Shelf UFAB3-1, Box 3, Trial Box 24
+</td></tr>
+<tr>
+<td>UFAB4-1
+</td><td>4
+</td><td>25
+</td><td>Shelf UFAB4-1, Box 4, Trial Box 25
+</td></tr>
+<tr>
+<td>UFAB4-1
+</td><td>4
+</td><td>26
+</td><td>Shelf UFAB4-1, Box 4, Trial Box 26
+</td></tr>
+<tr>
+<td>UFAB4-1
+</td><td>4
+</td><td>27
+</td><td>Shelf UFAB4-1, Box 4, Trial Box 27
+</td></tr>
+<tr>
+<td>UFAB4-1
+</td><td>4
+</td><td>28
+</td><td>Shelf UFAB4-1, Box 4, Trial Box 28
+</td></tr>
+<tr>
+<td>UFAB4-1
+</td><td>4
+</td><td>29
+</td><td>Shelf UFAB4-1, Box 4, Trial Box 29
+</td></tr>
+<tr>
+<td>UFAB4-1
+</td><td>4
+</td><td>30
+</td><td>Shelf UFAB4-1, Box 4, Trial Box 30
+</td></tr>
+</table>
+<p><br />
+Please take not that the first level (Unfumigated Room) is defined first in the Location table to determine its LOCID, then the second level follows, so forth and so on.<br /><br />
+</p><p>(b) From an existing database 
+</p><p>Some organizations or divisions have already existing database table of seed stocks.  From this current seed stock table, a stored procedure can be created which automatically assigns the tray number to the existing accessions. A tray can only hold a maximum of 40 accnos each. From here, the LOCID is generated (incremental), the SNL1ID (for level1) and SNLID2 (for level2) values are manually encoded and SNLID3 is linked to the LOCID of level3.
+</p>
+<a name="POPULATING_TABLES_IN_THE_DMS" id="POPULATING_TABLES_IN_THE_DMS"></a><h3> <span class="mw-headline"> POPULATING TABLES IN THE DMS </span></h3>
+<a name="The_TRAIT_table_.28Central.29" id="The_TRAIT_table_.28Central.29"></a><h4> <span class="mw-headline"> The TRAIT table (Central) </span></h4>
+<p>The IMS scales should have an associated trait.  The trait should be added in the central Trait table similar to the record in Table 1.2.2.1.  Furthermore, that trait id should be assigned to the SEEDSTOCKTRAIT key of the IMS section in the INI file.<br /><br />
+<b>Table 1.2.2.1 Details of the TRAIT table</b>
+</p>
+<div class="center"><div class="floatnone"><a href="../../../../articles/t/r/a/File%7ETrait_for_ims.jpg_3909.html" class="image" title="Trait for ims.jpg"><img alt="" src="../../../../images/d/d4/Trait_for_ims.jpg" width="640" height="103" border="0" /></a></div></div><br /><br />
+<a name="The_Scale_table_.28Local.29" id="The_Scale_table_.28Local.29"></a><h4> <span class="mw-headline"> The Scale table (Local) </span></h4>
+<p>The scale used by the IMS is the unit of measurement for the amount.   Since IMS is a local database, its scales can be stored in the local database with negative scale ids. 
+</p><p>For example:
+</p><p><b>Table 1.2.2.2 Details of the SCALE table </b>
+</p>
+<div class="center"><div class="floatnone"><a href="../../../../articles/s/c/a/File%7EScale_for_ims.jpg_f67d.html" class="image" title="Scale for ims.jpg"><img alt="" src="../../../../images/0/0a/Scale_for_ims.jpg" width="640" height="242" border="0" /></a></div></div><br /><br />
+<a name="POPULATING_THE_IMS_DATABASE" id="POPULATING_THE_IMS_DATABASE"></a><h3> <span class="mw-headline"> POPULATING THE IMS DATABASE </span></h3>
+<p>There are two tables in the IMS database. The IMS_LOT, which stores the GID, scale unit and location ID, is the first table to be populated. After which the IMS_TRANSACTION table, which holds the quantity in storage and the commitment date, is populated next. 
+</p>
+<a name="The_IMS_LOT_table" id="The_IMS_LOT_table"></a><h4> <span class="mw-headline"> The IMS_LOT table </span></h4>
+<p>(a) From an Excel File
+</p><p>If the existing seed stock is in Excel, it can be imported to ACCESS database. The IMS_LOT table can be populated as follows: LOCID is selected from the LOCATION table, EID is the GID from the excel file, ETPE is the table that stores the GID (in this case GERMPLSM), STATUS is 0 (active), SOURCE is 0 and USERID is the default USERID. The LOCATION table and excel file is joined by LOCATION.LNAME and the combination of the Shelf, box and file no columns of the excel file.
+</p><p>Here is an example of the SQL statement:
+</p><p><i>INSERT INTO IMS_LOT ( LOCID, EID, ETYPE, SCALEID, STATUS, SOURCE, USERID )</i><br />
+<i>SELECT LOCATION.LOCID, [03WS Bulk].GID, 'GERMPLSM' AS Expr1, -3 AS Expr2, 0 AS Expr3, 0 AS Expr4, 0 AS Expr5</i><br />
+<i>FROM [03WS Bulk], LOCATION</i>
+<i>WHERE (((LOCATION.LNAME)=CStr([SHELVE])+'-B'+CStr([BOX])+'-T'+CStr([FILE_NO])) AND((LOCATION.LNAME) Is Not Null));</i>
+</p><p><br />
+(b)	From an existing database
+</p><p>One lot is created for each combination of GID from the current seed stock table, LOCID in the LOCATION table and SCALEID in the SCALE table.
+</p>
+<a name="The_IMS_TRANSACTION_table" id="The_IMS_TRANSACTION_table"></a><h4> <span class="mw-headline"> The IMS_TRANSACTION table </span></h4>
+<p>After populating the IMS_LOT table, populating the IMS_TRANSACTION table is trouble-free. Append rows in the IMS_TRANSACTION table, setting LOTID to the LOTID in the IMS_LOT table, TRNQTY would be the amount column in the excel file or the current seed stock table (which ever migration method you are using). The amount is set to the actual balance there is in the storage location, therefore it is set to positive. TRNSTAT is set to 1 (committed), USERID is the default USERID and TRNDATE and CMTDATA is the current date.
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 75/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+<div class="printfooter">
+Retrieved from "<a href="http://localhost../../../../articles/i/m/s/IMS_Setup_c5be.html">http://localhost../../../../articles/i/m/s/IMS_Setup_c5be.html</a>"</div>
+						<!-- end content -->
+						<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<div class="pBody">
+			<ul>
+	
+				 <li id="ca-nstab-main" class="selected"><a href="../../../../articles/i/m/s/IMS_Setup_c5be.html" title="View the content page [c]" accesskey="c">Page</a></li>
+				 <li id="ca-talk" class="new"><a href="../../../../articles/i/m/s/Talk%7EIMS_Setup_0837.html" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				 <li id="ca-viewsource"><a href="../../../../articles/i/m/s/IMS_Setup_c5be.html" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				 <li id="ca-history"><a href="../../../../articles/i/m/s/IMS_Setup_c5be.html" title="Past versions of this page [h]" accesskey="h">History</a></li>			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="../../../../articles/u/s/e/Special%7EUserLogin_94cd.html" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(../../../../misc/icis-wiki3.png);" href="../../../../index.html" title="Visit the main page [z]" accesskey="z"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class='generated-sidebar portlet' id='p-navigation'>
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="../../../../index.html" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
+				<li id="n-portal"><a href="../../../../articles/c/o/m/ICISWiki%7ECommunity_Portal_7449.html" title="About the project, what you can do, where to find things">Community portal</a></li>
+				<li id="n-recentchanges"><a href="../../../../articles/r/e/c/Special%7ERecentChanges_e0d0.html" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+				<li id="n-help"><a href="../../../../articles/c/o/n/Help%7EContents_22de.html" title="The place to find out">Help</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="../../../../articles/s/e/a/Special%7ESearch_a8e5.html" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" title="Search ICISWiki [f]" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="../../../../articles/w/h/a/Special%7EWhatLinksHere_IMS_Setup_6c9c.html" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="../../../../articles/r/e/c/Special%7ERecentChangesLinked_IMS_Setup_33b5.html" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+<li id="t-specialpages"><a href="../../../../articles/s/p/e/Special%7ESpecialPages_f12b.html" title="List of all special pages [q]" accesskey="q">Special pages</a></li>
+				<li id="t-print"><a href="../../../../articles/i/m/s/IMS_Setup_c5be.html" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>				<li id="t-permalink"><a href="../../../../articles/i/m/s/IMS_Setup_c5be.html" title="Permanent link to this version of the page">Permanent link</a></li>			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="../../../../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" /></a></div>
+				<div id="f-copyrightico"><a href="../../../../../COPYING.html"><img src="/icis/skins/common/images/gnu-fdl.png" alt='GNU Free Documentation License 1.2' /></a></div>
+			<ul id="f-list">
+					<li id="credits">This page was last modified 03:05, 24 August 2006 by <a href="../../../../articles/l/s/i/User%7ELsison_43a8.html" title="User:Lsison">Beth Sison</a>. </li>
+					<li id="copyright">Content is available under <a href="../../../../../COPYING.html" class="external " title="../../../../../COPYING.html">GNU Free Documentation License 1.2</a>.</li>
+					<li id="privacy"><a href="../../../../articles/p/r/i/ICISWiki%7EPrivacy_policy_0cbf.html" title="ICISWiki:Privacy policy">Privacy policy</a></li>
+					<li id="about"><a href="../../../../articles/a/b/o/ICISWiki%7EAbout_53aa.html" title="ICISWiki:About">About ICISWiki</a></li>
+					<li id="disclaimer"><a href="../../../../articles/g/e/n/ICISWiki%7EGeneral_disclaimer_9129.html" title="ICISWiki:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+</div>
+
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served in 85.636 secs. --></body></html>
